@@ -1,0 +1,7 @@
+#header .header-left .hamburger {
+	outline: none;
+	padding-bottom: 10px; }
+	#header .header-left .hamburger .hamburger-box .hamburger-inner,
+	#header .header-left .hamburger .hamburger-box .hamburger-inner:before,
+	#header .header-left .hamburger .hamburger-box .hamburger-inner:after {
+		background-color: #fff; }
