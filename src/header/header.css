@@ -4,24 +4,24 @@
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	height: 8vh; }
 
-	#header .header-inner,
-	#header .header-section {
-		display: flex;
+	#header .header-inner {
+    display: flex;
+    justify-content: space-between;
 		height: 100%; }
 
 	#header .header-section {
-		padding: 10px;
-		display: flex;
+    padding: 0 10px;
+    display: flex;
 		align-items: center; }
 		#header .header-section p {
 			margin: 0; }
 
 	#header .header-left {
-		width: 10vw;
+    padding: 0 20px;
+    width: 80px;
 		flex-direction: row; }
 
 	#header .header-middle {
-		width: 80vw;
 		justify-content: center; }
 		#header .header-middle h1  {
 			margin: 0;
@@ -30,8 +30,8 @@
 			color: #fff; }
 
 	#header .header-right {
-		width: 10vw;
-		flex-direction: row-reverse; }
+		width: 60px;
+    padding: 0 20px; }
 		#header .header-right i {
 			color: #fff;
 			padding-right: 10px; }
