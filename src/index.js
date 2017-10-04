@@ -14,11 +14,29 @@ import './dist/hamburgers.min.css'
 import './index.css'
 
 class Index extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		
+		this.state = {
+			drawer: false
+		}
+		
+		this.handleHamburger = this.handleHamburger.bind(this)
+	}
+	
+	handleHamburger() {
+		this.setState({ drawer: !this.state.drawer })
+	}
+	
 	render() {
+		const appState = this.state
 		return (
 			<div id="index">
 				
-				<Header />
+				<Header
+					appState={appState}
+					handleHamburger={this.handleHamburger} />
 				
 				<div id="content">
 					

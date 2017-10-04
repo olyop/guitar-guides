@@ -19,15 +19,9 @@ class Hamburger extends React.Component {
 	}
 	
 	render() {
-		const string = this.state.active ? ' is-active' : ''
+		const string = 
 		return (
-			<button className={'hamburger hamburger--3dx' + string}
-				onClick={this.handleClick}
-				type="button">
-				<span className="hamburger-box">
-					<span className="hamburger-inner"></span>
-				</span>
-			</button>
+			
 		)
 	}
 }
