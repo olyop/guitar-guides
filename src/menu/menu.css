@@ -1,0 +1,40 @@
+#menu {
+	position: fixed;
+	z-index: 2;
+	background-color: #00796B;
+	width: 100vw;
+	height: 92vh; }
+	#menu .menu-inner {
+		padding: 40px; }
+		#menu .menu-inner h1 {
+			margin: 0 0 20px 0;
+			width: 100%;
+			position: relative;
+  		text-align: center;  } 
+			#menu .menu-inner h1 span {
+				background: #00796B;
+  			padding: 0 15px;
+				color: #fff;
+				font-size: 30px;
+  			position: relative;
+  			z-index: 2; }
+
+#menu h1:before {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+	top: 50%;
+  width: 100%;
+}
+#menu h1:before {
+  left: 0;
+}
+
+@media (min-width: 800px) {
+	#menu .menu-inner {
+		padding: 80px; }
+		#menu .menu-inner h1 span {
+			font-size: 40px; }
+}

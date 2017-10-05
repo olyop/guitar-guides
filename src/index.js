@@ -5,6 +5,7 @@ import registerServiceWorker from './registerServiceWorker'
 
 // Import Components
 import Header from './header/header'
+import Menu from './menu/menu'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -19,14 +20,14 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			drawer: false
+			menu: true
 		}
 		
 		this.handleHamburger = this.handleHamburger.bind(this)
 	}
 	
 	handleHamburger() {
-		this.setState({ drawer: !this.state.drawer })
+		this.setState({ menu: !this.state.menu })
 	}
 	
 	render() {
@@ -38,7 +39,16 @@ class Index extends React.Component {
 					appState={appState}
 					handleHamburger={this.handleHamburger} />
 				
+				{appState.menu ? (
+					<Menu />
+				) : null}
+				
 				<div id="content">
+					
+					<div>
+						<h1>Content Heading</h1>
+						<p>Paragraph</p>
+					</div>
 					
 				</div>
 				

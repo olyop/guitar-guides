@@ -10,7 +10,7 @@ const Header = props => (
 				<div className="hamburger-container">
 					
 					<button
-						className={'hamburger hamburger--3dx' + (props.appState.drawer ? ' is-active' : '')}
+						className={'hamburger hamburger--3dx' + (props.appState.menu ? ' is-active' : '')}
 						onClick={props.handleHamburger}
 						type="button">
 						<span className="hamburger-box">

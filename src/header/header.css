@@ -1,6 +1,7 @@
 #header {
-	background-color: #673AB7;
+	background-color: #009688;
 	z-index: 3;
+	position:relative;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	height: 8vh; }
 
@@ -56,13 +57,14 @@
 				color: #FFC107; }
 
 	#header .header-right .header-search-container {
+		cursor: pointer;
 		transition: .2s all;
 		padding: 0;
 		height: 100%;
 		align-items: center;
 		display: flex; }
 		#header .header-right .header-search-container:hover {
-			background-color: #7E57C2; }
+			background-color: #26A69A; }
 		#header .header-right .header-search-container .header-search-icon {
 			padding: 0 20px 0 20px;
 			display: flex; }
@@ -88,7 +90,6 @@
 	#header .header-middle h1 b {
 		font-size: 45px; }
 	#header .header-right .header-search-container {
-		cursor: pointer;
 		padding: 0 30px; }
 		#header .header-right .header-search-container .header-search-icon {
 			padding: 0 10px 0 0; }
