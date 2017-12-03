@@ -29,12 +29,20 @@ const Header = props => (
 			</div>
 
 			<div className="header-section header-right">
-				<div className="header-search-container">
-					<div className="header-search-icon">
+        
+				<div className="header-search">
+					<div className="header-icon">
 						<i className="material-icons">search</i>
 					</div>
 					<div className="header-search-text">Search...</div>
 				</div>
+        
+        <div className="header-account">
+          <div className="header-icon">
+            <i class="material-icons">account_circle</i>
+          </div>
+        </div>
+        
 			</div>
 			
 		</div>

@@ -18,6 +18,23 @@
 				font-size: 30px;
   			position: relative;
   			z-index: 2; }
+#menu .menu-inner .menu-split {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+#menu .menu-inner .menu-split .menu-split-item {
+  width: calc(100% / 2 - 10px);
+  min-width: calc(100% / 2 - 10px);
+  padding: 20px;
+}
+#menu .menu-inner .menu-split .menu-split-item h2 {
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
 
 #menu h1:before {
   background: #ddd;

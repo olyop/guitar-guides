@@ -7,6 +7,8 @@ import registerServiceWorker from './registerServiceWorker'
 import Header from './header/header'
 import Menu from './menu/menu'
 
+import { BrowserRouter as Router } from 'react-router-dom'
+
 // Import CSS
 import 'normalize.css/normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -33,26 +35,29 @@ class Index extends React.Component {
 	render() {
 		const appState = this.state
 		return (
-			<div id="index">
+			<Router>
+        <div id="index">
 				
-				<Header
-					appState={appState}
-					handleHamburger={this.handleHamburger} />
-				
-				{appState.menu ? (
-					<Menu />
-				) : null}
-				
-				<div id="content">
-					
-					<div>
-						<h1>Content Heading</h1>
-						<p>Paragraph</p>
-					</div>
-					
-				</div>
-				
-			</div>
+          <Header
+            appState={appState}
+            handleHamburger={this.handleHamburger} />
+
+          {appState.menu ? (
+            <Menu
+              handleHamburger={this.handleHamburger} />
+          ) : null}
+
+          <div id="content">
+
+            <div>
+              <h1>Content Heading</h1>
+              <p>Paragraph</p>
+            </div>
+
+          </div>
+
+        </div>
+      </Router>
 		)
 	}
 }

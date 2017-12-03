@@ -56,28 +56,38 @@
 				font-weight: 700;
 				color: #FFC107; }
 
-	#header .header-right .header-search-container {
+	#header .header-right .header-search {
 		cursor: pointer;
 		transition: .2s all;
 		padding: 0;
 		height: 100%;
 		align-items: center;
 		display: flex; }
-		#header .header-right .header-search-container:hover {
+		#header .header-right .header-search:hover {
 			background-color: #26A69A; }
-		#header .header-right .header-search-container .header-search-icon {
-			padding: 0 20px 0 20px;
-			display: flex; }
-			#header .header-right .header-search-container .header-search-icon i {
-				-webkit-user-select: none;
-				font-size: 28px;
-				color: #fff; }
-		#header .header-right .header-search-container .header-search-text {
+		#header .header-right .header-search .header-search-text {
 			-webkit-user-select: none;
 			padding-right: 5px;
 			color: #fff;
-			font-size: 20px;
+			font-size: 23px;
 			display: none; }
+
+  #header .header-right .header-account {
+    cursor: pointer;
+    transition: .2s all;
+    display: flex;
+    height: 100%; }
+    #header .header-right .header-account:hover {
+      background-color: #26A69A; }
+
+#header .header-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 10px; }
+  #header .header-icon i {
+    font-size: 32px;
+    -webkit-user-select: none;
+    color: #fff;  }
 
 @media (min-width: 800px) {
 	#header .header-left .hamburger-container {
@@ -89,11 +99,14 @@
 		font-size: 35px; }
 	#header .header-middle h1 b {
 		font-size: 45px; }
-	#header .header-right .header-search-container {
-		padding: 0 30px; }
-		#header .header-right .header-search-container .header-search-icon {
-			padding: 0 10px 0 0; }
-		#header .header-right .header-search-container .header-search-text {
+	#header .header-right .header-search {
+		padding: 0 20px; }
+    #header .header-right .header-search .header-icon {
+      padding: 0 10px 0 0; }
+		#header .header-right .header-search .header-search-text {
 			cursor: text;
 			display: block; }
+  
+  #header .header-icon {
+    padding: 0 20px 0 20px; }
 } 
