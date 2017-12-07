@@ -1,5 +1,5 @@
 #header {
-	background-color: #009688;
+	background-color: #212121;
 	z-index: 3;
 	position:relative;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
@@ -54,7 +54,7 @@
 			#header .header-middle h1 b {
 				font-size: 38px;
 				font-weight: 700;
-				color: #FFC107; }
+				color: #F44336; }
 
 	#header .header-right .header-search {
 		cursor: pointer;
@@ -64,7 +64,7 @@
 		align-items: center;
 		display: flex; }
 		#header .header-right .header-search:hover {
-			background-color: #26A69A; }
+			background-color: #424242; }
 		#header .header-right .header-search .header-search-text {
 			-webkit-user-select: none;
 			padding-right: 5px;
@@ -78,7 +78,7 @@
     display: flex;
     height: 100%; }
     #header .header-right .header-account:hover {
-      background-color: #26A69A; }
+      background-color: #424242; }
 
 #header .header-icon {
   display: flex;

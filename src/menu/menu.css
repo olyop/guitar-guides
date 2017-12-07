@@ -1,7 +1,7 @@
 #menu {
 	position: fixed;
 	z-index: 2;
-	background-color: #00796B;
+	background-color: #424242;
 	width: 100vw;
 	height: 92vh; }
 	#menu .menu-inner {
@@ -12,7 +12,7 @@
 			position: relative;
   		text-align: center;  } 
 			#menu .menu-inner h1 span {
-				background: #00796B;
+				background: #424242;
   			padding: 0 15px;
 				color: #fff;
 				font-size: 30px;
@@ -22,32 +22,54 @@
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  align-items: stretch;
-}
-#menu .menu-inner .menu-split .menu-split-item {
-  width: calc(100% / 2 - 10px);
-  min-width: calc(100% / 2 - 10px);
-  padding: 20px;
-}
-#menu .menu-inner .menu-split .menu-split-item h2 {
-  font-size: 35px;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-}
+  align-items: stretch; }
+	#menu .menu-inner .menu-split .menu-split-item {
+		width: calc(100% / 2 - 10px);
+		min-width: calc(100% / 2 - 10px);
+		padding: 20px; }
+		#menu .menu-inner .menu-split .menu-split-item .menu-split-heading {
+			display: flex;
+			justify-content: center;
+			align-items: center; }
+			#menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2 {
+				position: relative;
+				text-align: center;
+				width: 100%;
+				margin: 0; }
+#menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2 span {
+	color: #fff;
+	position: relative;
+	padding: 0 10px;
+	margin: 0;
+	font-size: 32px;
+	z-index: 2;
+	background-color: #424242; }
+	#menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2:before {
+		background: #ddd;
+		content: "";
+		display: block;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%; }
 
-#menu h1:before {
-  background: #ddd;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-	top: 50%;
-  width: 100%;
-}
-#menu h1:before {
-  left: 0;
-}
+#menu .menu-inner .menu-split-item .menu-links {
+	padding: 10px; }
+	#menu .menu-inner .menu-split-item .menu-links ul {
+		margin: 0;
+		padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+		align-content: center; }
+		#menu .menu-inner .menu-split-item .menu-links ul li {
+			color: #fff;
+			padding-left: 10px;
+			list-style-type: disc; }
+			#menu .menu-inner .menu-split-item .menu-links ul li a {
+				font-size: 18px;
+				color: #fff;
+				margin-bottom: 10px; }
 
 @media (min-width: 800px) {
 	#menu .menu-inner {
