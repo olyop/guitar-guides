@@ -6,8 +6,9 @@ import registerServiceWorker from './registerServiceWorker'
 // Import Components
 import Header from './header/header'
 import Menu from './menu/menu'
+import Home from './pages/home/home'
 
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -22,7 +23,7 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			menu: true
+			menu: false
 		}
 		
 		this.handleHamburger = this.handleHamburger.bind(this)
@@ -43,16 +44,14 @@ class Index extends React.Component {
             handleHamburger={this.handleHamburger} />
 
           {appState.menu ? (
-            <Menu
-              handleHamburger={this.handleHamburger} />
+            <Menu handleHamburger={this.handleHamburger} />
           ) : null}
 
           <div id="content">
 
-            <div>
-              <h1>Content Heading</h1>
-              <p>Paragraph</p>
-            </div>
+            <Route path="/" exact render={ () => (
+							<Home />		
+						)} />
 
           </div>
 
