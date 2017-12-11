@@ -39,7 +39,7 @@ const Header = props => (
         
         <div className="header-account">
           <div className="header-icon">
-            <i class="material-icons">account_circle</i>
+            <i className="material-icons">account_circle</i>
           </div>
         </div>
         

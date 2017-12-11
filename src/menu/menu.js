@@ -2,9 +2,6 @@ import React from 'react'
 
 import { NavLink } from 'react-router-dom'
 
-import GuitarIcon from './guitar-icon.png'
-import BassIcon from './bass-icon.png'
-
 import './menu.css'
 
 const Menu = props => (
