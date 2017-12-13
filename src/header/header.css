@@ -1,6 +1,6 @@
 #header {
 	background-color: #212121;
-	z-index: 3;
+	z-index: 4;
 	position:relative;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	height: 8vh; }
