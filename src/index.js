@@ -26,10 +26,19 @@ class Index extends React.Component {
 		
 		this.state = {
       loggedIn: false,
+			account: null,
 			menu: false
 		}
 		
+		this.logIn = this.logIn.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
+	}
+	
+	logIn(account) {
+		this.setState({
+			loggedIn: true,
+			account: account
+		})
 	}
 	
 	handleHamburger() {
@@ -53,7 +62,8 @@ class Index extends React.Component {
 
             {appState.loggedIn ? null : (
               <Account
-                appState={appState} />
+                appState={appState}
+								logIn={this.logIn} />
             )}
 
             {appState.loggedIn ? (
