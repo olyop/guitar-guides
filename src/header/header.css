@@ -15,6 +15,7 @@
 		align-items: center; }
 
 	#header .header-left {
+    width: 20%;
 		display: flex; }
 		#header .header-left .hamburger-container {
 			padding: 0 20px;
@@ -56,29 +57,33 @@
 				font-weight: 700;
 				color: #F44336; }
 
-	#header .header-right .header-search {
-		cursor: pointer;
-		transition: .2s all;
-		padding: 0;
-		height: 100%;
-		align-items: center;
-		display: flex; }
-		#header .header-right .header-search:hover {
-			background-color: #424242; }
-		#header .header-right .header-search .header-search-text {
-			-webkit-user-select: none;
-			padding-right: 5px;
-			color: #fff;
-			font-size: 23px;
-			display: none; }
-
-  #header .header-right .header-account {
-    cursor: pointer;
-    transition: .2s all;
+  #header .header-right {
     display: flex;
-    height: 100%; }
-    #header .header-right .header-account:hover {
-      background-color: #424242; }
+    justify-content: flex-end;
+    width: 20%; }	
+    #header .header-right .header-search {
+        cursor: pointer;
+        transition: .2s all;
+        padding: 0;
+        height: 100%;
+        align-items: center;
+        display: flex; }
+        #header .header-right .header-search:hover {
+          background-color: #424242; }
+        #header .header-right .header-search .header-search-text {
+          -webkit-user-select: none;
+          padding-right: 5px;
+          color: #fff;
+          font-size: 23px;
+          display: none; }
+
+      #header .header-right .header-account {
+        cursor: pointer;
+        transition: .2s all;
+        display: flex;
+        height: 100%; }
+        #header .header-right .header-account:hover {
+          background-color: #424242; }
 
 #header .header-icon {
   display: flex;

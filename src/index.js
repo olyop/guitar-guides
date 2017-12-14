@@ -2,10 +2,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 // Import Components
 import Header from './header/header'
 import Menu from './menu/menu'
+import Account from './account/account'
 import Home from './pages/home/home'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -23,6 +25,7 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
+      loggedIn: false,
 			menu: false
 		}
 		
@@ -37,25 +40,34 @@ class Index extends React.Component {
 		const appState = this.state
 		return (
 			<Router>
-        <div id="index">
-				
-          <Header
-            appState={appState}
-            handleHamburger={this.handleHamburger} />
+        <MuiThemeProvider>
+          <div id="index">
 
-          {appState.menu ? (
-            <Menu handleHamburger={this.handleHamburger} />
-          ) : null}
+            <Header
+              appState={appState}
+              handleHamburger={this.handleHamburger} />
 
-          <div id="content">
+            {appState.menu ? (
+              <Menu handleHamburger={this.handleHamburger} />
+            ) : null}
 
-            <Route path="/" exact render={ () => (
-							<Home />		
-						)} />
+            {appState.loggedIn ? null : (
+              <Account
+                appState={appState} />
+            )}
+
+            {appState.loggedIn ? (
+              <div id="content">
+
+                <Route path="/" exact render={ () => (
+                  <Home />		
+                )} />
+
+              </div>
+            ) : null}
 
           </div>
-
-        </div>
+        </MuiThemeProvider>
       </Router>
 		)
 	}
