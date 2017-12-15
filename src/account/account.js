@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
+import FlatButton from 'material-ui/FlatButton'
 
 import './account.css'
 
@@ -13,7 +14,7 @@ class Account extends React.Component {
 		super(props)
 		
 		this.state = {
-			newAccountScreen: false
+			newAccountScreen: true
 		}
 		
 		this.toggleCreateAccountScreen = this.toggleCreateAccountScreen.bind(this)
@@ -68,49 +69,80 @@ class CreateAccount extends React.Component {
 		super(props)
 		
 		this.state = {
-			nameVal: '',
-			experienceVal: null
+			name: '',
+			experience: null,
+      nameErrorText: null,
+      experienceErrorText: null
 		}
 		
 		this.handleName = this.handleName.bind(this)
 		this.handleExperience = this.handleExperience.bind(this)
+    this.handleAdd = this.handleAdd.bind(this)
 	}
 	
 	handleName(event) {
 		this.setState({
-			nameVal: event.target.value
+			name: event.target.value
 		})
 	}
 	
 	handleExperience(event, index, value) {
-		this.setState({ experienceVal: value })
+		this.setState({ experience: value })
 	}
+  
+  handleAdd() {
+    
+    // Validate form data
+    let isNameEmpty = this.state.name === ''
+    let isNameTooLong = this.state.name.length > 10
+    let isExperienceEmpty = this.state.experience === null
+    
+    if (isNameEmpty) {
+      this.setState({ nameErrorText: 'Please enter your name.' })
+    } else if (isNameTooLong) {
+      this.setState({ nameErrorText: 'Your name is to long.' })
+    } else {
+       this.setState({ nameErrorText: null })
+    }
+    if (isExperienceEmpty) {
+      this.setState({ experienceErrorText: 'Please enter your experience.' })
+    } else {
+      this.setState({ experienceErrorText: null })
+    }
+    
+    // Send data
+    if (isNameEmpty === false && isNameTooLong === false && isExperienceEmpty === false) {
+      
+    }
+  }
 	
 	render() {
 		return (
 			<div className="account-create">
 				
-				<div className="account-create-close"
-					onClick={this.props.toggleCreateAccountScreen}>
-					<i className="material-icons">close</i>
-				</div>
-				
 				<TextField
-					value={this.state.nameVal}
+					value={this.state.name}
           onChange={this.handleName}
+          errorText={this.state.nameErrorText}
 					
 					underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 					floatingLabelFocusStyle={{ color: '#333' }}
 					floatingLabelStyle={{ fontWeight: '500' }}
+          
+          floatingLabelFixed
 					floatingLabelText="Name" fullWidth />
 				
 				<SelectField
+					value={this.state.experience}
+					onChange={this.handleExperience}
+          errorText={this.state.experienceErrorText}
+          
 					floatingLabelText="Experience"
 					floatingLabelStyle={{ fontWeight: '500' }}
 					floatingLabelFocusStyle={{ color: '#333' }}
 					underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-					value={this.state.experienceVal}
-					onChange={this.handleExperience}
+          
+          floatingLabelFixed
 					fullWidth>
 					<MenuItem value={1} primaryText="Beginner" />
 					<MenuItem value={2} primaryText="Intermediate" />
@@ -118,7 +150,14 @@ class CreateAccount extends React.Component {
 				</SelectField>
 				
 				<div className="account-create-buttons">
-					<RaisedButton label="Add" fullWidth />
+          <RaisedButton
+            style={{ marginRight: '10px' }}
+            onClick={this.handleAdd}
+            icon={<i className="material-icons">add</i>}
+            label="Add" />
+          <FlatButton
+					onClick={this.props.toggleCreateAccountScreen}
+            label="Cancel" style={{  }} />
 				</div>
 				
 			</div>

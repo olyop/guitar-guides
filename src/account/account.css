@@ -53,7 +53,7 @@
           padding: 10px; }
           #account .account-screen .account-list .account-list-item .account-list-item-content h2 {
             margin: 0;
-            font-size: 22px; }
+            font-size: 20px; }
 					#account .account-screen .account-list .account-list-item .account-list-item-content h3 {
             margin: 0;
 						font-weight: 400;
@@ -65,23 +65,9 @@
 
 #account .account-screen .account-create {
 	margin: 0 auto;
-	position: relative;
 	display: block;
 	padding: 40px 60px 60px 60px; }
-#account .account-screen .account-create .account-create-close {
-	position: absolute;
-	cursor: pointer;
-	margin: 10px;
-	padding: 10px;
-	border-radius: 100%;
-	width: 50px;
-	height: 50px;
-	top: 0;
-	right: 0; }
-#account .account-screen .account-create .account-create-close:hover {
-	background-color: #e0e0e0;
-}
-	#account .account-screen .account-create .account-create-close i {
-		font-size: 30px; }
-		#account .account-screen .account-create .account-create-buttons {
-			margin-top: 30px; }
+
+    #account .account-screen .account-create .account-create-buttons {
+      display: flex;
+      margin-top: 30px; }
