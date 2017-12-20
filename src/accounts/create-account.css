@@ -1,0 +1,7 @@
+#account .account-screen .account-create {
+	margin: 0 auto;
+	display: block;
+	padding: 40px 60px 60px 60px; }
+	#account .account-screen .account-create .account-create-buttons {
+		display: flex;
+		margin-top: 30px; }

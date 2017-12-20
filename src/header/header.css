@@ -62,14 +62,14 @@
     justify-content: flex-end;
     width: 20%; }	
     #header .header-right .header-search {
-        cursor: pointer;
-        transition: .2s all;
-        padding: 0;
-        height: 100%;
-        align-items: center;
-        display: flex; }
-        #header .header-right .header-search:hover {
-          background-color: #424242; }
+			cursor: pointer;
+			transition: .2s all;
+			padding: 0;
+			height: 100%;
+			align-items: center;
+			display: flex; }
+			#header .header-right .header-search:hover {
+				background-color: #424242; }
         #header .header-right .header-search .header-search-text {
           -webkit-user-select: none;
           padding-right: 5px;
@@ -79,20 +79,28 @@
 
       #header .header-right .header-account {
         cursor: pointer;
-        transition: .2s all;
         display: flex;
         height: 100%; }
-        #header .header-right .header-account:hover {
-          background-color: #424242; }
-
-#header .header-icon {
-  display: flex;
-  align-items: center;
-  padding: 0 10px 0 10px; }
-  #header .header-icon i {
-    font-size: 32px;
-    -webkit-user-select: none;
-    color: #fff;  }
+				#header .header-right .header-account .header-account-active {
+					background-color: #F44336 !important; }
+				#header .header-right .header-account a {
+					display: flex;
+					height: 100%;
+					transition: .2s all; }
+					#header .header-right .header-account a:hover {
+						text-decoration: none;
+						background-color: #424242; }
+					#header .header-right .header-account a:focus {
+						outline: none;
+						text-decoration: none; }
+					#header .header-icon {
+						display: flex;
+						align-items: center;
+						padding: 0 10px 0 10px; }
+						#header .header-icon i {
+							font-size: 32px;
+							-webkit-user-select: none;
+							color: #fff;  }
 
 @media (min-width: 800px) {
 	#header .header-left .hamburger-container {
@@ -109,7 +117,6 @@
     #header .header-right .header-search .header-icon {
       padding: 0 10px 0 0; }
 		#header .header-right .header-search .header-search-text {
-			cursor: text;
 			display: block; }
   
   #header .header-icon {

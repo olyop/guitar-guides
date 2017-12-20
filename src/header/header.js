@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { NavLink } from 'react-router-dom'
+
 import './header.css'
 
 const Header = props => (
 	<div id="header">
 		<div className="header-inner"
-      style={{ justifyContent: props.appState.loggedIn ? 'space-between' : 'center' }}>
+      style={{ justifyContent: props.isAccountLoggedIn ? 'space-between' : 'center' }}>
 			
-			{props.appState.loggedIn ? (
+			{props.isAccountLoggedIn ? (
         <div className="header-section header-left">
           <div className="hamburger-container">
 
@@ -21,7 +23,7 @@ const Header = props => (
             </button>
 
           </div>
-          <div className="header-text">Home</div>
+          <div className="header-text">Menu</div>
         </div>
       ) : null}
 
@@ -31,20 +33,23 @@ const Header = props => (
 				</a>
 			</div>
 
-      {props.appState.loggedIn ? (
+      {props.isAccountLoggedIn ? (
         <div className="header-section header-right">
 
           <div className="header-search">
             <div className="header-icon">
               <i className="material-icons">search</i>
             </div>
-            <div className="header-search-text">Search...</div>
+            <div className="header-search-text">{props.globalText.header.searchInputText}</div>
           </div>
 
           <div className="header-account">
-            <div className="header-icon">
-              <i className="material-icons">account_circle</i>
-            </div>
+						<NavLink to="/account"
+							activeClassName="header-account-active">
+							<div className="header-icon">
+              	<i className="material-icons">account_circle</i>
+            	</div>
+						</NavLink>
           </div>
 
         </div>
