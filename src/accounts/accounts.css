@@ -1,10 +1,10 @@
 #account {
-	padding: 80px;
+	padding: 20px;
   height: 100%;
   width: 100%; }
   #account .account-screen {
     margin: 0 auto;
-    width: 40vw;
+    width: 100%;
 		max-height: calc(92vh  - 160px);
     box-shadow:
       0 2px 2px 0 rgba(0,0,0,0.14),
@@ -12,25 +12,25 @@
       0 1px 5px 0 rgba(0,0,0,0.2); }
 
     #account .account-screen h1 {
+      font-size: 25px;
+			padding: 20px 20px 0 20px;
 			margin: 0 0 5px 0;
-			padding: 40px 40px 0 40px;
-      font-size: 28px;
       font-weight: 400; }
 
     #account .account-screen p {
-			padding: 0 40px 40px 40px;
+      font-size: 14px;
+			padding: 0 20px 20px 20px;
 			margin: 0;
-      border-bottom: 1px solid #BDBDBD;
-      font-size: 15px; }
+      border-bottom: 1px solid #BDBDBD; }
 
     #account .account-screen .account-list {
+      padding: 10px 0;
       display: flex;
 			height: 100%;
-      padding: 20px 0;
       flex-direction: column; }
       #account .account-screen .account-list .account-list-item {
+        padding: 5px 20px;
         transition: .2s all;
-        padding: 5px 30px;
 				width: 100%;
         cursor: pointer;
         display: flex;
@@ -63,3 +63,49 @@
             margin: 0;
 						font-weight: 400;
             font-size: 14px; }
+
+@media (min-width: 500px) {
+	#account {
+		padding: 30px; }
+	#account .account-screen h1 {
+		padding: 30px 30px 0 30px; }
+	#account .account-screen p {
+		padding: 0 30px 30px 30px; }
+}
+
+@media (min-width: 600px) {
+	#account {
+		padding: 40px; }
+	#account .account-screen h1 {
+		padding: 40px 40px 0 40px;
+		font-size: 28px; }
+	#account .account-screen p {
+		padding: 0 40px 40px 40px;
+		font-size: 15px; }
+	#account .account-screen .account-list {
+		padding: 20px 0; }
+		#account .account-screen .account-list .account-list-item {
+			padding: 5px 30px; }
+}
+
+@media (min-width: 700px) {
+	#account {
+		padding: 80px; }
+	#account .account-screen {
+		width: 60vw; }
+}
+
+@media (min-width: 800px) {
+	#account .account-screen {
+		width: 60vw; }
+}
+
+@media (min-width: 1000px) {
+	#account .account-screen {
+		width: 50vw; }
+}
+
+@media (min-width: 1200px) {
+	#account .account-screen {
+		width: 40vw; }
+}

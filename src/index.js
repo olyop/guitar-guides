@@ -30,8 +30,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: { id: 1, name: "Oliver Plummer", experience: 2 },
-//			account: null,
+//			account: { id: 1, name: "Oliver Plummer", experience: 2 },
+			account: null,
 			menu: false
 		}
 		
