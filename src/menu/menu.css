@@ -1,7 +1,7 @@
 #menu {
 	position: fixed;
 	z-index: 3;
-	background-color: #424242;
+	background-color: #F5F5F5;
 	width: 100vw;
 	height: 92vh; }
 	#menu .menu-inner {
@@ -14,7 +14,6 @@
 			#menu .menu-inner h1 span {
 				background: #424242;
   			padding: 0 15px;
-				color: #fff;
 				font-size: 30px;
   			position: relative;
   			z-index: 2; }
@@ -24,12 +23,17 @@
   flex-wrap: wrap;
   align-items: stretch; }
 	#menu .menu-inner .menu-split .menu-split-item {
-		width: calc(100% / 2 - 10px);
-		min-width: calc(100% / 2 - 10px);
-		padding: 20px 40px; }
+		width: calc((100% / 2) - 40px);
+		padding: 20px;
+		min-width: calc((100% / 2) - 40px);
+		background-color: #fff;
+		border-radius: 5px;
+		border: 1px solid #BDBDBD;
+		margin: 20px; }
 		#menu .menu-inner .menu-split .menu-split-item .menu-split-heading {
 			display: flex;
 			justify-content: center;
+			margin-bottom: 20px;
 			align-items: center; }
 			#menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2 {
 				position: relative;
@@ -37,15 +41,14 @@
 				width: 100%;
 				margin: 0; }
 #menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2 span {
-	color: #fff;
 	position: relative;
 	padding: 0 10px;
 	margin: 0;
+	background-color: #fff;
 	font-size: 32px;
-	z-index: 2;
-	background-color: #424242; }
+	z-index: 2; }
 	#menu .menu-inner .menu-split .menu-split-item .menu-split-heading h2:before {
-		background: #ddd;
+		background: #9E9E9E;
 		content: "";
 		display: block;
 		height: 1px;
@@ -55,7 +58,7 @@
 		width: 100%; }
 
 #menu .menu-inner .menu-split-item .menu-links {
-	padding: 10px; }
+	padding: 20px; }
 	#menu .menu-inner .menu-split-item .menu-links ul {
 		margin: 0;
 		padding-left: 20px;
@@ -63,12 +66,11 @@
 		flex-direction: column;
 		align-content: center; }
 		#menu .menu-inner .menu-split-item .menu-links ul li {
-			color: #fff;
 			padding-left: 10px;
 			list-style-type: disc; }
 			#menu .menu-inner .menu-split-item .menu-links ul li a {
 				font-size: 18px;
-				color: #fff;
+				color: #333;
 				margin-bottom: 10px; }
 
 @media (min-width: 800px) {

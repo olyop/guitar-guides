@@ -30,8 +30,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-//			account: { id: 1, name: "Oliver Plummer", experience: 2 },
-			account: null,
+			account: { id: 1, name: 'Oliver', surname: 'Plummer', experience: 2, dateJoined: '27/12/2017' },
+//			account: null,	
 			menu: false
 		}
 		
@@ -66,22 +66,19 @@ class Index extends React.Component {
         <MuiThemeProvider>
           <div id="index">
 
-            <Header
-              appState={appState}
+            <Header appState={appState}
 							globalText={globalText}
 							isAccountLoggedIn={isAccountLoggedIn}
               handleHamburger={this.handleHamburger} />
 
             {appState.menu ? (
-              <Menu
-              	appState={appState}
+              <Menu appState={appState}
 								globalText={globalText}
 								handleHamburger={this.handleHamburger} />
             ) : null}
 
             {isAccountLoggedIn ? null : (
-              <Accounts
-                appState={appState}
+              <Accounts appState={appState}
 								globalText={globalText}
 								logIn={this.logIn} />
             )}
@@ -90,14 +87,12 @@ class Index extends React.Component {
               <div id="content">
 
                 <Route path="/" exact render={ () => (
-                  <Home
-                		appState={appState}
+                  <Home appState={appState}
 										globalText={globalText} />		
                 )} />
 								
 								<Route path="/account" exact render={ () => (
-                  <AccountPage
-                		appState={appState}
+                  <AccountPage appState={appState}
 										globalText={globalText} />		
                 )} />
 

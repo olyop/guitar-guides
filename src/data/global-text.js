@@ -10,8 +10,9 @@ const globalText = {
 			'Expert'
 		],
 		createAccountPage: {
-			nameLabelText: 'Name:',
-			expLevelLabelText: 'Experience:',
+			nameLabelText: 'Name',
+			surnameLabelText: 'Surname',
+			expLevelLabelText: 'Experience',
 			addNewAccountButtonText: 'Create new Account',
 			cancelNewAccountButtonText: 'Cancel'
 		}

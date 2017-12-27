@@ -1,5 +1,64 @@
 #account-page {
-	display: flex;
 	width: 100%;
-	height: 100%;
+	padding: 40px;
+	height: 100%; }
+
+	#account-page .account-page-header {
+		border: 1px solid #BDBDBD;
+		width: 100%;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		background-color: #fff; }
+
+#account-page .account-page-header .account-page-account {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between; }
+	#account-page .account-page-header .account-page-account .account-page-info {
+		display: flex; }
+		#account-page .account-page-header .account-page-account .account-page-info i {
+			display: block;
+			margin-right: 20px;
+			font-size: 76px;
+			display: flex;
+			flex-direction: column; }
+			#account-page .account-page-header .account-page-account .account-page-info .account-page-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center; }
+				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
+					margin: 0;
+					font-size: 36px; }
+				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h4 {
+					margin: 0;
+					font-weight: 400;
+					font-size: 14px; }
+	#account-page .account-page-header .account-page-account .account-page-percent {
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center; }
+		#account-page .account-page-header .account-page-account .account-page-percent p {
+			margin: 0;
+			line-height: 1;
+			font-size: 40px;
+			font-weight: 700; }
+		#account-page .account-page-header .account-page-account .account-page-percent h3 {
+			margin: 0;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: 700; }
+
+#account-page .account-page-header .account-page-progress {
+	padding: 0 20px 20px 20px;
 }
+
+		
+
+	#account-page .account-page-body {
+		padding: 20px;
+		border-radius: 5px;
+		border: 1px solid #BDBDBD;
+		background-color: #fff;
+	}

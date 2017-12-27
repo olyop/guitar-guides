@@ -1,7 +1,5 @@
 import React from 'react'
 
-import LinearProgress from 'material-ui/LinearProgress'
-
 // Import Images
 import guitarStock from './guitar-stock-photo.jpg'
 import bassStock from './bass-stock-photo.jpg'
@@ -11,16 +9,6 @@ import './home.css'
 
 const Home = props => (
 	<div id="home">
-
-		<div className="home-top">
-			
-			<LinearProgress
-				mode="determinate" value={50}
-				color="#F44336"
-				style={{ height: 'calc(4vh)', borderRadius: '10px', marginBottom: '20px' }} />
-			
-		</div>
-		
 		<div className="home-cards">
 			
 			<div className="home-section home-left">
@@ -82,8 +70,8 @@ const Home = props => (
 
 				</div>
 			</div>
+			
 		</div>
-
 	</div>
 )
 

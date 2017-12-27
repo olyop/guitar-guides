@@ -1,6 +1,8 @@
 import React from 'react'
 
 import axios from 'axios'
+import moment from 'moment'
+
 import CreateAccount from './create-account'
 
 import './accounts.css'
@@ -36,10 +38,12 @@ class Accounts extends React.Component {
       })
   }
   
-  addAccount(name, experience) {
+  addAccount(name, surname, experience) {
     axios.post('http://localhost:3001/users', {
       name: name,
-      experience: experience
+			surname: surname,
+      experience: experience,
+			dateJoined: moment().format('DD/MM/YYYY')
     })
     .then(response => {
       this.setState({ 
@@ -69,35 +73,18 @@ class Accounts extends React.Component {
         <p>No accounts</p>
       )
     } else if (this.state.accounts.length > 0) {
-      accountList = this.state.accounts.map(account => {
-        
-        let exp
-        switch (account.experience) {
-          case 0:
-            exp = this.props.globalText.accounts.expLevels[0]
-            break
-          case 1:
-            exp = this.props.globalText.accounts.expLevels[1]
-            break
-          case 2:
-            exp = this.props.globalText.accounts.expLevels[2]
-            break
-          default: 
-            exp = ""
-        }
-        
-        return (
+      accountList = this.state.accounts.map(account => (
           <div key={account.id}
 						onClick={() => this.props.logIn(account)}
             className="account-list-item">
             <i className="material-icons">account_circle</i>
             <div className="account-list-item-content">
-              <h2>{account.name}</h2>
-              <h4>{exp}</h4>
+              <h2>{account.name} {account.surname	}</h2>
+              <h4>{this.props.globalText.accounts.expLevels[account.experience]}</h4>
             </div>
           </div>
         ) 
-      })
+      )
     }
      
 		return (

@@ -14,19 +14,29 @@ class CreateAccount extends React.Component {
 		
 		this.state = {
 			name: '',
+			surname: '',
 			experience: null,
       nameErrorText: null,
+      surnameErrorText: null,
       experienceErrorText: null
 		}
 		
 		this.handleName = this.handleName.bind(this)
+		this.handleSurname = this.handleSurname.bind(this)
 		this.handleExperience = this.handleExperience.bind(this)
+		
     this.handleAdd = this.handleAdd.bind(this)
 	}
 	
 	handleName(event) {
 		this.setState({
 			name: event.target.value
+		})
+	}
+	
+	handleSurname(event) {
+		this.setState({
+			surname: event.target.value
 		})
 	}
 	
@@ -39,15 +49,26 @@ class CreateAccount extends React.Component {
     // Validate form data
     let isNameEmpty = this.state.name === ''
     let isNameTooLong = this.state.name.length > 10
+		let isSurnameEmpty = this.state.surname === ''
+    let isSurnameTooLong = this.state.surname.length > 10
     let isExperienceEmpty = this.state.experience === null
     
-		// Check name input
+		// Check first name input
     if (isNameEmpty) {
       this.setState({ nameErrorText: 'Please enter your name.' })
     } else if (isNameTooLong) {
       this.setState({ nameErrorText: 'Your name is to long.' })
     } else {
        this.setState({ nameErrorText: null })
+    }
+		
+		// Check last name input
+		if (isSurnameEmpty) {
+      this.setState({ surnameErrorText: 'Please enter your surname.' })
+    } else if (isSurnameTooLong) {
+      this.setState({ surnameErrorText: 'Your surname is to long.' })
+    } else {
+       this.setState({ surnameErrorText: null })
     }
 		
 		// Check experience input
@@ -58,8 +79,12 @@ class CreateAccount extends React.Component {
     }
     
     // Send data
-    if (isNameEmpty === false && isNameTooLong === false && isExperienceEmpty === false) {
-      this.props.addAccount(this.state.name, this.state.experience)
+    if (isNameEmpty === false &&
+			isNameTooLong === false &&
+			isSurnameEmpty === false &&
+			isSurnameTooLong === false &&
+			isExperienceEmpty === false) {
+      this.props.addAccount(this.state.name, this.state.surname, this.state.experience)
       this.props.toggleCreateAccountScreen()
     }
   }
@@ -68,19 +93,39 @@ class CreateAccount extends React.Component {
 		return (
 			<div className="account-create">
 				
-				<TextField
-					value={this.state.name}
-          onChange={this.handleName}
-          errorText={this.state.nameErrorText}
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 					
-					underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-					floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
-					floatingLabelFocusStyle={{ fontWeight: '700' }}
-					errorStyle={{ color: '#F44336' }}
-          
-          floatingLabelFixed fullWidth
-					floatingLabelText={this.props.globalText.accounts.createAccountPage.nameLabelText}>
-				</TextField>
+					<TextField
+						value={this.state.name}
+						onChange={this.handleName}
+						errorText={this.state.nameErrorText}
+
+						style={{ width: '48%' }}
+						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
+						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
+						floatingLabelFocusStyle={{ fontWeight: '700' }}
+						errorStyle={{ color: '#F44336' }}
+
+						floatingLabelFixed
+						floatingLabelText={this.props.globalText.accounts.createAccountPage.nameLabelText}>
+					</TextField>
+
+					<TextField
+						value={this.state.surname}
+						onChange={this.handleSurname}
+						errorText={this.state.surnameErrorText}
+
+						style={{ width: '48%' }}
+						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
+						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
+						floatingLabelFocusStyle={{ fontWeight: '700' }}
+						errorStyle={{ color: '#F44336' }}
+
+						floatingLabelFixed
+						floatingLabelText={this.props.globalText.accounts.createAccountPage.surnameLabelText}>
+					</TextField>
+					
+				</div>
 				
 				<SelectField
 					value={this.state.experience}
@@ -107,11 +152,11 @@ class CreateAccount extends React.Component {
           <RaisedButton
             onClick={this.handleAdd}
 						
-            style={{ marginRight: '10px' }}
             backgroundColor={'#212121'}
             labelColor={'#fff'}
+						style={{ marginBottom: '10px' }}
 						
-            icon={(
+            fullWidth icon={(
 							<i className="material-icons"
 								style={{ color: '#fff', fontSize: '25px' }}>done</i>
 						)}
@@ -124,7 +169,7 @@ class CreateAccount extends React.Component {
             backgroundColor={'#F44336'}
             labelColor={'#fff'}
 						
-            icon={(
+            fullWidth icon={(
 							<i className="material-icons"
 								style={{ color: '#fff', fontSize: '25px' }}>close</i>
 						)}

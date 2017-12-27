@@ -1,7 +1,20 @@
 #account .account-screen .account-create {
 	margin: 0 auto;
 	display: block;
-	padding: 40px 60px 60px 60px; }
+	padding: 20px 30px 30px 30px; }
 	#account .account-screen .account-create .account-create-buttons {
-		display: flex;
-		margin-top: 30px; }
+		margin-top: 25px; }
+
+@media (min-width: 500px) {
+	#account .account-screen .account-create {
+		padding: 30px 40px 40px 40px;	 }
+		#account .account-screen .account-create .account-create-buttons {
+			margin-top: 30px; }
+}
+
+@media (min-width: 600px) {
+	#account .account-screen .account-create {
+		padding: 40px 60px 60px 60px;	 }
+		#account .account-screen .account-create .account-create-buttons {
+			margin-top: 40px; }
+}

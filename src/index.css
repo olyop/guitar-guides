@@ -12,6 +12,7 @@ body {
 	margin: 0; }
 
 #content, #account {
+	background-color: #F5F5F5;
 	overflow: auto;
 	overflow-x: hidden;
 	height: 92vh; }

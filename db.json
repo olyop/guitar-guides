@@ -1,9 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Oliver Plummer",
-      "experience": 2
+      "name": "Oliver",
+      "surname": "Plummer",
+      "experience": 2,
+      "dateJoined": "27/12/2017",
+      "id": 1
     }
   ]
 }
