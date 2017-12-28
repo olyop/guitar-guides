@@ -5,6 +5,8 @@ import moment from 'moment'
 
 import CreateAccount from './create-account'
 
+import accountTemplate from '../data/account-template'
+
 import './accounts.css'
 
 class Accounts extends React.Component {
@@ -39,17 +41,18 @@ class Accounts extends React.Component {
   }
   
   addAccount(name, surname, experience) {
-    axios.post('http://localhost:3001/users', {
-      name: name,
-			surname: surname,
-      experience: experience,
-			dateJoined: moment().format('DD/MM/YYYY')
-    })
-    .then(response => {
-      this.setState({ 
-        accounts: this.state.accounts.concat([response.data])
-      })
-    })
+		
+		let template = accountTemplate
+		
+		template.name = name
+		template.surname = surname
+		template.experience = experience
+		template.dateJoined = moment().format('DD/MM/YYYY')
+		
+		console.log(template)
+		
+    axios.post('http://localhost:3001/users', template)
+    .then(response => this.setState({ accounts: this.state.accounts.concat([response.data]) }))
     .catch(error => {
       console.log(error)
 			this.setState({ accounts: 'error' })

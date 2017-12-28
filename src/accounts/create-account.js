@@ -84,7 +84,7 @@ class CreateAccount extends React.Component {
 			isSurnameEmpty === false &&
 			isSurnameTooLong === false &&
 			isExperienceEmpty === false) {
-      this.props.addAccount(this.state.name, this.state.surname, this.state.experience)
+      this.props.addAccount(this.state.name.trim(), this.state.surname.trim(), this.state.experience)
       this.props.toggleCreateAccountScreen()
     }
   }

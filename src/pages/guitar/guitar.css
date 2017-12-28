@@ -59,8 +59,9 @@
 		#guitar .guitar-body .container .row {
 			margin: 0; }
 		#guitar .guitar-body .guitar-heading {
-			padding: 40px 40px 10px 40px;
+			padding: 40px 40px 0 40px;
 			align-items: center;
+			margin: 5px;
 			display: flex; }
 			#guitar .guitar-body .guitar-heading h1 {
 				margin: 0;
@@ -77,9 +78,10 @@
 				border: 1px solid #BDBDBD;
 				margin: 5px;
 				padding: 20px;
-				width: calc(100% / 3 - 20px); }
+				width: calc(100% / 4 - 20px); }
 				#guitar .guitar-body .guitar-grid .guitar-grid-item h2 {
 					font-size: 22px;
+					text-decoration: underline;
 					padding-bottom: 5px;
 					margin: 0; }
 				#guitar .guitar-body .guitar-grid .guitar-grid-item h3 {

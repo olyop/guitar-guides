@@ -4,15 +4,30 @@
       "name": "Oliver",
       "surname": "Plummer",
       "experience": 2,
-      "dateJoined": "27/12/2017",
+      "dateJoined": "29/12/2017",
+      "progress": {
+        "guitar": {
+          "modes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "minor": 0,
+          "major": 0,
+          "pentatonic": 0,
+          "blues": 0
+        },
+        "bass": {
+          "major": 0,
+          "minor": 0
+        },
+        "theory": {}
+      },
       "id": 1
-    },
-    {
-      "name": "Gypsy",
-      "surname": "Sea",
-      "experience": 0,
-      "dateJoined": "28/12/2017",
-      "id": 2
     }
   ]
 }

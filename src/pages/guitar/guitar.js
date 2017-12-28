@@ -32,7 +32,7 @@ const Guitar = props => (
 					<div className="guitar-grid">
 						<div className="guitar-grid-item">
 							<h2>Major Scale Modes</h2>
-							<h3>Learn the 7 major scale modes</h3>
+							<h3>Learn the 7 major scale modes and all their different positions on the neck.</h3>
 						</div>
 						<div className="guitar-grid-item">
 						
