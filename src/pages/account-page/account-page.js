@@ -41,7 +41,11 @@ const AccountPage = props => (
 			
 		</div>
 		
-		<div className="account-page-body"></div>
+		<div className="container account-page-body">
+			
+			
+		
+		</div>
 		
 	</div>
 )

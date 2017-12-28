@@ -10,6 +10,9 @@ import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
 import AccountPage from './pages/account-page/account-page'
 import Home from './pages/home/home'
+import Guitar from './pages/guitar/guitar'
+import Bass from './pages/bass/bass'
+import Theory from './pages/theory/theory'
 
 // Import Components
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -93,6 +96,21 @@ class Index extends React.Component {
 								
 								<Route path="/account" exact render={ () => (
                   <AccountPage appState={appState}
+										globalText={globalText} />		
+                )} />
+								
+								<Route path="/guitar" exact render={ () => (
+                  <Guitar appState={appState}
+										globalText={globalText} />		
+                )} />
+								
+								<Route path="/bass" exact render={ () => (
+                  <Bass appState={appState}
+										globalText={globalText} />		
+                )} />
+								
+								<Route path="/theory" exact render={ () => (
+                  <Theory appState={appState}
 										globalText={globalText} />		
                 )} />
 

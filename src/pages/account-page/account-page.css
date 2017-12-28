@@ -1,13 +1,11 @@
 #account-page {
 	width: 100%;
-	padding: 40px;
 	height: 100%; }
 
 	#account-page .account-page-header {
-		border: 1px solid #BDBDBD;
 		width: 100%;
-		border-radius: 5px;
-		margin-bottom: 20px;
+		border-bottom: 1px solid #BDBDBD;
+		margin-bottom: 40px;
 		background-color: #fff; }
 
 #account-page .account-page-header .account-page-account {
@@ -51,8 +49,7 @@
 			font-weight: 700; }
 
 #account-page .account-page-header .account-page-progress {
-	padding: 0 20px 20px 20px;
-}
+	padding: 0 20px 20px 20px; }
 
 		
 
