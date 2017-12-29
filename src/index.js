@@ -35,7 +35,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: adminAccount,	
+			account: adminAccount,
+//      account: null,
 			menu: false
 		}
 		

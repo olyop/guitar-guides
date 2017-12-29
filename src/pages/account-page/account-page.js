@@ -36,7 +36,7 @@ const AccountPage = props => (
 				<LinearProgress mode="determinate"
 					color="#F44336"
 					style={{ borderRadius: '5px', height: '20px', backgroundColor: '#E0E0E0' }}
-					value={'50'} />
+					value={50} />
 			</div>
 			
 		</div>

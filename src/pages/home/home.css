@@ -21,6 +21,50 @@
 				#home .home-cards .home-section .home-section-inner:hover {
 					justify-content: flex-start; }
 
+        #home .home-cards .home-section .home-section-inner .home-section-open {
+          display: none;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          margin: 10px;
+          border-radius: 100%;
+          padding: 10px;
+          transition: .2s all;
+          z-index: 2; }
+          #home .home-cards .home-section .home-section-inner .home-section-open i {
+            font-size: 30px;
+            color: #E0E0E0; }
+          #home .home-cards .home-section .home-section-inner .home-section-open:hover {
+            text-decoration: none;
+            background-color: #424242; }
+            #home .home-cards .home-section .home-section-inner .home-section-open:hover i {
+              color: #fff; }
+          #home .home-cards .home-section .home-section-inner .home-section-open:focus {
+            text-decoration: none; }
+          #home .home-cards .home-section .home-section-inner:hover .home-section-open {
+            display: flex; }
+
+          #home .home-cards .home-section .home-section-inner .home-section-check {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 100%;
+            transition: .2s all;
+            z-index: 2;
+            font-size: 30px;
+            color: #E0E0E0; }
+            #home .home-cards .home-section .home-section-inner .home-section-check:hover {
+              color: #fff;
+              background-color: #424242;
+              text-decoration: none; }
+            #home .home-cards .home-section .home-section-inner:hover .home-section-check {
+              display: flex; }
+
 				#home .home-cards .home-section .home-section-inner .home-section-image {
 					transition: .2s opacity;
 					position: absolute;
@@ -38,15 +82,18 @@
 				#home .home-cards .home-section .home-section-inner h1 {
 					font-size: 20px;
 					color: #fff;
+          text-shadow: 0px 2px px rgba(0,0,0,1);
 					font-weight: 700;
 					margin: 0 0 20px 0;
 					text-transform: uppercase;
 					z-index: 2; }
 					#home .home-cards .home-section .home-section-inner h1 a {
 						color: #fff; }
-						#home .home-cards .home-section .home-section-inner h1 a:hover {
-							text-decoration: underline;
-							color: #fff; }
+            #home .home-cards .home-section .home-section-inner:hover h1 a {
+              text-decoration: none;
+              color: #F44336; }
+            #home .home-cards .home-section .home-section-inner h1 a:hover {
+              text-decoration: underline; }
 				#home .home-cards .home-section .home-section-inner h2 {
 					font-size: 16px;
 					color: #fff;

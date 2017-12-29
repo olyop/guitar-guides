@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import './header.css'
 
@@ -28,9 +28,9 @@ const Header = props => (
       ) : null}
 
 			<div className="header-section header-middle">
-				<a href="/">
-					<h1><b>G</b>uitar <b>G</b>uides</h1>
-				</a>
+				<Link to="/">
+          <h1><b>G</b>uitar <b>G</b>uides</h1>
+        </Link>
 			</div>
 
       {props.isAccountLoggedIn ? (

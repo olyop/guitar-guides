@@ -15,10 +15,15 @@ const Home = props => (
 			
 			<div className="home-section home-left">
 				<div className="home-section-inner">
+          
+          <Link to="/guitar" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          
+          <i className="material-icons home-section-check">check_circle</i>
+          
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ guitarStock + ')' }} />
 					<h2>Learn</h2>
-					<h1><Link to="/guitar">Guitar</Link></h1>
+          <h1><Link to="/guitar" title="Learn Guitar">Guitar</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
@@ -34,11 +39,15 @@ const Home = props => (
 
 			<div className="home-section home-middle">
 				<div className="home-section-inner">
+          
+          <Link to="/bass" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          
+          <i className="material-icons home-section-check">check_circle</i>
 
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ bassStock + ')' }} />
 					<h2>Learn</h2>
-					<h1><Link to="/bass">Bass</Link></h1>
+					<h1><Link to="/bass" title="Learn Bass">Bass</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
@@ -54,11 +63,15 @@ const Home = props => (
 
 			<div className="home-section home-right">
 				<div className="home-section-inner">
+          
+          <Link to="/theory" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          
+          <i className="material-icons home-section-check">check_circle</i>
 
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ musicStock + ')' }} />
 					<h2>Learn</h2>
-					<h1><Link to="/theory">Theory</Link></h1>
+					<h1><Link to="/theory" title="Learn Theory">Theory</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
