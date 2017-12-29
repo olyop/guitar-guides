@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 // Import Images
 import guitarStock from './guitar-stock-photo.jpg'
 import bassStock from './bass-stock-photo.jpg'
@@ -13,11 +15,10 @@ const Home = props => (
 			
 			<div className="home-section home-left">
 				<div className="home-section-inner">
-
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ guitarStock + ')' }} />
 					<h2>Learn</h2>
-					<h1>Guitar</h1>
+					<h1><Link to="/guitar">Guitar</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
@@ -37,7 +38,7 @@ const Home = props => (
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ bassStock + ')' }} />
 					<h2>Learn</h2>
-					<h1>Bass</h1>
+					<h1><Link to="/bass">Bass</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
@@ -57,7 +58,7 @@ const Home = props => (
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ musicStock + ')' }} />
 					<h2>Learn</h2>
-					<h1>Theory</h1>
+					<h1><Link to="/theory">Theory</Link></h1>
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>

@@ -2,7 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 // Import Pages
 import Header from './header/header'
@@ -15,10 +14,12 @@ import Bass from './pages/bass/bass'
 import Theory from './pages/theory/theory'
 
 // Import Components
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Data
 import IMPORT_globalText from './data/global-text'
+import adminAccount from './data/admin-account'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -27,14 +28,14 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import './dist/hamburgers.min.css'
 import './index.css'
 
+// Root Index Component
 class Index extends React.Component {
 	
 	constructor(props) {
 		super(props)
 		
 		this.state = {
-//			account: { id: 1, name: 'Oliver', surname: 'Plummer', experience: 2, dateJoined: '27/12/2017' },
-			account: null,	
+			account: adminAccount,	
 			menu: false
 		}
 		
