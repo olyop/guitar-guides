@@ -101,7 +101,7 @@ class Index extends React.Component {
 										globalText={globalText} />		
                 )} />
 								
-								<Route path="/guitar" exact render={ () => (
+								<Route path="/guitar" render={ () => (
                   <Guitar appState={appState}
 										globalText={globalText} />		
                 )} />

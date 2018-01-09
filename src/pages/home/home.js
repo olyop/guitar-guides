@@ -3,9 +3,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Import Images
-import guitarStock from './guitar-stock-photo.jpg'
-import bassStock from './bass-stock-photo.jpg'
-import musicStock from './music-stock-photo.jpg'
+import guitarStock from '../../media/guitar-stock-photo.jpg'
+import bassStock from '../../media/bass-stock-photo.jpg'
+import musicStock from '../../media/music-stock-photo.jpg'
 
 import './home.css'
 

@@ -1,6 +1,8 @@
 import React from 'react'
 
-import GuitarCover from '../home/guitar-stock-photo.jpg'
+import GuitarCover from '../../media/guitar-stock-photo.jpg'
+
+import { NavLink } from 'react-router-dom'
 
 import './guitar.css'
 
@@ -10,40 +12,70 @@ const Guitar = props => (
 		<div className="guitar-header"
 			style={{ backgroundImage: `url(${ GuitarCover })` }}>
 		
-			<div className="guitar-header-left">
-				<h3>Learn</h3>
-				<h1>Guitar</h1>
-			</div>
-			<div className="guitar-header-right">
-				<p>86%</p>
-				<h3>Completed</h3>
+			<div className="container">
+				<div className="container-inner">
+					<div className="guitar-header-left">
+						<h1>Guitar</h1>
+					</div>
+					<div className="guitar-header-right">
+						<p>86%</p>
+						<h3>Completed</h3>
+				</div>
+				</div>
 			</div>
 			
 		</div>
 		
 		<div className="guitar-body">
-			<div className="container">
-				<div className="row">
-				
-					<div className="guitar-heading">
-						<i className="material-icons">stop</i>
-						<h1>Scales</h1>
-					</div>
-					<div className="guitar-grid">
-						<div className="guitar-grid-item">
-							<h2>Major Scale Modes</h2>
-							<h3>Learn the 7 major scale modes and all their different positions on the neck.</h3>
-						</div>
-						<div className="guitar-grid-item">
+			
+			<div className="guitar-nav">
+				<div className="container">
+					<div className="guitar-nav-inner">
 						
-						</div>
-						<div className="guitar-grid-item">
+						<NavLink to="/guitar" exact
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<i className="material-icons">home</i>
+						</NavLink>
 						
-						</div>
+						<NavLink to="/guitar/scales"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>Scales</p>
+						</NavLink>
+						
+						<NavLink to="/guitar/chords"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>Chords</p>
+						</NavLink>
+						
+						<NavLink to="/guitar/theory"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>Theory</p>
+						</NavLink>
+						
+						<NavLink to="/guitar/exercises"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>Exercises</p>
+						</NavLink>
+						
+						<NavLink to="/guitar/about"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>About</p>
+						</NavLink>
+						
 					</div>
-				
 				</div>
 			</div>
+			
+			<div className="guitar-content">
+				<div className="container">Content</div>
+			</div>
+			
 		</div>
 	
 	</div>
