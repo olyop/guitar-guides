@@ -16,9 +16,13 @@ const Home = props => (
 			<div className="home-section home-left">
 				<div className="home-section-inner">
           
-          <Link to="/guitar" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          <Link to="/guitar" className="home-section-icon home-section-open">
+            <i className="material-icons">open_in_new</i>
+          </Link>
           
-          <i className="material-icons home-section-check">check_circle</i>
+          <div className="home-section-icon home-section-check">
+            <i className="material-icons">check_circle</i>
+          </div>
           
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ guitarStock + ')' }} />
@@ -40,9 +44,13 @@ const Home = props => (
 			<div className="home-section home-middle">
 				<div className="home-section-inner">
           
-          <Link to="/bass" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          <Link to="/bass" className="home-section-icon home-section-open">
+            <i className="material-icons">open_in_new</i>
+          </Link>
           
-          <i className="material-icons home-section-check">check_circle</i>
+          <div className="home-section-icon home-section-check">
+            <i className="material-icons">check_circle</i>
+          </div>
 
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ bassStock + ')' }} />
@@ -64,9 +72,13 @@ const Home = props => (
 			<div className="home-section home-right">
 				<div className="home-section-inner">
           
-          <Link to="/theory" className="home-section-open"><i className="material-icons">open_in_new</i></Link>
+          <Link to="/bass" className="home-section-icon home-section-open">
+            <i className="material-icons">open_in_new</i>
+          </Link>
           
-          <i className="material-icons home-section-check">check_circle</i>
+          <div className="home-section-icon home-section-check">
+            <i className="material-icons">check_circle</i>
+          </div>
 
 					<div className="home-section-image"
 						style={{ backgroundImage: 'url('+ musicStock + ')' }} />
