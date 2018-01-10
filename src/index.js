@@ -18,14 +18,15 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Data
-import IMPORT_globalText from './data/global-text'
 import adminAccount from './data/admin-account'
+import IMPORT_globalText from './data/global-text'
+import IMPORT_chordsData from './data/chords-data'
 
 // Import CSS
 import 'normalize.css/normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
-import './dist/hamburgers.min.css'
+import './header/hamburger/hamburgers.min.css'
 import './index.css'
 
 // Root Index Component
@@ -101,8 +102,10 @@ class Index extends React.Component {
 										globalText={globalText} />		
                 )} />
 								
-								<Route path="/guitar" render={ () => (
+								<Route path="/guitar" render={ ({ match }) => (
                   <Guitar appState={appState}
+										match={match}
+										chordsData={this.props.chordsData}
 										globalText={globalText} />		
                 )} />
 								
@@ -128,7 +131,8 @@ class Index extends React.Component {
 
 ReactDOM.render(
 	<Index
-		globalText={IMPORT_globalText} />,
+		globalText={IMPORT_globalText}
+		chordsData={IMPORT_chordsData} />,
 	document.getElementById('root')
 )
 

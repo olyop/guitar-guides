@@ -1,0 +1,32 @@
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+import RaisedButton from 'material-ui/RaisedButton'
+
+const GuitarHome = props => (
+	<div id="guitar-home">
+		
+		<div className="row">
+		
+			<div className="col-md-6">
+				<h1>Learn chords</h1>
+				<p>Guitar chords shapes are a great way to start learning the guitar and are realtively easy to learn and pick up. Learn the basic chords that every guitaist should know which are common in many popular songs.</p>
+				<Link to="/guitar/chords">
+					<RaisedButton label="Learn Guitar Chords" backgroundColor="#F44336" labelColor="#fff" />
+				</Link>
+			</div>
+			
+			<div className="col-md-6">
+				<h1>Learn Scales</h1>
+				<p>Guitar chords shapes are a great way to start learning the guitar and are realtively easy to learn and pick up. Learn the basic chords that every guitaist should know.</p>
+				<Link to="/guitar/scales">
+					<RaisedButton label="Learn Guitar Scales" backgroundColor="#F44336" labelColor="#fff" />
+				</Link>
+			</div>
+		
+		</div>
+		
+	</div>
+)
+
+export default GuitarHome

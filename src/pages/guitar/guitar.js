@@ -2,9 +2,19 @@ import React from 'react'
 
 import GuitarCover from '../../media/guitar-stock-photo.jpg'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
+
+// Import Guitar Pages
+import GuitarHome from './guitar-pages/guitar-home'
+import GuitarScales from './guitar-pages/guitar-scales'
+import GuitarChords from './guitar-pages/guitar-chords'
+import GuitarExercises from './guitar-pages/guitar-exercises'
+import GuitarRiffs from './guitar-pages/guitar-riffs'
+import GuitarAbout from './guitar-pages/guitar-about'
+import GuitarSettings from './guitar-pages/guitar-settings'
 
 import './guitar.css'
+import './guitar-pages.css'
 
 const Guitar = props => (
 	<div id="guitar">
@@ -38,28 +48,28 @@ const Guitar = props => (
 							<i className="material-icons">home</i>
 						</NavLink>
 						
-						<NavLink to="/guitar/scales"
-							activeClassName="guitar-nav-item-active">
-							<div className="guitar-nav-strip"></div>
-							<p>Scales</p>
-						</NavLink>
-						
 						<NavLink to="/guitar/chords"
 							activeClassName="guitar-nav-item-active">
 							<div className="guitar-nav-strip"></div>
 							<p>Chords</p>
 						</NavLink>
 						
-						<NavLink to="/guitar/theory"
+						<NavLink to="/guitar/scales"
 							activeClassName="guitar-nav-item-active">
 							<div className="guitar-nav-strip"></div>
-							<p>Theory</p>
+							<p>Scales</p>
 						</NavLink>
 						
 						<NavLink to="/guitar/exercises"
 							activeClassName="guitar-nav-item-active">
 							<div className="guitar-nav-strip"></div>
 							<p>Exercises</p>
+						</NavLink>
+						
+						<NavLink to="/guitar/riffs"
+							activeClassName="guitar-nav-item-active">
+							<div className="guitar-nav-strip"></div>
+							<p>Riffs</p>
 						</NavLink>
 						
 						<NavLink to="/guitar/about"
@@ -73,7 +83,38 @@ const Guitar = props => (
 			</div>
 			
 			<div className="guitar-content">
-				<div className="container">Content</div>
+				<div className="container">
+					
+					<Route path={`${props.match.path}`} exact render={ ({ match }) => (
+						<GuitarHome />
+					)} />
+					
+					<Route path={`${props.match.path}/chords`} exact render={ ({ match }) => (
+						<GuitarChords
+							chordsData={props.chordsData} />
+					)} />
+				
+					<Route path={`${props.match.path}/scales`} exact render={ ({ match }) => (
+						<GuitarScales />
+					)} />
+					
+					<Route path={`${props.match.path}/exercises`} exact render={ ({ match }) => (
+						<GuitarExercises />
+					)} />
+					
+					<Route path={`${props.match.path}/riffs`} exact render={ ({ match }) => (
+						<GuitarRiffs />
+					)} />
+					
+					<Route path={`${props.match.path}/about`} exact render={ ({ match }) => (
+						<GuitarAbout />
+					)} />
+					
+					<Route path={`${props.match.path}/settings`} exact render={ ({ match }) => (
+						<GuitarSettings />
+					)} />
+				
+				</div>
 			</div>
 			
 		</div>

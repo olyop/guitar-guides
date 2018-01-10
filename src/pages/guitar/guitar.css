@@ -15,12 +15,12 @@
 			justify-content: space-between ;
 			flex-direction: row;
 			align-items: center;
+			padding: 0 20px;
 			display: flex; }
 		#guitar .guitar-header .guitar-header-left {
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			flex-direction: column; }
+			flex-direction: row; }
 			#guitar .guitar-header .guitar-header-left h1 {
 				margin: 0;
 				color: #fff;
@@ -51,15 +51,17 @@
 
 #guitar .guitar-body .guitar-nav {
 	padding-top: 40px;
-	border-bottom: 1px solid #e0e0e0; }
+	border-bottom: 1px solid #E0E0E0; }
 	#guitar .guitar-body .guitar-nav .container {
 		padding: 0; }
 	#guitar .guitar-body .guitar-nav .guitar-nav-inner {
 		display: flex;
-		justify-content: flex-start; }
+		align-items: center;
+		justify-content: center; }
 
 		#guitar .guitar-body .guitar-nav .guitar-nav-inner a {
 			z-index: 2;
+			transition: .2s all;
 			position: relative;
 			bottom: -1px;
 			text-decoration: none;
@@ -70,22 +72,22 @@
 			color: #333;
 			border-left: 1px solid #F5F5F5;
 			border-right: 1px solid #F5F5F5;
-			border-bottom: 1px solid #e0e0e0; }
+			border-bottom: 1px solid #E0E0E0; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
-				padding: 15px;
+				padding: 15px 20px;
 				font-size: 28px; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
-				transition: .3s all;
-				padding: 15px 30px;
+				padding: 15px 40px;
 				margin: 0;
-				font-weight: 400;
+				font-weight: 500;
 				font-size: 20px; }
 				#guitar .guitar-body .guitar-nav .guitar-nav-inner a:hover p {
-					text-decoration: underline; }
+					color: #F44336; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a .guitar-nav-strip {
+				transition: .2s all;
 				height: 5px;
 				width: calc(100% + 2px);
 				position: absolute;
@@ -97,12 +99,10 @@
 		#guitar .guitar-body .guitar-nav .guitar-nav-inner .guitar-nav-item-active {
 			background-color: #fff;
 			border-bottom-color: #fff;
-			border-left-color: #e0e0e0;
-			border-right-color: #e0e0e0; }
-			#guitar .guitar-body .guitar-nav .guitar-nav-inner .guitar-nav-item-active p {
-				padding: 15px 60px;
-				font-weight: 600; }
+			border-left-color: #E0E0E0;
+			border-right-color: #E0E0E0; }
 
 #guitar .guitar-body .guitar-content {
+	padding-top: 40px;
 	min-height: 65vh;
 	background-color: #fff; }

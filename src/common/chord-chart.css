@@ -1,0 +1,72 @@
+.chart {
+	width: 200px;
+	height: 300px;
+	position: relative;
+}
+
+.chart .chart-heading {
+	position: absolute;
+	top: 0;
+	width: 200px;
+	height: 60px;
+	font-size: 23px;
+	text-align: center;
+	padding: 18px 0 10px 0;
+}
+
+.chart .chart-open-strings {
+	position: absolute;
+	top: 60px;
+	width: 200px;
+	height: 30px;
+}
+.chart .chart-open-strings .chart-open-string {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+}
+.chart .chart-open-strings .chart-open-string i {
+	font-size: 30px;
+	width: 30px;
+	height: 30px;
+}
+.chart .chart-open-strings .chart-open-string .chart-open-string-play {
+	border: 2px solid #333;
+	height: 20px;
+	width: 20px;
+	margin: 5px;
+	border-radius: 100%;
+}
+
+.chart .chart-fretboard {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 140px;
+	height: 180px;
+	margin: 0 30px 30px 30px;
+}
+
+.chart .chart-fret {
+	position: absolute;
+	width: 140px;
+	height: 2px;
+	background-color: #333;
+}
+
+.chart .chart-string {
+	position: absolute;
+	width: 2px;
+	height: 180px;
+	background-color: #333;
+}
+
+.chart .chart-fix {
+	position: absolute;
+	width: 2px;
+	background-color: #333;
+	height: 2px;
+	bottom: -2px;
+	right: -2px;
+}
