@@ -1,72 +1,105 @@
 .chart {
 	width: 200px;
+	cursor: pointer;
 	height: 300px;
-	position: relative;
-}
+	position: relative; }
+	.chart:hover {
+		background-color: #eee; }
 
-.chart .chart-heading {
-	position: absolute;
-	top: 0;
-	width: 200px;
-	height: 60px;
-	font-size: 23px;
-	text-align: center;
-	padding: 18px 0 10px 0;
-}
+	.chart .chart-icon {
+		z-index: 3;
+		position: absolute;
+		margin: 5px;
+		padding: 5px;
+		border-radius: 100%;
+		display: none;
+		align-items: center;
+		justify-content: center; }
+		.chart:hover .chart-icon {
+			display: flex; }
+		.chart .chart-icon:hover {
+			background-color: #BDBDBD; }
+		.chart .chart-icon i {
+			color: #424242;
+			font-size: 24px; }
 
-.chart .chart-open-strings {
-	position: absolute;
-	top: 60px;
-	width: 200px;
-	height: 30px;
-}
-.chart .chart-open-strings .chart-open-string {
-	position: absolute;
-	height: 30px;
-	width: 30px;
-}
-.chart .chart-open-strings .chart-open-string i {
-	font-size: 30px;
-	width: 30px;
-	height: 30px;
-}
-.chart .chart-open-strings .chart-open-string .chart-open-string-play {
-	border: 2px solid #333;
-	height: 20px;
-	width: 20px;
-	margin: 5px;
-	border-radius: 100%;
-}
+	.chart .chart-heading {
+		position: absolute;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		height: 60px;
+		padding: 18px 0 10px 0; }
 
-.chart .chart-fretboard {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 140px;
-	height: 180px;
-	margin: 0 30px 30px 30px;
-}
+		.chart .chart-heading h2 {
+			margin: 0;
+			font-size: 23px;
+			font-weight: 500; }
 
-.chart .chart-fret {
-	position: absolute;
-	width: 140px;
-	height: 2px;
-	background-color: #333;
-}
+		.chart .chart-heading span {
+			font-size: 15px;
+			font-weight: 500; }
 
-.chart .chart-string {
-	position: absolute;
-	width: 2px;
-	height: 180px;
-	background-color: #333;
-}
+	.chart .chart-open-strings {
+		position: absolute;
+		top: 60px;
+		width: 200px;
+		height: 30px; }
+		.chart .chart-open-strings .chart-open-string {
+			position: absolute;
+			height: 30px;
+			width: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center; }
+			.chart .chart-open-strings .chart-open-string i {
+				-webkit-user-select: none;
+				font-size: 28px;
+				width: 30px;
+				padding: 1px;
+				height: 30px; }
+			.chart .chart-open-strings .chart-open-string .chart-open-string-play {
+				border: 2px solid #333;
+				height: 18px;
+				width: 18px;
+				margin: 6px;
+				border-radius: 100%; }
 
-.chart .chart-fix {
-	position: absolute;
-	width: 2px;
-	background-color: #333;
-	height: 2px;
-	bottom: -2px;
-	right: -2px;
-}
+	.chart .chart-fretboard {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 140px;
+		height: 180px;
+		margin: 0 30px 30px 30px; }
+
+		.chart .chart-fretboard .chart-note {
+			transition: .2s all;
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			background-color: #333;
+			border-radius: 100%; }
+
+		.chart .chart-fretboard .chart-fret {
+			position: absolute;
+			width: 140px;
+			height: 2px;
+			background-color: #333; }
+
+		.chart .chart-fretboard .chart-string {
+			position: absolute;
+			width: 2px;
+			height: 180px;
+			background-color: #333; }
+
+		.chart .chart-fretboard .chart-fix {
+			position: absolute;
+			width: 2px;
+			background-color: #333;
+			height: 2px;
+			bottom: -2px;
+			right: -2px; }

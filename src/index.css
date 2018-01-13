@@ -13,10 +13,10 @@ body {
 
 #content, #account {
 	background-color: #F5F5F5;
-	overflow: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	height: 92vh; }
 
-#content .content-header {
-	
+i {
+	-webkit-user-select: none;
 }

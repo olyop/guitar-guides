@@ -1,8 +1,14 @@
 .guitar-content h1 {
-	margin: 20px 0 10px 0;
+	border-bottom: 1px solid #BDBDBD;
+	padding-bottom: 5px;
+	margin: 40px 0 10px 0;
 	font-size: 30px; }
 
 .guitar-content p {
 	margin: 0 0 20px 0;
 	font-size: 15px; }
 
+.guitar-content .guitar-chords-track {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	display: flex; }
