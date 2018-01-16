@@ -9,7 +9,7 @@ const GuitarHome = props => (
 		<div className="row">
 		
 			<div className="col-md-6">
-				<h1>Learn chords</h1>
+				<h1>Learn Chords</h1>
 				<p>Guitar chords shapes are a great way to start learning the guitar and are realtively easy to learn and pick up. Learn the basic chords that every guitaist should know which are common in many popular songs.</p>
 				<Link to="/guitar/chords">
 					<RaisedButton label="Learn Guitar Chords" backgroundColor="#F44336" labelColor="#fff" />

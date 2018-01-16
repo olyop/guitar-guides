@@ -61,7 +61,6 @@
 
 		#guitar .guitar-body .guitar-nav .guitar-nav-inner a {
 			z-index: 2;
-			transition: .2s all;
 			position: relative;
 			bottom: -1px;
 			text-decoration: none;
@@ -87,7 +86,6 @@
 					color: #F44336; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a .guitar-nav-strip {
-				transition: .2s all;
 				height: 5px;
 				width: calc(100% + 2px);
 				position: absolute;
@@ -102,8 +100,3 @@
 			border-left-color: #E0E0E0;
 			border-right-color: #E0E0E0; }
 
-#guitar .guitar-body .guitar-content {
-	padding-top: 20px;
-	padding-bottom: 80px;
-	min-height: 65vh;
-	background-color: #fff; }

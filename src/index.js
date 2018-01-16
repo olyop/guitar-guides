@@ -21,6 +21,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import adminAccount from './data/admin-account'
 import IMPORT_globalText from './data/global-text'
 import IMPORT_chordsData from './data/chords-data'
+import IMPORT_theoryData from './data/theory-data'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -105,8 +106,9 @@ class Index extends React.Component {
 								<Route path="/guitar" render={ ({ match }) => (
                   <Guitar appState={appState}
 										match={match}
+										globalText={globalText}
 										chordsData={this.props.chordsData}
-										globalText={globalText} />		
+                    theoryData={this.props.theoryData} />		
                 )} />
 								
 								<Route path="/bass" exact render={ () => (
@@ -132,7 +134,8 @@ class Index extends React.Component {
 ReactDOM.render(
 	<Index
 		globalText={IMPORT_globalText}
-		chordsData={IMPORT_chordsData} />,
+		chordsData={IMPORT_chordsData}
+    theoryData={IMPORT_theoryData} />,
 	document.getElementById('root')
 )
 

@@ -1,14 +1,92 @@
-.guitar-content h1 {
-	border-bottom: 1px solid #BDBDBD;
-	padding-bottom: 5px;
-	margin: 40px 0 10px 0;
-	font-size: 30px; }
+#guitar-content {
+	padding-top: 20px;
+	padding-bottom: 120px;
+	min-height: 65vh;
+	background-color: #fff; }
 
-.guitar-content p {
-	margin: 0 0 20px 0;
-	font-size: 15px; }
+  #guitar-content #guitar-chords .guitar-chords-heading {
+    border-bottom: 3px solid #BDBDBD;
+    padding-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 10px 0; }
+    #guitar-content #guitar-chords .guitar-chords-heading:hover {
+      border-color: #F44336; }
+    #guitar-content #guitar-chords .guitar-chords-heading h1 {
+      margin: 0;
+      font-size: 30px; }
+      #guitar-content #guitar-chords .guitar-chords-heading:hover h1 {
+        color: #F44336 }
+    #guitar-content #guitar-chords .guitar-chords-heading i {
+      font-size: 33px; }
+      #guitar-content #guitar-chords .guitar-chords-heading:hover i {
+        color: #F44336 }
 
-.guitar-content .guitar-chords-track {
-	flex-wrap: wrap;
-	justify-content: space-between;
-	display: flex; }
+  #guitar-content #guitar-chords p {
+    margin: 0 0 20px 0;
+    font-size: 15px; }
+  #guitar-content #guitar-chords .guitar-chords-track {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex; }
+
+#chord-chooser {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; }
+
+  #chord-chooser h4 {
+    width: calc(50% - 28px);
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 30px 0 0 0;
+    font-weight: 400;
+    font-size: 21px; }
+
+  #chord-chooser .chord-chooser-buttons {
+    padding: 7px;
+    width: 50%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    display: flex; }
+    #chord-chooser .chord-chooser-buttons .chord-chooser-button {
+      border: 1px solid #E0E0E0;
+      cursor: pointer;
+      padding: 10px;
+      margin: 7px;
+      text-align: center;
+      border-radius: 2px;
+      width: calc(100% / 4 - 14px);
+      font-size: 18px; }
+      #chord-chooser .chord-chooser-buttons .chord-chooser-button:hover {
+        background-color: #E0E0E0; }
+      #chord-chooser .chord-chooser-buttons .chord-chooser-button-active {
+        background-color: #F44336;
+        border-color: #F44336;
+        color: #fff; }
+        #chord-chooser .chord-chooser-buttons .chord-chooser-button-active:hover {
+          background-color: #D32F2F;
+          border-color: #D32F2F; }
+
+#chord-chooser .chord-chooser-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #chord-chooser .chord-chooser-chart .chord-chooser-variation {
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 20px;
+    padding: 30px 10px; }
+    #chord-chooser .chord-chooser-chart .chord-chooser-variation:hover {
+      background-color: #e0e0e0; }
+    #chord-chooser .chord-chooser-chart .chord-chooser-variation-max {
+      cursor: default;
+      color: #fff; }
+      #chord-chooser .chord-chooser-chart .chord-chooser-variation-max:hover {
+        background-color: #fff; }

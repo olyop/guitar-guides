@@ -28,6 +28,7 @@
         align-items: center;
         justify-content: center;
         margin: 10px;
+        border-radius: 100%;
         padding: 10px;
         transition: .2s all;
         z-index: 2; }
@@ -93,6 +94,7 @@
 					font-weight: 400;
 					margin: 0;
 					text-decoration: underline;
+          cursor: text;
 					z-index: 2; }
 					#home .home-cards .home-section .home-section-inner:hover h2 {
 						margin-top: 20px;
@@ -121,8 +123,14 @@
 							padding: 0 0 0 20px;
 							margin: 0; }
 							#home .home-cards .home-section .home-section-inner .home-section-content ul li {
-								color: #fff;
-								font-size: 18px; }
+                color: #fff;
+                font-size: 20px;
+                padding: 0; }
+                #home .home-cards .home-section .home-section-inner .home-section-content ul li a {
+                  color: #fff;
+                  font-size: inherit; }
+                  #home .home-cards .home-section .home-section-inner .home-section-content ul li a:hover {
+                    color: #F44336; }
 
 @media (min-width: 400px) {
 	#home .home-cards .home-section .home-section-inner {

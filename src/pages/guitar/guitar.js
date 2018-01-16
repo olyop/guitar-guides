@@ -5,13 +5,13 @@ import GuitarCover from '../../media/guitar-stock-photo.jpg'
 import { NavLink, Route } from 'react-router-dom'
 
 // Import Guitar Pages
-import GuitarHome from './guitar-pages/guitar-home'
-import GuitarScales from './guitar-pages/guitar-scales'
-import GuitarChords from './guitar-pages/guitar-chords'
-import GuitarExercises from './guitar-pages/guitar-exercises'
-import GuitarRiffs from './guitar-pages/guitar-riffs'
-import GuitarAbout from './guitar-pages/guitar-about'
-import GuitarSettings from './guitar-pages/guitar-settings'
+import GuitarHome from './guitar-pages/home'
+import GuitarScales from './guitar-pages/scales'
+import GuitarChords from './guitar-pages/chords'
+import GuitarExercises from './guitar-pages/exercises'
+import GuitarRiffs from './guitar-pages/riffs'
+import GuitarAbout from './guitar-pages/about'
+import GuitarSettings from './guitar-pages/settings'
 
 import './guitar.css'
 import './guitar-pages.css'
@@ -20,7 +20,7 @@ const Guitar = props => (
 	<div id="guitar">
 	
 		<div className="guitar-header"
-			style={{ backgroundImage: `url(${ GuitarCover })` }}>
+			style={{ backgroundImage: `url(${GuitarCover})` }}>
 		
 			<div className="container">
 				<div className="container-inner">
@@ -82,7 +82,7 @@ const Guitar = props => (
 				</div>
 			</div>
 			
-			<div className="guitar-content">
+			<div id="guitar-content">
 				<div className="container">
 					
 					<Route path={`${props.match.path}`} exact render={ ({ match }) => (
@@ -91,7 +91,8 @@ const Guitar = props => (
 					
 					<Route path={`${props.match.path}/chords`} exact render={ ({ match }) => (
 						<GuitarChords
-							chordsData={props.chordsData} />
+							chordsData={props.chordsData}
+              theoryData={props.theoryData} />
 					)} />
 				
 					<Route path={`${props.match.path}/scales`} exact render={ ({ match }) => (

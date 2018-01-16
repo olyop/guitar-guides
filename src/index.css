@@ -5,11 +5,16 @@ body {
 	margin: 0;
 	border: 0;
 	padding: 0; }
+
 * {
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 	color: #333;
 	margin: 0; }
+
+::selection {
+  color: #fff;
+  background: #F44336; }
 
 #content, #account {
 	background-color: #F5F5F5;

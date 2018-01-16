@@ -2,10 +2,26 @@ import React from 'react'
 
 import './chord-chart.css'
 
+const ChordChartHeading = props => {
+  if (props.chord.fret === 1) {
+    return <div className="chart-heading"><h2>{props.chord.name}</h2></div>
+  } else {
+    return (
+      <div className="chart-heading">
+        <h2>
+          {props.chord.name}
+          <span>{' (' + String(props.chord.fret) + 'fr.)'}</span>
+        </h2>
+      </div>
+    )
+  }
+}
+
 class ChordChart extends React.Component {
 	render() {
-		
-		const fretting = this.props.chord.fretting
+    
+    const chord = this.props.chord
+    
 		const openStringSpacing = [18,44,72,100,128,156]
 		const noteSpacingString = [-8,20,48,76,104,132]
 		const noteSpacingFret = [14,59,105,149]
@@ -21,24 +37,15 @@ class ChordChart extends React.Component {
 				
 				<div className="chart-icon"
 					style={{ top: '0', left: '0' }}>
-					<i class="material-icons">play_arrow</i>
+					<i className="material-icons">play_arrow</i>
 				</div>
 				
-				<div className="chart-heading">
-					{this.props.chord.fret === 1 ? (
-						<h2>{this.props.chord.name}</h2>
-					) : (
-						<h2>
-							{this.props.chord.name}
-							<span>{' (' + String(this.props.chord.fret) + 'fr.)'}</span>
-						</h2>
-					)}
-				</div>
+				<ChordChartHeading chord={chord} />
 				
 				<div className="chart-open-strings">
 					<div style={{ position: 'relative' }}>
 						
-						{fretting.map((string, index) => {
+						{chord.fretting.map((string, index) => {
 							if (string === null) {
 								return (
 									<div key={index}
@@ -52,7 +59,9 @@ class ChordChart extends React.Component {
 									<div key={index}
 										className="chart-open-string"
 										style={{ left: `${openStringSpacing[index]}px` }}>
-										<div className="chart-open-string-play" />
+                    <div className="chart-open-string-play">
+                      <h3>{chord.notes[index]}</h3>
+                    </div>
 									</div>
 								)
 							} else {
@@ -65,7 +74,7 @@ class ChordChart extends React.Component {
 				
 				<div className="chart-fretboard">
 					
-					{fretting.map((string, index) => {
+					{chord.fretting.map((string, index) => {
 						
 						// Determine which fret
 						let fretSpacing
@@ -82,9 +91,10 @@ class ChordChart extends React.Component {
 						}
 							
 						return (
-							<div key={index}
-								className="chart-note"
-								style={{ left: `${noteSpacingString[index]}px`, top: `${fretSpacing}px` }} />
+							<div key={index} className="chart-note"
+								style={{ left: `${noteSpacingString[index]}px`, top: `${fretSpacing}px` }}>
+                <h3>{chord.notes[index]}</h3>
+              </div>
 						)
 						
 					})}

@@ -16,7 +16,9 @@ const Home = props => (
 			<div className="home-section home-left">
 				<div className="home-section-inner">
           
-          <Link to="/guitar" className="home-section-icon home-section-open">
+          <Link to="/guitar"
+            target="_blank"
+            className="home-section-icon home-section-open">
             <i className="material-icons">open_in_new</i>
           </Link>
           
@@ -31,10 +33,11 @@ const Home = props => (
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
+							<li><Link to="/guitar/chords">Chords</Link></li>
+							<li><Link to="/guitar/chords">Scales</Link></li>
+							<li><Link to="/guitar/exercises">Exercises</Link></li>
+							<li><Link to="/guitar/riffs">Riffs</Link></li>
+              <li><Link to="/guitar/about">About</Link></li>
 						</ul>
 					</div>
 
@@ -59,10 +62,11 @@ const Home = props => (
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
+							<li><Link to="/bass">Chords</Link></li>
+							<li><Link to="/bass">Scales</Link></li>
+							<li><Link to="/bass">Exercises</Link></li>
+							<li><Link to="/bass">Riffs</Link></li>
+              <li><Link to="/bass">About</Link></li>
 						</ul>
 					</div>
 
@@ -87,10 +91,11 @@ const Home = props => (
 					<div className="home-section-line" />
 					<div className="home-section-content">
 						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-							<li>Item 4</li>
+							<li><Link to="/theory">Chords</Link></li>
+							<li><Link to="/theory">Scales</Link></li>
+							<li><Link to="/theory">Exercises</Link></li>
+							<li><Link to="/theory">Riffs</Link></li>
+              <li><Link to="/theory">About</Link></li>
 						</ul>
 					</div>
 
