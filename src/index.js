@@ -55,6 +55,7 @@ class Index extends React.Component {
 	}
 	
 	render() {
+    
 		const appState = this.state
 		const globalText = this.props.globalText
 		
@@ -64,8 +65,6 @@ class Index extends React.Component {
 			isAccountLoggedIn = false
 		} else if (typeof appState.account === 'object') {
 			isAccountLoggedIn = true
-		} else {
-			console.log('error: account log in error')
 		}
 		
 		return (
@@ -132,8 +131,7 @@ class Index extends React.Component {
 }
 
 ReactDOM.render(
-	<Index
-		globalText={IMPORT_globalText}
+	<Index globalText={IMPORT_globalText}
 		chordsData={IMPORT_chordsData}
     theoryData={IMPORT_theoryData} />,
 	document.getElementById('root')

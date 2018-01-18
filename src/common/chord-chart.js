@@ -87,8 +87,8 @@ class ChordChart extends React.Component {
 						} else if (string === 4) {
 							fretSpacing = noteSpacingFret[3]
 						} else {
-							return null
-						}
+              return null
+            }
 							
 						return (
 							<div key={index} className="chart-note"
@@ -96,32 +96,20 @@ class ChordChart extends React.Component {
                 <h3>{chord.notes[index]}</h3>
               </div>
 						)
-						
 					})}
 					
-					<div className="chart-fret"
-						style={{ top: '0' }}></div>
-					<div className="chart-fret"
-						style={{ top: '45px' }}></div>
-					<div className="chart-fret"
-						style={{ top: '90px' }}></div>
-					<div className="chart-fret"
-						style={{ top: '135px' }}></div>
-					<div className="chart-fret"
-						style={{ top: '180px' }}></div>
+					<div className="chart-fret" style={{ top: '0' }}></div>
+					<div className="chart-fret" style={{ top: '45px' }}></div>
+					<div className="chart-fret" style={{ top: '90px' }}></div>
+					<div className="chart-fret" style={{ top: '135px' }}></div>
+					<div className="chart-fret" style={{ top: '180px' }}></div>
 					
-					<div className="chart-string"
-						style={{ left: '0' }}></div>
-					<div className="chart-string"
-						style={{ left: '28px' }}></div>
-					<div className="chart-string"
-						style={{ left: '56px' }}></div>
-					<div className="chart-string"
-						style={{ left: '84px' }}></div>
-					<div className="chart-string"
-						style={{ left: '112px' }}></div>
-					<div className="chart-string"
-						style={{ left: '140px' }}></div>
+					<div className="chart-string" style={{ left: '0' }}></div>
+					<div className="chart-string" style={{ left: '28px' }}></div>
+					<div className="chart-string" style={{ left: '56px' }}></div>
+					<div className="chart-string" style={{ left: '84px' }}></div>
+					<div className="chart-string" style={{ left: '112px' }}></div>
+					<div className="chart-string" style={{ left: '140px' }}></div>
 					
 					<div className="chart-fix"></div>
 					
