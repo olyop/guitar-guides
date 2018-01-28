@@ -228,36 +228,36 @@ const ChordsData = {
           id: 'MBKFoHMxej',
           name: 'A#',
           fret: 1,
-          fretting: [],
-          notes: []
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'A#','F','A#','D',null]
         },
         {
           id: 'xIksgSMCtC',
           name: 'A#',
-          fret: 5,
-          fretting: [],
-          notes: []
+          fret: 6,
+          fretting: [1,3,3,2,1,1],
+          notes: ['A#','F','A#','D','F','A#']
         },
         {
           id: 'GcJKvogGwD',
           name: 'A#',
-          fret: 12,
-          fretting: [],
-          notes: []
+          fret: 13,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'A#','F','A#','D',null]
         },
         {
           id: 'DjWTUJPYwh',
           name: 'A#',
-          fret: 17,
-          fretting: [],
-          notes: []
+          fret: 18,
+          fretting: [null,null,3,2,1,1],
+          notes: [null,null,'A#','D','F','A#']
         },
         {
           id: 'SPCdOdFFsY',
           name: 'A#',
-          fret: 9,
-          fretting: [],
-          notes: []
+          fret: 10,
+          fretting: [null,4,3,1,2,1],
+          notes: [null,'A#','D','F','A#','D']
         }
       ],
       [
