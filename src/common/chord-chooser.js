@@ -3,7 +3,6 @@ import React from 'react'
 import orderBy from 'lodash/orderBy'
 import ChordChart from './chord-chart'
 import RaisedButton from 'material-ui/RaisedButton'
-import FlatButton from 'material-ui/FlatButton';
 
 import './chord-chooser.css'
 
@@ -69,7 +68,7 @@ class ChordChooser extends React.Component {
     return (
       <div id="chord-chooser">
         
-        <h4>Choose Note</h4>
+        <h4>Key</h4>
         <div className="chord-chooser-buttons">
           {this.props.theoryData.notes.map((note, index) => (
             <RaisedButton key={index} label={note}
@@ -80,7 +79,7 @@ class ChordChooser extends React.Component {
           ))}
         </div>
         
-        <h4>Choose Type</h4>
+        <h4>Type</h4>
         <div className="chord-chooser-buttons">
           {this.props.theoryData.chordTypes.map((type, index) => (
             <RaisedButton key={index} label={type}
