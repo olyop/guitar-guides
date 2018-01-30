@@ -424,9 +424,323 @@ const ChordsData = {
         }
       ]
     ],
-    [],
-    [],
-    [],
+    [
+      [
+        {
+          id: 'fLccGveDHq',
+          name: 'C',
+          fret: 1,
+      		fretting: [null,3,2,0,1,0],
+      		notes: [null,'C','E','G','C','E']
+        },
+        {
+          id: 'jUiWZGMAjJ',
+          name: 'C',
+          fret: 3,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'C','G','C','E',null]
+        },
+        {
+          id: 'alpHxLUVpQ',
+          name: 'C',
+          fret: 8,
+          fretting: [1,3,3,2,1,1],
+          notes: ['C','G','C','E','G','C']
+        },
+        {
+          id: 'nMEQYnwrxT',
+          name: 'C',
+          fret: 15,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'C','G','C','E',null]
+        },
+        {
+          id: 'SSIpyWBECG',
+          name: 'C',
+          fret: 12,
+          fretting: [null,4,3,1,2,1],
+          notes: [null,'C','E','G','C','E']
+        }
+      ],
+      [
+        {
+          id: 'sgiQvKqugl',
+          name: 'Cm',
+          fret: 3,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'C','G','C','D#','G']
+        },
+        {
+          id: 'vqyzcAGtMm',
+          name: 'Cm',
+          fret: 8,
+          fretting: [1,3,3,1,1,1],
+          notes: ['C','G','C','D#','G','C']
+        },
+        {
+          id: 'HvPWGlYQGm',
+          name: 'Cm',
+          fret: 15,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'C','G','C','D#','G']
+        }
+      ],
+      [
+        {
+          id: 'rQUGksKcqa',
+          name: 'Cmaj7',
+          fret: 3,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'C','G','B','E','G']
+        },
+        {
+          id: 'ohkQXOjmPx',
+          name: 'Cmaj7',
+          fret: 15,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'C','G','B','E','G']
+        },
+        {
+          id: 'FmPzJssNsO',
+          name: 'Cmaj7',
+          fret: 8,
+          fretting: [1,3,2,2,1,1],
+          notes: ['C','G','B','E','G','C']
+        }
+      ],
+      [
+        {
+          id: 'RfQXbsYFav',
+          name: 'Cm7',
+          fret: 3,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'C','G','A#','D#','G']
+        },
+        {
+          id: 'WVQFOUuYAQ',
+          name: 'Cm7',
+          fret: 15,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'C','G','A#','D#','G']
+        }
+      ]
+    ],
+    [
+      [
+        {
+          id: 'jhtuACCZoz',
+          name: 'C#',
+          fret: 4,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'C#','G#','C#','F',null]
+        },
+        {
+          id: 'NTLqFEOiQq',
+          name: 'C#',
+          fret: 9,
+          fretting: [1,3,3,2,1,1],
+          notes: ['C#','G#','C#','F','G#','C#']
+        },
+        {
+          id: 'PVmEHSfzQh',
+          name: 'C#',
+          fret: 16,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'C#','G#','C#','F',null]
+        },
+        {
+          id: 'GvYShacOhN',
+          name: 'C#',
+          fret: 13,
+          fretting: [null,4,3,1,2,1],
+          notes: [null,'C#','F','G#','C#','F']
+        }
+      ],
+      [
+        {
+          id: 'TSSwvKddtG',
+          name: 'C#m',
+          fret: 4,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'C#','G#','C#','E','G#']
+        },
+        {
+          id: 'BpVHhdgzBV',
+          name: 'C#m',
+          fret: 9,
+          fretting: [1,3,3,1,1,1],
+          notes: ['C#','G#','C#','E','G#','C#']
+        },
+        {
+          id: 'IFUDGriUii',
+          name: 'C#m',
+          fret: 16,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'C#','G#','C#','E','G#']
+        }
+      ],
+      [
+        {
+          id: 'CUWfjeGkxU',
+          name: 'C#maj7',
+          fret: 4,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'C#','G#','C','F','G#']
+        },
+        {
+          id: 'JORMETDutZ',
+          name: 'C#maj7',
+          fret: 16,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'C#','G#','C','F','G#']
+        },
+        {
+          id: 'NoLfjHsmOl',
+          name: 'C#maj7',
+          fret: 9,
+          fretting: [1,3,2,2,1,1],
+          notes: ['C#','G#','C','F','G#','C#']
+        }
+      ],
+      [
+        {
+          id: 'TKvSUbISUO',
+          name: 'C#m7',
+          fret: 4,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'C#','G#','B','E','G#']
+        },
+        {
+          id: 'RmlRZmgjMK',
+          name: 'C#m7',
+          fret: 16,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'C#','G#','B','E','G#']
+        }
+      ]
+    ],
+    [
+      [
+        {
+          id: 'RaipuGjPtg',
+          name: 'D',
+          fret: 1,
+          fretting: [null,null,0,2,3,2],
+          notes: [null,null,'D','A','D','F#']
+        },
+        {
+          id: 'MYaXgVTJqO',
+          name: 'D',
+          fret: 2,
+          fretting: [null,4,3,1,2,1],
+          notes: [null,'D','F#','A','D','F#']
+        },
+        {
+          id: 'SJzgVVEwPD',
+          name: 'D',
+          fret: 5,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'D','A','D','F#',null]
+        },
+        {
+          id: 'sdTpAwbhFa',
+          name: 'D',
+          fret: 7,
+          fretting: [4,3,1,1,1,null],
+          notes: ['D','F#','A','D','F#']
+        },
+        {
+          id: 'qbrTXUKKLL',
+          name: 'D',
+          fret: 10,
+          fretting: [1,3,3,2,1,1],
+          notes: ['D','A','D','F#','A','D']
+        },
+        {
+          id: 'brtFJEultZ',
+          name: 'D',
+          fret: 14,
+          fretting: [null,null,0,1,2,1],
+          notes: [null,null,'D','A','D','F#']
+        },
+        {
+          id: 'TYwwiQkkCw',
+          name: 'D',
+          fret: 17,
+          fretting: [null,1,3,3,3,null],
+          notes: [null,'D','A','D','F#',null]
+        }
+      ],
+      [
+        {
+          id: 'SZTBCtsjsH',
+          name: 'Dm',
+          fret: 1,
+          fretting: [null,null,0,2,3,1],
+          notes: [null,null,'D','A','D','F']
+        },
+        {
+          id: 'woUZktEpMq',
+          name: 'Dm',
+          fret: 5,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'D','A','D','F','A']
+        },
+        {
+          id: 'MdcMjOXNbz',
+          name: 'Dm',
+          fret: 10,
+          fretting: [1,3,3,1,1,1],
+          notes: ['D','A','D','F','A','D']
+        },
+        {
+          id: 'IZKNVlGQvM',
+          name: 'Dm',
+          fret: 17,
+          fretting: [null,1,3,3,2,1],
+          notes: [null,'D','A','D','F','A']
+        }
+      ],
+      [
+        {
+          id: 'DBgxdHuwlu',
+          name: 'Dmaj7',
+          fret: 5,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'D','A','C#','F#','A']
+        },
+        {
+          id: 'barRXLxYcg',
+          name: 'Dmaj7',
+          fret: 17,
+          fretting: [null,1,3,2,3,1],
+          notes: [null,'D','A','C#','F#','A']
+        },
+        {
+          id: 'hwvfDlzinX',
+          name: 'Dmaj7',
+          fret: 10,
+          fretting: [1,3,2,2,1,1],
+          notes: ['D','A','C#','F#','A','D']
+        }
+      ],
+      [
+        {
+          id: 'CsXiZoKYmf',
+          name: 'Dm7',
+          fret: 5,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'D','A','C','F','A']
+        },
+        {
+          id: 'EAXFuYOaYa',
+          name: 'Dm7',
+          fret: 17,
+          fretting: [null,1,3,1,2,1],
+          notes: [null,'D','A','C','F','A']
+        }
+      ]
+    ],
     [],
     [],
     [],
