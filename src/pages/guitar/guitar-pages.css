@@ -1,8 +1,19 @@
 #guitar-content {
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 120px;
 	min-height: 100vh;
 	background-color: #fff; }
+
+	#guitar-content #guitar-home h1 {
+		margin: 0 0 5px 0;
+		font-size: 25px; }
+		#guitar-content #guitar-home p {
+			margin: 0;
+			margin-bottom: 10px;
+			font-size: 14px; }
+
+#guitar-content #guitar-home .col-md-6 {
+	padding-bottom: 30px; }
 
   #guitar-content #guitar-chords p {
     margin: 0 0 20px 0;
@@ -11,3 +22,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     display: flex; }
+
+@media (min-width: 700px) {
+	#guitar-content {
+		padding-top: 20px; }
+		#guitar-content #guitar-home h1 {
+			margin: 20px 0 5px 0;
+			font-size: 30px; }
+		#guitar-content #guitar-home p {
+			margin-bottom: 20px;
+			font-size: 16px; 	}
+		#guitar-content #guitar-home .col-md-6 {
+			padding-bottom: 0; }
+}

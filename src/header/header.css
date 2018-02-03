@@ -49,11 +49,11 @@
 		#header .header-middle h1 {
 			-webkit-user-select: none;
 			margin: 0;
-			font-size: 28px;
+			font-size: 23px;
 			text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
 			color: #fff; }
 			#header .header-middle h1 b {
-				font-size: 38px;
+				font-size: 30px;
 				font-weight: 700;
 				color: #F44336; }
 
@@ -98,9 +98,19 @@
 						align-items: center;
 						padding: 0 10px 0 10px; }
 						#header .header-icon i {
-							font-size: 32px;
+							font-size: 27px;
 							-webkit-user-select: none;
 							color: #fff;  }
+
+@media (min-width: 500px) {
+	#header .header-middle h1 {
+		font-size: 28px;}
+		#header .header-middle h1 b {
+			font-size: 38px; }
+	
+	#header .header-icon i {
+		font-size: 32px; }
+}
 
 @media (min-width: 800px) {
 	#header .header-left .hamburger-container {

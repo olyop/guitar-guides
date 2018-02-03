@@ -12,7 +12,7 @@
 			padding: 0; }
 		#guitar .guitar-header .container .container-inner {
 			height: 100%;
-			justify-content: space-between ;
+			justify-content: space-around;
 			flex-direction: row;
 			align-items: center;
 			padding: 0 20px;
@@ -22,10 +22,10 @@
 			align-items: center;
 			flex-direction: row; }
 			#guitar .guitar-header .guitar-header-left h1 {
+				font-size: 57px;
 				text-shadow: #333 2px 2px 5px; 
 				margin: 0;
 				color: #fff;
-				font-size: 75px;
 				text-transform: uppercase; }
 		#guitar .guitar-header .guitar-header-right {
 			display: flex;
@@ -36,13 +36,13 @@
 				margin: 0;
 				color: #fff;
 				line-height: 1;
-				font-size: 45px;
+				font-size: 37px;
 				font-weight: 700; }
 			#guitar .guitar-header .guitar-header-right h3 {
 				margin: 0;
 				color: #fff;
 				text-transform: uppercase;
-				font-size: 13px;
+				font-size: 11px;
 				font-weight: 700; }
 
 #guitar .guitar-body {
@@ -51,7 +51,7 @@
 		padding: 20px; }
 
 #guitar .guitar-body .guitar-nav {
-	padding-top: 40px;
+	padding-top: 20px;
 	border-bottom: 1px solid #E0E0E0; }
 	#guitar .guitar-body .guitar-nav .container {
 		padding: 0; }
@@ -75,14 +75,14 @@
 			border-bottom: 1px solid #E0E0E0; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
-				padding: 15px 20px;
-				font-size: 28px; }
+				padding: 10px 10px;
+				font-size: 21px; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
-				padding: 15px 40px;
+				padding: 10px 10px;
+				font-size: 15px;
 				margin: 0;
-				font-weight: 500;
-				font-size: 20px; }
+				font-weight: 500; }
 				#guitar .guitar-body .guitar-nav .guitar-nav-inner a:hover p {
 					color: #F44336; }
 
@@ -101,3 +101,50 @@
 			border-left-color: #E0E0E0;
 			border-right-color: #E0E0E0; }
 
+@media (min-width: 450px) {
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
+		font-size: 16px; 	}
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
+		font-size: 22px; }
+}
+
+@media (min-width: 600px) {
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
+		padding: 10px 20px; 	}
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
+		padding: 10px 20px; }
+}
+
+@media (min-width: 767px) {
+	#guitar .guitar-header .container .container-inner {
+		justify-content: space-between;	}
+}
+
+@media (min-width: 700px) {
+	
+	#guitar .guitar-header .guitar-header-left h1 {
+		font-size: 65px;	}
+	#guitar .guitar-header .guitar-header-right p {
+		font-size: 45px; }
+	#guitar .guitar-header .guitar-header-right h3 {
+		font-size: 13px; }
+	
+	#guitar .guitar-body .guitar-nav {
+		padding-top: 40px; }
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
+		padding: 15px 20px;
+		font-size: 20px; 	}
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
+		font-size: 28px;
+		padding: 15px 20px; }
+}
+
+@media (min-width: 900px) {
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
+		padding: 15px 40px;	}
+}
+
+@media (min-width: 992px) {
+	#guitar .guitar-header .guitar-header-left h1 {
+		font-size: 75px;	}
+}
