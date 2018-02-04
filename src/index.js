@@ -18,10 +18,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Data
-import adminAccount from './data/admin-account'
-import IMPORT_globalText from './data/global-text'
-import IMPORT_chordsData from './data/chords-data'
-import IMPORT_theoryData from './data/theory-data'
+import adminAccount from './database/admin-account'
+import IMPORT_globalText from './database/global-text'
+import IMPORT_chordsData from './database/chords-data'
+import IMPORT_theoryData from './database/theory-data'
 
 // Import CSS
 import 'normalize.css/normalize.css'

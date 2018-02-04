@@ -20,6 +20,7 @@
 		.chart .chart-icon:hover {
 			background-color: #BDBDBD; }
 		.chart .chart-icon i {
+			-webkit-user-select: none;
 			color: #424242;
 			font-size: 24px; }
 
@@ -41,6 +42,7 @@
 		.chart .chart-heading span {
 			font-size: 15px;
       color: #616161;
+			-webkit-user-select: none;
       font-weight: 400;
 			font-weight: 500; }
 
@@ -73,6 +75,7 @@
 				margin: 6px;
 				border-radius: 100%; }
         .chart .chart-open-strings .chart-open-string .chart-open-string-play h3 {
+					-webkit-user-select: none;
           display: none;
           font-size: 10px;
           color: #333;
@@ -101,8 +104,9 @@
 			background-color: #333;
 			border-radius: 100%; }
       .chart .chart-fretboard .chart-note h3 {
+				-webkit-user-select: none;
         display: none;
-        margin: 0;
+        margin: 2px 0 0 0;
         font-size: 10px;
         color: #fff; }
         .chart:hover .chart-fretboard .chart-note h3 {
@@ -127,3 +131,8 @@
 			height: 2px;
 			bottom: -2px;
 			right: -2px; }
+
+@media (min-width: 500px) {
+	.chart .chart-fretboard .chart-note h3 {
+		margin: 0;	}
+}

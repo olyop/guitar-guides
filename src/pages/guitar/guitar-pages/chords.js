@@ -1,8 +1,8 @@
 import React from 'react'
 
+import orderBy from 'lodash/orderBy'
 import ChordChart from '../../../common/chord-chart'
 import ChordChooser from '../../../common/chord-chooser'
-import orderBy from 'lodash/orderBy'
 import Heading from '../../../common/heading'
 
 class GuitarChords extends React.Component {

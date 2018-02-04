@@ -1,7 +1,7 @@
 #guitar-content {
 	padding-top: 0;
-	padding-bottom: 120px;
-	min-height: 100vh;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #E0E0E0;
 	background-color: #fff; }
 
 	#guitar-content #guitar-home h1 {
@@ -17,11 +17,17 @@
 
   #guitar-content #guitar-chords p {
     margin: 0 0 20px 0;
-    font-size: 15px; }
+    font-size: 14px; }
   #guitar-content #guitar-chords .guitar-chords-track {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex; }
+
+@media (min-width: 500px) {
+	#guitar-content #guitar-chords .guitar-chords-track {
+		justify-content: space-between;
+	}
+}
 
 @media (min-width: 700px) {
 	#guitar-content {
