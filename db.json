@@ -28,35 +28,6 @@
         "theory": {}
       },
       "id": 1
-    },
-    {
-      "name": "Jimi",
-      "surname": "Hendrix",
-      "experience": 2,
-      "dateJoined": "29/01/2018",
-      "progress": {
-        "guitar": {
-          "modes": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "minor": 0,
-          "major": 0,
-          "pentatonic": 0,
-          "blues": 0
-        },
-        "bass": {
-          "major": 0,
-          "minor": 0
-        },
-        "theory": {}
-      },
-      "id": 2
     }
   ]
 }

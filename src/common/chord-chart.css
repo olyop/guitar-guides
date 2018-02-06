@@ -106,7 +106,7 @@
       .chart .chart-fretboard .chart-note h3 {
 				-webkit-user-select: none;
         display: none;
-        margin: 2px 0 0 0;
+        margin: 0;
         font-size: 10px;
         color: #fff; }
         .chart:hover .chart-fretboard .chart-note h3 {

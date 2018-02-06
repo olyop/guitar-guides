@@ -5,11 +5,16 @@ const accountTemplate = {
 	dateJoined: '',
 	progress: {
 		guitar: {
-			modes: [ 0, 0, 0, 0, 0, 0, 0 ],
-			minor: 0,
-			major: 0,
-			pentatonic: 0,
-			blues: 0
+			chords: {
+				standardChords: [0,0,0,0,0,0,0,0,0,0,0,0]
+			},
+			scales: {
+				modes: [0,0,0,0,0,0,0],
+				minor: 0,
+				major: 0,
+				pentatonic: 0,
+				blues: 0
+			}
 		},
 		bass: {
 			major: 0,

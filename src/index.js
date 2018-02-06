@@ -17,8 +17,11 @@ import Theory from './pages/theory/theory'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+// Import Functions
+import createAdminAccount from './common/createAdminAccount'
+
 // Import Data
-import adminAccount from './database/admin-account'
+import accountTemplate from './database/account-template'
 import IMPORT_globalText from './database/global-text'
 import IMPORT_chordsData from './database/chords-data'
 import IMPORT_theoryData from './database/theory-data'
@@ -37,7 +40,7 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: adminAccount,
+			account: createAdminAccount(accountTemplate),
 //      account: null,
 			menu: false
 		}

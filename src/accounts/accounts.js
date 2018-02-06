@@ -5,7 +5,7 @@ import moment from 'moment'
 
 import CreateAccount from './create-account'
 
-import accountTemplate from '../data/account-template'
+import accountTemplate from '../database/account-template'
 
 import './accounts.css'
 
