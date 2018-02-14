@@ -47,12 +47,17 @@ class Index extends React.Component {
 		}
 		
 		this.logIn = this.logIn.bind(this)
+    this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
 	}
 	
 	logIn(account) {
 		this.setState({ account })
-	}
+	} 
+  
+  logOut() {
+    this.setState({ account: null })
+  }
 	
 	handleHamburger() {
 		this.setState({ menu: !this.state.menu })
@@ -105,7 +110,8 @@ class Index extends React.Component {
 								
 								<Route path="/account" exact render={ () => (
                   <AccountPage appState={appState}
-										globalText={globalText} />		
+										globalText={globalText}
+                    logOut={this.logOut} />		
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (

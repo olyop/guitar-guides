@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LinearProgress from 'material-ui/LinearProgress'
+import RaisedButton from 'material-ui/RaisedButton'
 
 import './account-page.css'
 
@@ -8,7 +8,6 @@ const AccountPage = props => (
 	<div id="account-page">
 		
 		<div className="account-page-header">
-			
 			<div className="account-page-account">
 				
 				<div className="account-page-info">
@@ -31,14 +30,6 @@ const AccountPage = props => (
 				</div>
 				
 			</div>
-			
-			<div className="account-page-progress">
-				<LinearProgress mode="determinate"
-					color="#F44336"
-					style={{ borderRadius: '5px', height: '20px', backgroundColor: '#E0E0E0' }}
-					value={50} />
-			</div>
-			
 		</div>
 		
 		<div className="container account-page-body">
@@ -47,6 +38,13 @@ const AccountPage = props => (
 				Test
 			
 			</div>
+		</div>
+    
+    <div className="account-page-sign-out">
+			<RaisedButton onClick={props.logOut}
+        backgroundColor={'#F44336'}
+        labelColor={'#fff'}
+        label="Sign Out" />
 		</div>
 		
 	</div>
