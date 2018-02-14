@@ -1,0 +1,14 @@
+#account-hover {
+	background-color: #fff;
+	z-index: 4;
+	width: 300px;
+	padding: 20px;
+	height: 200px;
+	top: 8vh;
+	right: 0;
+	display: none;
+	position: fixed;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28); }
+
+#header .header-right .header-account:hover #account-hover {
+	display: flex; }
