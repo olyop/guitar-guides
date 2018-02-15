@@ -24,6 +24,14 @@
     justify-content: space-around;
     display: flex; }
 
+#guitar-content #guitar-chords .heading {
+	margin-top: 0 0 10px 0; }
+
+@media (min-width: 690px) {
+	#guitar-content #guitar-chords .heading {
+		margin-top: 20px; }
+}
+
 @media (min-width: 500px) {
 	#guitar-content #guitar-chords .guitar-chords-track {
 		justify-content: space-between; }

@@ -26,9 +26,8 @@ class GuitarChords extends React.Component {
     return (
       <div id="guitar-chords">
         
-        <Heading title="Standard Chords"
-          onClick={this.toggleContent1}
-          active={this.state.content1}/>
+        <Heading onClick={this.toggleContent1}
+          active={this.state.content1}>Standard Chords</Heading>
         {this.state.content1 ? (
           <div>
             <p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
@@ -41,9 +40,8 @@ class GuitarChords extends React.Component {
           </div>
         ) : null}
         
-        <Heading title="Chord Chooser"
-          onClick={this.toggleContent2}
-          active={this.state.content2} />
+        <Heading onClick={this.toggleContent2}
+          active={this.state.content2}>Chord Chooser</Heading>
         {this.state.content2 ? (
           <ChordChooser
             chordsData={this.props.chordsData}

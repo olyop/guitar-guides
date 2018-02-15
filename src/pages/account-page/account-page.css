@@ -51,17 +51,23 @@
 	#account-page .account-page-header .account-page-progress {
 		padding: 0 20px 20px 20px; }
 
-	#account-page .account-page-body {
-		padding: 20px;
-    margin-bottom: 40px;
-		border-radius: 5px;
-		border: 1px solid #BDBDBD;
-		background-color: #fff;	}
-    #account-page .account-page-body .row {
-      margin: 0; }
+#account-page .account-page-section {
+	padding: 20px;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	border: 1px solid #BDBDBD;
+	background-color: #fff; }
+	#account-page .account-page-section .account-page-content {
+		margin-bottom: 20px; }
+
+#account-page .account-page-overview {
+	
+}
+
+#account-page  .account-page-body .account-page-body-content  {
+	display: flex; }
 
   #account-page .account-page-sign-out {
     display: flex;
     align-items: center;
     justify-content: center; }
-    #account-page .account-page-sign-out button {}
