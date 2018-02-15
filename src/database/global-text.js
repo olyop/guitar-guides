@@ -19,7 +19,7 @@ const globalText = {
 	},
 	
 	header: {
-		searchInputText: 'Search...'
+		searchInputText: 'Search'
 	},
 	
 	home: {

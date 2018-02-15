@@ -19,18 +19,23 @@
 			margin-right: 20px;
 			font-size: 85px;
 			display: flex;
+      color: #333;
 			flex-direction: column; }
 			#account-page .account-page-header .account-page-account .account-page-info .account-page-content {
 				display: flex;
 				flex-direction: column;
 				justify-content: center; }
 				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
+          color: #333;
 					margin: 0;
 					font-size: 38px; }
 				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h4 {
+          color: #333;
 					margin: 0;
 					font-weight: 400;
 					font-size: 15px; }
+          #account-page .account-page-header .account-page-account .account-page-info .account-page-content h4 b {
+            color: #333; }
 	#account-page .account-page-header .account-page-account .account-page-percent {
 		padding: 10px;
 		display: flex;
@@ -38,11 +43,13 @@
 		flex-direction: column;
 		align-items: center; }
 		#account-page .account-page-header .account-page-account .account-page-percent p {
+      color: #333;
 			margin: 0;
 			line-height: 1;
 			font-size: 40px;
 			font-weight: 700; }
 		#account-page .account-page-header .account-page-account .account-page-percent h3 {
+      color: #333;
 			margin: 0;
 			text-transform: uppercase;
 			font-size: 11px;
@@ -51,21 +58,33 @@
 	#account-page .account-page-header .account-page-progress {
 		padding: 0 20px 20px 20px; }
 
-#account-page .account-page-section {
-	padding: 20px;
-	margin-bottom: 40px;
-	border-radius: 5px;
-	border: 1px solid #BDBDBD;
-	background-color: #fff; }
+  #account-page .account-page-section {
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    background-color: #fff; }
 	#account-page .account-page-section .account-page-content {
-		margin-bottom: 20px; }
+		margin-bottom: 30px; }
+    #account-page .account-page-content:last-child {
+      margin-bottom: 10px; }
 
-#account-page .account-page-overview {
-	
-}
-
-#account-page  .account-page-body .account-page-body-content  {
-	display: flex; }
+#account-page .account-page-section .account-page-content .account-page-overview {
+  margin: 0;
+  padding-top: 10px;
+  display: flex; }
+  #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info {
+    width: 25%;
+    padding: 20px 0; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
+      text-align: center;
+      margin: 0;
+      font-size: 16px;
+      color: #919496; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h6 {
+      text-align: center;
+      margin: 0;
+      font-size: 22px; }
 
   #account-page .account-page-sign-out {
     display: flex;

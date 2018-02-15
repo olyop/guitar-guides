@@ -11,7 +11,7 @@ class AccountPage extends React.Component {
 		super(props)
 		
 		this.state = {
-			content1: false,
+			content1: true,
 			content2: false,
 			content3: false
 		}
@@ -61,7 +61,27 @@ class AccountPage extends React.Component {
 							active={this.state.content1}>Overview</Heading>
 						{this.state.content1 ? (
 							<div className="account-page-content account-page-overview">
-								Overview
+                
+                <div className="account-page-overview-info">
+                  <h5>Name</h5>
+                  <h6>{this.props.appState.account.name}</h6>
+                </div>
+                
+                <div className="account-page-overview-info">
+                  <h5>Surname</h5>
+                  <h6>{this.props.appState.account.surname}</h6>
+                </div>
+                
+                <div className="account-page-overview-info">
+                  <h5>Experience</h5>
+                  <h6>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h6>
+                </div>
+                
+                <div className="account-page-overview-info">
+                  <h5>Date Joined</h5>
+                  <h6>{this.props.appState.account.dateJoined}</h6>
+                </div>
+                
 							</div>
 						) : null}
 					</div>

@@ -19,10 +19,8 @@
       color: #F44336 }
 
 @media (min-width: 500px) {
-	.heading {
-  	margin: 0 0; }
-		.heading h1 {
-			font-size: 27px;	}
+  .heading h1 {
+    font-size: 27px;	}
 }
 
 @media (min-width: 700px) {

@@ -12,7 +12,6 @@ import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
 import Theory from './pages/theory/theory'
-import AccountHover from './account-hover/account-hover'
 
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -97,8 +96,6 @@ class Index extends React.Component {
 								globalText={globalText}
 								logIn={this.logIn} />
             )}
-						
-						<AccountHover />
 
             {isAccountLoggedIn ? (
               <div id="content">
