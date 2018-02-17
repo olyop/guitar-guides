@@ -1,0 +1,25 @@
+#guitar-tab .guitar-tab-inner {
+	width: 350px;
+	height: 150px;
+	position: relative; }
+	#guitar-tab .guitar-tab-inner .guitar-tab-horz {
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background-color: #333; }
+
+#guitar-tab .guitar-tab-inner .guitar-tab-note {
+	position: absolute;
+	margin: 0;
+	top: 10px;
+	height: 20px;
+	width: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+}
+#guitar-tab .guitar-tab-inner .guitar-tab-note p {
+	margin: 0;
+	font-size: 12px;
+}

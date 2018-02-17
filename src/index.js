@@ -50,17 +50,9 @@ class Index extends React.Component {
 		this.handleHamburger = this.handleHamburger.bind(this)
 	}
 	
-	logIn(account) {
-		this.setState({ account })
-	} 
-  
-  logOut() {
-    this.setState({ account: null })
-  }
-	
-	handleHamburger() {
-		this.setState({ menu: !this.state.menu })
-	}
+	logIn(account) { this.setState({ account }) } 
+  logOut() { this.setState({ account: null }) }
+	handleHamburger() { this.setState({ menu: !this.state.menu }) }
 	
 	render() {
     

@@ -36,13 +36,6 @@ class AccountPage extends React.Component {
 							<i className="material-icons">account_circle</i>
 							<div className="account-page-content">
 								<h3>{`${this.props.appState.account.name} ${this.props.appState.account.surname}`}</h3>
-								<h4>
-									<b>Experience: </b>
-									{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}
-									<br />
-									<b>Date Joined: </b>
-									{this.props.appState.account.dateJoined}
-								</h4>
 							</div>
 						</div>
 
@@ -63,23 +56,23 @@ class AccountPage extends React.Component {
 							<div className="account-page-content account-page-overview">
                 
                 <div className="account-page-overview-info">
-                  <h5>Name</h5>
-                  <h6>{this.props.appState.account.name}</h6>
+                  <h5><b>Public ID:</b>{this.props.appState.account.id}</h5>
+                </div>
+								
+								<div className="account-page-overview-info">
+                  <h5><b>Name:</b>{this.props.appState.account.name}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5>Surname</h5>
-                  <h6>{this.props.appState.account.surname}</h6>
+                  <h5><b>Surname:</b>{this.props.appState.account.surname}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5>Experience</h5>
-                  <h6>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h6>
+                  <h5><b>Experience:</b>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5>Date Joined</h5>
-                  <h6>{this.props.appState.account.dateJoined}</h6>
+                  <h5><b>Date Joined:</b>{this.props.appState.account.dateJoined}</h5>
                 </div>
                 
 							</div>

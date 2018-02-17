@@ -17,7 +17,7 @@
 		#account-page .account-page-header .account-page-account .account-page-info i {
 			display: block;
 			margin-right: 20px;
-			font-size: 85px;
+			font-size: 73px;
 			display: flex;
       color: #333;
 			flex-direction: column; }
@@ -28,14 +28,7 @@
 				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
           color: #333;
 					margin: 0;
-					font-size: 38px; }
-				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h4 {
-          color: #333;
-					margin: 0;
-					font-weight: 400;
-					font-size: 15px; }
-          #account-page .account-page-header .account-page-account .account-page-info .account-page-content h4 b {
-            color: #333; }
+					font-size: 37px; }
 	#account-page .account-page-header .account-page-account .account-page-percent {
 		padding: 10px;
 		display: flex;
@@ -66,25 +59,20 @@
     background-color: #fff; }
 	#account-page .account-page-section .account-page-content {
 		margin-bottom: 30px; }
-    #account-page .account-page-content:last-child {
-      margin-bottom: 10px; }
 
 #account-page .account-page-section .account-page-content .account-page-overview {
-  margin: 0;
-  padding-top: 10px;
-  display: flex; }
+  margin: 0; }
   #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info {
-    width: 25%;
-    padding: 20px 0; }
-    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
-      text-align: center;
+		display: flex;
+    padding: 2px 0; }
+		#account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
+    	font-size: 19px;
+			margin: 0; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
+			padding-right: 8px;
       margin: 0;
-      font-size: 16px;
+			font-weight: 500;
       color: #919496; }
-    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h6 {
-      text-align: center;
-      margin: 0;
-      font-size: 22px; }
 
   #account-page .account-page-sign-out {
     display: flex;

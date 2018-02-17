@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Tab from '../../../common/tab'
+import GuitarTab from '../../../common/guitar-tab'
 
 const GuitarScales = props => (
 	<div id="guitar-scales">
-		<Tab />
+		<GuitarTab />
 	</div>
 )
 

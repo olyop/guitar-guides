@@ -1,5 +1,8 @@
 import React from 'react'
 
+import includes from 'lodash/includes'
+import maliciousSubStrings from '../database/malicious-sub-string'
+
 import TextField from 'material-ui/TextField'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
@@ -30,13 +33,13 @@ class CreateAccount extends React.Component {
 	
 	handleName(event) {
 		this.setState({
-			name: event.target.value
+			name: String(event.target.value)
 		})
 	}
 	
 	handleSurname(event) {
 		this.setState({
-			surname: event.target.value
+			surname: String(event.target.value)
 		})
 	}
 	
@@ -46,6 +49,23 @@ class CreateAccount extends React.Component {
   
   handleAdd() {
     
+		// Check for malicious code
+		let flag = false
+		
+		for (let i = 0; i < maliciousSubStrings.length; i++) {
+			if (includes(this.state.name, maliciousSubStrings[i])) {
+				this.setState({ nameErrorText: 'Please enter a valid name.' })
+				flag = true
+			}
+			if (includes(this.state.surname, maliciousSubStrings[i])) {
+				this.setState({ surnameErrorText: 'Please enter a valid surname.' })
+				flag = true
+			}
+		}
+		
+		// Exit sending data if potentially malicoius content is found
+		if (flag) { return }
+		
     // Validate form data
     let isNameEmpty = this.state.name === ''
     let isNameTooLong = this.state.name.length > 10
@@ -59,7 +79,7 @@ class CreateAccount extends React.Component {
     } else if (isNameTooLong) {
       this.setState({ nameErrorText: 'Your name is to long.' })
     } else {
-       this.setState({ nameErrorText: null })
+      this.setState({ nameErrorText: null })
     }
 		
 		// Check last name input

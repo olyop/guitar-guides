@@ -1,4 +1,5 @@
 const accountTemplate = {
+	id: '',
 	name: '',
 	surname: '',
 	experience: null,
