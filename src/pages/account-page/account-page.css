@@ -5,19 +5,19 @@
 	#account-page .account-page-header {
 		width: 100%;
 		border-bottom: 1px solid #BDBDBD;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 		background-color: #fff; }
 
 #account-page .account-page-header .account-page-account {
-	padding: 40px;
+	padding: 20px;
 	display: flex;
 	justify-content: space-between; }
 	#account-page .account-page-header .account-page-account .account-page-info {
 		display: flex; }
 		#account-page .account-page-header .account-page-account .account-page-info i {
 			display: block;
-			margin-right: 20px;
-			font-size: 73px;
+			margin-right: 10px;
+			font-size: 63px;
 			display: flex;
       color: #333;
 			flex-direction: column; }
@@ -28,7 +28,7 @@
 				#account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
           color: #333;
 					margin: 0;
-					font-size: 37px; }
+					font-size: 30px; }
 	#account-page .account-page-header .account-page-account .account-page-percent {
 		padding: 10px;
 		display: flex;
@@ -39,38 +39,42 @@
       color: #333;
 			margin: 0;
 			line-height: 1;
-			font-size: 40px;
+			font-size: 32px;
 			font-weight: 700; }
 		#account-page .account-page-header .account-page-account .account-page-percent h3 {
       color: #333;
 			margin: 0;
 			text-transform: uppercase;
-			font-size: 11px;
+			font-size: 10px;
 			font-weight: 700; }
 
 	#account-page .account-page-header .account-page-progress {
 		padding: 0 20px 20px 20px; }
 
   #account-page .account-page-section {
-    padding: 40px;
+    padding: 20px;
     margin-bottom: 40px;
-    border-radius: 5px;
-    border: 1px solid #BDBDBD;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
     background-color: #fff; }
 	#account-page .account-page-section .account-page-content {
 		margin-bottom: 30px; }
 
 #account-page .account-page-section .account-page-content .account-page-overview {
+  padding: 0;
   margin: 0; }
   #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info {
 		display: flex;
-    padding: 2px 0; }
+    width: 100%;
+    justify-content: space-between; }
 		#account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
-    	font-size: 19px;
+    	font-size: 16px;
 			margin: 0; }
     #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
-			padding-right: 8px;
-      margin: 0;
+    	font-size: 16px;
 			font-weight: 500;
       color: #919496; }
 
@@ -78,3 +82,32 @@
     display: flex;
     align-items: center;
     justify-content: center; }
+
+@media (min-width: 700px) {
+  #account-page .account-page-header .account-page-account {
+	 padding: 40px; }
+    #account-page .account-page-header .account-page-account .account-page-info i {
+			margin-right: 20px;
+      font-size: 73px; }
+    #account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
+      font-size: 37px; }
+    #account-page .account-page-header .account-page-account .account-page-percent p {
+      font-size: 40px; }
+    #account-page .account-page-header .account-page-account .account-page-percent h3 {
+      font-size: 11px; }
+  #account-page .account-page-section {
+    padding: 40px; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
+      font-size: 19px; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
+      font-size: 19px; }
+}
+
+@media (min-width: 768px) {
+  #account-page .account-page-header {
+		margin-bottom: 40px; }
+  #account-page .account-page-section {
+    border-left: 1px solid #BDBDBD;
+    border-right: 1px solid #BDBDBD;
+    border-radius: 5px; }
+}

@@ -12,8 +12,8 @@ class AccountPage extends React.Component {
 		
 		this.state = {
 			content1: true,
-			content2: false,
-			content3: false
+			content2: true,
+			content3: true
 		}
 		
 		this.toggleContent1 = this.toggleContent1.bind(this)
@@ -56,23 +56,28 @@ class AccountPage extends React.Component {
 							<div className="account-page-content account-page-overview">
                 
                 <div className="account-page-overview-info">
-                  <h5><b>Public ID:</b>{this.props.appState.account.id}</h5>
+                  <b>Public ID:</b>
+                  <h5>{this.props.appState.account.id}</h5>
                 </div>
 								
 								<div className="account-page-overview-info">
-                  <h5><b>Name:</b>{this.props.appState.account.name}</h5>
+                  <b>Name:</b>
+                  <h5>{this.props.appState.account.name}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5><b>Surname:</b>{this.props.appState.account.surname}</h5>
+                  <b>Surname:</b>
+                  <h5>{this.props.appState.account.surname}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5><b>Experience:</b>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h5>
+                  <b>Experience:</b>
+                  <h5>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <h5><b>Date Joined:</b>{this.props.appState.account.dateJoined}</h5>
+                  <b>Date Joined:</b>
+                  <h5>{this.props.appState.account.dateJoined}</h5>
                 </div>
                 
 							</div>
