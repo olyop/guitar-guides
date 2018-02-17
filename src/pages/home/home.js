@@ -34,7 +34,7 @@ const Home = props => (
 					<div className="home-section-content">
 						<ul>
 							<li><Link to="/guitar/chords">Chords</Link></li>
-							<li><Link to="/guitar/chords">Scales</Link></li>
+							<li><Link to="/guitar/scales">Scales</Link></li>
 							<li><Link to="/guitar/exercises">Exercises</Link></li>
 							<li><Link to="/guitar/riffs">Riffs</Link></li>
               <li><Link to="/guitar/about">About</Link></li>

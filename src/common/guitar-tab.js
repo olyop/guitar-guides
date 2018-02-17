@@ -2,74 +2,41 @@ import React from 'react'
 
 import './guitar-tab.css'
 
-class GuitarTab extends React.Component {
-	
-	constructor(props) {
-		super(props)
-		
-		this.state = {
-			
-		}
-	}
-	
+class GuitarTab extends React.Component {	
 	render() {
+		
+		const stringSpacing = [0,20,40,60,80,100]
+		const leftSpacing = [5,30,55,80,105,130,155,180,205,230,255,280,305]
+		
 		return (
-			<div id="guitar-tab">
+			<div class="guitar-tab">
 				<div className="guitar-tab-inner">
 				
 					<div className="guitar-tab-horz"
-						style={{ top: '0' }} />
+						style={{ top: '10px' }} />
 					<div className="guitar-tab-horz"
 						style={{ top: '30px' }} />
 					<div className="guitar-tab-horz"
-						style={{ top: '60px' }} />
+						style={{ top: '50px' }} />
+					<div className="guitar-tab-horz"
+						style={{ top: '70px' }} />
 					<div className="guitar-tab-horz"
 						style={{ top: '90px' }} />
 					<div className="guitar-tab-horz"
-						style={{ top: '120px' }} />
-					<div className="guitar-tab-horz"
-						style={{ top: '149px' }} />
+						style={{ top: '110px' }} />
 					
-					<div className="guitar-tab-note"
-						style={{ left: '10px', top: '10px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '45px', top: '20px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '80px', top: '30px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '115px', top: '40px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '150px', top: '50px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '185px', top: '60px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '210px', top: '70px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '245px', top: '80px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '280px', top: '90px' }}>
-						<p>12</p>
-					</div>
-					<div className="guitar-tab-note"
-						style={{ left: '315px', top: '100px' }}>
-						<p>12</p>
-					</div>
+					{this.props.tab.map((section, index) => {
+						if (section === null) {
+							return null
+						} else {
+							return (
+								<div className="guitar-tab-note"
+									style={{ left: `${leftSpacing[index]}px`, top: `${stringSpacing[section.string - 1]}px`}}>
+									<p>{section.fret}</p>
+								</div>
+							)
+						}
+					})}
 					
 				</div>
 			</div>
