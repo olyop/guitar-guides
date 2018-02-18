@@ -1,4 +1,4 @@
-const ChordsData = {
+const chordsDatabase = {
   standard: [
     {
       id: 'voiTzjkFTl',
@@ -750,4 +750,4 @@ const ChordsData = {
   ]
 }
 
-export default ChordsData
+export default chordsDatabase

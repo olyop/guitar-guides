@@ -87,6 +87,7 @@
 					color: #F44336; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a .guitar-nav-strip {
+				border-radius: 10px 10px 0 0;
 				height: 5px;
 				width: calc(100% + 2px);
 				position: absolute;

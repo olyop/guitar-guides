@@ -45,7 +45,7 @@ class Accounts extends React.Component {
 		
 		let template = accountTemplate
 		
-		template.id = makeId(15)
+		template.id = makeId()
 		template.name = name
 		template.surname = surname
 		template.experience = experience

@@ -69,6 +69,7 @@
   #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info {
 		display: flex;
     width: 100%;
+		align-items: center;
     justify-content: space-between; }
 		#account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
     	font-size: 16px;
@@ -90,7 +91,7 @@
 			margin-right: 20px;
       font-size: 73px; }
     #account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
-      font-size: 37px; }
+      font-size: 33px; }
     #account-page .account-page-header .account-page-account .account-page-percent p {
       font-size: 40px; }
     #account-page .account-page-header .account-page-account .account-page-percent h3 {

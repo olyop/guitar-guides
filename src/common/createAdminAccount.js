@@ -2,7 +2,7 @@ import makeId from './make-id'
 
 const createAdminAccount = template => {
 	
-	template.id = makeId(15)
+	template.id = makeId()
 	template.name = 'Admin'
 	template.surname = 'Account'
 	template.experience = 2

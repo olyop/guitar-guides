@@ -23,8 +23,9 @@ import createAdminAccount from './common/createAdminAccount'
 // Import Data
 import accountTemplate from './database/account-template'
 import IMPORT_globalText from './database/global-text'
-import IMPORT_chordsData from './database/chords-data'
-import IMPORT_theoryData from './database/theory-data'
+import IMPORT_chordsDatabase from './database/chords-database'
+import IMPORT_scalesDatabase from './database/scales-database'
+import IMPORT_theoryDatabase from './database/theory-database'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -108,6 +109,7 @@ class Index extends React.Component {
 										match={match}
 										globalText={globalText}
 										chordsData={this.props.chordsData}
+										scalesData={this.props.scalesData}
                     theoryData={this.props.theoryData} />		
                 )} />
 								
@@ -133,8 +135,9 @@ class Index extends React.Component {
 
 ReactDOM.render(
 	<Index globalText={IMPORT_globalText}
-		chordsData={IMPORT_chordsData}
-    theoryData={IMPORT_theoryData} />,
+		chordsData={IMPORT_chordsDatabase}
+		scalesData={IMPORT_scalesDatabase}
+    theoryData={IMPORT_theoryDatabase} />,
 	document.getElementById('root')
 )
 

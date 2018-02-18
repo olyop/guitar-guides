@@ -5,13 +5,13 @@
 	border-bottom: 1px solid #E0E0E0;
 	background-color: #fff; }
 
-	#guitar-content #guitar-home h1 {
-		margin: 0 0 5px 0;
-		font-size: 25px; }
-		#guitar-content #guitar-home p {
-			margin: 0;
-			margin-bottom: 10px;
-			font-size: 14px; }
+#guitar-content #guitar-home h1 {
+	margin: 0 0 5px 0;
+	font-size: 25px; }
+	#guitar-content #guitar-home p {
+		margin: 0;
+		margin-bottom: 10px;
+		font-size: 14px; }
 
 #guitar-content #guitar-home .col-md-6 {
 	padding-bottom: 30px; }
