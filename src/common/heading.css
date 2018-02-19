@@ -10,7 +10,7 @@
     border-color: #F44336; }
   .heading h1 {
     margin: 0;
-    font-size: 25px; }
+    font-size: 21px; }
     .heading:hover h1 {
       color: #F44336 }
   .heading i {
@@ -20,10 +20,10 @@
 
 @media (min-width: 500px) {
   .heading h1 {
-    font-size: 27px;	}
+    font-size: 23px;	}
 }
 
 @media (min-width: 700px) {
 	.heading h1 {
-    font-size: 30px;	}
+    font-size: 25px;	}
 }

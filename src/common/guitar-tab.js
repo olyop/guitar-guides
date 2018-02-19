@@ -21,10 +21,16 @@ class GuitarTabSection extends React.Component {
 					if (section === null) {
 						return null
 					} else {
+						let noteStyle = {
+							left: `${leftSpacing[index]}px`,
+							top: `${stringSpacing[section.string - 1]}px`
+						}
 						return (
 							<div key={index}
 								className="guitar-tab-note"
-								style={{ left: `${leftSpacing[index]}px`, top: `${stringSpacing[section.string - 1]}px`}}><p>{section.fret}</p></div>
+								style={noteStyle}>
+								<p>{section.fret}</p>
+							</div>
 						)
 					}
 				})}

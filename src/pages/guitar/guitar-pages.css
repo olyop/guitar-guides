@@ -12,20 +12,19 @@
 		margin: 0;
 		margin-bottom: 10px;
 		font-size: 14px; }
-
 #guitar-content #guitar-home .col-md-6 {
 	padding-bottom: 30px; }
 
-  #guitar-content #guitar-chords p {
-    margin: 0 0 20px 0;
-    font-size: 14px; }
-  #guitar-content #guitar-chords .guitar-chords-track {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    display: flex; }
-
+#guitar-content #guitar-chords p {
+	margin: 0 0 20px 0;
+	font-size: 14px; }
+#guitar-content #guitar-chords .guitar-chords-track {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	display: flex; }
 #guitar-content #guitar-chords .heading {
-	margin-top: 0 0 10px 0; }
+margin-top: 0 0 10px 0; }
+
 
 @media (min-width: 690px) {
 	#guitar-content #guitar-chords .heading {
