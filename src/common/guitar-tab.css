@@ -9,10 +9,9 @@
 	.guitar-tab .guitar-tabs {
 		display: flex;
 		flex-direction: column;
-		justify-content: center; }
+		justify-content: flex-start; }
 
 		.guitar-tab h1 {
-			text-align: center;
 			margin: 0 0 10px 0;
 			font-size: 20px; }
 
