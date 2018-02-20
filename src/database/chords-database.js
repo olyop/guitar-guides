@@ -221,7 +221,7 @@ const chordsDatabase = {
           notes: [null,'A','E','G','C','E']
         }
       ]
-    ],
+    ], // A
     [
       [
         {
@@ -329,7 +329,7 @@ const chordsDatabase = {
           notes: [null,'A#','F','G#','C#','F']
         }
       ]
-    ],
+    ], // A#
     [
       [
         {
@@ -423,7 +423,7 @@ const chordsDatabase = {
           notes: [null,'B','F#','A','D','F#']
         }
       ]
-    ],
+    ], // B
     [
       [
         {
@@ -524,7 +524,7 @@ const chordsDatabase = {
           notes: [null,'C','G','A#','D#','G']
         }
       ]
-    ],
+    ], // C
     [
       [
         {
@@ -618,7 +618,7 @@ const chordsDatabase = {
           notes: [null,'C#','G#','B','E','G#']
         }
       ]
-    ],
+    ], // C#
     [
       [
         {
@@ -740,13 +740,13 @@ const chordsDatabase = {
           notes: [null,'D','A','C','F','A']
         }
       ]
-    ],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    ], // D
+    [],      // D#
+    [],      // E
+    [],      // F
+    [],      // F#
+    [],      // G
+    []       // G#
   ]
 }
 
