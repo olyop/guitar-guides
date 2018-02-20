@@ -7,21 +7,21 @@ import registerServiceWorker from './registerServiceWorker'
 import Header from './header/header'
 import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
-import AccountPage from './pages/account-page/account-page'
 import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
 import Theory from './pages/theory/theory'
+import AccountPage from './pages/account-page/account-page'
 
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
+import accountTemplate from './database/account-template'
 import createAdminAccount from './common/createAdminAccount'
 
 // Import Data
-import accountTemplate from './database/account-template'
 import IMPORT_globalText from './database/global-text'
 import IMPORT_chordsDatabase from './database/chords-database'
 import IMPORT_scalesDatabase from './database/scales-database'
@@ -41,18 +41,24 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-//			account: createAdminAccount(accountTemplate),
-      account: null,
+			account: createAdminAccount(accountTemplate),
+//      account: null,
 			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
+    this.deleteAccount = this.deleteAccount.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
 	}
 	
 	logIn(account) { this.setState({ account }) } 
   logOut() { this.setState({ account: null }) }
+  
+  deleteAccount() {
+    
+  }
+  
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
 	
 	render() {
@@ -101,7 +107,8 @@ class Index extends React.Component {
 								<Route path="/account" exact render={ () => (
                   <AccountPage appState={appState}
 										globalText={globalText}
-                    logOut={this.logOut} />		
+                    logOut={this.logOut}
+                    deleteAccount={this.deleteAccount} />		
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (

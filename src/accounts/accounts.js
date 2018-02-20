@@ -43,15 +43,15 @@ class Accounts extends React.Component {
   
   addAccount(name, surname, experience) {
 		
-		let template = accountTemplate
+		let newAccount = accountTemplate
 		
-		template.id = makeId()
-		template.name = name
-		template.surname = surname
-		template.experience = experience
-		template.dateJoined = moment().format('DD/MM/YYYY')
+		newAccount.id = makeId()
+		newAccount.name = name
+		newAccount.surname = surname
+		newAccount.experience = experience
+		newAccount.dateJoined = moment().format('DD/MM/YYYY')
 		
-    axios.post('http://localhost:3001/users', template)
+    axios.post('http://localhost:3001/users', newAccount)
     	.then(response => this.setState({ accounts: this.state.accounts.concat([response.data]) }))
     	.catch(error => {
       	console.log(error)

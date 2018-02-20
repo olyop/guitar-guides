@@ -50,8 +50,10 @@ class AccountPage extends React.Component {
 				<div className="container account-page-section">
 					
 					<div className="account-page-content">
+            
 						<Heading onClick={this.toggleContent1}
 							active={this.state.content1}>Overview</Heading>
+            
 						{this.state.content1 ? (
 							<div className="account-page-content account-page-overview">
                 
@@ -82,6 +84,7 @@ class AccountPage extends React.Component {
                 
 							</div>
 						) : null}
+            
 					</div>
 					
 					<div className="account-page-content">
@@ -99,7 +102,10 @@ class AccountPage extends React.Component {
 							active={this.state.content3}>Setttings</Heading>
 						{this.state.content3 ? (
 							<div className="account-page-content account-page-settings">
-								Settings
+								<RaisedButton onClick={this.props.deleteAccount}
+                  backgroundColor="#F44336"
+                  labelColor="#fff"
+                  label="Delete Account" />
 							</div>
 						) : null}
 					</div>
@@ -108,8 +114,8 @@ class AccountPage extends React.Component {
 
 				<div className="account-page-sign-out">
 					<RaisedButton onClick={this.props.logOut}
-						backgroundColor={'#F44336'}
-						labelColor={'#fff'}
+            backgroundColor="#F44336"
+            labelColor="#fff"
 						label="Sign Out" />
 				</div>
 

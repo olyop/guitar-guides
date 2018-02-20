@@ -93,6 +93,53 @@
         },
         "theory": {}
       }
+    },
+    {
+      "id": "gyVwTBGq1st97Vb",
+      "name": "Test",
+      "surname": "Account",
+      "experience": 1,
+      "dateJoined": "20/02/2018",
+      "progress": {
+        "guitar": {
+          "chords": {
+            "standardChords": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "scales": {
+            "modes": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "minor": 0,
+            "major": 0,
+            "pentatonic": 0,
+            "blues": 0
+          }
+        },
+        "bass": {
+          "major": 0,
+          "minor": 0
+        },
+        "theory": {}
+      }
     }
   ]
 }
