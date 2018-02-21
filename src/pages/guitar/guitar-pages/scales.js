@@ -5,7 +5,7 @@ import GuitarTab from '../../../common/guitar-tab'
 const GuitarScales = props => (
 	<div id="guitar-scales">
 		
-		<GuitarTab scale={props.scalesData[7][0]} />
+		<GuitarTab scale={props.scalesData[7][0][0]} />
 		
 	</div>
 )
