@@ -18,6 +18,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
+import axios from 'axios'
 import accountTemplate from './database/account-template'
 import createAdminAccount from './common/createAdminAccount'
 
@@ -41,8 +42,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: createAdminAccount(accountTemplate),
-//      account: null,
+//			account: createAdminAccount(accountTemplate),
+      account: null,
 			menu: false
 		}
 		
@@ -56,7 +57,14 @@ class Index extends React.Component {
   logOut() { this.setState({ account: null }) }
   
   deleteAccount() {
-    
+		axios({
+			method: 'delete',
+			url: 'http://localhost:3001/users',
+			headers: { 'Content-Type': 'application/json' },
+			data: {
+				id: this.state.account.id
+			}
+		})
   }
   
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
