@@ -1,8 +1,11 @@
 import React from 'react'
 
+import axios from 'axios'
 import orderBy from 'lodash/orderBy'
+
 import ChordChart from './chord-chart'
 import RaisedButton from 'material-ui/RaisedButton'
+import Loading from '../common/loading'
 
 import './chord-chooser.css'
 
@@ -59,43 +62,62 @@ class ChordChooser extends React.Component {
     super(props)
     
     this.state = {
+			chordChooser: null,
       note: 0,
       type: 0
     }
   }
+	
+	componentDidMount() {
+    axios.get('http://localhost:3001/chordChooser')
+      .then(response => {
+        this.setState({ chordChooser: response.data })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+	}
   
   render() {    
-    return (
-      <div id="chord-chooser">
-        
-        <h4>Key</h4>
-        <div className="chord-chooser-buttons">
-          {this.props.theoryData.notes.map((note, index) => (
-            <RaisedButton key={index} label={note}
-              className="chord-chooser-button"
-              backgroundColor={this.state.note === index ? '#F44336' : '#fff'}
-              labelColor={this.state.note === index ? '#fff' : '#333'}
-              onClick={ () => this.setState({ note: index }) } />
-          ))}
-        </div>
-        
-        <h4>Type</h4>
+    if (this.state.chordChooser === null) {
+			return (
+				<div id="chord-chooser">
+					<Loading />
+				</div>
+			)
+		} else if (this.state.chordChooser.constructor === Array) {
+			return (
+				<div id="chord-chooser">
+
+					<h4>Key</h4>
 					<div className="chord-chooser-buttons">
-						{this.props.theoryData.chordTypes.map((type, index) => (
-							<RaisedButton key={index} label={type}
+						{this.props.theoryData.notes.map((note, index) => (
+							<RaisedButton key={index} label={note}
 								className="chord-chooser-button"
-								backgroundColor={this.state.type === index ? '#F44336' : '#fff'}
-								labelColor={this.state.type === index ? '#fff' : '#333'}
-								onClick={ () => this.setState({ type: index }) } />
+								backgroundColor={this.state.note === index ? '#F44336' : '#fff'}
+								labelColor={this.state.note === index ? '#fff' : '#333'}
+								onClick={ () => this.setState({ note: index }) } />
 						))}
 					</div>
-        
-        {this.state.note === null || this.state.type === null ? null : (
-          <ChordChartVariations variations={orderBy(this.props.chordsData.chordChooser[this.state.note][this.state.type], ['fret'],['asc'])} />
-        )}
-        
-      </div>
-    )
+
+					<h4>Type</h4>
+						<div className="chord-chooser-buttons">
+							{this.props.theoryData.chordTypes.map((type, index) => (
+								<RaisedButton key={index} label={type}
+									className="chord-chooser-button"
+									backgroundColor={this.state.type === index ? '#F44336' : '#fff'}
+									labelColor={this.state.type === index ? '#fff' : '#333'}
+									onClick={ () => this.setState({ type: index }) } />
+							))}
+						</div>
+
+					{this.state.note === null || this.state.type === null ? null : (
+						<ChordChartVariations variations={orderBy(this.props.chordsData.chordChooser[this.state.note][this.state.type], ['fret'],['asc'])} />
+					)}
+
+				</div>
+			)
+		}
   }
 }
 

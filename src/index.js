@@ -42,9 +42,10 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-//			account: createAdminAccount(accountTemplate),
-      account: null,
-			menu: false
+			account: createAdminAccount(accountTemplate),
+//      account: null,
+			menu: false,
+			accountDeleteLoading: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
@@ -54,16 +55,25 @@ class Index extends React.Component {
 	}
 	
 	logIn(account) { this.setState({ account }) } 
-  logOut() { this.setState({ account: null }) }
+  logOut() {
+		this.setState({ account: null })
+	}
   
   deleteAccount() {
-		axios({
-			method: 'delete',
-			url: 'http://localhost:3001/users',
-			headers: { 'Content-Type': 'application/json' },
-			data: {
-				id: this.state.account.id
+		this.setState({ accountDeleteLoading: true },() => {
+			
+			const axiosConfig = {
+				method: 'delete',
+				url: `http://localhost:3001/users/${this.state.account.id}`,
+				headers: { 'Content-Type': 'application/json' }
 			}
+
+			axios(axiosConfig)
+				.then(response => {
+					this.setState({ accountDeleteLoading: false })
+					this.logOut()
+				})
+				.catch(error => console.log(error))
 		})
   }
   

@@ -1,9 +1,52 @@
 import React from 'react'
 
 import orderBy from 'lodash/orderBy'
+import axios from 'axios'
+
 import ChordChart from '../../../common/chord-chart'
 import ChordChooser from '../../../common/chord-chooser'
 import Heading from '../../../common/heading'
+import Loading from '../../../common/loading'
+
+class StandardChords extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		
+		this.state = { standardChords: null }
+	}
+	
+	componentDidMount() {
+    axios.get('http://localhost:3001/standardChords')
+      .then(response => {
+        this.setState({ standardChords: response.data })
+      })
+      .catch(error => {
+        console.log(error)
+        this.setState({ standardChords: 'error' })
+      })
+	}
+	
+	render() {
+		
+		if (this.state.standardChords === null) {
+			return (
+				<div className="guitar-chords-track">
+					<Loading />
+				</div>
+			)
+		} else if (this.state.standardChords.constructor === Array) {
+			return (
+				<div className="guitar-chords-track">
+					{orderBy(this.state.standardChords, ['name'],['asc']).map(chord => (
+						<ChordChart key={chord.id}
+							chord={chord} />
+					))}
+				</div>
+			)
+		}
+	}
+}
 
 class GuitarChords extends React.Component {
   
@@ -12,7 +55,7 @@ class GuitarChords extends React.Component {
     
     this.state = {
       content1: false,
-      content2: true
+      content2: false
     }
     
     this.toggleContent1 = this.toggleContent1.bind(this)
@@ -31,12 +74,7 @@ class GuitarChords extends React.Component {
         {this.state.content1 ? (
           <div>
             <p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
-            <div className="guitar-chords-track">
-              {orderBy(this.props.chordsData.standard, ['name'],['asc']).map(chord => (
-                <ChordChart key={chord.id}
-                  chord={chord} />
-              ))}
-            </div>
+            <StandardChords />
           </div>
         ) : null}
         

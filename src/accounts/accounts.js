@@ -71,7 +71,7 @@ class Accounts extends React.Component {
       )
     } else if (this.state.accounts.length === 0) {
       accountList = (
-        <p>No accounts</p>
+        <h5>No accounts.</h5>
       )
     } else if (this.state.accounts.length > 0) {
       accountList = this.state.accounts.map(account => (

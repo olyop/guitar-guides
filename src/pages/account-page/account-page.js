@@ -105,7 +105,8 @@ class AccountPage extends React.Component {
 								<RaisedButton onClick={this.props.deleteAccount}
                   backgroundColor="#F44336"
                   labelColor="#fff"
-                  label="Delete Account" />
+									disabled={this.props.appState.accountDeleteLoading}
+                  label={this.props.appState.accountDeleteLoading ? 'Deleting...' : 'Delete Account'} />
 							</div>
 						) : null}
 					</div>
