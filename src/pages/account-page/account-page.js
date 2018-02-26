@@ -1,5 +1,7 @@
 import React from 'react'
 
+import axios from 'axios'
+
 import Heading from '../../common/heading'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -11,15 +13,38 @@ class AccountPage extends React.Component {
 		super(props)
 		
 		this.state = {
+			accountDeleteLoading: false,
 			content1: true,
 			content2: true,
 			content3: true
 		}
 		
+    this.deleteAccount = this.deleteAccount.bind(this)
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
 	}
+	
+	deleteAccount() {
+		this.setState(
+			{ accountDeleteLoading: true },
+			() => {
+			
+				const axiosConfig = {
+					method: 'delete',
+					url: `http://localhost:3001/users/${this.props.appState.account.id}`,
+					headers: { 'Content-Type': 'application/json' }
+				}
+
+				axios(axiosConfig)
+					.then(response => {
+						this.setState({ accountDeleteLoading: false })
+						this.props.logOut()
+					})
+					.catch(error => console.log(error))
+			}
+		)
+  }
 	
 	toggleContent1() { this.setState({ content1: !this.state.content1 }) }
 	toggleContent2() { this.setState({ content2: !this.state.content2 }) }
@@ -102,11 +127,11 @@ class AccountPage extends React.Component {
 							active={this.state.content3}>Setttings</Heading>
 						{this.state.content3 ? (
 							<div className="account-page-content account-page-settings">
-								<RaisedButton onClick={this.props.deleteAccount}
+								<RaisedButton onClick={this.deleteAccount}
                   backgroundColor="#F44336"
                   labelColor="#fff"
-									disabled={this.props.appState.accountDeleteLoading}
-                  label={this.props.appState.accountDeleteLoading ? 'Deleting...' : 'Delete Account'} />
+									disabled={this.state.accountDeleteLoading}
+                  label={this.state.accountDeleteLoading ? 'Deleting...' : 'Delete Account'} />
 							</div>
 						) : null}
 					</div>
@@ -117,6 +142,7 @@ class AccountPage extends React.Component {
 					<RaisedButton onClick={this.props.logOut}
             backgroundColor="#F44336"
             labelColor="#fff"
+						disabled={this.state.accountDeleteLoading}
 						label="Sign Out" />
 				</div>
 

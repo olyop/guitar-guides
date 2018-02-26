@@ -1,10 +1,10 @@
 import React from 'react'
 
-import orderBy from 'lodash/orderBy'
 import axios from 'axios'
+import orderBy from 'lodash/orderBy'
 
-import ChordChart from '../../../common/chord-chart'
 import ChordChooser from '../../../common/chord-chooser'
+import ChordChart from '../../../common/chord-chart'
 import Heading from '../../../common/heading'
 import Loading from '../../../common/loading'
 
@@ -54,8 +54,8 @@ class GuitarChords extends React.Component {
     super(props)
     
     this.state = {
-      content1: false,
-      content2: false
+      content1: true,
+      content2: true
     }
     
     this.toggleContent1 = this.toggleContent1.bind(this)

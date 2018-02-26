@@ -18,7 +18,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
-import axios from 'axios'
 import accountTemplate from './database/account-template'
 import createAdminAccount from './common/createAdminAccount'
 
@@ -44,13 +43,11 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			menu: false,
-			accountDeleteLoading: false
+			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
-    this.deleteAccount = this.deleteAccount.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
 	}
 	
@@ -58,24 +55,6 @@ class Index extends React.Component {
   logOut() {
 		this.setState({ account: null })
 	}
-  
-  deleteAccount() {
-		this.setState({ accountDeleteLoading: true },() => {
-			
-			const axiosConfig = {
-				method: 'delete',
-				url: `http://localhost:3001/users/${this.state.account.id}`,
-				headers: { 'Content-Type': 'application/json' }
-			}
-
-			axios(axiosConfig)
-				.then(response => {
-					this.setState({ accountDeleteLoading: false })
-					this.logOut()
-				})
-				.catch(error => console.log(error))
-		})
-  }
   
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
 	
