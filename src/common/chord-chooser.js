@@ -112,7 +112,7 @@ class ChordChooser extends React.Component {
 						</div>
 
 					{this.state.note === null || this.state.type === null ? null : (
-						<ChordChartVariations variations={orderBy(this.props.chordsData.chordChooser[this.state.note][this.state.type], ['fret'],['asc'])} />
+						<ChordChartVariations variations={orderBy(this.state.chordChooser[this.state.note][this.state.type], ['fret'],['asc'])} />
 					)}
 
 				</div>

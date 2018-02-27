@@ -81,9 +81,7 @@ class GuitarChords extends React.Component {
         <Heading onClick={this.toggleContent2}
           active={this.state.content2}>Chord Chooser</Heading>
         {this.state.content2 ? (
-          <ChordChooser
-            chordsData={this.props.chordsData}
-            theoryData={this.props.theoryData} />
+          <ChordChooser theoryData={this.props.theoryData} />
         ) : null}
 
       </div>
