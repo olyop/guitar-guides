@@ -132,6 +132,11 @@
                   #home .home-cards .home-section .home-section-inner .home-section-content ul li a:hover {
                     color: #F44336; }
 
+@media (min-height: 1080px) {
+  #home .home-cards {
+    height: 94vh; }
+}
+
 @media (min-width: 400px) {
 	#home .home-cards .home-section .home-section-inner {
 		padding: 20px; }

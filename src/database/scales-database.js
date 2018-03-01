@@ -7,6 +7,8 @@ const scalesDatabase = [
 	[], // D
 	[], // D#
 	[
+    [], // E Major
+    [], // E Major Pentatonic
 		[
 			{
 				id: 'tgVmVCpXMB',
@@ -95,7 +97,8 @@ const scalesDatabase = [
 					}
 				]
 			}
-		] // E Minor
+		], // E Minor
+    [] // E Minor Pentatonic
 	], // E
 	[], // F
 	[], // F#

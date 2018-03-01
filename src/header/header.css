@@ -102,6 +102,11 @@
 							-webkit-user-select: none;
 							color: #fff;  }
 
+@media (min-height: 1080px) {
+  #header {
+    height: 6vh; }
+}
+
 @media (min-width: 500px) {
 	#header .header-middle h1 {
 		font-size: 28px;}

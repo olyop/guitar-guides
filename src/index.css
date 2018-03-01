@@ -26,3 +26,7 @@ i {
 	-webkit-user-select: none;
 }
 
+@media (min-height: 1080px) {
+  #content, #account {
+    height: 94vh; }
+}
