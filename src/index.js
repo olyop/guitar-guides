@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
 import accountTemplate from './database/account-template'
-import createAdminAccount from './common/createAdminAccount'
+import createAdminAccount from './functions/createAdminAccount'
 
 // Import Data
 import IMPORT_globalText from './database/global-text'

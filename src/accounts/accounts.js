@@ -3,7 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import moment from 'moment'
 import accountTemplate from '../database/account-template'
-import makeId from '../common/make-id'
+import makeId from '../functions/make-id'
 
 import CreateAccount from './create-account'
 import Loading from '../common/loading'

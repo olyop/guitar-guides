@@ -53,7 +53,7 @@
 
   #account-page .account-page-section {
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border-radius: 0;
     border-left: 0;
     border-right: 0;
@@ -80,11 +80,16 @@
       color: #919496; }
 
   #account-page .account-page-sign-out {
+		margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center; }
 
 @media (min-width: 500px) {
+	#account-page .account-page-section {
+		margin-bottom: 40px;}
+	#account-page .account-page-sign-out {
+		margin-bottom: 40px; }
 	#account-page .account-page-header .account-page-account .account-page-info .account-page-content h3 {
 		font-size: 27px; }
 	#account-page .account-page-header .account-page-account .account-page-percent p {
