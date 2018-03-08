@@ -42,20 +42,22 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			menu: false
+			menu: false,
+			title: ''
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
+		this.updateTitle = this.updateTitle.bind(this)
 	}
 	
 	logIn(account) { this.setState({ account }) } 
-  logOut() {
-		this.setState({ account: null })
-	}
+  logOut() { this.setState({ account: null }) }
   
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
+	
+	updateTitle(title) { this.setState({ title }) }
 	
 	render() {
     
@@ -95,10 +97,8 @@ class Index extends React.Component {
             {isAccountLoggedIn ? (
               <div id="content">
 
-                <Route path="/" exact render={ () => (
-                  <Home appState={appState}
-										globalText={globalText} />		
-                )} />
+                <Route path="/" exact
+									render={ () => <Home /> } />
 								
 								<Route path="/account" exact render={ () => (
                   <AccountPage appState={appState}
@@ -108,8 +108,8 @@ class Index extends React.Component {
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (
-                  <Guitar appState={appState}
-										match={match}
+                  <Guitar match={match}
+										appState={appState}
 										globalText={globalText}
 										scalesData={this.props.scalesData}
                     theoryData={this.props.theoryData} />		

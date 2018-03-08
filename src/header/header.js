@@ -23,7 +23,7 @@ const Header = props => (
             </button>
 
           </div>
-          <div className="header-text">Menu</div>
+          <div className="header-text">{props.appState.title}</div>
         </div>
       ) : null}
 

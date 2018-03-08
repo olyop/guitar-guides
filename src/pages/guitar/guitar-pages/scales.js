@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GuitarTab from '../../../common/guitar-tab'
+import ScaleChooser from '../../../common/scale-chooser'
 import Heading from '../../../common/heading'
 
 class GuitarScales extends React.Component {
@@ -23,11 +23,13 @@ class GuitarScales extends React.Component {
 		return (
 			<div id="guitar-scales">
 			
-				<Heading onClick={this.state.toggleContent1}>Scale Chooser</Heading>
+				<Heading onClick={this.toggleContent1}>Scale Chooser</Heading>
 				{this.state.content1 ? (
 					<div>
 						<p>Choose what scale you want to learn.</p>
-						
+						<ScaleChooser
+							scalesData={this.props.scalesData}
+							theoryData={this.props.theoryData} />
 					</div>
 				) : null}
 			

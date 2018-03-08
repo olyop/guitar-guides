@@ -1,0 +1,16 @@
+.scale-chooser {
+	padding: 0; }
+
+.scale-chooser .scale-chooser-menus {
+	padding: 0 20px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; }
+
+.scale-chooser .scale-chooser-menus .scale-chooser-menu {
+	margin-right: 20px; }
+
+@media (min-width: 800px) {
+	.scale-chooser .scale-chooser-menus {
+		flex-direction: row; }
+}
