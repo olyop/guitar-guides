@@ -18,6 +18,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
+import remove from 'lodash/remove'
+import includes from 'lodash/includes'
 import accountTemplate from './database/account-template'
 import createAdminAccount from './functions/createAdminAccount'
 
@@ -41,13 +43,14 @@ class Index extends React.Component {
 		
 		this.state = {
 			account: createAdminAccount(accountTemplate),
-//      account: null,
+   // account: null,
 			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
+    this.updateProgressStandardChords = this.updateProgressStandardChords.bind(this)
 	}
 	
 	// Account Functions
@@ -56,6 +59,18 @@ class Index extends React.Component {
   
 	// Handle Navigation Menu
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
+  
+  // Progress Functions
+  updateProgressStandardChords(chordId) {
+    let temp = this.state.account
+    if (includes(temp.progress.guitar.chords.standardChords, chordId)) {
+      temp.progress.guitar.chords.standardChords = remove(temp.progress.guitar.chords.standardChords, chordId)
+      this.setState({ account: temp })
+    } else {
+      temp.progress.guitar.chords.standardChords.push(chordId)
+      this.setState({ account: temp })
+    }
+  }
 	
 	render() {
     
@@ -104,7 +119,8 @@ class Index extends React.Component {
 										appState={appState}
 										globalText={globalText}
 										scalesData={this.props.scalesData}
-                    theoryData={this.props.theoryData} />		
+                    theoryData={this.props.theoryData}
+                    updateProgressStandardChords={this.updateProgressStandardChords} />		
                 )} />
 								
 								<Route path="/bass" exact render={ () => (

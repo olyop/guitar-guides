@@ -30,9 +30,11 @@ class ChordChart extends React.Component {
 			<div className="chart"
 				style={this.props.style}>
 				
-				<div className="chart-icon"
+				<div onClick={ () => this.props.checkFunction(chord.id) }
+          className="chart-icon"
 					style={{ top: '0', right: '0' }}>
-					<i className="material-icons">check</i>
+					<i className="material-icons"
+            style={{ color: this.props.completed ? '#4285f4' : '#333' }}>{this.props.completed ? 'check_circle' : 'check'}</i>
 				</div>
 				
 				<div className="chart-icon"

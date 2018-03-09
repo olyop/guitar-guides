@@ -1,48 +1,51 @@
 {
   "users": [
     {
-      "id": "77yK8EwzpUHwjHP",
+      "id": "bwMhlEvjFRkE62n",
       "name": "Oliver",
       "surname": "Plummer",
       "experience": 2,
-      "dateJoined": "27/02/2018",
+      "dateJoined": "09/03/2018",
       "progress": {
         "guitar": {
           "chords": {
             "standardChords": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "scales": {
-            "modes": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
+              "uUlbfHnvyR",
+              "QxMKqBUTJz",
+              "yFehyPODOp"
             ],
-            "minor": 0,
-            "major": 0,
-            "pentatonic": 0,
-            "blues": 0
-          }
+            "chordChooser": []
+          },
+          "scales": {}
         },
         "bass": {
-          "major": 0,
-          "minor": 0
+          "major": false,
+          "minor": false
+        },
+        "theory": {}
+      }
+    },
+    {
+      "id": "yy1z1oNYqfLRnmx",
+      "name": "Test",
+      "surname": "Account",
+      "experience": 2,
+      "dateJoined": "09/03/2018",
+      "progress": {
+        "guitar": {
+          "chords": {
+            "standardChords": [
+              "uUlbfHnvyR",
+              "QxMKqBUTJz",
+              "yFehyPODOp"
+            ],
+            "chordChooser": []
+          },
+          "scales": {}
+        },
+        "bass": {
+          "major": false,
+          "minor": false
         },
         "theory": {}
       }

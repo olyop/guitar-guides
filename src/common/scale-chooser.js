@@ -12,8 +12,8 @@ class ScaleChooser extends React.Component {
 		super(props)
 		
 		this.state = {
-			key: 0,
-			type: 0
+			key: 7,
+			type: 1
 		}
 		
 		this.handleKeyChange = this.handleKeyChange.bind(this)

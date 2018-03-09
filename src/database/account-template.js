@@ -7,19 +7,14 @@ const accountTemplate = {
 	progress: {
 		guitar: {
 			chords: {
-				standardChords: [0,0,0,0,0,0,0,0,0,0,0,0]
+				standardChords: [],
+        chordChooser: []
 			},
-			scales: {
-				modes: [0,0,0,0,0,0,0],
-				minor: 0,
-				major: 0,
-				pentatonic: 0,
-				blues: 0
-			}
+			scales: {}
 		},
 		bass: {
-			major: 0,
-			minor: 0
+			major: false,
+			minor: false
 		},
 		theory: {
 			
