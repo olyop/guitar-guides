@@ -23,7 +23,8 @@ class GuitarScales extends React.Component {
 		return (
 			<div id="guitar-scales">
 			
-				<Heading onClick={this.toggleContent1}>Scale Chooser</Heading>
+				<Heading onClick={this.toggleContent1}
+					active={this.state.content1}>Scale Chooser</Heading>
 				{this.state.content1 ? (
 					<div>
 						<p>Choose what scale you want to learn.</p>

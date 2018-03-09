@@ -22,7 +22,7 @@ class ChordChartVariations extends React.Component {
   
   left() {
     if (this.state.index !== 0) {
-      this.setState({ index: this.state.index -1 })
+      this.setState({ index: this.state.index - 1 })
     }
   }
   
@@ -68,6 +68,7 @@ class ChordChooser extends React.Component {
     }
   }
 	
+	// Get Chord Database
 	componentDidMount() {
     axios.get('http://localhost:3001/chordChooser')
       .then(response => {

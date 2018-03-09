@@ -42,22 +42,20 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			menu: false,
-			title: ''
+			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
-		this.updateTitle = this.updateTitle.bind(this)
 	}
 	
+	// Account Functions
 	logIn(account) { this.setState({ account }) } 
   logOut() { this.setState({ account: null }) }
   
+	// Handle Navigation Menu
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
-	
-	updateTitle(title) { this.setState({ title }) }
 	
 	render() {
     
@@ -87,12 +85,6 @@ class Index extends React.Component {
 								globalText={globalText}
 								handleHamburger={this.handleHamburger} />
             ) : null}
-
-            {isAccountLoggedIn ? null : (
-              <Accounts appState={appState}
-								globalText={globalText}
-								logIn={this.logIn} />
-            )}
 
             {isAccountLoggedIn ? (
               <div id="content">
@@ -126,7 +118,11 @@ class Index extends React.Component {
                 )} />
 
               </div>
-            ) : null}
+            ) : (
+              <Accounts appState={appState}
+								globalText={globalText}
+								logIn={this.logIn} />
+						)}
 
           </div>
         </MuiThemeProvider>

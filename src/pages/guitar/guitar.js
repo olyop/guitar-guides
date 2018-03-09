@@ -2,6 +2,7 @@ import React from 'react'
 
 import GuitarCover from '../../media/guitar-stock-photo.jpg'
 
+// Import React Router
 import { NavLink, Route } from 'react-router-dom'
 
 // Import Guitar Pages
@@ -13,6 +14,7 @@ import GuitarRiffs from './guitar-pages/riffs'
 import GuitarAbout from './guitar-pages/about'
 import GuitarSettings from './guitar-pages/settings'
 
+// Import CSS
 import './guitar.css'
 import './guitar-pages.css'
 

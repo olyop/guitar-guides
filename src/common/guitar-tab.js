@@ -45,7 +45,6 @@ class GuitarTab extends React.Component {
 		
 		// Calcuate number of tab sections needed
 		let numOfTabSection = Math.ceil((this.props.scale.tab.length + 1) / 12)
-		
 		let tabSections = new Array(numOfTabSection)
 		for (let i = 0; i < numOfTabSection; i++) {
 			tabSections[i] = i + 1 
