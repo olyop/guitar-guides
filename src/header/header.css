@@ -63,19 +63,34 @@
     width: 20%; }	
     #header .header-right .header-search {
 			cursor: pointer;
-			transition: .2s all;
-			padding: 0;
 			height: 100%;
-			align-items: center;
-			display: flex; }
-			#header .header-right .header-search:hover {
-				background-color: #424242; }
-        #header .header-right .header-search .header-search-text {
-          -webkit-user-select: none;
-          padding-right: 5px;
-          color: #fff;
-          font-size: 23px;
-          display: none; }
+      display: flex;
+			align-items: center; }
+      #header .header-right .header-search:hover {
+        background-color: #424242; }
+      #header .header-right .header-search .header-search-active {
+        background-color: #F44336 !important; }
+      #header .header-right .header-search a {
+        height: 100%;
+        transition: .2s all;
+        padding: 0;
+        display: flex; }
+        #header .header-right .header-search a:hover,
+        #header .header-right .header-search a:focus {
+          text-decoration: none; }
+          #header .header-right .header-search .header-search-text {
+            -webkit-user-select: none;
+            padding-right: 5px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            display: none; }
+            #header .header-right .header-search .header-search-text h4 {
+              font-size: 23px;
+              vertical-align: middle;
+              font-weight: 400;
+              margin: 0;
+              color: #fff; }
 
       #header .header-right .header-account {
         cursor: pointer;
@@ -127,12 +142,12 @@
 		font-size: 35px; }
 	#header .header-middle h1 b {
 		font-size: 45px; }
-	#header .header-right .header-search {
+	#header .header-right .header-search a {
 		padding: 0 20px; }
     #header .header-right .header-search .header-icon {
       padding: 0 10px 0 0; }
 		#header .header-right .header-search .header-search-text {
-			display: block; }
+			display: flex; }
   
   #header .header-icon {
     padding: 0 20px 0 20px; }

@@ -8,6 +8,7 @@ import Header from './header/header'
 import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
 import Help from './help/help'
+import Search from './search/search'
 import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
@@ -128,6 +129,11 @@ class Index extends React.Component {
                 
                 <Route path="/help" exact render={ () => (
                   <Help appState={appState}
+                    globalText={globalText} />
+                )} />
+                
+                <Route path="/search" exact render={ () => (
+                  <Search appState={appState}
                     globalText={globalText} />
                 )} />
 								

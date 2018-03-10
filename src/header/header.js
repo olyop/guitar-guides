@@ -36,10 +36,15 @@ const Header = props => (
         <div className="header-section header-right">
 
           <div className="header-search">
-            <div className="header-icon">
-              <i className="material-icons">search</i>
-            </div>
-            <div className="header-search-text">{props.globalText.header.searchInputText}</div>
+            <NavLink to="/search"
+							activeClassName="header-search-active">
+              <div className="header-icon">
+                <i className="material-icons">search</i>
+              </div>
+              <div className="header-search-text">
+                <h4>{props.globalText.header.searchInputText}</h4>
+              </div>
+            </NavLink>
           </div>
 
           <div className="header-account">

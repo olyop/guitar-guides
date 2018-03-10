@@ -32,7 +32,7 @@ class ChordChart extends React.Component {
 			<div className="chart"
 				style={this.props.style}>
 				
-				<div onClick={ () => this.props.checkFunction(chord.id) }
+				<div onClick={this.props.checkFunction ? () => this.props.checkFunction(chord.id) : null}
           className="chart-icon"
 					style={{ top: '0', left: '0' }}>
 					<i className="material-icons"
