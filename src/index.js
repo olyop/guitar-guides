@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker'
 import Header from './header/header'
 import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
+import Help from './help/help'
 import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
@@ -18,6 +19,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 // Import Functions
+import axios from 'axios'
 import remove from 'lodash/remove'
 import includes from 'lodash/includes'
 import accountTemplate from './database/account-template'
@@ -43,7 +45,7 @@ class Index extends React.Component {
 		
 		this.state = {
 			account: createAdminAccount(accountTemplate),
-   // account: null,
+//      account: null,
 			menu: false
 		}
 		
@@ -62,14 +64,24 @@ class Index extends React.Component {
   
   // Progress Functions
   updateProgressStandardChords(chordId) {
+    
     let temp = this.state.account
-    if (includes(temp.progress.guitar.chords.standardChords, chordId)) {
-      temp.progress.guitar.chords.standardChords = remove(temp.progress.guitar.chords.standardChords, chordId)
-      this.setState({ account: temp })
-    } else {
-      temp.progress.guitar.chords.standardChords.push(chordId)
-      this.setState({ account: temp })
+    const config = {
+      method: 'put',
+      url: `http://localhost:3001/users/${this.state.account.id}`,
+      headers: { 'Content-Type': 'application/json' },
+      data: temp
     }
+    
+    if (includes(temp.progress.guitar.chords.standardChords, chordId)) {
+      config.data.progress.guitar.chords.standardChords = remove(temp.progress.guitar.chords.standardChords, chordId)
+    } else {
+      config.data.progress.guitar.chords.standardChords.push(chordId)
+    }
+    
+    axios(config)
+      .then(response => this.setState({ account: temp }) )
+      .catch(error => console.log(error))
   }
 	
 	render() {
@@ -112,6 +124,11 @@ class Index extends React.Component {
 										globalText={globalText}
                     logOut={this.logOut}
                     deleteAccount={this.deleteAccount} />		
+                )} />
+                
+                <Route path="/help" exact render={ () => (
+                  <Help appState={appState}
+                    globalText={globalText} />
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (

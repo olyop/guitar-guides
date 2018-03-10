@@ -24,6 +24,13 @@
 			color: #424242;
 			font-size: 24px; }
 
+.chart .chart-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.chart .chart-icon a:hover, .chart .chart-icon a:focus {
+  text-decoration: none; }
+
 	.chart .chart-heading {
 		position: absolute;
 		top: 0;

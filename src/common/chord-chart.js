@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './chord-chart.css'
 
 const ChordChartHeading = props => {
@@ -32,14 +34,16 @@ class ChordChart extends React.Component {
 				
 				<div onClick={ () => this.props.checkFunction(chord.id) }
           className="chart-icon"
-					style={{ top: '0', right: '0' }}>
+					style={{ top: '0', left: '0' }}>
 					<i className="material-icons"
             style={{ color: this.props.completed ? '#4285f4' : '#333' }}>{this.props.completed ? 'check_circle' : 'check'}</i>
 				</div>
 				
 				<div className="chart-icon"
-					style={{ top: '0', left: '0' }}>
-					<i className="material-icons">play_arrow</i>
+					style={{ top: '0', right: '0' }}>
+					<Link to="/help">
+            <i className="material-icons">help</i>
+          </Link>
 				</div>
 				
 				<ChordChartHeading chord={chord} />

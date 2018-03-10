@@ -21,6 +21,16 @@ const globalText = {
 	header: {
 		searchInputText: 'Search'
 	},
+  
+  help: {
+    chordChartKey: {
+      tableHeader: [
+        'Symbol',
+        'Name',
+        'Description'
+      ]
+    }
+  },
 	
 	home: {
 		

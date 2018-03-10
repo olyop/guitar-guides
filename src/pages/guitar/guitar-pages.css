@@ -23,13 +23,7 @@
 	justify-content: flex-start;
 	display: flex; }
 #guitar-content #guitar-chords .heading {
-margin-top: 0 0 10px 0; }
-
-
-@media (min-width: 690px) {
-	#guitar-content #guitar-chords .heading {
-		margin-top: 20px; }
-}
+  margin-top: 0 0 10px 0; }
 
 @media (min-width: 500px) {
 	#guitar-content #guitar-chords .guitar-chords-track {
