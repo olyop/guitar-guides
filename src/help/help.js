@@ -53,7 +53,7 @@ class Help extends React.Component {
           {this.state.content1 ? (
             <div>
               
-              <Table style={{ marginBottom: '20px' }}
+              <Table
                 fixedHeader={true}
                 fixedFooter={false}
                 selectable={false}
