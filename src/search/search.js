@@ -3,6 +3,8 @@ import React from 'react'
 import axios from 'axios'
 
 import Loading from '../common/loading'
+import FlatButton from 'material-ui/FlatButton'
+import SearchResults from './search-results'
 
 import './search.css'
 
@@ -19,10 +21,11 @@ class Search extends React.Component {
     }
     
     this.handleInputChange = this.handleInputChange.bind(this)
+		this.clearSearch = this.clearSearch.bind(this)
   }
   
   handleInputChange(event) {
-    this.setState({ input: event.target.value });
+    this.setState({ input: event.target.value })
   }
   
   componentDidMount() {
@@ -42,6 +45,8 @@ class Search extends React.Component {
     })
     .catch(error => console.log(error))
   }
+	
+	clearSearch() { this.setState({ input: '' }) }
   
   render() {
     const database = this.state.database
@@ -49,7 +54,9 @@ class Search extends React.Component {
       <div id="search">
         <div className="container">
         
-          {database.standardChords === null && database.chordChooser === null ? <Loading /> : (
+          {database.standardChords === null && database.chordChooser === null ? (
+						<Loading text="Loading Database" />
+					) : (
             <div>
               
               <div className="search-top">
@@ -63,14 +70,25 @@ class Search extends React.Component {
                     value={this.state.input}
                     onChange={this.handleInputChange}
                     ref={(input) => { this.nameInput = input }} />
-                  
-                  <i className="material-icons">close</i>
+									
+                  <FlatButton onClick={this.clearSearch}
+										style={{
+											position: 'absolute',
+											right: 0,
+											borderRadius: '100%',
+											minWidth: 'auto',
+											padding: '5px',
+											margin: '10px 0 0 0'
+										}}>
+										<i className="material-icons">close</i>
+									</FlatButton>
+									
                 </div>
               </div>
 
-              <div className="search-bottom">
-                Search Results
-              </div>
+              {this.state.input === '' ? null : (
+								<SearchResults searchState={this.state} />
+							)}
               
             </div>
           )}

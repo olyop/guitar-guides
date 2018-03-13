@@ -64,6 +64,7 @@
     #header .header-right .header-search {
 			cursor: pointer;
 			height: 100%;
+			transition: .2s all;
       display: flex;
 			align-items: center; }
       #header .header-right .header-search:hover {

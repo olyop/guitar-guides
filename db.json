@@ -9,12 +9,7 @@
       "progress": {
         "guitar": {
           "chords": {
-            "standardChords": [
-              "uUlbfHnvyR",
-              "QxMKqBUTJz",
-              "oGKzyNlGtu",
-              "RtjMpanuYu"
-            ],
+            "standardChords": [],
             "chordChooser": []
           },
           "scales": {}
@@ -2163,7 +2158,7 @@
           ],
           "notes": [
             "D#",
-            "A$",
+            "A#",
             "D#",
             "G",
             "A#",

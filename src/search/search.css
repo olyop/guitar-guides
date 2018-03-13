@@ -29,23 +29,4 @@
         padding: 10px 15px;
         font-size: 24px; }
       #search .search-top .search-top-bar i {
-        position: absolute;
-        font-size: 34px;
-        cursor: pointer;
-        transition: .2s all;
-        border-radius: 100%;
-        padding: 5px;
-        margin: 5px 0 5px 5px;
-        color: #333;
-        right: 0; }
-        #search .search-top .search-top-bar i:hover {
-          background-color: #E0E0E0; }
-
-#search .search-bottom {
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 2px;
-	box-shadow:
-		0 0 4px rgba(0,0,0,.14),
-		0 4px 8px rgba(0,0,0,.28);
-}
+        font-size: 26px; }
