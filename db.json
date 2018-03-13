@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": "XC9EKacMKVCEHGm",
-      "name": "Oliver",
-      "surname": "Plummer",
+      "id": "VkZA3jpg1B6rDXa",
+      "name": "Admin",
+      "surname": "Account",
       "experience": 2,
-      "dateJoined": "10/03/2018",
+      "dateJoined": "12/03/2018",
       "progress": {
         "guitar": {
           "chords": {
@@ -13,7 +13,7 @@
               "uUlbfHnvyR",
               "QxMKqBUTJz",
               "oGKzyNlGtu",
-              "MwKIGWQdcK"
+              "RtjMpanuYu"
             ],
             "chordChooser": []
           },

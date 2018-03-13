@@ -10,7 +10,6 @@ class Search extends React.Component {
   
   constructor(props) {
     super(props)
-    
     this.state = {
       input: '',
       database: {
@@ -38,7 +37,7 @@ class Search extends React.Component {
           chordChooser: chordChooserResponse.data
         }
       })
-      // Set focus on search  input
+      // Set focus on search input
       this.nameInput.focus()
     })
     .catch(error => console.log(error))

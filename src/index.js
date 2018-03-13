@@ -132,7 +132,7 @@ class Index extends React.Component {
                     globalText={globalText} />
                 )} />
                 
-                <Route path="/search" exact render={ () => (
+                <Route path="/search" exact render={ ({ match }) => (
                   <Search appState={appState}
                     globalText={globalText} />
                 )} />

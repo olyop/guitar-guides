@@ -40,3 +40,12 @@
         right: 0; }
         #search .search-top .search-top-bar i:hover {
           background-color: #E0E0E0; }
+
+#search .search-bottom {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow:
+		0 0 4px rgba(0,0,0,.14),
+		0 4px 8px rgba(0,0,0,.28);
+}
