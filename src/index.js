@@ -24,7 +24,7 @@ import axios from 'axios'
 import remove from 'lodash/remove'
 import includes from 'lodash/includes'
 import accountTemplate from './database/account-template'
-import createAdminAccount from './functions/createAdminAccount'
+import createAdminAccount from './functions/create-admin-account'
 
 // Import Data
 import IMPORT_globalText from './database/global-text'

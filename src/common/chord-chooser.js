@@ -2,6 +2,7 @@ import React from 'react'
 
 import axios from 'axios'
 import orderBy from 'lodash/orderBy'
+import checkDuplicates from '../functions/check-duplicates'
 
 import ChordChart from './chord-chart'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -79,7 +80,8 @@ class ChordChooser extends React.Component {
       })
 	}
   
-  render() {    
+  render() {
+		this.state.chordChooser ? () => checkDuplicates(this.state.chordChooser) : null
     if (this.state.chordChooser === null) {
 			return (
 				<div id="chord-chooser">

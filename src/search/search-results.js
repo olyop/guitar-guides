@@ -1,6 +1,7 @@
 import React from 'react'
 
-import includes from 'lodash/includes'
+import findChordMatches from './find-chord-matches'
+import transferChordsIntoArray from '../functions/transfer-chords-into-array'
 
 import Heading from '../common/heading'
 import ChordChart from '../common/chord-chart'
@@ -45,7 +46,8 @@ class ChordSearchResults extends React.Component {
 								))}
 							</div>
 						)}
-						<FlatButton label={this.state.more ? 'Less...' : 'More...'} onClick={this.handleMore} />
+						<FlatButton onClick={this.handleMore}
+							label={this.state.more ? 'Less...' : 'More...'} />
 					</div>
 				) : null}
 			</div>
@@ -59,28 +61,12 @@ class SearchResults extends React.Component {
 		const query = this.props.searchState.input
 		const database = this.props.searchState.database
 		
-		// transfer chord database into single array
-		let chordsArray = []
-		for (let a = 0; a < database.chordChooser.length; a++) {
-			for (let b = 0; b < database.chordChooser[a].length; b++) {
-				for (let c = 0; c < database.chordChooser[a][b].length; c++) {
-					chordsArray.push(database.chordChooser[a][b][c])
-				}
-			}
-		}
-		
-		// find chords that match the search query
-		let chordMatches = []
-		for (let i = 0; i < chordsArray.length; i++) {
-			if (includes(chordsArray[i].name.slice(0,2).toLowerCase(), query.toLowerCase())) {
-				chordMatches.push(chordsArray[i])
-			}
-		}
+		const matches = findChordMatches(transferChordsIntoArray(database.chordChooser), query)
 		
 		return (
 			<div className="search-results">
 				
-				{chordMatches.length >= 1 ? <ChordSearchResults chordMatches={chordMatches} /> : null}
+				{matches.length >= 1 ? <ChordSearchResults chordMatches={matches} /> : null}
 				
 			</div>
 		)
