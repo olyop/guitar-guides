@@ -16,13 +16,15 @@ class AccountPage extends React.Component {
 			accountDeleteLoading: false,
 			content1: true,
 			content2: true,
-			content3: true
+			content3: true,
+      content4: true
 		}
 		
     this.deleteAccount = this.deleteAccount.bind(this)
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
+		this.toggleContent4 = this.toggleContent4.bind(this)
 	}
 	
 	deleteAccount() {
@@ -49,6 +51,7 @@ class AccountPage extends React.Component {
 	toggleContent1() { this.setState({ content1: !this.state.content1 }) }
 	toggleContent2() { this.setState({ content2: !this.state.content2 }) }
 	toggleContent3() { this.setState({ content3: !this.state.content3 }) }
+	toggleContent4() { this.setState({ content4: !this.state.content4 }) }
 	
 	render() {
 		return (
@@ -121,11 +124,21 @@ class AccountPage extends React.Component {
 							</div>
 						) : null}
 					</div>
+          
+          <div className="account-page-content">
+						<Heading onClick={this.toggleContent3}
+							active={this.state.content3}>Testing</Heading>
+						{this.state.content3 ? (
+							<div className="account-page-content account-page-progress">
+								Testing
+							</div>
+						) : null}
+					</div>
 					
 					<div className="account-page-content">
-						<Heading onClick={this.toggleContent3}
-							active={this.state.content3}>Setttings</Heading>
-						{this.state.content3 ? (
+						<Heading onClick={this.toggleContent4}
+							active={this.state.content4}>Setttings</Heading>
+						{this.state.content4 ? (
 							<div className="account-page-content account-page-settings">
 								<RaisedButton onClick={this.deleteAccount}
                   backgroundColor="#F44336"
