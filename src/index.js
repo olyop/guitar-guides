@@ -47,7 +47,7 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			menu: false
+			menu: true
 		}
 		
 		this.logIn = this.logIn.bind(this)
@@ -66,22 +66,21 @@ class Index extends React.Component {
   // Progress Functions
   updateProgressStandardChords(chordId) {
     
-    let temp = this.state.account
     const config = {
       method: 'put',
       url: `http://localhost:3001/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
-      data: temp
+      data: this.state.account
     }
     
-    if (includes(temp.progress.guitar.chords.standardChords, chordId)) {
-      config.data.progress.guitar.chords.standardChords = pull(temp.progress.guitar.chords.standardChords, chordId)
+    if (includes(config.data.progress.guitar.chords.standardChords, chordId)) {
+      config.data.progress.guitar.chords.standardChords = pull(config.data.progress.guitar.chords.standardChords, chordId)
     } else {
       config.data.progress.guitar.chords.standardChords.push(chordId)
     }
     
     axios(config)
-      .then(response => this.setState({ account: temp }) )
+      .then(response => this.setState({ account: config.data }) )
       .catch(error => console.log(error))
   }
 	

@@ -1,5 +1,5 @@
 // Function for generating a new user id
-const makeId = (length = 15) => {
+const makeId = (length = 10) => {
 	
   let text = ''
 	

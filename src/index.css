@@ -16,14 +16,15 @@ body {
   color: #fff;
   background: #F44336; }
 
+i {
+	-webkit-user-select: none;
+}
+
 #content, #account {
 	background-color: #F5F5F5;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	height: 92vh; }
-
-i {
-	-webkit-user-select: none;
+	height: 92vh;
 }
 
 @media (min-height: 1080px) {
