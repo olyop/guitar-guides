@@ -79,6 +79,10 @@
 			font-weight: 500;
       color: #919496; }
 
+#account-page .account-page-section .account-page-content .account-page-testing .account-page-testing-test p {
+	font-size: 19px;
+}
+
   #account-page .account-page-sign-out {
 		margin-bottom: 20px;
     display: flex;

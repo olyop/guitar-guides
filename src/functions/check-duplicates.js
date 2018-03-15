@@ -1,12 +1,18 @@
 const checkDuplicates = values => {
 	
-	let valueArr = values.map(item => item.name)
+	let arr = values.map(item => item.id)
+	let cache = {}
+	let results = []
 	
-	let isDuplicate = valueArr.some((item, idx) => {
-		valueArr.indexOf(item) != idx
-	})
+	for (let i = 0; i < arr.length; i++) {
+		if (cache[arr[i]] === true) {
+			results.push(arr[i])
+		 } else {
+			 cache[arr[i]] = true
+		 }
+	}
 	
-	console.log(isDuplicate)
+	return results
 }
 
 export default checkDuplicates

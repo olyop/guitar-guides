@@ -3,6 +3,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 
+// Import Functions
+import axios from 'axios'
+import pull from 'lodash/pull'
+import includes from 'lodash/includes'
+import accountTemplate from './database/account-template'
+import createAdminAccount from './functions/create-admin-account'
+
+// Import Data
+import IMPORT_globalText from './database/global-text'
+import IMPORT_scalesDatabase from './database/scales-database'
+import IMPORT_theoryDatabase from './database/theory-database'
+
 // Import Pages
 import Header from './header/header'
 import Menu from './menu/menu'
@@ -18,18 +30,6 @@ import AccountPage from './pages/account-page/account-page'
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-// Import Functions
-import axios from 'axios'
-import remove from 'lodash/remove'
-import includes from 'lodash/includes'
-import accountTemplate from './database/account-template'
-import createAdminAccount from './functions/create-admin-account'
-
-// Import Data
-import IMPORT_globalText from './database/global-text'
-import IMPORT_scalesDatabase from './database/scales-database'
-import IMPORT_theoryDatabase from './database/theory-database'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -75,7 +75,7 @@ class Index extends React.Component {
     }
     
     if (includes(temp.progress.guitar.chords.standardChords, chordId)) {
-      config.data.progress.guitar.chords.standardChords = remove(temp.progress.guitar.chords.standardChords, chordId)
+      config.data.progress.guitar.chords.standardChords = pull(temp.progress.guitar.chords.standardChords, chordId)
     } else {
       config.data.progress.guitar.chords.standardChords.push(chordId)
     }

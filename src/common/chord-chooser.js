@@ -102,18 +102,21 @@ class ChordChooser extends React.Component {
 					</div>
 
 					<h4>Type</h4>
-						<div className="chord-chooser-buttons">
-							{this.props.theoryData.chordTypes.map((type, index) => (
-								<RaisedButton key={index} label={type}
-									className="chord-chooser-button"
-									backgroundColor={this.state.type === index ? '#F44336' : '#fff'}
-									labelColor={this.state.type === index ? '#fff' : '#333'}
-									onClick={ () => this.setState({ type: index }) } />
-							))}
-						</div>
+					<div className="chord-chooser-buttons">
+						{this.props.theoryData.chordTypes.map((type, index) => (
+							<RaisedButton key={index} label={type}
+								className="chord-chooser-button"
+								backgroundColor={this.state.type === index ? '#F44336' : '#fff'}
+								labelColor={this.state.type === index ? '#fff' : '#333'}
+								onClick={ () => this.setState({ type: index }) } />
+						))}
+					</div>
 
 					{this.state.note === null || this.state.type === null ? null : (
-						<ChordChartVariations variations={orderBy(this.state.chordChooser[this.state.note][this.state.type], ['fret'],['asc'])} />
+						<ChordChartVariations
+							variations={orderBy(
+								this.state.chordChooser[this.state.note][this.state.type], ['fret'],['asc']
+							)} />
 					)}
 
 				</div>

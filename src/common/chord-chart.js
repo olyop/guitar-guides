@@ -33,7 +33,7 @@ class ChordChart extends React.Component {
 				style={this.props.style}>
 				
 				<div onClick={this.props.checkFunction ? () => this.props.checkFunction(chord.id) : null}
-          className="chart-icon"
+          className={this.props.completed ? 'chart-icon chart-icon-completed' : 'chart-icon'}
 					style={{ top: '0', left: '0' }}>
 					<i className="material-icons"
             style={{ color: this.props.completed ? '#4285f4' : '#333' }}>{this.props.completed ? 'check_circle' : 'check'}</i>

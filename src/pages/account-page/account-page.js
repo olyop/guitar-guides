@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios'
 
 import Heading from '../../common/heading'
+import AccountTesting from './account-testing'
 import RaisedButton from 'material-ui/RaisedButton'
 
 import './account-page.css'
@@ -129,9 +130,7 @@ class AccountPage extends React.Component {
 						<Heading onClick={this.toggleContent3}
 							active={this.state.content3}>Testing</Heading>
 						{this.state.content3 ? (
-							<div className="account-page-content account-page-progress">
-								Testing
-							</div>
+							<AccountTesting />
 						) : null}
 					</div>
 					

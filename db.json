@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": "VkZA3jpg1B6rDXa",
-      "name": "Admin",
+      "id": "OCvETUXsFqGeOA6",
+      "name": "Test",
       "surname": "Account",
       "experience": 2,
-      "dateJoined": "12/03/2018",
+      "dateJoined": "14/03/2018",
       "progress": {
         "guitar": {
           "chords": {
@@ -22,15 +22,18 @@
       }
     },
     {
-      "id": "OCvETUXsFqGeOA6",
-      "name": "Test",
+      "id": "xFssf9M0ac1f2rI",
+      "name": "Admin",
       "surname": "Account",
       "experience": 2,
-      "dateJoined": "14/03/2018",
+      "dateJoined": "15/03/2018",
       "progress": {
         "guitar": {
           "chords": {
-            "standardChords": [],
+            "standardChords": [
+              "uUlbfHnvyR",
+              "QxMKqBUTJz"
+            ],
             "chordChooser": []
           },
           "scales": {}
@@ -534,7 +537,7 @@
           ]
         },
         {
-          "id": "wCDuMlwKcS",
+          "id": "LmCVZpAqMx",
           "name": "Am",
           "fret": 12,
           "fretting": [
