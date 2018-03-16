@@ -26,6 +26,7 @@ import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
 import Theory from './pages/theory/theory'
 import AccountPage from './pages/account-page/account-page'
+import Testing from './pages/testing/testing'
 
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -47,7 +48,7 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			menu: true
+			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
@@ -125,6 +126,11 @@ class Index extends React.Component {
                     logOut={this.logOut}
                     deleteAccount={this.deleteAccount} />		
                 )} />
+								
+								<Route path="/testing" exact render={ () => (
+									<Testing appState={appState}
+										globalText={globalText} />
+								)} />
                 
                 <Route path="/help" exact render={ () => (
                   <Help appState={appState}

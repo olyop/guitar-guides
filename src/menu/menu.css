@@ -29,14 +29,18 @@
       0 0 4px rgba(0,0,0,.14),
       0 4px 8px rgba(0,0,0,.28); }
 
+#menu .menu-slider {
+	padding: 20px 20px 20px 0;
+}
+
 @media (min-width: 1080px) {
   #menu {
-    height: 94vh;
-    top: 6vh; }
+    height: 92vh;
+    top: 8vh; }
     #menu .menu-background {
-      height: 94vh;
-      top: 6vh; }
+      height: 92vh;
+      top: 8vh; }
     #menu .menu-slider {
-      height: 94vh;
-      top: 6vh; }
+      height: 92vh;
+      top: 8vh; }
 }
