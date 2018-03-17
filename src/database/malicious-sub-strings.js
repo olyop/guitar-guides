@@ -1,0 +1,31 @@
+const maliciousSubStrings = [
+	'script',
+	'href',
+  'div',
+	'<',
+	'>',
+	'/',
+	'=',
+	'%',
+	'-',
+	'_',
+	'+',
+	'$',
+	'@',
+	'!',
+	'*',
+	'|',
+	'?',
+	':',
+	'{',
+	'}',
+	'(',
+	')',
+	'.',
+	'&',
+	'^',
+	'`',
+	'~'
+]
+
+export default maliciousSubStrings

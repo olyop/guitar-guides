@@ -31,10 +31,8 @@
         "guitar": {
           "chords": {
             "standardChords": [
-              "uUlbfHnvyR",
-              "QxMKqBUTJz",
-              "oGKzyNlGtu",
-              "umdwbCByhV"
+              "buANGQHAQw",
+              "YSooPxjQVf"
             ],
             "chordChooser": []
           },
@@ -369,7 +367,7 @@
     [
       [
         {
-          "id": "hYohXPscSP",
+          "id": "HzYummygAF",
           "name": "A",
           "fret": 1,
           "fretting": [
@@ -390,7 +388,7 @@
           ]
         },
         {
-          "id": "SnzqLXRbAg",
+          "id": "NoXgQFIHXw",
           "name": "A",
           "fret": 5,
           "fretting": [
@@ -411,7 +409,7 @@
           ]
         },
         {
-          "id": "LBGMwbfTDV",
+          "id": "OIYSEdFXIC",
           "name": "A",
           "fret": 12,
           "fretting": [
@@ -432,7 +430,7 @@
           ]
         },
         {
-          "id": "EIahIGQjFV",
+          "id": "XOGwEoUxdS",
           "name": "A",
           "fret": 17,
           "fretting": [
@@ -453,7 +451,7 @@
           ]
         },
         {
-          "id": "mmNuOJsEfK",
+          "id": "LfeGibuDhj",
           "name": "A",
           "fret": 9,
           "fretting": [
@@ -476,7 +474,7 @@
       ],
       [
         {
-          "id": "ydbAsUpDph",
+          "id": "sEjAGHsnUv",
           "name": "Am",
           "fret": 1,
           "fretting": [
@@ -1650,7 +1648,7 @@
           ]
         },
         {
-          "id": "BpVHhdgzBV",
+          "id": "BoVHhdgzBV",
           "name": "C#m",
           "fret": 9,
           "fretting": [
@@ -1884,7 +1882,8 @@
             "F#",
             "A",
             "D",
-            "F#"
+            "F#",
+            null
           ]
         },
         {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import includes from 'lodash/includes'
-import maliciousSubStrings from '../database/malicious-sub-string'
+import maliciousSubStrings from '../database/malicious-sub-strings'
 
 import TextField from 'material-ui/TextField'
 import SelectField from 'material-ui/SelectField'

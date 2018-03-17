@@ -10,16 +10,27 @@
 
 		#testing .testing-test h1 {
 			padding-bottom: 5px;
+			display: inline-block;
 			width: auto;
 			border-bottom: 1px solid #BDBDBD;
 			margin: 0 0 15px 0;
 			font-size: 18px; }
-		#testing .testing-test p {
+		
+
+	#testing .testing-test .testing-results {
+		margin-top: 20px;
+		box-shadow:
+			rgba(0, 0, 0, 0.12) 0px 1px 6px,
+			rgba(0, 0, 0, 0.12) 0px 1px 4px; }
+		#testing .testing-test .testing-results h2 {
+			background-color: #EEEEEE;
+			margin: 0;
+			padding: 10px;
+			font-size: 14px;
+			font-weight: 700; }
+		#testing .testing-test .testing-results p {
 			margin: 0; }
 
-#testing .testing-test .testing-results {
-	margin-top: 15px;
-	padding: 20px;
-	box-shadow:
-		rgba(0, 0, 0, 0.12) 0px 1px 6px,
-		rgba(0, 0, 0, 0.12) 0px 1px 4px; }
+#testing .testing-test .testing-results .testing-results-log {
+	padding: 0 10px;
+}
