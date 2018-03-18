@@ -1,51 +1,5 @@
 {
-  "users": [
-    {
-      "id": "JoyUAxM12K",
-      "name": "Oliver",
-      "surname": "Plummer",
-      "experience": 2,
-      "dateJoined": "15/03/2018",
-      "progress": {
-        "guitar": {
-          "chords": {
-            "standardChords": [],
-            "chordChooser": []
-          },
-          "scales": {}
-        },
-        "bass": {
-          "major": false,
-          "minor": false
-        },
-        "theory": {}
-      }
-    },
-    {
-      "id": "Hog52Fs4BG",
-      "name": "Test",
-      "surname": "Account",
-      "experience": 2,
-      "dateJoined": "15/03/2018",
-      "progress": {
-        "guitar": {
-          "chords": {
-            "standardChords": [
-              "buANGQHAQw",
-              "YSooPxjQVf"
-            ],
-            "chordChooser": []
-          },
-          "scales": {}
-        },
-        "bass": {
-          "major": false,
-          "minor": false
-        },
-        "theory": {}
-      }
-    }
-  ],
+  "users": [],
   "standardChords": [
     {
       "id": "voiTzjkFTl",
@@ -687,6 +641,71 @@
             "E"
           ]
         }
+      ],
+      [
+        {
+          "id": "dnCohQbsQo",
+          "name": "A7",
+          "fret": 1,
+          "fretting": [
+            null,
+            0,
+            2,
+            0,
+            2,
+            0
+          ],
+          "notes": [
+            null,
+            "A",
+            "E",
+            "G",
+            "C#",
+            "E"
+          ]
+        },
+        {
+          "id": "wHFrVhmNvQ",
+          "name": "A7",
+          "fret": 5,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "A",
+            "E",
+            "G",
+            "C#",
+            "E",
+            "A"
+          ]
+        },
+        {
+          "id": "sLuHfAbqSU",
+          "name": "A7",
+          "fret": 12,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "A",
+            "E",
+            "G",
+            "C#",
+            "E"
+          ]
+        }
       ]
     ],
     [
@@ -991,6 +1010,71 @@
             "F"
           ]
         }
+      ],
+      [
+        {
+          "id": "VCVHCcwBev",
+          "name": "A#7",
+          "fret": 1,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "A#",
+            "F",
+            "G#",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "id": "hxFlmBPkoA",
+          "name": "A#7",
+          "fret": 6,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "A#",
+            "F",
+            "G#",
+            "D",
+            "F",
+            "A#"
+          ]
+        },
+        {
+          "id": "ouXHYwbnTo",
+          "name": "A#7",
+          "fret": 13,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "A#",
+            "F",
+            "G#",
+            "D",
+            "F"
+          ]
+        }
       ]
     ],
     [
@@ -1250,6 +1334,71 @@
             "F#",
             "A",
             "D",
+            "F#"
+          ]
+        }
+      ],
+      [
+        {
+          "id": "qEqelXzukt",
+          "name": "B7",
+          "fret": 2,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "B",
+            "F#",
+            "A",
+            "D#",
+            "F#"
+          ]
+        },
+        {
+          "id": "KDUGsdmzIc",
+          "name": "B7",
+          "fret": 7,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "B",
+            "F#",
+            "A",
+            "D#",
+            "F#",
+            "B"
+          ]
+        },
+        {
+          "id": "OTeGJbqBpA",
+          "name": "B7",
+          "fret": 14,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "B",
+            "F#",
+            "A",
+            "D#",
             "F#"
           ]
         }
@@ -1536,6 +1685,71 @@
             "G"
           ]
         }
+      ],
+      [
+        {
+          "id": "eMWtggudfJ",
+          "name": "C7",
+          "fret": 3,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "C",
+            "G",
+            "A#",
+            "E",
+            "G"
+          ]
+        },
+        {
+          "id": "sLnnZmwBvw",
+          "name": "C7",
+          "fret": 8,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "C",
+            "G",
+            "A#",
+            "E",
+            "G",
+            "C"
+          ]
+        },
+        {
+          "id": "UMgtSGFyYN",
+          "name": "C7",
+          "fret": 15,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "C",
+            "G",
+            "A#",
+            "E",
+            "G"
+          ]
+        }
       ]
     ],
     [
@@ -1795,6 +2009,71 @@
             "G#",
             "B",
             "E",
+            "G#"
+          ]
+        }
+      ],
+      [
+        {
+          "id": "hmOZvGJYVZ",
+          "name": "C#7",
+          "fret": 4,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "C#",
+            "G#",
+            "B",
+            "F",
+            "G#"
+          ]
+        },
+        {
+          "id": "NVIbZjwUuM",
+          "name": "C#7",
+          "fret": 9,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "C#",
+            "G#",
+            "B",
+            "F",
+            "G#",
+            "C#"
+          ]
+        },
+        {
+          "id": "OozyyYWNPz",
+          "name": "C#7",
+          "fret": 16,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "C#",
+            "G#",
+            "B",
+            "F",
             "G#"
           ]
         }
@@ -2144,6 +2423,71 @@
             "A"
           ]
         }
+      ],
+      [
+        {
+          "id": "TRMrYilKJf",
+          "name": "D7",
+          "fret": 5,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "D",
+            "A",
+            "C",
+            "F#",
+            "A"
+          ]
+        },
+        {
+          "id": "yslbsErZAD",
+          "name": "D7",
+          "fret": 10,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "D",
+            "A",
+            "C",
+            "F#",
+            "A",
+            "D"
+          ]
+        },
+        {
+          "id": "lofOgzXGmr",
+          "name": "D7",
+          "fret": 17,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "D",
+            "A",
+            "C",
+            "F#",
+            "A"
+          ]
+        }
       ]
     ],
     [
@@ -2383,6 +2727,50 @@
             "C#",
             "F#",
             "A#"
+          ]
+        }
+      ],
+      [
+        {
+          "id": "ySKtEFHjmT",
+          "name": "D#7",
+          "fret": 6,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "D#",
+            "A#",
+            "C#",
+            "G",
+            "A#"
+          ]
+        },
+        {
+          "id": "esNKfwneAy",
+          "name": "D#7",
+          "fret": 11,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "D#",
+            "A#",
+            "C#",
+            "G",
+            "A#",
+            "D#"
           ]
         }
       ]
@@ -2710,6 +3098,71 @@
             "A"
           ]
         }
+      ],
+      [
+        {
+          "id": "fSZnfnTznR",
+          "name": "E7",
+          "fret": 1,
+          "fretting": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "notes": [
+            "E",
+            "B",
+            "D",
+            "G#",
+            "B",
+            "E"
+          ]
+        },
+        {
+          "id": "YthcKaYpOA",
+          "name": "E7",
+          "fret": 7,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "E",
+            "B",
+            "D",
+            "G#",
+            "B"
+          ]
+        },
+        {
+          "id": "QFDqLGEcnO",
+          "name": "E7",
+          "fret": 12,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "E",
+            "B",
+            "D",
+            "G#",
+            "B",
+            "E"
+          ]
+        }
       ]
     ],
     [
@@ -2949,6 +3402,71 @@
             "D#",
             "G#",
             null
+          ]
+        }
+      ],
+      [
+        {
+          "id": "KtRChkhcWV",
+          "name": "F7",
+          "fret": 1,
+          "fretting": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "notes": [
+            "F",
+            "C",
+            "D#",
+            "A",
+            "C",
+            "F"
+          ]
+        },
+        {
+          "id": "somvpUFhKI",
+          "name": "F7",
+          "fret": 8,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "F",
+            "C",
+            "D#",
+            "A",
+            "C"
+          ]
+        },
+        {
+          "id": "hdCUxyYDZN",
+          "name": "F7",
+          "fret": 13,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "F",
+            "C",
+            "D#",
+            "A",
+            "C",
+            "F"
           ]
         }
       ]
@@ -3192,6 +3710,71 @@
             "C#"
           ]
         }
+      ],
+      [
+        {
+          "id": "baktnOwSuz",
+          "name": "F#7",
+          "fret": 2,
+          "fretting": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "notes": [
+            "F#",
+            "C#",
+            "E",
+            "A#",
+            "C#",
+            "F#"
+          ]
+        },
+        {
+          "id": "KgAMqrMHXK",
+          "name": "F#7",
+          "fret": 9,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "F#",
+            "C#",
+            "E",
+            "A#",
+            "C#"
+          ]
+        },
+        {
+          "id": "MqJDjhYtvT",
+          "name": "F#7",
+          "fret": 14,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "F#",
+            "C#",
+            "E",
+            "A#",
+            "C#",
+            "F#"
+          ]
+        }
       ]
     ],
     [
@@ -3433,6 +4016,71 @@
             "D"
           ]
         }
+      ],
+      [
+        {
+          "id": "VzILIIPPof",
+          "name": "G7",
+          "fret": 3,
+          "fretting": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "notes": [
+            "G",
+            "D",
+            "F",
+            "B",
+            "D",
+            "G"
+          ]
+        },
+        {
+          "id": "awTtWoAlgK",
+          "name": "G7",
+          "fret": 10,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "G",
+            "D",
+            "F",
+            "B",
+            "D"
+          ]
+        },
+        {
+          "id": "FCKdfhTcZb",
+          "name": "G7",
+          "fret": 15,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "G",
+            "D",
+            "F",
+            "B",
+            "D",
+            "G"
+          ]
+        }
       ]
     ],
     [
@@ -3672,6 +4320,71 @@
             "F#",
             "B",
             "D#"
+          ]
+        }
+      ],
+      [
+        {
+          "id": "FMrYUBfHEb",
+          "name": "G#7",
+          "fret": 4,
+          "fretting": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "notes": [
+            "G#",
+            "D#",
+            "F#",
+            "C",
+            "D#",
+            "G#"
+          ]
+        },
+        {
+          "id": "qbCXnEMaYh",
+          "name": "G#7",
+          "fret": 11,
+          "fretting": [
+            null,
+            1,
+            3,
+            1,
+            3,
+            1
+          ],
+          "notes": [
+            null,
+            "G#",
+            "D#",
+            "F#",
+            "C",
+            "D#"
+          ]
+        },
+        {
+          "id": "KBUBctHXkS",
+          "name": "G#7",
+          "fret": 16,
+          "fretting": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            1
+          ],
+          "notes": [
+            "G#",
+            "D#",
+            "F#",
+            "C",
+            "D#",
+            "G#"
           ]
         }
       ]

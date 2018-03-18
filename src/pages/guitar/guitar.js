@@ -94,7 +94,7 @@ const Guitar = props => (
 					<Route path={`${props.match.path}/chords`} exact render={ ({ match }) => (
 						<GuitarChords appState={props.appState}
               theoryData={props.theoryData}
-              updateProgressStandardChords={props.updateProgressStandardChords} />
+              updateProgressChords={props.updateProgressChords} />
 					)} />
 				
 					<Route path={`${props.match.path}/scales`} exact render={ ({ match }) => (

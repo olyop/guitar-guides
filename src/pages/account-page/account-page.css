@@ -80,14 +80,7 @@
       color: #919496; }
 
 #account-page .account-page-section .account-page-content .account-page-testing .account-page-testing-test p {
-	font-size: 19px;
-}
-
-  #account-page .account-page-sign-out {
-		margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+	font-size: 19px; }
 
 @media (min-width: 500px) {
 	#account-page .account-page-section {

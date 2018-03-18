@@ -1,6 +1,7 @@
 import React from 'react'
 
 import axios from 'axios'
+import includes from 'lodash/includes'
 import orderBy from 'lodash/orderBy'
 
 import ChordChart from './chord-chart'
@@ -13,9 +14,7 @@ class ChordChartVariations extends React.Component {
   
   constructor(props) {
     super(props)
-    
     this.state = { index: 0 }
-    
     this.left = this.left.bind(this)
     this.right = this.right.bind(this)
   }
@@ -37,6 +36,8 @@ class ChordChartVariations extends React.Component {
   }
   
   render() {
+		const variations = this.props.variations
+		const chord = variations[this.state.index]
     return (
       <div>
         <div className="chord-chooser-chart">
@@ -44,13 +45,15 @@ class ChordChartVariations extends React.Component {
           <i onClick={this.left}
             className={this.state.index === 0 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>keyboard_arrow_left</i>
 
-          <ChordChart chord={this.props.variations[this.state.index]} />
+          <ChordChart chord={chord}
+						checkFunction={this.props.updateProgressChords}
+						completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)}  />
 
           <i onClick={this.right}
-            className={this.state.index === this.props.variations.length - 1 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>keyboard_arrow_right</i>
+            className={this.state.index === variations.length - 1 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>keyboard_arrow_right</i>
           
         </div>
-        <h5>{this.props.variations.length === 1 ? '1/1' : `${this.state.index + 1}/${this.props.variations.length}`}</h5>
+        <h5>{variations.length === 1 ? '1/1' : `${this.state.index + 1}/${variations.length}`}</h5>
       </div>
     )
   }
@@ -113,7 +116,8 @@ class ChordChooser extends React.Component {
 					</div>
 
 					{this.state.note === null || this.state.type === null ? null : (
-						<ChordChartVariations
+						<ChordChartVariations appState={this.props.appState}
+							updateProgressChords={this.props.updateProgressChords}
 							variations={orderBy(
 								this.state.chordChooser[this.state.note][this.state.type], ['fret'],['asc']
 							)} />

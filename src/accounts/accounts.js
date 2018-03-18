@@ -5,6 +5,7 @@ import moment from 'moment'
 import accountTemplate from '../database/account-template'
 import makeId from '../functions/make-id'
 
+import AccountNone from './account-none'
 import CreateAccount from './create-account'
 import Loading from '../common/loading'
 
@@ -71,7 +72,7 @@ class Accounts extends React.Component {
       )
     } else if (this.state.accounts.length === 0) {
       accountList = (
-        <h5>No accounts.</h5>
+        <AccountNone />
       )
     } else if (this.state.accounts.length > 0) {
       accountList = this.state.accounts.map(account => (

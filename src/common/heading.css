@@ -9,6 +9,7 @@
   .heading:hover {
     border-color: #F44336; }
   .heading h1 {
+		-webkit-user-select: none;
     margin: 0;
     font-size: 21px; }
     .heading:hover h1 {

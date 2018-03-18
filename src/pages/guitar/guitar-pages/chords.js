@@ -1,7 +1,6 @@
 import React from 'react'
 
 import axios from 'axios'
-import includes from 'lodash/includes'
 import orderBy from 'lodash/orderBy'
 
 import ChordChooser from '../../../common/chord-chooser'
@@ -40,9 +39,7 @@ class StandardChords extends React.Component {
 				<div className="guitar-chords-track">
 					{orderBy(this.state.standardChords, ['name'],['asc']).map(chord => (
 						<ChordChart key={chord.id}
-							chord={chord}
-              completed={includes(this.props.appState.account.progress.guitar.chords.standardChords, chord.id)}
-              checkFunction={this.props.updateProgressStandardChords} />
+							chord={chord} />
 					))}
 				</div>
 			)
@@ -62,7 +59,7 @@ class GuitarChords extends React.Component {
     super(props)
     
     this.state = {
-      content1: true,
+      content1: false,
       content2: true
     }
     
@@ -82,15 +79,16 @@ class GuitarChords extends React.Component {
         {this.state.content1 ? (
           <div>
             <p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
-            <StandardChords appState={this.props.appState}
-              updateProgressStandardChords={this.props.updateProgressStandardChords} />
+            <StandardChords appState={this.props.appState} />
           </div>
         ) : null}
         
         <Heading onClick={this.toggleContent2}
           active={this.state.content2}>Chord Chooser</Heading>
         {this.state.content2 ? (
-          <ChordChooser theoryData={this.props.theoryData} />
+          <ChordChooser appState={this.props.appState}
+						theoryData={this.props.theoryData}
+						updateProgressChords={this.props.updateProgressChords} />
         ) : null}
 
       </div>

@@ -7,7 +7,10 @@ import registerServiceWorker from './registerServiceWorker'
 import axios from 'axios'
 import pull from 'lodash/pull'
 import includes from 'lodash/includes'
+
+ // eslint-disable-next-line
 import accountTemplate from './database/account-template'
+ // eslint-disable-next-line
 import createAdminAccount from './functions/create-admin-account'
 
 // Import Data
@@ -19,14 +22,14 @@ import IMPORT_theoryDatabase from './database/theory-database'
 import Header from './header/header'
 import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
-import Help from './help/help'
 import Search from './search/search'
+import Help from './help/help'
+import Testing from './pages/testing/testing'
 import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
 import Bass from './pages/bass/bass'
 import Theory from './pages/theory/theory'
 import AccountPage from './pages/account-page/account-page'
-import Testing from './pages/testing/testing'
 
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -46,15 +49,15 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: createAdminAccount(accountTemplate),
-//      account: null,
+//			account: createAdminAccount(accountTemplate),
+      account: null,
 			menu: false
 		}
 		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
-    this.updateProgressStandardChords = this.updateProgressStandardChords.bind(this)
+    this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
 	
 	// Account Functions
@@ -65,7 +68,7 @@ class Index extends React.Component {
 	handleHamburger() { this.setState({ menu: !this.state.menu }) }
   
   // Progress Functions
-  updateProgressStandardChords(chordId) {
+  updateProgressChords(chordId) {
     
     const config = {
       method: 'put',
@@ -74,14 +77,14 @@ class Index extends React.Component {
       data: this.state.account
     }
     
-    if (includes(config.data.progress.guitar.chords.standardChords, chordId)) {
-      config.data.progress.guitar.chords.standardChords = pull(config.data.progress.guitar.chords.standardChords, chordId)
+    if (includes(config.data.progress.guitar.chords, chordId)) {
+      config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId)
     } else {
-      config.data.progress.guitar.chords.standardChords.push(chordId)
+      config.data.progress.guitar.chords.push(chordId)
     }
     
     axios(config)
-      .then(response => this.setState({ account: config.data }) )
+      .then(response => this.setState({ account: response.data }) )
       .catch(error => console.log(error))
   }
 	
@@ -137,7 +140,7 @@ class Index extends React.Component {
                     globalText={globalText} />
                 )} />
                 
-                <Route path="/search" exact render={ ({ match }) => (
+                <Route path="/search" exact render={ () => (
                   <Search appState={appState}
                     globalText={globalText} />
                 )} />
@@ -148,7 +151,7 @@ class Index extends React.Component {
 										globalText={globalText}
 										scalesData={this.props.scalesData}
                     theoryData={this.props.theoryData}
-                    updateProgressStandardChords={this.updateProgressStandardChords} />		
+                    updateProgressChords={this.updateProgressChords} />		
                 )} />
 								
 								<Route path="/bass" exact render={ () => (

@@ -12,53 +12,53 @@ const Menu = props => (
     <div className="menu-slider">
 			
 			<ul>
-				<li><NavLink to="/">Home</NavLink></li>
+				<li><NavLink to="/" onClick={props.handleHamburger}>Home</NavLink></li>
 			</ul>
 			
 			<ul>
 				<li>
-					<NavLink to="/guitar">Guitar</NavLink>
+					<NavLink to="/guitar onClick={props.handleHamburger}">Guitar</NavLink>
 					<ul>
-						<li><NavLink to="/guitar/chords">Chords</NavLink></li>
-						<li><NavLink to="/guitar/scales">Scales</NavLink></li>
-						<li><NavLink to="/guitar/exercises">Exercises</NavLink></li>
-						<li><NavLink to="/guitar/riffs">Riffs</NavLink></li>
-						<li><NavLink to="/guitar/about">About</NavLink></li>
+						<li><NavLink to="/guitar/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
+						<li><NavLink to="/guitar/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
+						<li><NavLink to="/guitar/exercises" onClick={props.handleHamburger}>Exercises</NavLink></li>
+						<li><NavLink to="/guitar/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
+						<li><NavLink to="/guitar/about" onClick={props.handleHamburger}>About</NavLink></li>
 					</ul>
 				</li>
 			</ul>
 			
 			<ul>
 				<li>
-					<NavLink to="/bass">Bass</NavLink>
+					<NavLink to="/bass" onClick={props.handleHamburger}>Bass</NavLink>
 					<ul>
-						<li><NavLink to="/bass/chords">Chords</NavLink></li>
-						<li><NavLink to="/bass/scales">Scales</NavLink></li>
-						<li><NavLink to="/bass/exercies">Exercies</NavLink></li>
-						<li><NavLink to="/bass/riffs">Riffs</NavLink></li>
-						<li><NavLink to="/bass/about">About</NavLink></li>
+						<li><NavLink to="/bass/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
+						<li><NavLink to="/bass/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
+						<li><NavLink to="/bass/exercies" onClick={props.handleHamburger}>Exercies</NavLink></li>
+						<li><NavLink to="/bass/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
+						<li><NavLink to="/bass/about" onClick={props.handleHamburger}>About</NavLink></li>
 					</ul>
 				</li>
 			</ul>
 			
 			<ul>
 				<li>
-					<NavLink to="/theory">Theory</NavLink>
+					<NavLink to="/theory" onClick={props.handleHamburger}>Theory</NavLink>
 					<ul>
-						<li><NavLink to="/theory/chords">Chords</NavLink></li>
-						<li><NavLink to="/theory/scales">Scales</NavLink></li>
-						<li><NavLink to="/theory/exercies">Exercies</NavLink></li>
-						<li><NavLink to="/theory/riffs">Riffs</NavLink></li>
-						<li><NavLink to="/theory/about">About</NavLink></li>
+						<li><NavLink to="/theory/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
+						<li><NavLink to="/theory/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
+						<li><NavLink to="/theory/exercies" onClick={props.handleHamburger}>Exercies</NavLink></li>
+						<li><NavLink to="/theory/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
+						<li><NavLink to="/theory/about" onClick={props.handleHamburger}>About</NavLink></li>
 					</ul>
 				</li>
 			</ul>
 			
 			<ul>
-				<li><NavLink to="/search">Search</NavLink></li>
-				<li><NavLink to="/help">Help</NavLink></li>
-				<li><NavLink to="/account">Account</NavLink></li>
-				<li><NavLink to="/testing">Testing</NavLink></li>
+				<li><NavLink to="/search" onClick={props.handleHamburger}>Search</NavLink></li>
+				<li><NavLink to="/help" onClick={props.handleHamburger}>Help</NavLink></li>
+				<li><NavLink to="/account" onClick={props.handleHamburger}>Account</NavLink></li>
+				<li><NavLink to="/testing" onClick={props.handleHamburger}>Testing</NavLink></li>
 			</ul>
 			
     </div>

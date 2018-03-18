@@ -6,10 +6,7 @@ const accountTemplate = {
 	dateJoined: '',
 	progress: {
 		guitar: {
-			chords: {
-				standardChords: [],
-        chordChooser: []
-			},
+			chords: [],
 			scales: {}
 		},
 		bass: {

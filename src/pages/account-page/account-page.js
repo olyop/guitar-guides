@@ -130,20 +130,18 @@ class AccountPage extends React.Component {
 								<RaisedButton onClick={this.deleteAccount}
                   backgroundColor="#F44336"
                   labelColor="#fff"
+									style={{ marginRight: '10px' }}
 									disabled={this.state.accountDeleteLoading}
                   label={this.state.accountDeleteLoading ? 'Deleting...' : 'Delete Account'} />
+								<RaisedButton onClick={this.props.logOut}
+									backgroundColor="#F44336"
+									labelColor="#fff"
+									disabled={this.state.accountDeleteLoading}
+									label="Sign Out" />
 							</div>
 						) : null}
 					</div>
 					
-				</div>
-
-				<div className="account-page-sign-out">
-					<RaisedButton onClick={this.props.logOut}
-            backgroundColor="#F44336"
-            labelColor="#fff"
-						disabled={this.state.accountDeleteLoading}
-						label="Sign Out" />
 				</div>
 
 			</div>
