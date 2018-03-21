@@ -34,28 +34,40 @@
 			font-size: 26px;
 			display: none; }
 
-	#header .header-middle {
-		padding: 0 10px;
-		justify-content: center; }
+	#header .header-middle {}
 		#header .header-middle a {
+			transition: .5s all;
+			padding: 0 20px 5px 20px;
 			color: #fff;
-			display: block; }
+			height: 100%;
+			display: flex;
+			align-items: center; }
 			#header .header-middle a:hover,
 			#header .header-middle a:focus,
-			#header .header-middle a:active {
+			#header .header-middle a:active,
+			#header .header-middle a:visited {
 				outline: none;
 				color: #fff;
 				text-decoration: none; }
-		#header .header-middle h1 {
-			-webkit-user-select: none;
-			margin: 0;
-			font-size: 23px;
-			text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
-			color: #fff; }
-			#header .header-middle h1 b {
-				font-size: 30px;
-				font-weight: 700;
+			#header .header-middle a:hover {
+				background-color: #424242; }
+			#header .header-middle a:active h1 {
 				color: #F44336; }
+
+			#header .header-middle a h1 {
+				-webkit-user-select: none;
+				margin: 0;
+				transition: .2s text-shadow;
+				color: #fff;
+				font-size: 23px;
+				font-family: 'Lobster', cursive;
+				text-shadow: 3px 3px 0px rgba(0, 0, 0, 1); }
+				#header .header-middle a:hover h1 {
+					text-shadow: 4px 4px 0px rgba(0, 0, 0, 1); }
+				#header .header-middle a h1 b {
+					transition: .2s all;
+					font-family: 'Lobster', cursive;
+					color: #F44336; }
 
   #header .header-right {
     display: flex;
@@ -124,11 +136,8 @@
 }
 
 @media (min-width: 500px) {
-	#header .header-middle h1 {
-		font-size: 28px;}
-		#header .header-middle h1 b {
-			font-size: 38px; }
-	
+	#header .header-middle a h1 {
+		font-size: 28px; }
 	#header .header-icon i {
 		font-size: 32px; }
 }
@@ -139,10 +148,8 @@
 		padding: 0 25px; }
 	#header .header-left .header-text {
 		display: block; }
-	#header .header-middle h1 {
+	#header .header-middle a h1 {
 		font-size: 35px; }
-	#header .header-middle h1 b {
-		font-size: 45px; }
 	#header .header-right .header-search a {
 		padding: 0 20px; }
     #header .header-right .header-search .header-icon {

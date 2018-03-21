@@ -124,7 +124,7 @@ class AccountPage extends React.Component {
 					
 					<div className="account-page-content">
 						<Heading onClick={this.toggleContent3}
-							active={this.state.content3}>Setttings</Heading>
+							active={this.state.content3}>Settings</Heading>
 						{this.state.content3 ? (
 							<div className="account-page-content account-page-settings">
 								<RaisedButton onClick={this.deleteAccount}
