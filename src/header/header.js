@@ -28,7 +28,7 @@ const Header = props => (
 
 			<div className="header-section header-middle">
 				<Link to="/">
-          <h1><b>g</b>uitar <b>g</b>uides</h1>
+          <h1><b>G</b>uitar <b>G</b>uides</h1>
         </Link>
 			</div>
 

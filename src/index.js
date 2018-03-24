@@ -33,7 +33,7 @@ import AccountPage from './pages/account-page/account-page'
 
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -74,7 +74,7 @@ class Index extends React.Component {
       method: 'put',
       url: `http://localhost:3001/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
-      data: this.state.account
+      data: this.state.accoudnt
     }
     
     if (includes(config.data.progress.guitar.chords, chordId)) {
@@ -102,7 +102,7 @@ class Index extends React.Component {
 		}
 		
 		return (
-			<Router>
+			<BrowserRouter>
         <MuiThemeProvider>
           <div id="index">
 
@@ -119,9 +119,14 @@ class Index extends React.Component {
 
             {isAccountLoggedIn ? (
               <div id="content">
-
-                <Route path="/" exact
-									render={ () => <Home /> } />
+							
+								<Route path="/" exact
+									render={ ({ match, location }) => {
+										
+										return (
+											<Home location={location} />
+										)
+									}} />
 								
 								<Route path="/account" exact render={ () => (
                   <AccountPage appState={appState}
@@ -163,17 +168,17 @@ class Index extends React.Component {
                   <Theory appState={appState}
 										globalText={globalText} />		
                 )} />
-
-              </div>
+							
+							</div>
             ) : (
-              <Accounts appState={appState}
+							<Accounts appState={appState}
 								globalText={globalText}
 								logIn={this.logIn} />
 						)}
 
           </div>
         </MuiThemeProvider>
-      </Router>
+      </BrowserRouter>
 		)
 	}
 }
