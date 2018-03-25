@@ -42,7 +42,7 @@ class Test1 extends React.Component {
 				isChordsDatabase: true,
 				results: {
 					validate: validateChords(data),
-					duplicates: checkDuplicates(data)
+					duplicates: checkDuplicates(data.map(item => item.id))
 				}
 			})
 		})
