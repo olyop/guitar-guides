@@ -1,6 +1,8 @@
 import React from 'react'
 
 import axios from 'axios'
+import includes from 'lodash/includes'
+import maliciousSubStrings from '../database/malicious-sub-strings'
 
 import Error from '../common/error'
 import Loading from '../common/loading'
@@ -24,13 +26,10 @@ class Search extends React.Component {
 		this.clearSearch = this.clearSearch.bind(this)
   }
   
-  handleInputChange(event) { this.setState({ input: event.target.value }) }
-	clearSearch() { this.setState({ input: '' }) }
-  
   componentDidMount() {
     Promise.all([
       axios.get('http://localhost:3001/standardChords'),
-      axios.get('http://localhost:3001/chordChooserr')
+      axios.get('http://localhost:3001/chordChooser')
     ])
     .then(([standardChordsResponse, chordChooserResponse]) => {
       this.setState({
@@ -48,8 +47,24 @@ class Search extends React.Component {
 		})
   }
 	
+  handleInputChange(event) {
+		// Check for malicious code
+		let flag = false
+		for (let i = 0; i < maliciousSubStrings.length; i++) {
+			if (includes(this.state.input, maliciousSubStrings[i])) { flag = true }
+		}
+		if (flag) {
+			this.setState({ input: 'malicious' })
+		} else {
+			this.setState({ input: event.target.value })
+		}
+	}
+	clearSearch() { this.setState({ input: '' }) }
+
+	
   render() {
     const database = this.state.database
+		console.log(this.state.input)
 		let content
 		if (database === 'error') {
 			content = <Error error={database} />
@@ -58,14 +73,24 @@ class Search extends React.Component {
 		} else {
 			let style = {
 				position: 'absolute',
-				right: 0,
 				borderRadius: '100%',
+				margin: '10px 0 0 0',
 				minWidth: 'auto',
 				padding: '5px',
-				margin: '10px 0 0 0'
+				right: 0
+			}
+			// Search results
+			let searchResults
+			if (this.state.input === 'malicious') {
+				searchResults = <p>Search input is potentially malicious.</p>
+			} else if (this.state.input === '') {
+				searchResults = null 
+			} else {
+				searchResults = <SearchResults searchState={this.state} />				 
 			}
 			content = (
 				<div>
+					
 					<div className="search-top">
 						<div className="search-top-icon">
 							<i className="material-icons">search</i>
@@ -82,9 +107,9 @@ class Search extends React.Component {
 							</FlatButton>
 						</div>
 					</div>
-					{this.state.input === '' ? null : (
-						<SearchResults searchState={this.state} />
-					)}
+					
+					{searchResults}
+					
 				</div>
 			)
 		}
