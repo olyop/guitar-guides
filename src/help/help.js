@@ -17,11 +17,7 @@ class Help extends React.Component {
   
   constructor(props) {
     super(props)
-    
-    this.state = {
-      content1: true
-    }
-    
+    this.state = { content1: true }
     this.toggleContent1 = this.toggleContent1.bind(this)
   }
   
@@ -33,8 +29,7 @@ class Help extends React.Component {
       col1: { width: '20%', fontSize: '13px' },
       col2: { width: '20%', fontSize: '13px' },
       col3: { width: '60%', fontSize: '13px' }
-    }
-    let rowStyle2 = {
+    }, rowStyle2 = {
       col1: { width: '20%', fontSize: '13px' },
       col2: { width: '80%', fontSize: '13px' }
     }

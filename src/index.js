@@ -49,8 +49,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-			account: createAdminAccount(accountTemplate),
-//      account: null,
+//			account: createAdminAccount(accountTemplate),
+      account: null,
 			menu: false
 		}
 		
@@ -74,7 +74,7 @@ class Index extends React.Component {
       method: 'put',
       url: `http://localhost:3001/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
-      data: this.state.accoudnt
+      data: this.state.account
     }
     
     if (includes(config.data.progress.guitar.chords, chordId)) {

@@ -48,7 +48,7 @@ class Search extends React.Component {
 	
   handleInputChange(event) {
 		// Check for potentially malicious input
-    const input = event.target.value
+    const input = String(event.target.value)
 		let flag = false
 		for (let i = 0; i < maliciousSubStrings.length; i++) {
 			if (includes(input, maliciousSubStrings[i])) { flag = true }
@@ -78,7 +78,7 @@ class Search extends React.Component {
         </div>
       )
 		} else {
-			let style = {
+			let buttonStyle = {
 				position: 'absolute',
 				borderRadius: '100%',
 				margin: '10px 0 0 0',
@@ -101,7 +101,7 @@ class Search extends React.Component {
                   onChange={this.handleInputChange}
                   ref={input => { this.nameInput = input }} />
                 <FlatButton onClick={this.clearSearch}
-                  style={style}>
+                  style={buttonStyle}>
                   <i className="material-icons">close</i>
                 </FlatButton>
               </div>

@@ -51,7 +51,6 @@ class CreateAccount extends React.Component {
     
 		// Check for malicious code
 		let flag = false
-		
 		for (let i = 0; i < maliciousSubStrings.length; i++) {
 			if (includes(this.state.name, maliciousSubStrings[i])) {
 				this.setState({ nameErrorText: 'Please enter a valid name.' })
@@ -115,50 +114,41 @@ class CreateAccount extends React.Component {
 				
 				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 					
-					<TextField
-						value={this.state.name}
+					<TextField value={this.state.name}
 						onChange={this.handleName}
 						errorText={this.state.nameErrorText}
-
+						floatingLabelFixed
+						floatingLabelText={this.props.globalText.accounts.createAccountPage.nameLabelText}
+						tabIndex={1}
 						style={{ width: '48%' }}
 						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
 						floatingLabelFocusStyle={{ fontWeight: '700' }}
-						errorStyle={{ color: '#F44336' }}
+						errorStyle={{ color: '#F44336' }} />
 
-						floatingLabelFixed
-						floatingLabelText={this.props.globalText.accounts.createAccountPage.nameLabelText}>
-					</TextField>
-
-					<TextField
-						value={this.state.surname}
+					<TextField value={this.state.surname}
 						onChange={this.handleSurname}
 						errorText={this.state.surnameErrorText}
-
+						floatingLabelFixed
+						floatingLabelText={this.props.globalText.accounts.createAccountPage.surnameLabelText}
+						tabIndex={2}
 						style={{ width: '48%' }}
 						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
 						floatingLabelFocusStyle={{ fontWeight: '700' }}
-						errorStyle={{ color: '#F44336' }}
-
-						floatingLabelFixed
-						floatingLabelText={this.props.globalText.accounts.createAccountPage.surnameLabelText}>
-					</TextField>
+						errorStyle={{ color: '#F44336' }} />
 					
 				</div>
 				
-				<SelectField
-					value={this.state.experience}
+				<SelectField value={this.state.experience}
 					onChange={this.handleExperience}
           errorText={this.state.experienceErrorText}
-					
+          floatingLabelFixed fullWidth
+					floatingLabelText={this.props.globalText.accounts.createAccountPage.expLevelLabelText}
 					underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 					floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
 					floatingLabelFocusStyle={{ fontWeight: '700' }}
-					errorStyle={{ color: '#F44336' }}
-          
-          floatingLabelFixed fullWidth
-					floatingLabelText={this.props.globalText.accounts.createAccountPage.expLevelLabelText}>
+					errorStyle={{ color: '#F44336' }}>
 					<MenuItem value={0}
 						primaryText={this.props.globalText.accounts.expLevels[0]} />
 					<MenuItem value={1}
@@ -169,32 +159,28 @@ class CreateAccount extends React.Component {
 				
 				<div className="account-create-buttons">
 					
-          <RaisedButton
-            onClick={this.handleAdd}
-						
-            backgroundColor={'#212121'}
-            labelColor={'#fff'}
-						style={{ marginBottom: '10px' }}
-						
-            fullWidth icon={(
+          <RaisedButton onClick={this.handleAdd}						
+            fullWidth
+						icon={(
 							<i className="material-icons"
 								style={{ color: '#fff', fontSize: '25px' }}>done</i>
 						)}
-            label={this.props.globalText.accounts.createAccountPage.addNewAccountButtonText}>
-					</RaisedButton>
-					
-					<RaisedButton
-            onClick={this.props.toggleCreateAccountScreen}
-						
-            backgroundColor={'#F44336'}
+            label={this.props.globalText.accounts.createAccountPage.addNewAccountButtonText}
+						tabIndex={4}
+						backgroundColor={'#212121'}
             labelColor={'#fff'}
-						
-            fullWidth icon={(
+						style={{ marginBottom: '10px' }} />
+					
+					<RaisedButton onClick={this.props.toggleCreateAccountScreen}
+            label={this.props.globalText.accounts.createAccountPage.cancelNewAccountButtonText}
+						fullWidth
+						icon={(
 							<i className="material-icons"
 								style={{ color: '#fff', fontSize: '25px' }}>close</i>
 						)}
-            label={this.props.globalText.accounts.createAccountPage.cancelNewAccountButtonText}>
-					</RaisedButton>
+						tabIndex={5}
+            backgroundColor={'#F44336'}
+            labelColor={'#fff'} />
 					
 				</div>
 				
