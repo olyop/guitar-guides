@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './guitar-tab.css'
+import './css/guitar-tab.css'
 
 class GuitarTabSection extends React.Component {	
 	render() {

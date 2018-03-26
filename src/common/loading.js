@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Import CSS
-import './loading.css'
+import './css/loading.css'
 
 const Loading = props => {
 	return (

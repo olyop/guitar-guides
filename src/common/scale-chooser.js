@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './scale-chooser.css'
+import './css/scale-chooser.css'
 
 import GuitarTab from './guitar-tab'
 import SelectField from 'material-ui/SelectField'

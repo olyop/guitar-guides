@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import './chord-chart.css'
+import './css/chord-chart.css'
 
 const ChordChartHeading = props => {
   if (props.chord.fret === 1) {

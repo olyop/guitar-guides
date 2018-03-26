@@ -8,7 +8,7 @@ import ChordChart from './chord-chart'
 import RaisedButton from 'material-ui/RaisedButton'
 import Loading from '../common/loading'
 
-import './chord-chooser.css'
+import './css/chord-chooser.css'
 
 class ChordChartVariations extends React.Component {
   

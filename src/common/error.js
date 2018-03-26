@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './error.css'
+import './css/error.css'
 
 const Error = props => {
 	

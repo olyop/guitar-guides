@@ -30,3 +30,21 @@
         font-size: 24px; }
       #search .search-top .search-top-bar i {
         font-size: 26px; }
+
+  #search .search-results {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow:
+      0 0 4px rgba(0,0,0,.14),
+      0 4px 8px rgba(0,0,0,.28); }
+
+  #search .search-results .search-results-chords {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: flex; }
+
+@media (min-width: 500px) {
+	.search-results .search-results-chords {
+		justify-content: space-between; }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './heading.css'
+import './css/heading.css'
 
 const Heading = props => (
   <div onClick={props.onClick}
