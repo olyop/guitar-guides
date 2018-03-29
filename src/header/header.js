@@ -23,6 +23,7 @@ const Header = props => (
             </button>
 
           </div>
+					<div id="header-title"></div>
         </div>
       ) : null}
 

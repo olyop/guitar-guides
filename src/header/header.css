@@ -28,11 +28,10 @@
 				#header .header-left .hamburger .hamburger-box .hamburger-inner:before,
 				#header .header-left .hamburger .hamburger-box .hamburger-inner:after {
 					background-color: #fff; }
-		#header .header-left .header-text {
+		#header .header-left #header-title {
 			padding-right: 20px;
 			color: #fff;
-			font-size: 26px;
-			display: none; }
+			font-size: 23px; }
 
 	#header .header-middle {}
 		#header .header-middle a {

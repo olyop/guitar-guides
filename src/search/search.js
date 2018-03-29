@@ -22,7 +22,8 @@ class Search extends React.Component {
       database: {
         standardChords: null,
         chordChooser: null
-      }
+      },
+			databaseError: null
     }
     this.handleInputChange = this.handleInputChange.bind(this)
 		this.clearSearch = this.clearSearch.bind(this)
@@ -31,7 +32,7 @@ class Search extends React.Component {
   componentDidMount() {
     Promise.all([
       axios.get('http://localhost:3001/standardChords'),
-      axios.get('http://localhost:3001/chordChooser')
+      axios.get('http://localhost:3001/chordChooserr')
     ])
     .then(([response1, response2]) => {
       this.setState({
@@ -43,7 +44,12 @@ class Search extends React.Component {
       // Set focus on search input
       this.nameInput.focus()
     })
-    .catch(error => { this.setState({ database: 'error' }) })
+    .catch(error => {
+			this.setState({
+				database: 'error',
+				databaseError: error
+			})
+		})
   }
 	
   handleInputChange(event) {
@@ -65,7 +71,7 @@ class Search extends React.Component {
 			return (
         <div id="search">
           <div className="container">
-            <Error error={this.state.database} />
+            <Error error={this.state.databaseError} />
           </div>
         </div>
       )

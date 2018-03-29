@@ -49,8 +49,8 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-//			account: createAdminAccount(accountTemplate),
-      account: null,
+			account: createAdminAccount(accountTemplate),
+//      account: null,
 			menu: false
 		}
 		
@@ -121,19 +121,16 @@ class Index extends React.Component {
               <div id="content">
 							
 								<Route path="/" exact
-									render={ ({ match, location }) => {
-										
-										return (
-											<Home location={location} />
-										)
-									}} />
+									render={ ({ match, location }) => (
+										<Home location={location} />
+									)} />
 								
 								<Route path="/account" exact render={ () => (
-                  <AccountPage appState={appState}
+									<AccountPage appState={appState}
 										globalText={globalText}
-                    logOut={this.logOut}
-                    deleteAccount={this.deleteAccount} />		
-                )} />
+										logOut={this.logOut}
+										deleteAccount={this.deleteAccount} />
+									)} />
 								
 								<Route path="/testing" exact render={ () => (
 									<Testing appState={appState}

@@ -1,0 +1,18 @@
+.error {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow:
+		0 0 4px rgba(0,0,0,.14),
+		0 4px 8px rgba(0,0,0,.28);
+	border-radius: 2px;}
+	.error .error-header {
+		margin-bottom: 10px;
+		display: flex; } 
+		.error .error-header i {
+			margin-right: 10px;
+			font-size: 30px; }
+		.error .error-header h1 {
+			margin: 0;
+			font-size: 28px; }
+	.error pre {
+		margin: 0; }

@@ -14,6 +14,11 @@
     margin: 10px 0 10px 0;
     font-weight: 400;
     font-size: 21px; }
+	#chord-chooser h5 {
+    font-size: 16px;
+		-webkit-user-select: none;
+    text-align: center;
+    font-weight: 500; }
 
   #chord-chooser .chord-chooser-buttons {
     width: 100%;
@@ -44,12 +49,6 @@
         color: #fff; }
         #chord-chooser .chord-chooser-chart .chord-chooser-variation-max:hover {
           background-color: #fff; }
-
-  #chord-chooser h5 {
-    font-size: 16px;
-		-webkit-user-select: none;
-    text-align: center;
-    font-weight: 500; }
 
 @media (min-width: 500px) {
 	#chord-chooser .chord-chooser-buttons .chord-chooser-button {

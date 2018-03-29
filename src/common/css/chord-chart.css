@@ -25,13 +25,12 @@
 			font-size: 24px; }
 	.chart .chart-icon-completed {
 		display: flex !important; }
-
-.chart .chart-icon a {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-.chart .chart-icon a:hover, .chart .chart-icon a:focus {
-  text-decoration: none; }
+	.chart .chart-icon a {
+		display: flex;
+		align-items: center;
+		justify-content: center; }
+	.chart .chart-icon a:hover, .chart .chart-icon a:focus {
+		text-decoration: none; }
 
 	.chart .chart-heading {
 		position: absolute;
@@ -42,12 +41,10 @@
 		width: 200px;
 		height: 60px;
 		padding: 30px 0 0 0; }
-
 		.chart .chart-heading h2 {
 			margin: 0;
 			font-size: 23px;
 			font-weight: 500; }
-
 		.chart .chart-heading span {
 			font-size: 15px;
       color: #616161;
