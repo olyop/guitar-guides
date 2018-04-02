@@ -19,10 +19,7 @@ class Search extends React.Component {
     this.state = {
       input: '',
       isInputMalicious: false,
-      database: {
-        standardChords: null,
-        chordChooser: null
-      },
+      database: null,
 			databaseError: null
     }
     this.handleInputChange = this.handleInputChange.bind(this)
@@ -32,7 +29,7 @@ class Search extends React.Component {
   componentDidMount() {
     Promise.all([
       axios.get('http://localhost:3001/standardChords'),
-      axios.get('http://localhost:3001/chordChooserr')
+      axios.get('http://localhost:3001/chordChooser')
     ])
     .then(([response1, response2]) => {
       this.setState({
@@ -68,14 +65,16 @@ class Search extends React.Component {
 	
   render() {
 		if (this.state.database === 'error') {
+			const error = this.state.databaseError
 			return (
         <div id="search">
           <div className="container">
-            <Error error={this.state.databaseError} />
+            <Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
+							apiError={error} />
           </div>
         </div>
       )
-		} else if (this.state.database.standardChords === null && this.state.database.chordChooser === null) {
+		} else if (this.state.database === null) {
 			return (
         <div id="search">
           <div className="container">

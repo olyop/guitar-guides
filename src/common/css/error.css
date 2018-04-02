@@ -6,13 +6,27 @@
 		0 4px 8px rgba(0,0,0,.28);
 	border-radius: 2px;}
 	.error .error-header {
-		margin-bottom: 10px;
-		display: flex; } 
-		.error .error-header i {
-			margin-right: 10px;
-			font-size: 30px; }
-		.error .error-header h1 {
-			margin: 0;
-			font-size: 28px; }
+		justify-content: space-between;
+		display: flex; }
+		.error .error-header .error-header-left,
+		.error .error-header .error-header-right {
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			display: flex; }
+		.error .error-header .error-header-left {
+			flex-direction: row; }
+			.error .error-header .error-header-left i {
+				margin-right: 10px;
+				font-size: 36px; }
+			.error .error-header .error-header-left h1 {
+				margin: 0;
+				font-size: 28px; }
+		.error .error-header .error-header-right {
+			flex-direction: row-reverse; }
+			.error .error-header .error-header-right i {
+				font-size: 28px;
+				margin: 0; }
+
 	.error pre {
-		margin: 0; }
+		margin: 10px 0 0 0; }
