@@ -144,7 +144,8 @@ class Index extends React.Component {
                 
                 <Route path="/search" exact render={ () => (
                   <Search appState={appState}
-                    globalText={globalText} />
+                    globalText={globalText}
+									  updateProgressChords={this.updateProgressChords} />
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (

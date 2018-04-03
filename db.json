@@ -1,15 +1,25 @@
 {
   "users": [
     {
-      "id": "1pLLZ4t75A",
-      "name": "Oliver",
-      "surname": "Plummer",
+      "id": "W2TfCynhmw",
+      "name": "Test",
+      "surname": "Account",
       "experience": 2,
-      "dateJoined": "26/03/2018",
+      "dateJoined": "03/04/2018",
       "progress": {
         "guitar": {
           "chords": [
-            "HzYummygsF"
+            "sEjAGHsnUv",
+            "jtLoDaNZiU",
+            "hbzWHCEuJL",
+            "LmCVZpAqMx",
+            "wCDuMlwKcS",
+            "DVBuUnMTJv",
+            "WTycZMdDZl",
+            "PBqOaadQOh",
+            "aTZsNGBwTW",
+            "NmPKdVQeaC",
+            "MBKFoHMxej"
           ],
           "scales": {}
         },

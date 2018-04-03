@@ -8,6 +8,7 @@ import validateChords from './testing-functions/validate-chords'
 import './testing.css'
 
 import Title from '../../common/title'
+import Container from '../../common/container'
 import Heading from '../../common/heading'
 import Loading from '../../common/loading'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -172,18 +173,15 @@ class Testing extends React.Component {
 	
 	render() {
 		return (
-			<div id="testing">
-				<div className="container">
-					
-					<Title>Testing</Title>
-					
-					<Heading onClick={this.toggleContent1}
-						active={this.state.content1}
-						>Database Testing</Heading>
-					{this.state.content1 ? <DatabaseTesting /> : null}
+			<Container id="testing">
 				
-				</div>
-			</div>
+				<Title>Testing</Title>
+				<Heading onClick={this.toggleContent1}
+					active={this.state.content1}
+					>Database Testing</Heading>
+				{this.state.content1 ? <DatabaseTesting /> : null}
+				
+			</Container>
 		)
 	}
 }

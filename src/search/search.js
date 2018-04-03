@@ -6,6 +6,7 @@ import maliciousSubStrings from '../database/malicious-sub-strings'
 import transferChordsIntoArray from '../functions/transfer-chords-into-array'
 
 import Error from '../common/error'
+import Container from '../common/container'
 import Loading from '../common/loading'
 import FlatButton from 'material-ui/FlatButton'
 import SearchResults from './search-results'
@@ -67,20 +68,16 @@ class Search extends React.Component {
 		if (this.state.database === 'error') {
 			const error = this.state.databaseError
 			return (
-        <div id="search">
-          <div className="container">
-            <Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
-							apiError={error} />
-          </div>
-        </div>
+				<Container id="search">
+					<Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
+						apiError={error} />
+				</Container>
       )
 		} else if (this.state.database === null) {
 			return (
-        <div id="search">
-          <div className="container">
-            <Loading text="Loading Database" />
-          </div>
-        </div>
+        <Container id="search">
+					<Loading text="Loading Database" />
+        </Container>
       )
 		} else {
 			let buttonStyle = {
@@ -92,32 +89,32 @@ class Search extends React.Component {
 				right: 0
 			}
 			return (
-				<div id="search">
-          <div className="container">
-          
-            <div className="search-top">
-              <div className="search-top-icon">
-                <i className="material-icons">search</i>
-              </div>
-              <div className="search-top-bar">
-                <input placeholder="Search..."
-                  type="text"
-                  value={this.state.input}
-                  onChange={this.handleInputChange}
-                  ref={input => { this.nameInput = input }} />
-                <FlatButton onClick={this.clearSearch}
-                  style={buttonStyle}>
-                  <i className="material-icons">close</i>
-                </FlatButton>
-              </div>
-            </div>
+				<Container id="search">
+					
+					<div className="search-top">
+						<div className="search-top-icon">
+							<i className="material-icons">search</i>
+						</div>
+						<div className="search-top-bar">
+							<input placeholder="Search..."
+								type="text"
+								value={this.state.input}
+								onChange={this.handleInputChange}
+								ref={input => { this.nameInput = input }} />
+							<FlatButton onClick={this.clearSearch}
+								style={buttonStyle}>
+								<i className="material-icons">close</i>
+							</FlatButton>
+						</div>
+					</div>
 
-            <SearchResults input={this.state.input}
-              isInputMalicious={this.state.isInputMalicious}
-              database={this.state.database} />
-          
-          </div>
-				</div>
+					<SearchResults appState={this.props.appState}
+						updateProgressChords={this.props.updateProgressChords}
+						input={this.state.input}
+						isInputMalicious={this.state.isInputMalicious}
+						database={this.state.database} />
+					
+				</Container>
 			)
 		}
   }

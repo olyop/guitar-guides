@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Title from '../common/title'
+import Container from '../common/container'
 import Heading from '../common/heading'
 import {
   Table,
@@ -35,122 +36,119 @@ class Help extends React.Component {
     }
     
     return (
-      <div id="help">
-        <div className="container">
+			<Container id="help">
+				
+				<Title>Help</Title>
 
-          <Title>Help</Title>
+				<Heading onClick={this.toggleContent1}
+					active={this.state.content1}>
+					Chord Chart Key
+				</Heading>
 
-          <Heading onClick={this.toggleContent1}
-            active={this.state.content1}>
-            Chord Chart Key
-          </Heading>
-          
-          {this.state.content1 ? (
-            <div>
-              
-              <Table bodyStyle={{ marginBottom: '30px' }}
-                fixedHeader={true}
-                fixedFooter={false}
-                selectable={false}
-                multiSelectable={false}>
-                <TableHeader
-                  displaySelectAll={false}
-                  adjustForCheckbox={false}
-                  enableSelectAll={true}>
-                  <TableRow>
-                    <TableHeaderColumn style={rowStyle1.col1}>Symbol</TableHeaderColumn>
-                    <TableHeaderColumn style={rowStyle1.col2}>Name</TableHeaderColumn>
-                    <TableHeaderColumn style={rowStyle1.col3}>Description</TableHeaderColumn>
-                  </TableRow>
-                </TableHeader>
-                <TableBody
-                  deselectOnClickaway={true}
-                  displayRowCheckbox={false}
-                  showRowHover={false}
-                  stripedRows={false}>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle1.col1}>
-                      <div className="help-chord-chart-key-note"></div>
-                    </TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col2}>Note</TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col3}>The position on the fretboard where you put your finger.</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle1.col1}>
-                      <div className="help-chord-chart-key-open-note"></div>
-                    </TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col2}>Open String Note</TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col3}>Open string on the guitar.</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle1.col1}>
-                      <div className="help-chord-chart-key-avoid">  
-                        <i className="material-icons">close</i>
-                      </div>
-                    </TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col2}>Avoid</TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col3}>Avoid strumming this string or make sure it is muted</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle1.col1}>
-                      <div className="help-chord-chart-key-fret">(2fret.)</div>
-                    </TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col2}>Starting Fret</TableRowColumn>
-                    <TableRowColumn style={rowStyle1.col3}>The starting fret of the first row on the chart.</TableRowColumn>
-                  </TableRow>
-                </TableBody>
-              </Table>
-              
-              <Table fixedHeader={true}
-                fixedFooter={false}
-                selectable={false}
-                multiSelectable={false}>
-                <TableHeader
-                  displaySelectAll={false}
-                  adjustForCheckbox={false}
-                  enableSelectAll={true}>
-                  <TableRow>
-                    <TableHeaderColumn style={rowStyle2.col1}>Abbreviation</TableHeaderColumn>
-                    <TableHeaderColumn style={rowStyle2.col2}>Full Name</TableHeaderColumn>
-                  </TableRow>
-                </TableHeader>
-                <TableBody
-                  deselectOnClickaway={true}
-                  displayRowCheckbox={false}
-                  showRowHover={false}
-                  stripedRows={false}>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}></TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Major</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}>m</TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Minor</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}>7</TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Dominant 7th</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}>m7</TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Minor 7th</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}>maj7</TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Major 7th</TableRowColumn>
-                  </TableRow>
-                  <TableRow>
-                    <TableRowColumn style={rowStyle2.col1}>sus4</TableRowColumn>
-                    <TableRowColumn style={rowStyle2.col2}>Suspended 4th</TableRowColumn>
-                  </TableRow>
-                </TableBody>
-              </Table>
-              
-            </div>
-          ) : null}
+				{this.state.content1 ? (
+					<div>
 
-        </div>
-      </div>
+						<Table bodyStyle={{ marginBottom: '30px' }}
+							fixedHeader={true}
+							fixedFooter={false}
+							selectable={false}
+							multiSelectable={false}>
+							<TableHeader
+								displaySelectAll={false}
+								adjustForCheckbox={false}
+								enableSelectAll={true}>
+								<TableRow>
+									<TableHeaderColumn style={rowStyle1.col1}>Symbol</TableHeaderColumn>
+									<TableHeaderColumn style={rowStyle1.col2}>Name</TableHeaderColumn>
+									<TableHeaderColumn style={rowStyle1.col3}>Description</TableHeaderColumn>
+								</TableRow>
+							</TableHeader>
+							<TableBody
+								deselectOnClickaway={true}
+								displayRowCheckbox={false}
+								showRowHover={false}
+								stripedRows={false}>
+								<TableRow>
+									<TableRowColumn style={rowStyle1.col1}>
+										<div className="help-chord-chart-key-note"></div>
+									</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col2}>Note</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col3}>The position on the fretboard where you put your finger.</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle1.col1}>
+										<div className="help-chord-chart-key-open-note"></div>
+									</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col2}>Open String Note</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col3}>Open string on the guitar.</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle1.col1}>
+										<div className="help-chord-chart-key-avoid">  
+											<i className="material-icons">close</i>
+										</div>
+									</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col2}>Avoid</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col3}>Avoid strumming this string or make sure it is muted</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle1.col1}>
+										<div className="help-chord-chart-key-fret">(2fret.)</div>
+									</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col2}>Starting Fret</TableRowColumn>
+									<TableRowColumn style={rowStyle1.col3}>The starting fret of the first row on the chart.</TableRowColumn>
+								</TableRow>
+							</TableBody>
+						</Table>
+
+						<Table fixedHeader={true}
+							fixedFooter={false}
+							selectable={false}
+							multiSelectable={false}>
+							<TableHeader
+								displaySelectAll={false}
+								adjustForCheckbox={false}
+								enableSelectAll={true}>
+								<TableRow>
+									<TableHeaderColumn style={rowStyle2.col1}>Abbreviation</TableHeaderColumn>
+									<TableHeaderColumn style={rowStyle2.col2}>Full Name</TableHeaderColumn>
+								</TableRow>
+							</TableHeader>
+							<TableBody
+								deselectOnClickaway={true}
+								displayRowCheckbox={false}
+								showRowHover={false}
+								stripedRows={false}>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}></TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Major</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}>m</TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Minor</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}>7</TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Dominant 7th</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}>m7</TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Minor 7th</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}>maj7</TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Major 7th</TableRowColumn>
+								</TableRow>
+								<TableRow>
+									<TableRowColumn style={rowStyle2.col1}>sus4</TableRowColumn>
+									<TableRowColumn style={rowStyle2.col2}>Suspended 4th</TableRowColumn>
+								</TableRow>
+							</TableBody>
+						</Table>
+
+					</div>
+				) : null}
+			</Container>
     )
   }
 }

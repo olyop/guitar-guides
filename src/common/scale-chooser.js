@@ -3,6 +3,7 @@ import React from 'react'
 import './css/scale-chooser.css'
 
 import GuitarTab from './guitar-tab'
+import FlatButton from 'material-ui/FlatButton'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 
@@ -24,6 +25,12 @@ class ScaleChooser extends React.Component {
 	handleTypeChange(event, index, value) { this.setState({ type: value }) }
 	
 	render() {
+		let buttonStyle = {
+			margin: '0',
+			minWidth: 'auto',
+			padding: '5px',
+			right: 0
+		}
 		return (
 			<div className="scale-chooser">
 				
@@ -34,7 +41,7 @@ class ScaleChooser extends React.Component {
           	onChange={this.handleKeyChange}
 						className="scale-chooser-menu">
 						{this.props.theoryData.notes.map((note, index) => (
-							<MenuItem key={index} value={index} primaryText={note} />
+							<MenuItem key={index} value={index} primaryText={note} /> 
 						))}
 					</SelectField>
 					
@@ -49,9 +56,21 @@ class ScaleChooser extends React.Component {
 					
 				</div>
 				
-				<div className="scale-chooser-tab">
+				<div className="scale-chooser-tab"> 
 					
 					<GuitarTab scale={this.props.scalesData[7][2][0]} />
+					
+					<div className="scale-variations">
+						<p>Variations</p>
+						<div className="scale-variations-buttons">
+							<FlatButton style={buttonStyle}>
+								<i className="material-icons">keyboard_arrow_left</i>
+							</FlatButton>
+							<FlatButton style={buttonStyle}>
+								<i className="material-icons">keyboard_arrow_right</i>
+							</FlatButton>
+						</div>
+					</div>
 					
 				</div>
 				

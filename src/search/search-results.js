@@ -1,5 +1,6 @@
 import React from 'react'
 
+import includes from 'lodash/includes'
 import findChordMatches from './find-chord-matches'
 
 import Heading from '../common/heading'
@@ -31,13 +32,15 @@ class ChordSearchResults extends React.Component {
 						{this.state.more ? (
 							<div className="search-results-chords">
 								{this.props.chordMatches.map((chord, index) => (
-									<ChordChart key={chord.id} chord={chord} />
+									<ChordChart key={chord.id} chord={chord}
+										checkFunction={this.props.updateProgressChords} completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
 								))}
 							</div>
 						) : (
 							<div className="search-results-chords">
 								{this.props.chordMatches.slice(0,5).map((chord, index) => (
-									<ChordChart key={chord.id} chord={chord} /> 
+									<ChordChart key={chord.id} chord={chord}
+										checkFunction={this.props.updateProgressChords} completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} /> 
 								))}
 							</div>
 						)}
@@ -59,7 +62,11 @@ const SearchResults = props => {
     const matches = findChordMatches(props.database.chordChooser, props.input)
     return (
       <div className="search-results">
-        {matches.length >= 1 ? <ChordSearchResults chordMatches={matches} /> : null}
+        {matches.length >= 1 ? (
+					<ChordSearchResults appState={props.appState}
+						updateProgressChords={props.updateProgressChords}
+						chordMatches={matches} />
+				) : null}
       </div>
     )
   }
