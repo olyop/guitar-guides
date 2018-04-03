@@ -7,12 +7,12 @@ import ChordChooser from '../../../common/chord-chooser'
 import ChordChart from '../../../common/chord-chart'
 import Heading from '../../../common/heading'
 import Loading from '../../../common/loading'
+import Ad from '../../../common/ad'
 
 class StandardChords extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = { standardChords: null }
 	}
 	
@@ -54,22 +54,17 @@ class StandardChords extends React.Component {
 }
 
 class GuitarChords extends React.Component {
-  
   constructor(props) {
     super(props)
-    
     this.state = {
       content1: false,
       content2: true
     }
-    
     this.toggleContent1 = this.toggleContent1.bind(this)
     this.toggleContent2 = this.toggleContent2.bind(this)
   }
-  
   toggleContent1() { this.setState({ content1: !this.state.content1 }) }
   toggleContent2() { this.setState({ content2: !this.state.content2 }) }
-  
   render() {
     return (
       <div id="guitar-chords">
@@ -82,6 +77,8 @@ class GuitarChords extends React.Component {
             <StandardChords appState={this.props.appState} />
           </div>
         ) : null}
+				
+				<Ad />
         
         <Heading onClick={this.toggleContent2}
           active={this.state.content2}>Chord Chooser</Heading>

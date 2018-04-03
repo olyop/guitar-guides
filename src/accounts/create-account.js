@@ -14,7 +14,6 @@ class CreateAccount extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = {
 			name: '',
 			surname: '',
@@ -23,32 +22,17 @@ class CreateAccount extends React.Component {
       surnameErrorText: null,
       experienceErrorText: null
 		}
-		
 		this.handleName = this.handleName.bind(this)
 		this.handleSurname = this.handleSurname.bind(this)
 		this.handleExperience = this.handleExperience.bind(this)
-		
     this.handleAdd = this.handleAdd.bind(this)
 	}
 	
-	handleName(event) {
-		this.setState({
-			name: String(event.target.value)
-		})
-	}
-	
-	handleSurname(event) {
-		this.setState({
-			surname: String(event.target.value)
-		})
-	}
-	
-	handleExperience(event, index, value) {
-		this.setState({ experience: value })
-	}
+	handleName(event) { this.setState({ name: String(event.target.value) }) }
+	handleSurname(event) { this.setState({ surname: String(event.target.value) }) }
+	handleExperience(event, index, value) { this.setState({ experience: value }) }
   
   handleAdd() {
-    
 		// Check for malicious code
 		let flag = false
 		for (let i = 0; i < maliciousSubStrings.length; i++) {
@@ -66,9 +50,9 @@ class CreateAccount extends React.Component {
 		if (flag) { return }
 		
     // Validate form data
-    let isNameEmpty = this.state.name === ''
+    let isNameEmpty = this.state.name.trim() === ''
     let isNameTooLong = this.state.name.length > 10
-		let isSurnameEmpty = this.state.surname === ''
+		let isSurnameEmpty = this.state.surname.trim() === ''
     let isSurnameTooLong = this.state.surname.length > 10
     let isExperienceEmpty = this.state.experience === null
     
@@ -87,7 +71,7 @@ class CreateAccount extends React.Component {
     } else if (isSurnameTooLong) {
       this.setState({ surnameErrorText: 'Your surname is to long.' })
     } else {
-       this.setState({ surnameErrorText: null })
+			this.setState({ surnameErrorText: null })
     }
 		
 		// Check experience input

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Ad from '../../../common/ad'
+
 import { Link } from 'react-router-dom'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -24,6 +26,12 @@ const GuitarHome = props => (
 				</Link>
 			</div>
 		
+		</div>
+		
+		<div className="row">
+			<div className="col-md-12">
+				<Ad />
+			</div>
 		</div>
 		
 	</div>

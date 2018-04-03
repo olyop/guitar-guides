@@ -29,13 +29,11 @@ class AccountPage extends React.Component {
 		this.setState(
 			{ accountDeleteLoading: true },
 			() => {
-			
 				const axiosConfig = {
 					method: 'delete',
 					url: `http://localhost:3001/users/${this.props.appState.account.id}`,
 					headers: { 'Content-Type': 'application/json' }
 				}
-
 				axios(axiosConfig)
 					.then(response => {
 						this.setState({ accountDeleteLoading: false })
@@ -60,7 +58,8 @@ class AccountPage extends React.Component {
 						<div className="account-page-info">
 							<i className="material-icons">account_circle</i>
 							<div className="account-page-content">
-								<h3>{`${this.props.appState.account.name} ${this.props.appState.account.surname}`}</h3>
+								<h3>{this.props.appState.account.name}</h3>
+								<h4>{this.props.appState.account.surname}</h4>
 							</div>
 						</div>
 
