@@ -10,15 +10,11 @@
 		margin-right: 20px; }
 
 	.scale-chooser .scale-variations {
-		padding-top: 10px;
-		padding-left: 20px; }
-		.scale-chooser .scale-variations p {
-			margin: 0 0 5px 0; }
-		.scale-chooser .scale-variations .scale-variations-buttons {
-			display: flex;
-			align-items: center; }
-			.scale-chooser .scale-variations .scale-variations-buttons i {
-				font-size: 28px; }
+		display: flex;
+		align-items: center; 
+		padding-left: 10px; }
+		.scale-chooser .scale-variations i {
+			font-size: 28px; }
 
 @media (min-width: 800px) {
 	.scale-chooser .scale-chooser-menus {

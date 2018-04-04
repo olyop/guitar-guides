@@ -47,13 +47,11 @@ class Index extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
 			menu: false
 		}
-		
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)

@@ -8,7 +8,7 @@ const Ad = props => {
 	return (
 		<div className="ad">
 			<div className="ad-info">Advertisement</div>
-			<img src={ad1} />
+			<img alt="Ad" src={ad1} />
 			<i className="material-icons">info</i>
 		</div>
 	)

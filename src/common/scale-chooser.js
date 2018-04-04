@@ -61,15 +61,12 @@ class ScaleChooser extends React.Component {
 					<GuitarTab scale={this.props.scalesData[7][2][0]} />
 					
 					<div className="scale-variations">
-						<p>Variations</p>
-						<div className="scale-variations-buttons">
-							<FlatButton style={buttonStyle}>
-								<i className="material-icons">keyboard_arrow_left</i>
-							</FlatButton>
-							<FlatButton style={buttonStyle}>
-								<i className="material-icons">keyboard_arrow_right</i>
-							</FlatButton>
-						</div>
+						<FlatButton style={buttonStyle}>
+							<i className="material-icons">keyboard_arrow_left</i>
+						</FlatButton>
+						<FlatButton style={buttonStyle}>
+							<i className="material-icons">keyboard_arrow_right</i>
+						</FlatButton>
 					</div>
 					
 				</div>
