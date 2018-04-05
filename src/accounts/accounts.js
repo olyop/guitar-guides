@@ -5,11 +5,33 @@ import moment from 'moment'
 import accountTemplate from '../database/account-template'
 import makeId from '../functions/make-id'
 
-import AccountNone from './account-none'
+import SadFace from '../common/sad-face'
 import CreateAccount from './create-account'
 import Loading from '../common/loading'
 
 import './accounts.css'
+
+const AccountList = props => {
+  if (props.accounts === null) {
+    return <Loading />
+  } else if (props.accounts === 'error') {
+    return <p>Error</p>
+  } else if (props.accounts.length === 0) {
+    return <SadFace>No Accounts.</SadFace>
+  } else if (props.accounts.length > 0) {
+    return props.accounts.map(account => (
+      <div key={account.id}
+        onClick={() => props.logIn(account)}
+        className="account-list-item">
+        <i className="material-icons">account_circle</i>
+        <div className="account-list-item-content">
+          <h2>{account.name} {account.surname	}</h2>
+          <h4>{props.globalText.accounts.expLevels[account.experience]}</h4>
+        </div>
+      </div>
+    ))
+  }
+}
 
 class Accounts extends React.Component {
 	
@@ -32,8 +54,8 @@ class Accounts extends React.Component {
 	// Recieve Accounts from API
   componentDidMount() {
     axios.get('http://localhost:3001/users')
-      .then(res => {
-        const accounts = res.data
+      .then(response => {
+        const accounts = response.data
         this.setState({ accounts })
       })
       .catch(error => {
@@ -45,7 +67,6 @@ class Accounts extends React.Component {
   addAccount(name, surname, experience) {
 		
 		let newAccount = accountTemplate
-		
 		newAccount.id = makeId()
 		newAccount.name = name
 		newAccount.surname = surname
@@ -54,41 +75,11 @@ class Accounts extends React.Component {
 		
     axios.post('http://localhost:3001/users', newAccount)
     	.then(response => this.setState({ accounts: this.state.accounts.concat([response.data]) }))
-    	.catch(error => {
-      	console.log(error)
-				this.setState({ accounts: 'error' })
-    	})
+    	.catch(error => this.setState({ accounts: 'error' }))
   }
 	
 	render() {
-    
-		// Determine and render the status of the accounts data
-    let accountList
-    if (this.state.accounts === null) {
-      accountList = <Loading />
-    } else if (this.state.accounts === 'error') {
-      accountList = (
-        <p>Error</p>
-      )
-    } else if (this.state.accounts.length === 0) {
-      accountList = (
-        <AccountNone />
-      )
-    } else if (this.state.accounts.length > 0) {
-      accountList = this.state.accounts.map(account => (
-				<div key={account.id}
-					onClick={() => this.props.logIn(account)}
-					className="account-list-item">
-					<i className="material-icons">account_circle</i>
-					<div className="account-list-item-content">
-						<h2>{account.name} {account.surname	}</h2>
-						<h4>{this.props.globalText.accounts.expLevels[account.experience]}</h4>
-					</div>
-				</div>
-      ))
-    }
-     
-		return (
+    return (
 			<div id="account">
 				<div className="account-screen">
 					
@@ -96,14 +87,16 @@ class Accounts extends React.Component {
 					<p>{this.props.globalText.accounts.subtitle}</p>
 					
 					{this.state.newAccountScreen ? (
-						<CreateAccount
-							globalText={this.props.globalText}
+						<CreateAccount globalText={this.props.globalText}
 							toggleCreateAccountScreen={this.toggleCreateAccountScreen}
               addAccount={this.addAccount} />
 					) : (
 						<div className="account-list">
               
-              {accountList}
+              <AccountList appState={this.props.appState}
+                globalText={this.props.globalText}
+                accounts={this.state.accounts}
+                logIn={this.props.logIn} />
 							
 							{Array.isArray(this.state.accounts) ? (
 								<div className="account-list-item"

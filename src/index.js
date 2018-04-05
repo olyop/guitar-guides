@@ -83,7 +83,7 @@ class Index extends React.Component {
     
     axios(config)
       .then(response => this.setState({ account: response.data }) )
-      .catch(error => console.log(error))
+      .catch(error => {})
   }
 	
 	render() {

@@ -52,7 +52,7 @@ class Search extends React.Component {
 	
   handleInputChange(event) {
 		// Check for potentially malicious input
-    const input = String(event.target.value)
+    const input = String(event.target.value.toLowerCase())
 		let flag = false
 		for (let i = 0; i < maliciousSubStrings.length; i++) {
 			if (includes(input, maliciousSubStrings[i])) { flag = true }
@@ -62,7 +62,10 @@ class Search extends React.Component {
       isInputMalicious: flag
     })
 	}
-	clearSearch() { this.setState({ input: '' }) }
+	clearSearch() {
+    this.nameInput.focus()
+    this.setState({ input: '' })
+  }
 	
   render() {
 		if (this.state.database === 'error') {
@@ -83,7 +86,7 @@ class Search extends React.Component {
 			let buttonStyle = {
 				position: 'absolute',
 				borderRadius: '100%',
-				margin: '10px 0 0 0',
+				margin: '10px 10px 0 0',
 				minWidth: 'auto',
 				padding: '5px',
 				right: 0

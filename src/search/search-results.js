@@ -3,7 +3,9 @@ import React from 'react'
 import includes from 'lodash/includes'
 import findChordMatches from './find-chord-matches'
 
+import Ad from '../common/ad'
 import Heading from '../common/heading'
+import SadFace from '../common/sad-face'
 import ChordChart from '../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
 
@@ -33,19 +35,21 @@ class ChordSearchResults extends React.Component {
 							<div className="search-results-chords">
 								{this.props.chordMatches.map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
-										checkFunction={this.props.updateProgressChords} completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
+										checkFunction={this.props.updateProgressChords}
+                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
 								))}
 							</div>
 						) : (
 							<div className="search-results-chords">
 								{this.props.chordMatches.slice(0,5).map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
-										checkFunction={this.props.updateProgressChords} completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} /> 
+										checkFunction={this.props.updateProgressChords}
+                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
 								))}
 							</div>
 						)}
 						<FlatButton onClick={this.handleMore}
-							label={this.state.more ? 'Less...' : `Show ${this.props.chordMatches.length} results...`} />
+							label={this.state.more ? 'Less...' : `Show all ${this.props.chordMatches.length} search results...`} />
 					</div>
 				) : null}
 			</div>
@@ -59,16 +63,22 @@ const SearchResults = props => {
   } else if (props.input === '') {
     return null 
   } else {
-    const matches = findChordMatches(props.database.chordChooser, props.input)
-    return (
-      <div className="search-results">
-        {matches.length >= 1 ? (
-					<ChordSearchResults appState={props.appState}
-						updateProgressChords={props.updateProgressChords}
-						chordMatches={matches} />
-				) : null}
-      </div>
-    )
+    const chordMatches = findChordMatches(props.database.chordChooser, props.input)
+    if (chordMatches.length === 0) {
+      return <SadFace>No Search Results.</SadFace>
+    } else {
+      return (
+        <div className="search-results">
+          
+          <ChordSearchResults appState={props.appState}
+            updateProgressChords={props.updateProgressChords}
+            chordMatches={chordMatches} />
+          
+          <Ad style={{ margin: '10px 0 0 0' }} />
+          
+        </div>
+      )
+    }
   }
 }
 

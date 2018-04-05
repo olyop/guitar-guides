@@ -1,55 +1,36 @@
 {
   "users": [
     {
-      "id": "W2TfCynhmw",
-      "name": "Test",
-      "surname": "Account",
-      "experience": 2,
-      "dateJoined": "03/04/2018",
-      "progress": {
-        "guitar": {
-          "chords": [
-            "sEjAGHsnUv",
-            "jtLoDaNZiU",
-            "hbzWHCEuJL",
-            "LmCVZpAqMx",
-            "wCDuMlwKcS",
-            "DVBuUnMTJv",
-            "WTycZMdDZl",
-            "PBqOaadQOh",
-            "aTZsNGBwTW",
-            "NmPKdVQeaC",
-            "MBKFoHMxej"
-          ],
-          "scales": {}
-        },
-        "bass": {
-          "major": false,
-          "minor": false
-        },
-        "theory": {}
-      }
-    },
-    {
-      "id": "C8xDHPBXrt",
+      "id": "lXh306V83k",
       "name": "Oliver",
       "surname": "Plummer",
       "experience": 2,
-      "dateJoined": "03/04/2018",
+      "dateJoined": "04/04/2018",
       "progress": {
         "guitar": {
           "chords": [
             "HzYummygsF",
-            "LfeGibuDhj",
+            "sEjAGHsnUv",
+            "itWLoxrMJA",
+            "VQasrXzuPi",
+            "dnCohQbsQo",
             "aTZsNGBwTW",
-            "NmPKdVQeaC",
+            "ecdkUSptgf",
+            "wGmbLStIBh",
+            "aRmJyMaZBJ",
+            "sNzKHYXooC",
             "wkkvrPFZur",
-            "JORMETDutZ",
-            "KMYShGsgyb",
-            "uEROlKueOp",
-            "NoXgQFIHXw",
-            "OIYSEdFXIC",
-            "XOGwEoUxdS"
+            "tHJcbMzpIc",
+            "aivwPTJPNB",
+            "qotGpoRbPU",
+            "DVBuUnMTJv",
+            "WTycZMdDZl",
+            "cXhKuZleGl",
+            "eGemhtxYQi",
+            "TKvSUbISUO",
+            "RmlRZmgjMK",
+            "ooAYYMuJou",
+            "HDIuQKZvfY"
           ],
           "scales": {}
         },
