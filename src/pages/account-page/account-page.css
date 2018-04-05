@@ -4,8 +4,9 @@
 
 	#account-page .account-page-header {
 		width: 100%;
-		border-bottom: 1px solid #BDBDBD;
+		margin-top: 20px;
 		margin-bottom: 20px;
+		box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		background-color: #fff; }
 
 #account-page .account-page-header .account-page-account {
@@ -61,8 +62,7 @@
     border-radius: 0;
     border-left: 0;
     border-right: 0;
-    border-top: 1px solid #BDBDBD;
-    border-bottom: 1px solid #BDBDBD;
+		box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
     background-color: #fff; }
 	#account-page .account-page-section .account-page-content {
 		margin-bottom: 20px; }
@@ -122,9 +122,8 @@
 
 @media (min-width: 768px) {
   #account-page .account-page-header {
+		margin-top: 0;
 		margin-bottom: 40px; }
   #account-page .account-page-section {
-    border-left: 1px solid #BDBDBD;
-    border-right: 1px solid #BDBDBD;
     border-radius: 5px; }
 }
