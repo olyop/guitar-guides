@@ -3,6 +3,7 @@
 	cursor: pointer;
 	height: 300px;
   margin-bottom: 10px;
+  transition: .2s all;
   border: 1px solid #BDBDBD;
 	position: relative; }
 	.chart:hover {
@@ -13,6 +14,7 @@
 		position: absolute;
 		margin: 5px;
     border-radius: 100%;
+    transition: .2s all;
 		padding: 5px;
 		display: none;
 		align-items: center;

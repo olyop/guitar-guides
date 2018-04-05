@@ -59,11 +59,14 @@ class Index extends React.Component {
 	}
 	
 	// Account Functions
-	logIn(account) { this.setState({ account }) } 
-  logOut() { this.setState({ account: null }) }
+	logIn(account) {
+    this.setState({ account }) } 
+  logOut() {
+    this.setState({ account: null }) }
   
 	// Handle Navigation Menu
-	handleHamburger() { this.setState({ menu: !this.state.menu }) }
+	handleHamburger() {
+    this.setState({ menu: !this.state.menu }) }
   
   // Progress Functions
   updateProgressChords(chordId) {
@@ -73,8 +76,10 @@ class Index extends React.Component {
       url: `http://localhost:3001/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
       data: this.state.account
+    
     }
     
+    // Determine whether to add or remove the chord
     if (includes(config.data.progress.guitar.chords, chordId)) {
       config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId)
     } else {
@@ -87,7 +92,6 @@ class Index extends React.Component {
   }
 	
 	render() {
-    
 		const appState = this.state
 		const globalText = this.props.globalText
 		

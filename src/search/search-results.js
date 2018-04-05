@@ -1,5 +1,6 @@
 import React from 'react'
 
+import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
 import findChordMatches from './find-chord-matches'
 
@@ -48,8 +49,10 @@ class ChordSearchResults extends React.Component {
 								))}
 							</div>
 						)}
-						<FlatButton onClick={this.handleMore}
-							label={this.state.more ? 'Less...' : `Show all ${this.props.chordMatches.length} search results...`} />
+						{this.props.chordMatches.length > 5 ? (
+              <FlatButton onClick={this.handleMore}
+                label={this.state.more ? 'Less...' : `Show all ${this.props.chordMatches.length} search results...`} />
+            ) : null}
 					</div>
 				) : null}
 			</div>
@@ -61,9 +64,9 @@ const SearchResults = props => {
   if (props.isInputMalicious) {
     return <p>Search input is potentially malicious.</p>
   } else if (props.input === '') {
-    return null 
+    return null
   } else {
-    const chordMatches = findChordMatches(props.database.chordChooser, props.input)
+    const chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc'])
     if (chordMatches.length === 0) {
       return <SadFace>No Search Results.</SadFace>
     } else {
