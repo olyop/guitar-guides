@@ -93,7 +93,10 @@ const ChordChart = props => {
 				className={props.completed ? 'chart-icon chart-icon-completed' : 'chart-icon'}
 				style={{ top: '0', left: '0' }}>
 				<i className="material-icons"
-					style={{ color: props.completed ? '#4CAF50' : '#333' }}>{props.completed ? 'check_circle' : 'check'}</i>
+					style={{
+						color: props.completed ? '#fff' : '#333',
+						backgroundColor: props.completed ? '#4CAF50' : ''
+					}}>check</i>
 			</div>
 
 			<div className="chart-icon"

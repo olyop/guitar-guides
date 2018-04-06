@@ -1,7 +1,7 @@
 #header {
 	background-color: #212121;
 	z-index: 4;
-	position:relative;
+	position: relative;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	height: 8vh; }
 
@@ -51,22 +51,25 @@
 			#header .header-middle a:hover {
 				background-color: #424242; }
 			#header .header-middle a:active h1 {
-				color: #F44336; }
+				color: #FF5722; }
 
 			#header .header-middle a h1 {
 				-webkit-user-select: none;
 				margin: 0;
-				transition: .2s text-shadow;
 				color: #fff;
+				transition: .4s text-shadow;
 				font-size: 23px;
 				font-family: 'Lobster', cursive;
 				text-shadow: 3px 3px 0px rgba(0, 0, 0, 1); }
-				#header .header-middle a:hover h1 {
-					text-shadow: 4px 4px 0px rgba(0, 0, 0, 1); }
 				#header .header-middle a h1 b {
-					transition: .2s all;
+					transition: .4s text-shadow;
+					text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
 					font-family: 'Lobster', cursive;
 					color: #F44336; }
+				#header .header-middle a:hover h1,
+				#header .header-middle a:hover h1 b {
+					text-shadow: 6px 6px 0px rgba(0, 0, 0, 1); }
+				
 
   #header .header-right {
     display: flex;

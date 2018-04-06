@@ -26,6 +26,7 @@
 		.chart .chart-icon i {
 			-webkit-user-select: none;
 			color: #424242;
+			border-radius: 100%;
 			font-size: 24px; }
 	.chart .chart-icon-completed {
 		display: flex !important; }

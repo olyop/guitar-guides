@@ -5,6 +5,13 @@
   background-color: #fff;
   border: 1px solid #BDBDBD; }
 
+	#help .help-content {
+		margin-bottom: 30px; }
+		#help .help-content a {
+			margin-right: 10px; }
+		#help .help-content i {
+			color: #fff;
+			font-size: 22px; }
 
   #help .help-chord-chart-key-note {
     width: 18px;

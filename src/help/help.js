@@ -3,6 +3,7 @@ import React from 'react'
 import Title from '../common/title'
 import Container from '../common/container'
 import Heading from '../common/heading'
+import RaisedButton from 'material-ui/RaisedButton'
 import {
   Table,
   TableBody,
@@ -18,11 +19,16 @@ class Help extends React.Component {
   
   constructor(props) {
     super(props)
-    this.state = { content1: true }
+    this.state = {
+			content1: true,
+			content2: true
+		}
     this.toggleContent1 = this.toggleContent1.bind(this)
+		this.toggleContent2 = this.toggleContent2.bind(this)
   }
   
   toggleContent1() { this.setState({ content1: !this.state.content1 }) }
+	toggleContent2() { this.setState({ content2: !this.state.content2 }) }
   
   render() {
     
@@ -39,12 +45,30 @@ class Help extends React.Component {
 			<Container id="help">
 				
 				<Title>Help</Title>
+				
+				<Heading onClick={this.toggleContent2}
+					active={this.state.content2}>Feedback</Heading>
+				{this.state.content2 ? (
+					<div className="help-content">
+						<a href="https://github.com/olyop/guitar-guides"
+							target="_blank">
+							<RaisedButton backgroundColor="#F44336"
+								labelColor="#fff"
+								label="View Gihub Repository"
+								icon={<i className="material-icons">open_in_new</i>} />
+						</a>
+						<a href="https://github.com/olyop/guitar-guides/issues"
+							target="_blank">
+							<RaisedButton backgroundColor="#F44336"
+								labelColor="#fff"
+								label="Submit An Issue"
+								icon={<i className="material-icons">open_in_new</i>} />
+						</a>
+					</div>
+				) : null}
 
 				<Heading onClick={this.toggleContent1}
-					active={this.state.content1}>
-					Chord Chart Key
-				</Heading>
-
+					active={this.state.content1}>Chord Chart Key</Heading>
 				{this.state.content1 ? (
 					<div>
 

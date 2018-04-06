@@ -18,13 +18,8 @@ class StandardChords extends React.Component {
 	
 	componentDidMount() {
     axios.get('http://localhost:3001/standardChords')
-      .then(response => {
-        this.setState({ standardChords: response.data })
-      })
-      .catch(error => {
-        console.log(error)
-        this.setState({ standardChords: 'error' })
-      })
+      .then(response => this.setState({ standardChords: response.data }))
+      .catch(error => this.setState({ standardChords: 'error' }))
 	}
 	
 	render() {
