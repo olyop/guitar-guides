@@ -73,14 +73,14 @@
   #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info {
 		display: flex;
     width: 100%;
-		align-items: center;
-    justify-content: space-between; }
+		align-items: center; }
 		#account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
     	font-size: 16px;
 			margin: 0; }
     #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
     	font-size: 16px;
 			font-weight: 500;
+			padding-right: 5px;
       color: #919496; }
 
 @media (min-width: 500px) {

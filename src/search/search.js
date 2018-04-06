@@ -70,12 +70,28 @@ class Search extends React.Component {
   render() {
 		if (this.state.database === 'error') {
 			const error = this.state.databaseError
-			return (
-				<Container id="search">
-					<Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
-						apiError={error} />
-				</Container>
-      )
+			if (error.response) {
+				return (
+					<Container id="search">
+						<Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
+							apiError={error} />
+					</Container>
+				)
+			} else if (error.request) {
+				return (
+					<Container id="search">
+						<Error heading="Error Server Request"
+							subtitle="Error requesting data from API server." />
+					</Container>
+				)
+			} else {
+				return (
+					<Container id="search">
+						<Error heading="Unknown Error"
+							subtitle="Error cause unknown" />
+					</Container>
+				)
+			}
 		} else if (this.state.database === null) {
 			return (
         <Container id="search">

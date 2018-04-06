@@ -1,0 +1,7 @@
+.container-class {
+	padding: 20px; }
+
+@media (min-width: 768px) {
+	.container-class {
+	padding: 40px; }
+	}

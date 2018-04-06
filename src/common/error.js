@@ -34,6 +34,7 @@ class Error extends React.Component {
 						</FlatButton>
 					</div>
 				</div>
+				{this.props.subtitle ? <p>{this.props.subtitle}</p> : null}
 				{this.state.log ? (
 					<div>
 						{this.props.apiError ? <pre>{JSON.stringify(this.props.apiError.response, null, 2)}</pre> : null}
