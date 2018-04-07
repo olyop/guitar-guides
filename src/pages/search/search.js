@@ -2,13 +2,13 @@ import React from 'react'
 
 import axios from 'axios'
 import includes from 'lodash/includes'
-import maliciousSubStrings from '../database/malicious-sub-strings'
-import transferChordsIntoArray from '../functions/transfer-chords-into-array'
+import maliciousSubStrings from '../../database/malicious-sub-strings'
+import transferChordsIntoArray from '../../functions/transfer-chords-into-array'
 
-import Error from '../common/error'
-import Container from '../common/container'
-import Loading from '../common/loading'
 import FlatButton from 'material-ui/FlatButton'
+import Error from '../../common/error'
+import Container from '../../common/container'
+import Loading from '../../common/loading'
 import SearchResults from './search-results'
 
 import './search.css'
@@ -72,21 +72,21 @@ class Search extends React.Component {
 			const error = this.state.databaseError
 			if (error.response) {
 				return (
-					<Container id="search">
+					<Container id="search" className="page">
 						<Error heading={`Error - ${error.response.status} ${error.response.statusText}`}
 							apiError={error} />
 					</Container>
 				)
 			} else if (error.request) {
 				return (
-					<Container id="search">
+					<Container id="search" className="page">
 						<Error heading="Error Server Request"
 							subtitle="Error requesting data from API server." />
 					</Container>
 				)
 			} else {
 				return (
-					<Container id="search">
+					<Container id="search" className="page">
 						<Error heading="Unknown Error"
 							subtitle="Error cause unknown" />
 					</Container>
@@ -94,7 +94,7 @@ class Search extends React.Component {
 			}
 		} else if (this.state.database === null) {
 			return (
-        <Container id="search">
+        <Container id="search" className="page">
 					<Loading text="Loading Database" />
         </Container>
       )
@@ -108,7 +108,7 @@ class Search extends React.Component {
 				right: 0
 			}
 			return (
-				<Container id="search">
+				<Container id="search" className="page">
 					
 					<div className="search-top">
 						<div className="search-top-icon">

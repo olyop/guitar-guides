@@ -25,10 +25,14 @@ i {
 	background-color: #F5F5F5;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	height: 92vh;
-}
+	height: 92vh; }
+
+.page {
+	min-height: 92vh; }
 
 @media (min-height: 1080px) {
   #content, #account {
     height: 94vh; }
+	#page {
+		min-height: 94vh; }
 }

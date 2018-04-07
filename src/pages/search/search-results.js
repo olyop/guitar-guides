@@ -4,10 +4,10 @@ import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
 import findChordMatches from './find-chord-matches'
 
-import Ad from '../common/ad'
-import Heading from '../common/heading'
-import SadFace from '../common/sad-face'
-import ChordChart from '../common/chord-chart'
+import Ad from '../../common/ad'
+import Heading from '../../common/heading'
+import SadFace from '../../common/sad-face'
+import ChordChart from '../../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
 
 class ChordSearchResults extends React.Component {

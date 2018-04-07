@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Title from '../common/title'
-import Container from '../common/container'
-import Heading from '../common/heading'
+import Title from '../../common/title'
+import Container from '../../common/container'
+import Heading from '../../common/heading'
 import RaisedButton from 'material-ui/RaisedButton'
 import {
   Table,
@@ -42,7 +42,7 @@ class Help extends React.Component {
     }
     
     return (
-			<Container id="help">
+			<Container id="help" className="page">
 				
 				<Title>Help</Title>
 				
@@ -51,6 +51,7 @@ class Help extends React.Component {
 				{this.state.content2 ? (
 					<div className="help-content">
 						<a href="https://github.com/olyop/guitar-guides"
+							rel="noopener noreferrer"
 							target="_blank">
 							<RaisedButton backgroundColor="#F44336"
 								labelColor="#fff"
@@ -58,6 +59,7 @@ class Help extends React.Component {
 								icon={<i className="material-icons">open_in_new</i>} />
 						</a>
 						<a href="https://github.com/olyop/guitar-guides/issues"
+							rel="noopener noreferrer" 
 							target="_blank">
 							<RaisedButton backgroundColor="#F44336"
 								labelColor="#fff"

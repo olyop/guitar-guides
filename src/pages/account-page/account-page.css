@@ -14,6 +14,7 @@
 	display: flex;
 	justify-content: space-between; }
 	#account-page .account-page-header .account-page-account .account-page-info {
+		align-items: center;
 		display: flex; }
 		#account-page .account-page-header .account-page-account .account-page-info i {
 			display: block;

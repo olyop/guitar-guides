@@ -2,8 +2,10 @@ import React from 'react'
 
 import axios from 'axios'
 
-import Heading from '../../common/heading'
+import Dialog from 'material-ui/Dialog'
+import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
+import Heading from '../../common/heading'
 
 import './account-page.css'
 
@@ -11,20 +13,28 @@ class AccountPage extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = {
+			editDialog: false,
+			deleteDialog: false,
 			accountDeleteLoading: false,
 			content1: true,
 			content2: true,
 			content3: true
 		}
-		
+		this.openDeleteDialog = this.openDeleteDialog.bind(this)
+		this.closeDeleteDialog = this.closeDeleteDialog.bind(this)
+		this.openEditAccountDialog = this.openEditAccountDialog.bind(this)
+		this.closeEditAccountDialog = this.closeEditAccountDialog.bind(this)
     this.deleteAccount = this.deleteAccount.bind(this)
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
 	}
 	
+	openDeleteDialog() {
+		this.setState({ deleteDialog: true }) }
+	closeDeleteDialog() {
+		this.setState({ deleteDialog: false }) }
 	deleteAccount() {
 		this.setState(
 			{ accountDeleteLoading: true },
@@ -39,18 +49,26 @@ class AccountPage extends React.Component {
 						this.setState({ accountDeleteLoading: false })
 						this.props.logOut()
 					})
-					.catch(error => console.log(error))
+					.catch(error => this.setState({ accountDeleteLoading: 'error' }))
 			}
 		)
   }
 	
-	toggleContent1() { this.setState({ content1: !this.state.content1 }) }
-	toggleContent2() { this.setState({ content2: !this.state.content2 }) }
-	toggleContent3() { this.setState({ content3: !this.state.content3 }) }
+	openEditAccountDialog() {
+		this.setState({ editDialog: true }) }
+	closeEditAccountDialog() {
+		this.setState({ editDialog: false }) }
+	
+	toggleContent1() {
+		this.setState({ content1: !this.state.content1 }) }
+	toggleContent2() {
+		this.setState({ content2: !this.state.content2 }) }
+	toggleContent3() {
+		this.setState({ content3: !this.state.content3 }) }
 	
 	render() {
 		return (
-			<div id="account-page">
+			<div id="account-page" className="page">
 
 				<div className="account-page-header">
 					<div className="account-page-account">
@@ -126,17 +144,45 @@ class AccountPage extends React.Component {
 							active={this.state.content3}>Settings</Heading>
 						{this.state.content3 ? (
 							<div className="account-page-content account-page-settings">
-								<RaisedButton onClick={this.deleteAccount}
-                  backgroundColor="#F44336"
-                  labelColor="#fff"
-									style={{ marginRight: '10px' }}
-									disabled={this.state.accountDeleteLoading}
-                  label={this.state.accountDeleteLoading ? 'Deleting...' : 'Delete Account'} />
-								<RaisedButton onClick={this.props.logOut}
+								
+								<RaisedButton onClick={this.openEditAccountDialog}
+									icon={<i className="material-icons" style={{ color: '#fff' }}>edit</i>}
 									backgroundColor="#F44336"
 									labelColor="#fff"
-									disabled={this.state.accountDeleteLoading}
+									style={{ marginRight: '10px' }}
+									label="Edit Account" />
+								
+								<RaisedButton onClick={this.openDeleteDialog}
+                  backgroundColor="#F44336"
+                  labelColor="#fff"
+									icon={<i className="material-icons" style={{ color: '#fff' }}>delete</i>}
+									style={{ marginRight: '10px' }}
+                  label="Delete Account" />
+								<Dialog open={this.state.deleteDialog}
+									onRequestClose={this.closeDeleteDialog}
+									title="Are you sure you want to delete your account?"
+									children="This is a permenant action."
+									actions={[
+										<RaisedButton onClick={this.deleteAccount}
+											disabled={this.state.accountDeleteLoading === 'error' ? true : this.state.accountDeleteLoading}
+											backgroundColor="#F44336"
+											labelColor="#fff"
+											icon={<i className="material-icons" style={{ color: '#fff' }}>done</i>}
+											label={this.state.accountDeleteLoading ? 'Deleting Account...' : 'Yes I\'m Sure'} />,
+										<FlatButton onClick={this.closeDeleteDialog}
+											style={{ marginLeft: '10px' }}
+											icon={<i className="material-icons">close</i>}
+											label="Cancel" />
+									]}
+									actionsContainerStyle={{ padding: '0 24px 24px 24px', textAlign: 'left' }}
+									titleStyle={{ paddingBottom: '0' }} />
+								
+								<RaisedButton onClick={this.props.logOut}
+									icon={<i className="material-icons" style={{ color: '#fff' }}>exit_to_app</i>}
+									backgroundColor="#F44336"
+									labelColor="#fff"
 									label="Sign Out" />
+								
 							</div>
 						) : null}
 					</div>

@@ -173,7 +173,7 @@ class Testing extends React.Component {
 	
 	render() {
 		return (
-			<Container id="testing">
+			<Container id="testing" className="page">
 				
 				<Title>Testing</Title>
 				<Heading onClick={this.toggleContent1}

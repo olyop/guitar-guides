@@ -3,7 +3,7 @@ import React from 'react'
 import './theory.css'
 
 const Theory = props => (
-	<div id="theory">
+	<div id="theory" className="page">
 	
 		<p>Theory</p>
 	

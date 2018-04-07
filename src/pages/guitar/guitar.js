@@ -19,7 +19,7 @@ import './guitar.css'
 import './guitar-pages.css'
 
 const Guitar = props => (
-	<div id="guitar">
+	<div id="guitar" className="page">
 	
 		<div className="guitar-header"
 			style={{ backgroundImage: `url(${GuitarCover})` }}>

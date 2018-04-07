@@ -22,8 +22,9 @@ import IMPORT_theoryDatabase from './database/theory-database'
 import Header from './header/header'
 import Menu from './menu/menu'
 import Accounts from './accounts/accounts'
-import Search from './search/search'
-import Help from './help/help'
+import Footer from './footer/footer'
+import Search from './pages/search/search'
+import Help from './pages/help/help'
 import Testing from './pages/testing/testing'
 import Home from './pages/home/home'
 import Guitar from './pages/guitar/guitar'
@@ -50,10 +51,12 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
+			editAccountLoading: false,
 			menu: false
 		}
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
+		this.editAccount = this.editAccount.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
@@ -63,6 +66,27 @@ class Index extends React.Component {
     this.setState({ account }) } 
   logOut() {
     this.setState({ account: null }) }
+	editAccount(name, surname) {
+		this.setState(
+			{ editAccountLoading: true },
+			() => {
+				const config = {
+					method: 'put',
+					url: `http://localhost:3001/users/${this.state.account.id}`,
+					headers: { 'Content-Type': 'application/json' },
+					data: this.state.account }
+				config.data.name = name
+				config.data.surname = surname
+				
+				axios(config)
+					.then(response => {
+						this.setState({ editAccountLoading: false })
+						this.setState({ account: response.data })
+					})
+					.catch(error => this.setState({ editAccountLoading: 'error' }))
+			}
+		)
+	}
   
 	// Handle Navigation Menu
 	handleHamburger() {
@@ -70,21 +94,18 @@ class Index extends React.Component {
   
   // Progress Functions
   updateProgressChords(chordId) {
-    
+		
     const config = {
       method: 'put',
       url: `http://localhost:3001/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
-      data: this.state.account
-    
-    }
+      data: this.state.account }
     
     // Determine whether to add or remove the chord
     if (includes(config.data.progress.guitar.chords, chordId)) {
-      config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId)
-    } else {
-      config.data.progress.guitar.chords.push(chordId)
-    }
+      config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId) }
+		else {
+      config.data.progress.guitar.chords.push(chordId) }
     
     axios(config)
       .then(response => this.setState({ account: response.data }) )
@@ -98,10 +119,9 @@ class Index extends React.Component {
 		// Check if account is logged in
 		let isAccountLoggedIn
 		if (appState.account === null) {
-			isAccountLoggedIn = false
-		} else if (typeof appState.account === 'object') {
-			isAccountLoggedIn = true
-		}
+			isAccountLoggedIn = false }
+		else if (typeof appState.account === 'object') {
+			isAccountLoggedIn = true }
 		
 		return (
 			<BrowserRouter>
@@ -122,17 +142,18 @@ class Index extends React.Component {
             {isAccountLoggedIn ? (
               <div id="content">
 							
-								<Route path="/" exact
-									render={ ({ match, location }) => (
-										<Home location={location} />
-									)} />
+								<Route path="/" exact render={ ({ match, location }) => (
+									<Home location={location} />
+								)} />
 								
 								<Route path="/account" exact render={ () => (
 									<AccountPage appState={appState}
 										globalText={globalText}
 										logOut={this.logOut}
+										editAccount={this.editAccount}
+										editAccountLoading={this.state.editAccountLoading}
 										deleteAccount={this.deleteAccount} />
-									)} />
+								)} />
 								
 								<Route path="/testing" exact render={ () => (
 									<Testing appState={appState}
@@ -168,6 +189,8 @@ class Index extends React.Component {
                   <Theory appState={appState}
 										globalText={globalText} />		
                 )} />
+								
+								<Footer />
 							
 							</div>
             ) : (
