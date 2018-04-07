@@ -1,14 +1,19 @@
 {
   "users": [
     {
-      "id": "gsDp4T3buq",
+      "id": "AFkEpAal8s",
       "name": "Test",
       "surname": "Account",
       "experience": 2,
       "dateJoined": "07/04/2018",
       "progress": {
         "guitar": {
-          "chords": [],
+          "chords": [
+            "HzYummygsF",
+            "DVBuUnMTJv",
+            "aTZsNGBwTW",
+            "NmPKdVQeaC"
+          ],
           "scales": {}
         },
         "bass": {

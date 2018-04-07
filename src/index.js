@@ -52,11 +52,13 @@ class Index extends React.Component {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
 			editAccountLoading: false,
+			accountDeleteLoading: false,
 			menu: false
 		}
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
 		this.editAccount = this.editAccount.bind(this)
+    this.deleteAccount = this.deleteAccount.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
@@ -87,6 +89,24 @@ class Index extends React.Component {
 			}
 		)
 	}
+	deleteAccount() {
+		this.setState(
+			{ accountDeleteLoading: true },
+			() => {
+				const axiosConfig = {
+					method: 'delete',
+					url: `http://localhost:3001/users/${this.state.account.id}`,
+					headers: { 'Content-Type': 'application/json' }
+				}
+				axios(axiosConfig)
+					.then(response => {
+						this.setState({ accountDeleteLoading: false })
+						this.logOut()
+					})
+					.catch(error => this.setState({ accountDeleteLoading: 'error' }))
+			}
+		)
+  }
   
 	// Handle Navigation Menu
 	handleHamburger() {
@@ -152,7 +172,8 @@ class Index extends React.Component {
 										logOut={this.logOut}
 										editAccount={this.editAccount}
 										editAccountLoading={this.state.editAccountLoading}
-										deleteAccount={this.deleteAccount} />
+										deleteAccount={this.deleteAccount}
+										accountDeleteLoading={this.state.accountDeleteLoading} />
 								)} />
 								
 								<Route path="/testing" exact render={ () => (

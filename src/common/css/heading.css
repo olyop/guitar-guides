@@ -11,12 +11,9 @@
     font-size: 19px; }
   .heading i {
 		cursor: pointer;
-		margin: 0 5px 0 0;
 		padding: 3px;
-    font-size: 25px;
+    font-size: 30px;
 		border-radius: 100%; }
-		.heading i:hover {
-			background-color: #E0E0E0; }
 
 @media (min-width: 500px) {
   .heading h1 {
@@ -26,8 +23,6 @@
 @media (min-width: 700px) {
 	.heading {
   	margin: 0 0 15px 0;	}
-	.heading i {
-    font-size: 32px; }
 }
 
 @media (min-width: 768px) {
