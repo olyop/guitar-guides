@@ -29,8 +29,8 @@ class Search extends React.Component {
   
   componentDidMount() {
     Promise.all([
-      axios.get('http://localhost:3001/standardChords'),
-      axios.get('http://localhost:3001/chordChooser')
+      axios.get(`${this.props.globalText.api.url}/standardChords`),
+      axios.get(`${this.props.globalText.api.url}/chordChooser`)
     ])
     .then(([response1, response2]) => {
       this.setState({

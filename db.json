@@ -1,14 +1,24 @@
 {
   "users": [
     {
-      "id": "29uJ8hj47L",
+      "id": "8GWIPQ5VgG",
       "name": "Oliver",
       "surname": "Plummer",
       "experience": 2,
-      "dateJoined": "08/04/2018",
+      "dateJoined": "09/04/2018",
       "progress": {
         "guitar": {
-          "chords": [],
+          "chords": [
+            "HzYummygsF",
+            "aTZsNGBwTW",
+            "dnCohQbsQo",
+            "sLuHfAbqSU",
+            "jtLoDaNZiU",
+            "sEjAGHsnUv",
+            "RzjYIDBFWE",
+            "kGgGUrdqCK",
+            "LafZXAYFMv"
+          ],
           "scales": {}
         },
         "bass": {

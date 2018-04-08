@@ -1,7 +1,13 @@
-.container-class {
-	padding: 20px; }
+.wrapper-class {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px; }
 
 @media (min-width: 768px) {
-	.container-class {
-	padding: 40px; }
-	}
+	.wrapper-class {
+		padding-top: 40px;
+		padding-right: 40px;
+		padding-bottom: 40px;
+		padding-left: 40px; }
+}

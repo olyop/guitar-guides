@@ -17,7 +17,7 @@ class StandardChords extends React.Component {
 	}
 	
 	componentDidMount() {
-    axios.get('http://localhost:3001/standardChords')
+    axios.get(`${this.props.globalText.api.url}/standardChords`)
       .then(response => this.setState({ standardChords: response.data }))
       .catch(error => this.setState({ standardChords: 'error' }))
 	}
@@ -69,7 +69,8 @@ class GuitarChords extends React.Component {
         {this.state.content1 ? (
           <div>
             <p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
-            <StandardChords appState={this.props.appState} />
+            <StandardChords appState={this.props.appState}
+							globalText={this.props.globalText}/>
           </div>
         ) : null}
 				
@@ -79,6 +80,7 @@ class GuitarChords extends React.Component {
           active={this.state.content2}>Chord Chooser</Heading>
         {this.state.content2 ? (
           <ChordChooser appState={this.props.appState}
+						globalText={this.props.globalText}
 						theoryData={this.props.theoryData}
 						updateProgressChords={this.props.updateProgressChords} />
         ) : null}

@@ -20,8 +20,8 @@
 		cursor: pointer; 
 		border-left: 1px solid #e0e0e0;
 		border-right: 1px solid #e0e0e0;
-		width: 490px;
-		height: 140px; }
+		width: 280px;
+		height: 80px; }
 	.ad i {
 		position: absolute;
 		top: 0;
@@ -31,3 +31,15 @@
 		margin: 5px;
 		color: #757575;
 		font-size: 23px; }
+
+@media (min-width: 768px) {
+	.ad img {
+		width: 350px;
+		height: 100px; }
+}
+
+@media (min-width: 992px) {
+	.ad img {
+		width: 490px;
+		height: 140px; }
+}

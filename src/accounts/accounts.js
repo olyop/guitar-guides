@@ -53,7 +53,7 @@ class Accounts extends React.Component {
   
 	// Recieve Accounts from API
   componentDidMount() {
-    axios.get('http://localhost:3001/users')
+    axios.get(`${this.props.globalText.api.url}/users`)
       .then(response => {
         const accounts = response.data
         this.setState({ accounts })
@@ -73,14 +73,14 @@ class Accounts extends React.Component {
 		newAccount.experience = experience
 		newAccount.dateJoined = moment().format('DD/MM/YYYY')
 		
-    axios.post('http://localhost:3001/users', newAccount)
+    axios.post(`${this.props.globalText.api.url}/users`, newAccount)
     	.then(response => this.setState({ accounts: this.state.accounts.concat([response.data]) }))
     	.catch(error => this.setState({ accounts: 'error' }))
   }
 	
 	render() {
     return (
-			<div id="account">
+			<div id="account" className="page">
 				<div className="account-screen">
 					
 					<h1>{this.props.globalText.accounts.heading}</h1>

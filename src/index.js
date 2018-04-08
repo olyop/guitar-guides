@@ -18,6 +18,13 @@ import IMPORT_globalText from './database/global-text'
 import IMPORT_scalesDatabase from './database/scales-database'
 import IMPORT_theoryDatabase from './database/theory-database'
 
+// Import CSS
+import 'normalize.css/normalize.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap-theme.css'
+import './header/hamburger/hamburgers.min.css'
+import './index.css'
+
 // Import Pages
 import Header from './header/header'
 import Menu from './menu/menu'
@@ -35,13 +42,6 @@ import AccountPage from './pages/account-page/account-page'
 // Import Components
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { BrowserRouter, Route } from 'react-router-dom'
-
-// Import CSS
-import 'normalize.css/normalize.css'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/css/bootstrap-theme.css'
-import './header/hamburger/hamburgers.min.css'
-import './index.css'
 
 // Root Index Component
 class Index extends React.Component {
@@ -74,7 +74,7 @@ class Index extends React.Component {
 			() => {
 				const config = {
 					method: 'put',
-					url: `http://localhost:3001/users/${this.state.account.id}`,
+					url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
 					headers: { 'Content-Type': 'application/json' },
 					data: this.state.account }
 				config.data.name = name
@@ -95,7 +95,7 @@ class Index extends React.Component {
 			() => {
 				const axiosConfig = {
 					method: 'delete',
-					url: `http://localhost:3001/users/${this.state.account.id}`,
+					url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
 					headers: { 'Content-Type': 'application/json' }
 				}
 				axios(axiosConfig)
@@ -117,7 +117,7 @@ class Index extends React.Component {
 		
     const config = {
       method: 'put',
-      url: `http://localhost:3001/users/${this.state.account.id}`,
+      url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
       data: this.state.account }
     
