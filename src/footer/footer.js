@@ -7,11 +7,11 @@ const Footer = props => {
 		<footer id="footer">
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-6 col-s-12">
+					<div className="col-md-6 col-s-12">
 						<h5>Guitar Guides</h5>
 						<p>A guitar and bass learning app.</p>
 					</div>
-					<div className="col-lg-4 col-s-12">
+					<div className="col-md-4 col-s-12">
 						<h5>Links</h5>
 						<ul className="footer-links-list">
 							<li>
@@ -32,7 +32,7 @@ const Footer = props => {
 			</div>
 			<div className="container">
 				<div className="footer-bottom">
-					<p>© 2017 Copyright</p>
+					<p>© 2018 Copyright</p>
 					<p>Oliver Plummer</p>
 				</div>
 			</div>

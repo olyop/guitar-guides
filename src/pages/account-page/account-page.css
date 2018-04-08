@@ -77,11 +77,11 @@
 		align-items: center; }
 		#account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
     	font-size: 16px;
-			margin: 0; }
-    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
+			font-weight: 500;
+			margin: 0 0 5px 0; }
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 b {
     	font-size: 16px;
 			font-weight: 500;
-			padding-right: 5px;
       color: #919496; }
 
 @media (min-width: 500px) {
@@ -117,7 +117,7 @@
     padding: 40px; }
     #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 {
       font-size: 19px; }
-    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info b {
+    #account-page .account-page-section .account-page-content .account-page-overview .account-page-overview-info h5 b {
       font-size: 19px; }
 }
 

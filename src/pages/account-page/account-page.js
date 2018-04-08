@@ -33,7 +33,6 @@ class AccountPage extends React.Component {
 	closeDeleteDialog() {
 		this.setState({ deleteDialog: false }) }
 	
-	
 	openEditAccountDialog() {
 		this.setState({ editDialog: true }) }
 	closeEditAccountDialog() {
@@ -80,28 +79,23 @@ class AccountPage extends React.Component {
 							<div className="account-page-content account-page-overview">
                 
                 <div className="account-page-overview-info">
-                  <b>ID:</b>
-                  <h5>{this.props.appState.account.id}</h5>
+                  <h5><b>ID:</b> {this.props.appState.account.id}</h5>
                 </div>
 								
 								<div className="account-page-overview-info">
-                  <b>Name:</b>
-                  <h5>{this.props.appState.account.name}</h5>
+                  <h5><b>Name:</b> {this.props.appState.account.name}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <b>Surname:</b>
-                  <h5>{this.props.appState.account.surname}</h5>
+                  <h5><b>Surname:</b> {this.props.appState.account.surname}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <b>Experience:</b>
-                  <h5>{this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h5>
+                  <h5><b>Experience:</b> {this.props.globalText.accounts.expLevels[this.props.appState.account.experience]}</h5>
                 </div>
                 
                 <div className="account-page-overview-info">
-                  <b>Date Joined:</b>
-                  <h5>{this.props.appState.account.dateJoined}</h5>
+                  <h5><b>Date Joined:</b> {this.props.appState.account.dateJoined}</h5>
                 </div>
                 
 							</div>
