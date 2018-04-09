@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Dialog from 'material-ui/Dialog'
+import TextField from 'material-ui/TextField'
 import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
 import Heading from '../../common/heading'
@@ -13,6 +14,8 @@ class AccountPage extends React.Component {
 		super(props)
 		this.state = {
 			editDialog: false,
+			editAccountName: '',
+			editAccountSurname: '',
 			deleteDialog: false,
 			accountDeleteLoading: false,
 			content1: true,
@@ -23,6 +26,8 @@ class AccountPage extends React.Component {
 		this.closeDeleteDialog = this.closeDeleteDialog.bind(this)
 		this.openEditAccountDialog = this.openEditAccountDialog.bind(this)
 		this.closeEditAccountDialog = this.closeEditAccountDialog.bind(this)
+		this.handleEditAccountName = this.handleEditAccountName.bind(this)
+		this.handleEditAccountSurname = this.handleEditAccountSurname.bind(this)
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
@@ -37,6 +42,10 @@ class AccountPage extends React.Component {
 		this.setState({ editDialog: true }) }
 	closeEditAccountDialog() {
 		this.setState({ editDialog: false }) }
+	handleEditAccountName(event) {
+		this.setState({ editAccountName: event.target.value  })	}
+	handleEditAccountSurname(event) {
+		this.setState({ editAccountSurname: event.target.value  })	}
 	
 	toggleContent1() {
 		this.setState({ content1: !this.state.content1 }) }
@@ -125,6 +134,44 @@ class AccountPage extends React.Component {
 									labelColor="#fff"
 									style={{ marginRight: '10px', marginBottom: '10px' }}
 									label="Edit Account" />
+								<Dialog open={this.state.editDialog}
+									onRequestClose={this.closeEditDialog}
+									title="Edit your account?"
+									actions={[
+										<RaisedButton onClick={this.props.editAccount}
+											disabled={this.props.accountEditLoading === 'error' ? true : this.props.accountEditLoading}
+											backgroundColor="#F44336"
+											labelColor="#fff"
+											icon={<i className="material-icons" style={{ color: '#fff' }}>done</i>}
+											label={this.props.accountEditLoading ? 'Editing Account...' : 'Yes I\'m Sure'} />,
+										<FlatButton onClick={this.closeEditDialog}
+											style={{ marginLeft: '10px' }}
+											icon={<i className="material-icons">close</i>}
+											label="Cancel" />
+									]}
+									actionsContainerStyle={{ padding: '0 24px 24px 24px', textAlign: 'left' }}
+									titleStyle={{ paddingBottom: '0' }}>
+									<div style={{ display: 'flex', flexDirection: 'column' }}>
+										<TextField value={this.state.editAccountName}
+											onChange={this.handleEditAccountName}
+											floatingLabelFixed
+											tabIndex={1}
+											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
+											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
+											floatingLabelFocusStyle={{ fontWeight: '700' }}
+											errorStyle={{ color: '#F44336' }}
+											id="Account Name" />
+										<TextField value={this.state.editAccountSurname}
+											onChange={this.handleEditAccountSurnamename}
+											floatingLabelFixed
+											tabIndex={2}
+											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
+											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
+											floatingLabelFocusStyle={{ fontWeight: '700' }}
+											errorStyle={{ color: '#F44336' }}
+											id="Account Surname" />
+									</div>
+								</Dialog>
 								
 								<RaisedButton onClick={this.openDeleteDialog}
                   backgroundColor="#F44336"

@@ -51,7 +51,7 @@ class Index extends React.Component {
 		this.state = {
 			account: createAdminAccount(accountTemplate),
 //      account: null,
-			editAccountLoading: false,
+			accountEditLoading: false,
 			accountDeleteLoading: false,
 			menu: false
 		}
@@ -70,7 +70,7 @@ class Index extends React.Component {
     this.setState({ account: null }) }
 	editAccount(name, surname) {
 		this.setState(
-			{ editAccountLoading: true },
+			{ accountEditLoading: true },
 			() => {
 				const config = {
 					method: 'put',
@@ -82,10 +82,10 @@ class Index extends React.Component {
 				
 				axios(config)
 					.then(response => {
-						this.setState({ editAccountLoading: false })
+						this.setState({ accountEditLoading: false })
 						this.setState({ account: response.data })
 					})
-					.catch(error => this.setState({ editAccountLoading: 'error' }))
+					.catch(error => this.setState({ accountEditLoading: 'error' }))
 			}
 		)
 	}
@@ -171,7 +171,7 @@ class Index extends React.Component {
 										globalText={globalText}
 										logOut={this.logOut}
 										editAccount={this.editAccount}
-										editAccountLoading={this.state.editAccountLoading}
+										accountEditLoading={this.state.accountEditLoading}
 										deleteAccount={this.deleteAccount}
 										accountDeleteLoading={this.state.accountDeleteLoading} />
 								)} />

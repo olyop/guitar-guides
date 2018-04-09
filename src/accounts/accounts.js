@@ -48,8 +48,7 @@ class Accounts extends React.Component {
 	}
 	
 	toggleCreateAccountScreen() {
-		this.setState({ newAccountScreen: !this.state.newAccountScreen })
-	}
+		this.setState({ newAccountScreen: !this.state.newAccountScreen })	}
   
 	// Recieve Accounts from API
   componentDidMount() {
