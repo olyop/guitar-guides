@@ -17,7 +17,7 @@ const Menu = props => (
 			
 			<ul>
 				<li>
-					<NavLink to="/guitar onClick={props.handleHamburger}">Guitar</NavLink>
+					<NavLink to="/guitar">Guitar</NavLink>
 					<ul>
 						<li><NavLink to="/guitar/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
 						<li><NavLink to="/guitar/scales" onClick={props.handleHamburger}>Scales</NavLink></li>

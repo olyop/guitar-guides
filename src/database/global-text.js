@@ -1,7 +1,7 @@
 const globalText = {
 	
 	api: {
-		url: 'http://10.80.6.47:3001'
+		url: 'http://192.168.1.5:3001'
 	},
 	
 	pageStructure: [
@@ -48,7 +48,7 @@ const globalText = {
 		{
 			id: 'HxNuvlbCeQ',
 			name: 'Theory',
-			path: 'theory'
+			path: '/theory'
 		},
 		{
 			id: '9ctP7rXzHV',

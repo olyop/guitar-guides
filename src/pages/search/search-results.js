@@ -2,9 +2,9 @@ import React from 'react'
 
 import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
-import findChordMatches from './find-chord-matches'
-import findPageMatches from './find-page-matches'
+import { findChordMatches, findPageMatches } from './find-matches'
 
+import { Link } from 'react-router-dom'
 import Ad from '../../common/ad'
 import Heading from '../../common/heading'
 import SadFace from '../../common/sad-face'
@@ -30,14 +30,16 @@ class ChordSearchResults extends React.Component {
 	
 	render() {
 		return (
-			<div>
+			<div className="search-results-content">
+        
 				<Heading onClick={this.handleContent}
-					active={this.state.content}>Chord Matches</Heading>
+					active={this.state.content}>Chords</Heading>
 				{this.state.content ? (
 					<div>
+            
 						{this.state.more ? (
 							<div className="search-results-chords">
-								{this.props.chordMatches.map((chord, index) => (
+								{this.props.matches.map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
                     completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
@@ -45,26 +47,30 @@ class ChordSearchResults extends React.Component {
 							</div>
 						) : (
 							<div className="search-results-chords">
-								{this.props.chordMatches.slice(0,5).map((chord, index) => (
+								{this.props.matches.slice(0,5).map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
                     completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
 								))}
 							</div>
 						)}
-						{this.props.chordMatches.length > 5 ? (
+            
+						{this.props.matches.length > 5 ? (
               <FlatButton onClick={this.handleMore}
-                label={this.state.more ? 'Less...' : `Show all ${this.props.chordMatches.length} search results...`} />
+                label={this.state.more ? 'Less...' : `Show all ${this.props.matches.length} search results...`} />
             ) : null}
+            
 					</div>
 				) : null}
+            
+        <Ad style={{ margin: '10px 0 0 0' }} />
+        
 			</div>
 		)
 	}
 }
 
 class PageSearchResults extends React.Component {
-	
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -78,13 +84,24 @@ class PageSearchResults extends React.Component {
 	
 	render() {
 		return (
-			<div>
+			<div className="search-results-content">
+        
 				<Heading onClick={this.handleContent}
-					style={{ marginTop: '15px' }}
-					active={this.state.content}>Page Matches</Heading>
+					active={this.state.content}>Pages</Heading>
 				{this.state.content ? (
-					<pre>{JSON.stringify(this.props.pageMatches, null, 2)}</pre>
+					<div className="search-results-pages">
+            {this.props.matches.map(page => (
+              <Link key={page.id} to={page.path}>
+                <div className="search-results-page">
+                  <i className="material-icons">link</i>
+                  <p>{page.name} - <b>{page.path}</b></p>
+                </div>
+              </Link>
+            ))}
+          </div>
 				) : null}
+        
+        <Ad style={{ margin: '10px 0 0 0' }} />
 			</div>
 		)
 	}
@@ -98,20 +115,22 @@ const SearchResults = props => {
   } else {
     const chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc'])
 		const pageMatches = findPageMatches(props.globalText.pageStructure, props.input)
-    if (chordMatches.length === 0 || pageMatches.length === 0) {
+    if (chordMatches.length === 0 && pageMatches.length === 0) {
       return <SadFace>No Search Results.</SadFace>
     } else {
       return (
         <div className="search-results">
           
-          <ChordSearchResults appState={props.appState}
-            updateProgressChords={props.updateProgressChords}
-            chordMatches={chordMatches} />
-          
-          <Ad style={{ margin: '10px 0 0 0' }} />
+          {pageMatches.length === 0 ? null : (
+            <PageSearchResults appState={props.appState}
+              matches={pageMatches} />
+          )}
 					
-					<PageSearchResults appState={props.appState}
-						pageMatches={pageMatches} />
+					{chordMatches.length === 0 ? null : (
+            <ChordSearchResults appState={props.appState}
+              updateProgressChords={props.updateProgressChords}
+              matches={chordMatches} />
+          )}
           
         </div>
       )

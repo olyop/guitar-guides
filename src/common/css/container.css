@@ -1,8 +1,16 @@
 .wrapper-class {
 	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px; }
+	padding-right: 0;
+	padding-bottom: 20px;
+	padding-left: 0; }
+
+@media (min-width: 600px) {
+	.wrapper-class {
+		padding-top: 10px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+		padding-left: 10px; }
+}
 
 @media (min-width: 768px) {
 	.wrapper-class {

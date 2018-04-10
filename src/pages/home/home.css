@@ -15,7 +15,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				background-color: #000000; }
+				background-color: #000; }
 				#home .home-cards .home-section .home-section-inner:hover {
 					justify-content: flex-start; }
 
@@ -60,6 +60,7 @@
 					position: absolute;
 					left: 0;
 					top: 0;
+          background-color: #000;
 					width: 100%;
 					height: 100%;
 					z-index: 1;
