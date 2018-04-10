@@ -37,12 +37,10 @@ class Accounts extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = {
 			newAccountScreen: false,
       accounts: null
 		}
-		
 		this.toggleCreateAccountScreen = this.toggleCreateAccountScreen.bind(this)
     this.addAccount = this.addAccount.bind(this)
 	}
@@ -52,15 +50,13 @@ class Accounts extends React.Component {
   
 	// Recieve Accounts from API
   componentDidMount() {
-    axios.get(`${this.props.globalText.api.url}/users`)
-      .then(response => {
-        const accounts = response.data
-        this.setState({ accounts })
-      })
-      .catch(error => {
-        console.log(error)
-        this.setState({ accounts: 'error' })
-      })
+    const axiosConfig = {
+			method: 'get',
+			url: `${this.props.globalText.api.url}/users`
+		}
+    axios(axiosConfig)
+      .then(response => this.setState({ accounts: response.data }))
+      .catch(error => this.setState({ accounts: 'error' }))
   }
   
   addAccount(name, surname, experience) {

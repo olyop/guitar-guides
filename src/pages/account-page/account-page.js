@@ -1,5 +1,8 @@
 import React from 'react'
 
+import includes from 'lodash/includes'
+import maliciousSubStrings from '../../database/malicious-sub-strings'
+
 import Dialog from 'material-ui/Dialog'
 import TextField from 'material-ui/TextField'
 import FlatButton from 'material-ui/FlatButton'
@@ -16,8 +19,9 @@ class AccountPage extends React.Component {
 			editDialog: false,
 			editAccountName: '',
 			editAccountSurname: '',
+      editAccountNameError: '',
+      editAccountSurnameError: '',
 			deleteDialog: false,
-			accountDeleteLoading: false,
 			content1: true,
 			content2: true,
 			content3: true
@@ -28,6 +32,7 @@ class AccountPage extends React.Component {
 		this.closeEditAccountDialog = this.closeEditAccountDialog.bind(this)
 		this.handleEditAccountName = this.handleEditAccountName.bind(this)
 		this.handleEditAccountSurname = this.handleEditAccountSurname.bind(this)
+    this.handleAdd = this.handleAdd.bind(this)
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
@@ -46,6 +51,53 @@ class AccountPage extends React.Component {
 		this.setState({ editAccountName: event.target.value  })	}
 	handleEditAccountSurname(event) {
 		this.setState({ editAccountSurname: event.target.value  })	}
+  
+  handleAdd() {
+    // Check for malicious code
+		let flag = false
+		for (let i = 0; i < maliciousSubStrings.length; i++) {
+			if (includes(this.state.editAccountName, maliciousSubStrings[i])) {
+				this.setState({ editAccountNameError: 'Please enter a valid name.' })
+				flag = true
+			}
+			if (includes(this.state.editAccountSurname, maliciousSubStrings[i])) {
+				this.setState({ editAccountSurnameError: 'Please enter a valid surname.' })
+				flag = true
+			}
+		}
+		
+		// Exit sending data if potentially malicoius content is found
+		if (flag) { return }
+		
+    // Validate form data
+    let isNameEmpty = this.state.editAccountName.trim() === ''
+    let isNameTooLong = this.state.editAccountName.length > 10
+		let isSurnameEmpty = this.state.editAccountSurname.trim() === ''
+    let isSurnameTooLong = this.state.editAccountSurname.length > 10
+    
+		// Check first name input
+    if (isNameEmpty) {
+      this.setState({ editAccountNameError: 'Please enter your name.' })
+    } else if (isNameTooLong) {
+      this.setState({ editAccountNameError: 'Your name is to long.' })
+    }
+		
+		// Check last name input
+		if (isSurnameEmpty) {
+      this.setState({ editAccountSurnameError: 'Please enter your surname.' })
+    } else if (isSurnameTooLong) {
+      this.setState({ editAccountSurnameError: 'Your surname is to long.' })
+    }
+    
+    // Send data
+    if (isNameEmpty === false &&
+			isNameTooLong === false &&
+			isSurnameEmpty === false &&
+			isSurnameTooLong === false) {
+      this.props.editAccount(this.state.editAccountName.trim(), this.state.editAccountSurname.trim())
+      this.closeEditAccountDialog()
+    }
+  }
 	
 	toggleContent1() {
 		this.setState({ content1: !this.state.content1 }) }
@@ -136,15 +188,15 @@ class AccountPage extends React.Component {
 									label="Edit Account" />
 								<Dialog open={this.state.editDialog}
 									onRequestClose={this.closeEditDialog}
-									title="Edit your account?"
+									title="Edit your account"
 									actions={[
-										<RaisedButton onClick={this.props.editAccount}
-											disabled={this.props.accountEditLoading === 'error' ? true : this.props.accountEditLoading}
+										<RaisedButton onClick={this.handleAdd}
+                      disabled={this.props.accountEditLoading}
 											backgroundColor="#F44336"
 											labelColor="#fff"
 											icon={<i className="material-icons" style={{ color: '#fff' }}>done</i>}
 											label={this.props.accountEditLoading ? 'Editing Account...' : 'Yes I\'m Sure'} />,
-										<FlatButton onClick={this.closeEditDialog}
+										<FlatButton onClick={this.closeEditAccountDialog}
 											style={{ marginLeft: '10px' }}
 											icon={<i className="material-icons">close</i>}
 											label="Cancel" />
@@ -154,22 +206,26 @@ class AccountPage extends React.Component {
 									<div style={{ display: 'flex', flexDirection: 'column' }}>
 										<TextField value={this.state.editAccountName}
 											onChange={this.handleEditAccountName}
+						          errorText={this.state.editAccountNameError}
+                      disabled={this.props.accountEditLoading}
+						          floatingLabelText="Name"
 											floatingLabelFixed
 											tabIndex={1}
 											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
 											floatingLabelFocusStyle={{ fontWeight: '700' }}
-											errorStyle={{ color: '#F44336' }}
-											id="Account Name" />
+											errorStyle={{ color: '#F44336' }} />
 										<TextField value={this.state.editAccountSurname}
-											onChange={this.handleEditAccountSurnamename}
+											onChange={this.handleEditAccountSurname}
+						          errorText={this.state.editAccountSurnameError}
+                      disabled={this.props.accountEditLoading}
+						          floatingLabelText="Surname"
 											floatingLabelFixed
 											tabIndex={2}
 											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
 											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
 											floatingLabelFocusStyle={{ fontWeight: '700' }}
-											errorStyle={{ color: '#F44336' }}
-											id="Account Surname" />
+											errorStyle={{ color: '#F44336' }} />
 									</div>
 								</Dialog>
 								
@@ -196,7 +252,8 @@ class AccountPage extends React.Component {
 											label="Cancel" />
 									]}
 									actionsContainerStyle={{ padding: '0 24px 24px 24px', textAlign: 'left' }}
-									titleStyle={{ paddingBottom: '0' }} />
+                  titleStyle={{ paddingBottom: '0' }}>
+                </Dialog>
 								
 								<RaisedButton onClick={this.props.logOut}
 									icon={<i className="material-icons" style={{ color: '#fff' }}>exit_to_app</i>}

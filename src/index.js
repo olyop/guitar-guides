@@ -57,7 +57,7 @@ class Index extends React.Component {
 		}
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
-		this.editAccount = this.editAccount.bind(this)
+    this.editAccount = this.editAccount.bind(this)
     this.deleteAccount = this.deleteAccount.bind(this)
 		this.handleHamburger = this.handleHamburger.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
@@ -68,27 +68,31 @@ class Index extends React.Component {
     this.setState({ account }) } 
   logOut() {
     this.setState({ account: null }) }
-	editAccount(name, surname) {
-		this.setState(
-			{ accountEditLoading: true },
-			() => {
-				const config = {
+  editAccount(name, surname) {
+    this.setState(
+      { accountEditLoading: true },
+      () => {
+        const axiosConfig = {
 					method: 'put',
 					url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
 					headers: { 'Content-Type': 'application/json' },
-					data: this.state.account }
-				config.data.name = name
-				config.data.surname = surname
-				
-				axios(config)
+          data: this.state.account
+				}
+        
+        axiosConfig.data.name = name
+        axiosConfig.data.surname = surname
+        
+        axios(axiosConfig)
 					.then(response => {
-						this.setState({ accountEditLoading: false })
-						this.setState({ account: response.data })
-					})
+						this.setState({
+              account: response.data,
+              accountEditLoading: false
+            })
+          })
 					.catch(error => this.setState({ accountEditLoading: 'error' }))
-			}
-		)
-	}
+      }
+    )
+  }
 	deleteAccount() {
 		this.setState(
 			{ accountDeleteLoading: true },
@@ -119,7 +123,8 @@ class Index extends React.Component {
       method: 'put',
       url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
       headers: { 'Content-Type': 'application/json' },
-      data: this.state.account }
+      data: this.state.account
+    }
     
     // Determine whether to add or remove the chord
     if (includes(config.data.progress.guitar.chords, chordId)) {
@@ -170,7 +175,7 @@ class Index extends React.Component {
 									<AccountPage appState={appState}
 										globalText={globalText}
 										logOut={this.logOut}
-										editAccount={this.editAccount}
+                    editAccount={this.editAccount}
 										accountEditLoading={this.state.accountEditLoading}
 										deleteAccount={this.deleteAccount}
 										accountDeleteLoading={this.state.accountDeleteLoading} />

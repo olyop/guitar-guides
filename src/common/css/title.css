@@ -1,5 +1,5 @@
 .title {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -11,3 +11,8 @@
     margin: 0;
     color: #333;
     text-align: center; }
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 60px; }
+}

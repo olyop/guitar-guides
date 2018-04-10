@@ -1,7 +1,7 @@
 const globalText = {
 	
 	api: {
-		url: 'http://192.168.1.4:3001'
+		url: 'http://192.168.1.5:3001'
 	},
 	
 	accounts: {

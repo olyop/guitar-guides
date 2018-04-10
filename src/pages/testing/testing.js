@@ -32,10 +32,11 @@ class Test1 extends React.Component {
 			}
 		}
 	}
+  
 	componentDidMount() {
 		axios({
 			method: 'get',
-			url: 'http://localhost:3001/chordChooser'
+			url: `${this.props.globalText.api.url}/chordChooser`
 		})
 		.then(response => {
 			const data = transferChordsIntoArray(response.data)
@@ -51,11 +52,12 @@ class Test1 extends React.Component {
 			this.setState({ chordsDatabase: 'error' })
 		})
 	}
+  
 	render() {
 		const state = this.state
 		let columnStyle1 = {
-      col1: { width: '15%', padding: '10px' },
-      col2: { width: '30%', padding: '10px' },
+      col1: { width: '12%', padding: '10px' },
+      col2: { width: '33%', padding: '10px' },
       col3: { width: '55%', padding: '10px' }
     }
 		return (
@@ -142,7 +144,10 @@ class DatabaseTesting extends React.Component {
 		}
 		this.toggleTest1 = this.toggleTest1.bind(this)
 	}
-	toggleTest1() { this.setState({ showTests: { test1: !this.state.showTests.test1 } }) }
+  
+	toggleTest1() {
+    this.setState({ showTests: { test1: !this.state.showTests.test1 } }) }
+  
 	render() {
 		return (
 			<div>
@@ -153,7 +158,8 @@ class DatabaseTesting extends React.Component {
 					<RaisedButton label={this.state.showTests.test1 ? 'Hide Test Results' : 'Run Tests'}
 						onClick={this.toggleTest1} />
 					{this.state.showTests.test1 ? (
-						<Test1 />
+						<Test1 appState={this.props.appState}
+            globalText={this.props.globalText} />
 					) : null}
 				</div>
 			</div>
@@ -169,7 +175,8 @@ class Testing extends React.Component {
 		this.toggleContent1 = this.toggleContent1.bind(this)
 	}
 	
-	toggleContent1() { this.setState({ content1: !this.state.content1 }) }
+	toggleContent1() {
+    this.setState({ content1: !this.state.content1 }) }
 	
 	render() {
 		return (
@@ -179,7 +186,10 @@ class Testing extends React.Component {
 				<Heading onClick={this.toggleContent1}
 					active={this.state.content1}
 					>Database Testing</Heading>
-				{this.state.content1 ? <DatabaseTesting /> : null}
+				{this.state.content1 ? (
+          <DatabaseTesting appState={this.props.appState}
+            globalText={this.props.globalText} />
+        ) : null}
 				
 			</Container>
 		)

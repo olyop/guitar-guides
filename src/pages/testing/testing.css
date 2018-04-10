@@ -1,12 +1,12 @@
 #testing .container {
-	padding: 40px;
-  margin-top: 40px;
+	padding: 20px;
+  margin-top: 20px;
   margin-bottom: 40px;
   background-color: #fff;
   border: 1px solid #BDBDBD; }
 
 	#testing .testing-test {
-		padding: 20px; }
+		padding: 10px 0; }
 
 		#testing .testing-test h1 {
 			padding-bottom: 5px;
@@ -14,7 +14,7 @@
 			width: auto;
 			border-bottom: 1px solid #BDBDBD;
 			margin: 0 0 15px 0;
-			font-size: 18px; }
+			font-size: 16px; }
 		
 
 	#testing .testing-test .testing-results {
@@ -31,6 +31,17 @@
 		#testing .testing-test .testing-results p {
 			margin: 0; }
 
-#testing .testing-test .testing-results .testing-results-log {
-	padding: 0 10px;
+    #testing .testing-test .testing-results .testing-results-log {
+      padding: 0 0; }
+
+@media (min-width: 768px) {
+  #testing .container {
+    margin-top: 40px;
+    padding: 40px; }
+    #testing .testing-test {
+      padding: 20px 20px; }
+      #testing .testing-test h1 {
+        font-size: 18px; } 
+      #testing .testing-test .testing-results .testing-results-log {
+        padding: 0 10px; }
 }
