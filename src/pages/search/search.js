@@ -128,6 +128,7 @@ class Search extends React.Component {
 					</div>
 
 					<SearchResults appState={this.props.appState}
+						globalText={this.props.globalText}
 						updateProgressChords={this.props.updateProgressChords}
 						input={this.state.input}
 						isInputMalicious={this.state.isInputMalicious}

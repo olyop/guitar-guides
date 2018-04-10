@@ -1,6 +1,8 @@
 #footer {
+	margin-bottom: 20px;
 	background-color: #fff;
 	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #e0e0e0;
 	padding: 20px 0; }
 	#footer .container {
 		padding: 0 15px; }
@@ -20,3 +22,8 @@
 		display: flex; }
 		#footer .footer-bottom p {
 			margin: 0; }
+
+@media (min-width: 768px) {
+	#footer {
+		margin-bottom: 0;	}
+}

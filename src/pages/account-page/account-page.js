@@ -17,8 +17,8 @@ class AccountPage extends React.Component {
 		super(props)
 		this.state = {
 			editDialog: false,
-			editAccountName: '',
-			editAccountSurname: '',
+			editAccountName: this.props.appState.account.name,
+			editAccountSurname: this.props.appState.account.surname,
       editAccountNameError: '',
       editAccountSurnameError: '',
 			deleteDialog: false,

@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker'
 // Import Functions
 import axios from 'axios'
 import pull from 'lodash/pull'
+import moment from 'moment'
 import includes from 'lodash/includes'
 
  // eslint-disable-next-line
@@ -138,6 +139,7 @@ class Index extends React.Component {
   }
 	
 	render() {
+		console.log('index', moment().format('SS'))
 		const appState = this.state
 		const globalText = this.props.globalText
 		

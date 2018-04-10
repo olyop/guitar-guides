@@ -28,8 +28,10 @@ class CreateAccount extends React.Component {
     this.handleAdd = this.handleAdd.bind(this)
 	}
 	
-	handleName(event) { this.setState({ name: String(event.target.value) }) }
-	handleSurname(event) { this.setState({ surname: String(event.target.value) }) }
+	handleName(event) {
+		this.setState({ name: event.target.value }) }
+	handleSurname(event) {
+		this.setState({ surname: event.target.value }) }
 	handleExperience(event, index, value) { this.setState({ experience: value }) }
   
   handleAdd() {

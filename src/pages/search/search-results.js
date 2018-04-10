@@ -3,6 +3,7 @@ import React from 'react'
 import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
 import findChordMatches from './find-chord-matches'
+import findPageMatches from './find-page-matches'
 
 import Ad from '../../common/ad'
 import Heading from '../../common/heading'
@@ -22,8 +23,10 @@ class ChordSearchResults extends React.Component {
 		this.handleContent = this.handleContent.bind(this)
 	}
 	
-	handleMore() { this.setState({ more: !this.state.more }) }
-	handleContent() { this.setState({ content: !this.state.content }) }
+	handleMore() {
+		this.setState({ more: !this.state.more }) }
+	handleContent() {
+		this.setState({ content: !this.state.content }) }
 	
 	render() {
 		return (
@@ -60,6 +63,33 @@ class ChordSearchResults extends React.Component {
 	}
 }
 
+class PageSearchResults extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		this.state = {
+			content: true
+		}
+		this.handleContent = this.handleContent.bind(this)
+	}
+	
+	handleContent() {
+		this.setState({ content: !this.state.content }) }
+	
+	render() {
+		return (
+			<div>
+				<Heading onClick={this.handleContent}
+					style={{ marginTop: '15px' }}
+					active={this.state.content}>Page Matches</Heading>
+				{this.state.content ? (
+					<pre>{JSON.stringify(this.props.pageMatches, null, 2)}</pre>
+				) : null}
+			</div>
+		)
+	}
+}
+
 const SearchResults = props => {
   if (props.isInputMalicious) {
     return <p>Search input is potentially malicious.</p>
@@ -67,7 +97,8 @@ const SearchResults = props => {
     return null
   } else {
     const chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc'])
-    if (chordMatches.length === 0) {
+		const pageMatches = findPageMatches(props.globalText.pageStructure, props.input)
+    if (chordMatches.length === 0 || pageMatches.length === 0) {
       return <SadFace>No Search Results.</SadFace>
     } else {
       return (
@@ -78,6 +109,9 @@ const SearchResults = props => {
             chordMatches={chordMatches} />
           
           <Ad style={{ margin: '10px 0 0 0' }} />
+					
+					<PageSearchResults appState={props.appState}
+						pageMatches={pageMatches} />
           
         </div>
       )
