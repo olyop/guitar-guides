@@ -1,4 +1,8 @@
-#home {}
+#home {
+	box-shadow:
+    0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
+  margin-bottom: 20px; }
 	#home .home-cards {
 		display: flex;
 		padding: 0px; 
@@ -136,25 +140,28 @@
 }
 
 @media (min-width: 400px) {
-	#home .home-cards .home-section .home-section-inner {
-		padding: 20px; }
-		#home .home-cards .home-section .home-section-inner h1 {
-			font-size: 30px; }
-		#home .home-cards .home-section .home-section-inner h2 {
-			font-size: 16px; }
+  #home .home-cards .home-section .home-section-inner {
+    padding: 20px; }
+    #home .home-cards .home-section .home-section-inner h1 {
+      font-size: 30px; }
+    #home .home-cards .home-section .home-section-inner h2 {
+      font-size: 16px; }
 }
 
 @media (min-width: 600px) {
-	#home .home-cards {
-		padding: 5px; }
-		#home .home-cards .home-section {
-			margin: 5px; }
-			#home .home-cards .home-section .home-section-inner {
-				padding: 20px; }
-				#home .home-cards .home-section .home-section-inner h1 {
-					font-size: 40px; }
-				#home .home-cards .home-section .home-section-inner h2 {
-					font-size: 18px; }
+  #home {
+    box-shadow: none;
+    margin-bottom: 0; }
+    #home .home-cards {
+      padding: 5px; }
+      #home .home-cards .home-section {
+        margin: 5px; }
+        #home .home-cards .home-section .home-section-inner {
+          padding: 20px; }
+          #home .home-cards .home-section .home-section-inner h1 {
+            font-size: 40px; }
+          #home .home-cards .home-section .home-section-inner h2 {
+            font-size: 18px; }
 }
 
 @media (min-width: 700px) {

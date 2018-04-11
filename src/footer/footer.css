@@ -1,8 +1,11 @@
 #footer {
 	margin-bottom: 20px;
 	background-color: #fff;
-	border-top: 1px solid #E0E0E0;
+	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #e0e0e0;
+  box-shadow:
+    0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
 	padding: 20px 0; }
 	#footer .container {
 		padding: 0 15px; }
@@ -25,5 +28,6 @@
 
 @media (min-width: 768px) {
 	#footer {
+    box-shadow: none;
 		margin-bottom: 0;	}
 }

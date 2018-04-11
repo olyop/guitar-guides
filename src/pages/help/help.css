@@ -1,9 +1,11 @@
 #help .container {
-  padding: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #fff;
-  border: 1px solid #BDBDBD; }
+  box-shadow:
+    0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28); }
 
 	#help .help-content {
 		margin-bottom: 30px; }
@@ -40,3 +42,10 @@
     color: #616161;
     font-weight: 400;
     font-weight: 500; }
+
+@media (min-width: 768px) {
+  #help .container {
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+}

@@ -11,18 +11,18 @@ class ScaleChooser extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.state = {
 			key: 7,
 			type: 1
 		}
-		
 		this.handleKeyChange = this.handleKeyChange.bind(this)
 		this.handleTypeChange = this.handleTypeChange.bind(this)
 	}
 	
-	handleKeyChange(event, index, value) { this.setState({ key: value }) }
-	handleTypeChange(event, index, value) { this.setState({ type: value }) }
+	handleKeyChange(event, index, value) {
+    this.setState({ key: value }) }
+	handleTypeChange(event, index, value) {
+    this.setState({ type: value }) }
 	
 	render() {
 		let buttonStyle = {

@@ -194,8 +194,8 @@ class AccountPage extends React.Component {
                       disabled={this.props.accountEditLoading}
 											backgroundColor="#F44336"
 											labelColor="#fff"
-											icon={<i className="material-icons" style={{ color: '#fff' }}>done</i>}
-											label={this.props.accountEditLoading ? 'Editing Account...' : 'Yes I\'m Sure'} />,
+											icon={<i className="material-icons" style={{ color: '#fff' }}>save</i>}
+											label={this.props.accountEditLoading ? 'Editing Account...' : 'Save Changes'} />,
 										<FlatButton onClick={this.closeEditAccountDialog}
 											style={{ marginLeft: '10px' }}
 											icon={<i className="material-icons">close</i>}

@@ -3,7 +3,9 @@
   margin-top: 20px;
   margin-bottom: 40px;
   background-color: #fff;
-  border: 1px solid #BDBDBD; }
+  box-shadow:
+    0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);}
 
 	#testing .testing-test {
 		padding: 10px 0; }

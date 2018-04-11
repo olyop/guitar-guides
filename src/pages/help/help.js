@@ -27,8 +27,10 @@ class Help extends React.Component {
 		this.toggleContent2 = this.toggleContent2.bind(this)
   }
   
-  toggleContent1() { this.setState({ content1: !this.state.content1 }) }
-	toggleContent2() { this.setState({ content2: !this.state.content2 }) }
+  toggleContent1() {
+    this.setState({ content1: !this.state.content1 }) }
+	toggleContent2() {
+    this.setState({ content2: !this.state.content2 }) }
   
   render() {
     

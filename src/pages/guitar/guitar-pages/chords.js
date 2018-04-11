@@ -49,6 +49,7 @@ class StandardChords extends React.Component {
 }
 
 class GuitarChords extends React.Component {
+  
   constructor(props) {
     super(props)
     this.state = {
@@ -58,8 +59,12 @@ class GuitarChords extends React.Component {
     this.toggleContent1 = this.toggleContent1.bind(this)
     this.toggleContent2 = this.toggleContent2.bind(this)
   }
-  toggleContent1() { this.setState({ content1: !this.state.content1 }) }
-  toggleContent2() { this.setState({ content2: !this.state.content2 }) }
+  
+  toggleContent1() {
+    this.setState({ content1: !this.state.content1 }) }
+  toggleContent2() {
+    this.setState({ content2: !this.state.content2 }) }
+  
   render() {
     return (
       <div id="guitar-chords">
