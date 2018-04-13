@@ -71,6 +71,7 @@ class ChordSearchResults extends React.Component {
 }
 
 class PageSearchResults extends React.Component {
+	
 	constructor(props) {
 		super(props)
 		this.state = {

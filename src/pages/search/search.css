@@ -6,6 +6,7 @@
 
 		#search .search-top .search-top-icon {
 			display: flex;
+			margin-left: 10px;
 			margin-right: 0;
 			align-items: center;
 			justify-content: center; }
@@ -52,11 +53,12 @@
     #search .search-results .search-results-pages {
       display: flex;
       flex-direction: column; }
+			#search .search-results a {
+				margin-bottom: 10px; }
       #search .search-results .search-results-pages .search-results-page {
         padding: 10px;
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
         border: 1px solid #e0e0e0; }
         #search .search-results .search-results-pages .search-results-page:hover {
           background-color: #EEEEEE; }
@@ -74,6 +76,7 @@
 
 @media (min-width: 500px) {
   #search .search-top .search-top-icon {
+		margin-left: 0;
     margin-right: 10px; }
   #search .search-top .search-top-bar {
     margin-right: 0; }

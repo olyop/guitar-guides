@@ -42,9 +42,6 @@ const Header = props => (
               <div className="header-icon">
                 <i className="material-icons">search</i>
               </div>
-              <div className="header-search-text">
-                <h4>{props.globalText.header.searchInputText}</h4>
-              </div>
             </NavLink>
           </div>
 
