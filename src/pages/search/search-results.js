@@ -29,17 +29,19 @@ class ChordSearchResults extends React.Component {
 		this.setState({ content: !this.state.content }) }
 	
 	render() {
+		const matches = this.props.matches 
 		return (
 			<div className="search-results-content">
         
 				<Heading onClick={this.handleContent}
-					active={this.state.content}>Chords</Heading>
+					active={this.state.content}
+					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Chords</Heading>
 				{this.state.content ? (
 					<div>
             
 						{this.state.more ? (
 							<div className="search-results-chords">
-								{this.props.matches.map((chord, index) => (
+								{matches.map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
                     completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
@@ -47,7 +49,7 @@ class ChordSearchResults extends React.Component {
 							</div>
 						) : (
 							<div className="search-results-chords">
-								{this.props.matches.slice(0,5).map((chord, index) => (
+								{matches.slice(0,5).map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
                     completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
@@ -55,9 +57,9 @@ class ChordSearchResults extends React.Component {
 							</div>
 						)}
             
-						{this.props.matches.length > 5 ? (
+						{matches.length > 5 ? (
               <FlatButton onClick={this.handleMore}
-                label={this.state.more ? 'Less...' : `Show all ${this.props.matches.length} search results...`} />
+                label={this.state.more ? 'Less...' : 'Show all'} />
             ) : null}
             
 					</div>
@@ -84,17 +86,19 @@ class PageSearchResults extends React.Component {
 		this.setState({ content: !this.state.content }) }
 	
 	render() {
+		const matches = this.props.matches
 		return (
 			<div className="search-results-content">
         
 				<Heading onClick={this.handleContent}
-					active={this.state.content}>Pages</Heading>
+					active={this.state.content}
+					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading>
 				{this.state.content ? (
 					<div className="search-results-pages">
-            {this.props.matches.map(page => (
+            {matches.map(page => (
               <Link key={page.id} to={page.path}>
                 <div className="search-results-page">
-                  <i className="material-icons">link</i>
+                  <i className="material-icons">bookmark</i>
                   <p>{page.name} - <b>{page.path}</b></p>
                 </div>
               </Link>
@@ -103,6 +107,7 @@ class PageSearchResults extends React.Component {
 				) : null}
         
         <Ad style={{ margin: '10px 0 0 0' }} />
+				
 			</div>
 		)
 	}

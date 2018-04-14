@@ -65,7 +65,9 @@
         #search .search-results .search-results-pages .search-results-page i {
           font-size: 23px;
           margin-right: 7px;
-          color: #9E9E9E; }
+          color: #333; }
+					#search .search-results .search-results-pages .search-results-page:hover i {
+						color: #F44336; }
         #search .search-results .search-results-pages .search-results-page p {
           font-size: 17px;
           margin: 0;
