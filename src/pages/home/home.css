@@ -89,6 +89,7 @@
 							margin: 0 0 40px 0;
               text-decoration: none; }
             #home .home-cards .home-section .home-section-inner h1 a:hover {
+							text-decoration: underline;
 							color: #F44336; }
 				#home .home-cards .home-section .home-section-inner h2 {
 					font-size: 16px;

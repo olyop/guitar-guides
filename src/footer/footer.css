@@ -11,9 +11,8 @@
 		padding: 0 15px; }
 
 	#footer .footer-links-list {
-		padding: 0;
-		margin: 0 0 10px 0;
-		list-style: none; }
+		margin: 0 0 15px 0;
+		padding-left: 16px; }
 		#footer .footer-links-list li a {
 			font-weight: 700;
 			color: #0D47A1; }
@@ -25,6 +24,9 @@
 		display: flex; }
 		#footer .footer-bottom p {
 			margin: 0; }
+
+#footer h5 {
+	margin: 0 0 5px 0; }
 
 @media (min-width: 768px) {
 	#footer {
