@@ -7,7 +7,7 @@
 		#search .search-top .search-top-icon {
 			display: flex;
 			margin-left: 10px;
-			margin-right: 0;
+			margin-right: 10px;
 			align-items: center;
 			justify-content: center; }
 		#search .search-top .search-top-icon i {
@@ -78,8 +78,7 @@
 
 @media (min-width: 500px) {
   #search .search-top .search-top-icon {
-		margin-left: 0;
-    margin-right: 10px; }
+		margin-left: 0; }
   #search .search-top .search-top-bar {
     margin-right: 0; }
 	.search-results .search-results-chords {

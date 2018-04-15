@@ -84,7 +84,20 @@ const ChordChart = props => {
 				style={style} />
 		)
 	})
-
+	
+	let iconText, iconStyle = {
+		color: props.completed ? '#fff' : '#333',
+		backgroundColor: props.completed && props.progressLoading !== 'error' ? '#4CAF50' : null
+	}
+	
+	if (props.progressLoading === 'error') {
+		iconText = 'error'
+		iconStyle.color = '#333'
+		iconStyle.color = '#F44336'
+	}
+	else if (props.progressLoading && props.completed === false) { iconText = 'cloud_circle' }
+	else { iconText = 'done' }
+	
 	return (
 		<div className="chart"
 			style={props.style}>
@@ -93,10 +106,7 @@ const ChordChart = props => {
 				className={props.completed ? 'chart-icon chart-icon-completed' : 'chart-icon'}
 				style={{ top: '0', left: '0' }}>
 				<i className="material-icons"
-					style={{
-						color: props.completed ? '#fff' : '#333',
-						backgroundColor: props.completed ? '#4CAF50' : ''
-					}}>check</i>
+					style={iconStyle}>{iconText}</i>
 			</div>
 
 			<div className="chart-icon"

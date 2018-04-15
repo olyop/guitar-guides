@@ -166,7 +166,8 @@ class AccountPage extends React.Component {
 					
 					<div className="account-page-content">
 						<Heading onClick={this.toggleContent2}
-							active={this.state.content2}>Progress</Heading>
+							active={this.state.content2}
+							subtitle="View your progress in the app.">Progress</Heading>
 						{this.state.content2 ? (
 							<div className="account-page-content account-page-progress">
 								Progress

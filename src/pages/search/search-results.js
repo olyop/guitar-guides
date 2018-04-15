@@ -44,7 +44,8 @@ class ChordSearchResults extends React.Component {
 								{matches.map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
-                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
+                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)}
+										progressLoading={this.props.updateProgressChordsLoading} />
 								))}
 							</div>
 						) : (
@@ -52,20 +53,22 @@ class ChordSearchResults extends React.Component {
 								{matches.slice(0,5).map((chord, index) => (
 									<ChordChart key={chord.id} chord={chord}
 										checkFunction={this.props.updateProgressChords}
-                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)} />
+                    completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)}
+										progressLoading={this.props.updateProgressChordsLoading} />
 								))}
 							</div>
 						)}
             
 						{matches.length > 5 ? (
               <FlatButton onClick={this.handleMore}
-                label={this.state.more ? 'Less...' : 'Show all'} />
+                label={this.state.more ? 'Less...' : 'Show all'}
+								style={{ marginBottom: '10px' }} />
             ) : null}
             
 					</div>
 				) : null}
             
-        <Ad style={{ margin: '10px 0 0 0' }} />
+        <Ad style={{ margin: '0' }} />
         
 			</div>
 		)
@@ -106,7 +109,7 @@ class PageSearchResults extends React.Component {
           </div>
 				) : null}
         
-        <Ad style={{ margin: '10px 0 0 0' }} />
+        <Ad style={{ margin: '0' }} />
 				
 			</div>
 		)
@@ -135,7 +138,8 @@ const SearchResults = props => {
 					{chordMatches.length === 0 ? null : (
             <ChordSearchResults appState={props.appState}
               updateProgressChords={props.updateProgressChords}
-              matches={chordMatches} />
+							updateProgressChordsLoading={props.updateProgressChordsLoading}
+							matches={chordMatches} />
           )}
           
         </div>

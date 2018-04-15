@@ -47,7 +47,7 @@
 #guitar .guitar-body {
 	margin: 0; }
 	#guitar .guitar-body .container {
-		padding: 20px; }
+		padding: 15px; }
 
 #guitar .guitar-body .guitar-nav {
 	padding-top: 20px;
@@ -83,6 +83,7 @@
 				margin: 0;
 				font-weight: 500; }
 				#guitar .guitar-body .guitar-nav .guitar-nav-inner a:hover p {
+					text-decoration: underline;
 					color: #F44336; }
 
 			#guitar .guitar-body .guitar-nav .guitar-nav-inner a .guitar-nav-strip {
@@ -109,9 +110,9 @@
 }
 
 @media (min-width: 600px) {
-	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
-		padding: 10px 20px; 	}
 	#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
+		padding: 10px 15px; }
+	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
 		padding: 10px 20px; }
 }
 
@@ -131,16 +132,14 @@
 	#guitar .guitar-body .guitar-nav {
 		padding-top: 40px; }
 	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
-		padding: 15px 20px;
 		font-size: 20px; 	}
 	#guitar .guitar-body .guitar-nav .guitar-nav-inner a i {
-		font-size: 28px;
-		padding: 15px 20px; }
+		font-size: 28px; }
 }
 
 @media (min-width: 900px) {
 	#guitar .guitar-body .guitar-nav .guitar-nav-inner a p {
-		padding: 15px 40px;	}
+		padding: 10px 40px;	}
 }
 
 @media (min-width: 992px) {

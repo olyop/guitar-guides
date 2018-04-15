@@ -33,14 +33,14 @@ class Search extends React.Component {
       axios.get(`${this.props.globalText.api.url}/chordChooser`)
     ])
     .then(([response1, response2]) => {
-      this.setState({
-        database: {
-          standardChords: response1.data,
-          chordChooser: transferChordsIntoArray(response2.data)
-        }
-      })
-      // Set focus on search input
-      this.nameInput.focus()
+			const database = {
+				standardChords: response1.data,
+				chordChooser: transferChordsIntoArray(response2.data)
+			}
+      this.setState(
+				{ database },
+				() => { this.nameInput.focus() }
+			)
     })
     .catch(error => {
 			this.setState({
@@ -62,10 +62,9 @@ class Search extends React.Component {
       isInputMalicious: flag
     })
 	}
+	
 	clearSearch() {
-    this.nameInput.focus()
-    this.setState({ input: '' })
-  }
+    this.setState({ input: '' }) }
 	
   render() {
 		if (this.state.database === 'error') {
@@ -130,6 +129,7 @@ class Search extends React.Component {
 					<SearchResults appState={this.props.appState}
 						globalText={this.props.globalText}
 						updateProgressChords={this.props.updateProgressChords}
+						updateProgressChordsLoading={this.props.updateProgressChordsLoading} 
 						input={this.state.input.trim()}
 						isInputMalicious={this.state.isInputMalicious}
 						database={this.state.database} />

@@ -53,13 +53,14 @@ class Index extends React.Component {
 //      account: null,
 			accountEditLoading: false,
 			accountDeleteLoading: false,
+			updateProgressChordsLoading: false,
 			menu: false
 		}
+		this.handleHamburger = this.handleHamburger.bind(this)
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
     this.editAccount = this.editAccount.bind(this)
     this.deleteAccount = this.deleteAccount.bind(this)
-		this.handleHamburger = this.handleHamburger.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
 	
@@ -118,23 +119,33 @@ class Index extends React.Component {
   
   // Progress Functions
   updateProgressChords(chordId) {
-		
-    const config = {
-      method: 'put',
-      url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
-      headers: { 'Content-Type': 'application/json' },
-      data: this.state.account
-    }
-    
-    // Determine whether to add or remove the chord
-    if (includes(config.data.progress.guitar.chords, chordId)) {
-      config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId) }
-		else {
-      config.data.progress.guitar.chords.push(chordId) }
-    
-    axios(config)
-      .then(response => this.setState({ account: response.data }) )
-      .catch(error => {})
+		this.setState(
+			{ updateProgressChordsLoading: true },
+			() => {
+				const config = {
+					method: 'put',
+					url: `${this.props.globalText.api.url}/users/${this.state.account.id}`,
+					headers: { 'Content-Type': 'application/json' },
+					data: this.state.account
+				}
+
+				// Determine whether to add or remove the chord
+				if (includes(config.data.progress.guitar.chords, chordId)) {
+					config.data.progress.guitar.chords = pull(config.data.progress.guitar.chords, chordId) }
+				else {
+					config.data.progress.guitar.chords.push(chordId) }
+
+				axios(config)
+					.then(response => {
+						console.log(response)
+						this.setState({
+							account: response.data,
+							updateProgressChordsLoading: false
+						})
+					})
+					.catch(error => this.setState({ updateProgressChordsLoading: 'error' }))
+			}
+		)
   }
 	
 	render() {
@@ -194,7 +205,8 @@ class Index extends React.Component {
                 <Route path="/search" exact render={ () => (
                   <Search appState={appState}
                     globalText={globalText}
-									  updateProgressChords={this.updateProgressChords} />
+									  updateProgressChords={this.updateProgressChords}
+										updateProgressChordsLoading={this.state.updateProgressChordsLoading} />
                 )} />
 								
 								<Route path="/guitar" render={ ({ match }) => (
@@ -203,7 +215,8 @@ class Index extends React.Component {
 										globalText={globalText}
 										scalesData={this.props.scalesData}
                     theoryData={this.props.theoryData}
-                    updateProgressChords={this.updateProgressChords} />		
+                    updateProgressChords={this.updateProgressChords}
+										updateProgressChordsLoading={this.state.updateProgressChordsLoading}  />		
                 )} />
 								
 								<Route path="/bass" exact render={ () => (
