@@ -12,7 +12,7 @@ class ScaleChooser extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			key: 7,
+			key: 6,
 			type: 0,
 			index: 0
 		}
@@ -23,9 +23,9 @@ class ScaleChooser extends React.Component {
 	}
 	
 	handleKeyChange(event, index, value) {
-    this.setState({ key: value }) }
+    this.setState({ key: value, index: 0 }) }
 	handleTypeChange(event, index, value) {
-    this.setState({ type: value }) }
+    this.setState({ type: value, index: 0 }) }
 	
 	left() {
     if (this.state.index !== 0) {
@@ -37,9 +37,6 @@ class ScaleChooser extends React.Component {
       this.setState({ index: this.state.index + 1 })
 		}
 	}
-	
-	componentWillReceiveProps() {
-    this.setState({ index: 0 }) }
 	
 	render() {
 		let buttonStyle = {

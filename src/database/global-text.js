@@ -28,6 +28,11 @@ const globalText = {
 		{
 			id: 'VxXJFesnq4',
 			name: 'Exercises',
+			path: '/guitar/exercises'
+		},
+		{
+			id: 'QIzdRhAplR',
+			name: 'Riffs',
 			path: '/guitar/riffs'
 		},
 		{
