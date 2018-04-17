@@ -109,10 +109,6 @@ const globalText = {
     }
   },
 	
-	home: {
-		
-	}
-	
 }
 
 export default globalText

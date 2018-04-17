@@ -1,19 +1,4 @@
-import includes from 'lodash/includes'
-import maliciousSubStrings from '../../../database/malicious-sub-strings'
-
-maliciousSubStrings.splice(0,3)
-
-const validateString = str => {
-	let isStringValid = true
-	for (let a = 0; a < str.length; a++) {
-		for (let b = 0; b < maliciousSubStrings.length; b++) {
-			if (includes(maliciousSubStrings[b], str.charAt(a))) {
-				isStringValid = false
-			}
-		}
-	}
-	return isStringValid
-}
+import validateString from '../../../functions/validate-string'
 
 const validateChords = array => {
 	

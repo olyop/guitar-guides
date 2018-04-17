@@ -3,7 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import includes from 'lodash/includes'
 import maliciousSubStrings from '../../database/malicious-sub-strings'
-import transferChordsIntoArray from '../../functions/transfer-chords-into-array'
+import transfer3dimensional from '../../functions/transfer-3dimensional'
 
 import FlatButton from 'material-ui/FlatButton'
 import Error from '../../common/error'
@@ -30,12 +30,14 @@ class Search extends React.Component {
   componentDidMount() {
     Promise.all([
       axios.get(`${this.props.globalText.api.url}/standardChords`),
-      axios.get(`${this.props.globalText.api.url}/chordChooser`)
+      axios.get(`${this.props.globalText.api.url}/chordChooser`),
+			axios.get(`${this.props.globalText.api.url}/scales`)
     ])
-    .then(([response1, response2]) => {
+    .then(([response1, response2, response3]) => {
 			const database = {
 				standardChords: response1.data,
-				chordChooser: transferChordsIntoArray(response2.data)
+				chordChooser: transfer3dimensional(response2.data),
+				scales: transfer3dimensional(response3.data)
 			}
       this.setState(
 				{ database },

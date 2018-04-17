@@ -1,7 +1,4 @@
 const maliciousSubStrings = [
-	'script',
-	'href',
-  'div',
 	'<',
 	'>',
 	'/',

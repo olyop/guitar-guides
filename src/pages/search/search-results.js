@@ -11,6 +11,47 @@ import SadFace from '../../common/sad-face'
 import ChordChart from '../../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
 
+class PageSearchResults extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		this.state = {
+			content: true
+		}
+		this.handleContent = this.handleContent.bind(this)
+	}
+	
+	handleContent() {
+		this.setState({ content: !this.state.content }) }
+	
+	render() {
+		const matches = this.props.matches
+		return (
+			<div className="search-results-content">
+        
+				<Heading onClick={this.handleContent}
+					active={this.state.content}
+					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading>
+				{this.state.content ? (
+					<div className="search-results-pages">
+            {matches.map(page => (
+              <Link key={page.id} to={page.path}>
+                <div className="search-results-page">
+                  <i className="material-icons">bookmark</i>
+                  <p>{page.name} - <b>{page.path}</b></p>
+                </div>
+              </Link>
+            ))}
+          </div>
+				) : null}
+        
+        <Ad style={{ margin: '0' }} />
+				
+			</div>
+		)
+	}
+}
+
 class ChordSearchResults extends React.Component {
 	
 	constructor(props) {
@@ -75,55 +116,14 @@ class ChordSearchResults extends React.Component {
 	}
 }
 
-class PageSearchResults extends React.Component {
-	
-	constructor(props) {
-		super(props)
-		this.state = {
-			content: true
-		}
-		this.handleContent = this.handleContent.bind(this)
-	}
-	
-	handleContent() {
-		this.setState({ content: !this.state.content }) }
-	
-	render() {
-		const matches = this.props.matches
-		return (
-			<div className="search-results-content">
-        
-				<Heading onClick={this.handleContent}
-					active={this.state.content}
-					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading>
-				{this.state.content ? (
-					<div className="search-results-pages">
-            {matches.map(page => (
-              <Link key={page.id} to={page.path}>
-                <div className="search-results-page">
-                  <i className="material-icons">bookmark</i>
-                  <p>{page.name} - <b>{page.path}</b></p>
-                </div>
-              </Link>
-            ))}
-          </div>
-				) : null}
-        
-        <Ad style={{ margin: '0' }} />
-				
-			</div>
-		)
-	}
-}
-
 const SearchResults = props => {
   if (props.isInputMalicious) {
     return <p>Search input is potentially malicious.</p>
   } else if (props.input === '') {
     return null
   } else {
+		const pageMatches = orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc'])
     const chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc'])
-		const pageMatches = findPageMatches(props.globalText.pageStructure, props.input)
     if (chordMatches.length === 0 && pageMatches.length === 0) {
       return <SadFace>No Search Results.</SadFace>
     } else {
