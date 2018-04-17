@@ -137,7 +137,6 @@ class Index extends React.Component {
 
 				axios(config)
 					.then(response => {
-						console.log(response)
 						this.setState({
 							account: response.data,
 							updateProgressChordsLoading: false

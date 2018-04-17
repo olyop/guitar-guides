@@ -1,12 +1,6 @@
 .guitar-tab {
-	width: 370px;
-	cursor: pointer;
 	transition: .2s all;
 	padding: 20px; }
-	.guitar-tab:hover {
-		background-color: #eee; }
-	.guitar-tab:hover .guitar-tab-section .guitar-tab-note p {
-		background-color: #eee; }
 	.guitar-tab .guitar-tabs {
 		display: flex;
 		width: 330px;
@@ -46,10 +40,7 @@
 					background-color: #fff;
 					font-size: 13px; }
 
-
 @media (min-width: 768px) {
-	.guitar-tab {
-		width: 700px;	}
 	.guitar-tab .guitar-tabs {
 		width: 660px;
 		flex-direction: row; }

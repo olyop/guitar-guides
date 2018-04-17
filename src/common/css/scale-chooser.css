@@ -2,7 +2,7 @@
 	padding: 0; }
 
 	.scale-chooser .scale-chooser-menus {
-		padding: 0 20px 10px 20px;
+		padding: 0 20px 0 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start; }
@@ -12,7 +12,7 @@
 	.scale-chooser .scale-variations {
 		display: flex;
 		align-items: center; 
-		padding-left: 10px; }
+		padding: 0 10px 10px 10px; }
 		.scale-chooser .scale-variations i {
 			font-size: 28px; }
 
@@ -20,3 +20,38 @@
 	.scale-chooser .scale-chooser-menus {
 		flex-direction: row; }
 }
+
+/*
+OonVqnFPSy
+xAkXVGOoQh
+UfYXdVvJeM
+dkQgHdhesM
+iaNzaHWnbA
+luCSdkXRFi
+jCQIpONACh
+PIMcksWoYO
+xKpxSNvGWJ
+IiLalHkWDO
+WODuxSMgbc
+QUHHwlCytU
+rolMKRbrYj
+meNUsRYiMx
+gCUvOHbAuj
+LTFvOkOaJK
+KkHpZicxqz
+cHJcyRiJpe
+WPqQHPPCRm
+dGjGtxfZGE
+RcqrXNTvRO
+tfICoYUAEr
+zAJookCCNc
+WcCIwHxoNe
+fMSXzymoPu
+zjTgppWsLP
+jjSFYEPeLV
+UQkinfRbCZ
+XKrrshzrWy
+eIRtSgOBig
+SDgSxLJAbA
+CMboBNnBbl
+*/

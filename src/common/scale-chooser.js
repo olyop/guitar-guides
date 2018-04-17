@@ -13,16 +13,33 @@ class ScaleChooser extends React.Component {
 		super(props)
 		this.state = {
 			key: 7,
-			type: 1
+			type: 0,
+			index: 0
 		}
 		this.handleKeyChange = this.handleKeyChange.bind(this)
 		this.handleTypeChange = this.handleTypeChange.bind(this)
+    this.left = this.left.bind(this)
+    this.right = this.right.bind(this)
 	}
 	
 	handleKeyChange(event, index, value) {
     this.setState({ key: value }) }
 	handleTypeChange(event, index, value) {
     this.setState({ type: value }) }
+	
+	left() {
+    if (this.state.index !== 0) {
+      this.setState({ index: this.state.index - 1 })
+		}
+	}
+  right() {
+    if (this.state.index !== this.props.scalesData[this.state.key][this.state.type].length - 1) {
+      this.setState({ index: this.state.index + 1 })
+		}
+	}
+	
+	componentWillReceiveProps() {
+    this.setState({ index: 0 }) }
 	
 	render() {
 		let buttonStyle = {
@@ -58,13 +75,15 @@ class ScaleChooser extends React.Component {
 				
 				<div className="scale-chooser-tab"> 
 					
-					<GuitarTab scale={this.props.scalesData[7][2][0]} />
-					
+					<GuitarTab scale={this.props.scalesData[this.state.key][this.state.type][this.state.index]} />
+				
 					<div className="scale-variations">
-						<FlatButton style={buttonStyle}>
+						<FlatButton onClick={this.left}
+							style={buttonStyle}>
 							<i className="material-icons">keyboard_arrow_left</i>
 						</FlatButton>
-						<FlatButton style={buttonStyle}>
+						<FlatButton onClick={this.right}
+							style={buttonStyle}>
 							<i className="material-icons">keyboard_arrow_right</i>
 						</FlatButton>
 					</div>
