@@ -13,8 +13,15 @@ class StandardChords extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		this.state = { standardChords: null }
-	}
+		this.state = {
+			content1: true,
+			standardChords: null
+		}
+    this.toggleContent1 = this.toggleContent1.bind(this)
+  }
+  
+  toggleContent1() {
+    this.setState({ content1: !this.state.content1 }) }
 	
 	componentDidMount() {
     axios.get(`${this.props.globalText.api.url}/standardChords`)
@@ -24,27 +31,35 @@ class StandardChords extends React.Component {
 	
 	render() {
 		if (this.state.standardChords === null) {
-			return (
-				<div className="guitar-chords-track">
-					<Loading />
-				</div>
-			)
+			return <Loading />
+		} else if (this.state.standardChords === 'error') {
+			return <div>Error</div>
 		} else if (this.state.standardChords.constructor === Array) {
 			return (
-				<div className="guitar-chords-track">
-					{orderBy(this.state.standardChords, ['name'],['asc']).map(chord => (
-						<ChordChart key={chord.id}
-							chord={chord} />
-					))}
+				<div>
+					
+					<Heading onClick={this.toggleContent1}
+						active={this.state.content1}
+						subtitle="15 chords">
+						Common Chords
+					</Heading>
+					{this.state.content1 ? (
+						<div>
+							<p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
+							<div className="guitar-chords-track">
+								{orderBy(this.state.standardChords, ['name'],['asc']).map(chord => (
+									<ChordChart key={chord.id}
+										chord={chord} />
+								))}
+							</div>
+						</div>
+					) : null}
+					
+					
 				</div>
 			)
-		} else if (this.state.standardChords === 'error') {
-      return (
-        <div className="guitar-chords-track">
-          Error
-        </div>
-      )
-    }
+		}
+		
 	}
 }
 
@@ -57,39 +72,25 @@ class GuitarChords extends React.Component {
       content2: true
     }
     this.toggleContent1 = this.toggleContent1.bind(this)
-    this.toggleContent2 = this.toggleContent2.bind(this)
   }
   
   toggleContent1() {
     this.setState({ content1: !this.state.content1 }) }
-  toggleContent2() {
-    this.setState({ content2: !this.state.content2 }) }
   
   render() {
     return (
       <div id="guitar-chords">
         
-        <Heading onClick={this.toggleContent1}
-          active={this.state.content1}
-					subtitle="15 chords">
-					Common Chords
-				</Heading>
-        {this.state.content1 ? (
-          <div>
-            <p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
-            <StandardChords appState={this.props.appState}
-							globalText={this.props.globalText}/>
-          </div>
-        ) : null}
+        <StandardChords  appState={this.props.appState}
+					globalText={this.props.globalText}
+					theoryData={this.props.theoryData} />
 				
 				<Ad />
         
-        <Heading onClick={this.toggleContent2}
-          active={this.state.content2}
-					subtitle="187 chords">
-					Chord Finder
-				</Heading>
-        {this.state.content2 ? (
+        <Heading onClick={this.toggleContent1}
+          active={this.state.content1}
+					subtitle="187 chords">Chord Finder</Heading>
+        {this.state.content1 ? (
           <ChordChooser appState={this.props.appState}
 						globalText={this.props.globalText}
 						theoryData={this.props.theoryData}

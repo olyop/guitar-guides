@@ -22,12 +22,6 @@ import {
   TableRowColumn,
 } from 'material-ui/Table'
 
-const columnStyle1 = {
-	col1: { width: '12%', padding: '10px' },
-	col2: { width: '33%', padding: '10px' },
-	col3: { width: '55%', padding: '10px' }
-}
-
 class Test1 extends React.Component {
   
 	constructor(props) {
@@ -57,6 +51,7 @@ class Test1 extends React.Component {
 	}
   
 	render() {
+		const props = this.props
 		const state = this.state
 		return (
 			<div className="testing-results">
@@ -74,9 +69,9 @@ class Test1 extends React.Component {
                   adjustForCheckbox={false}
                   enableSelectAll={true}>
                   <TableRow>
-                    <TableHeaderColumn style={columnStyle1.col1}>Passed</TableHeaderColumn>
-                    <TableHeaderColumn style={columnStyle1.col2}>Test</TableHeaderColumn>
-                    <TableHeaderColumn style={columnStyle1.col3}>Result</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col1}>Passed</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col2}>Test</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col3}>Result</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
                 <TableBody
@@ -85,14 +80,14 @@ class Test1 extends React.Component {
                   showRowHover={false}
                   stripedRows={false}>
 									<TableRow>
-                    <TableRowColumn style={columnStyle1.col1}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col1}>
                       <i className="material-icons"
 												style={{ color: state.results.validate.length === 0 ? '#4CAF50' : '#F44336' }}>
 												{state.results.validate.length === 0 ? 'done' : 'close'}
 											</i>
                     </TableRowColumn>
-                    <TableRowColumn style={columnStyle1.col2}>Validate property values</TableRowColumn>
-										<TableRowColumn style={columnStyle1.col3}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col2}>Validate property values</TableRowColumn>
+										<TableRowColumn style={props.globalText.testing.colStyle.col3}>
 											{state.results.validate.length === 0 ? (
 												<p>All database items and their property values are valid</p>
 											) : (
@@ -103,15 +98,15 @@ class Test1 extends React.Component {
 										</TableRowColumn>
                   </TableRow>
                   <TableRow>
-                    <TableRowColumn style={columnStyle1.col1}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col1}>
                       
                       <i className="material-icons"
 												style={{ color: state.results.duplicates.length === 0 ? '#4CAF50' : '#F44336' }}>
 												{state.results.duplicates.length === 0 ? 'done' : 'close'}
 											</i>
                     </TableRowColumn>
-                    <TableRowColumn style={columnStyle1.col2}>Check for duplicate ID values</TableRowColumn>
-										<TableRowColumn style={columnStyle1.col3}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col2}>Check for duplicate ID values</TableRowColumn>
+										<TableRowColumn style={props.globalText.testing.colStyle.col3}>
 											{state.results.duplicates.length === 0 ? (
 												<p>No Duplicates Found</p>
 											) : (
@@ -161,6 +156,7 @@ class Test2 extends React.Component {
 	}
   
 	render() {
+		const props = this.props
 		const state = this.state
 		return (
 			<div className="testing-results">
@@ -178,9 +174,9 @@ class Test2 extends React.Component {
                   adjustForCheckbox={false}
                   enableSelectAll={true}>
                   <TableRow>
-                    <TableHeaderColumn style={columnStyle1.col1}>Passed</TableHeaderColumn>
-                    <TableHeaderColumn style={columnStyle1.col2}>Test</TableHeaderColumn>
-                    <TableHeaderColumn style={columnStyle1.col3}>Result</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col1}>Passed</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col2}>Test</TableHeaderColumn>
+                    <TableHeaderColumn style={props.globalText.testing.colStyle.col3}>Result</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
                 <TableBody
@@ -189,14 +185,14 @@ class Test2 extends React.Component {
                   showRowHover={false}
                   stripedRows={false}>
 									<TableRow>
-                    <TableRowColumn style={columnStyle1.col1}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col1}>
                       <i className="material-icons"
 												style={{ color: state.results.validate.length === 0 ? '#4CAF50' : '#F44336' }}>
 												{state.results.validate.length === 0 ? 'done' : 'close'}
 											</i>
                     </TableRowColumn>
-                    <TableRowColumn style={columnStyle1.col2}>Validate property values</TableRowColumn>
-										<TableRowColumn style={columnStyle1.col3}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col2}>Validate property values</TableRowColumn>
+										<TableRowColumn style={props.globalText.testing.colStyle.col3}>
 											{state.results.validate.length === 0 ? (
 												<p>All database items and their property values are valid</p>
 											) : (
@@ -207,15 +203,15 @@ class Test2 extends React.Component {
 										</TableRowColumn>
                   </TableRow>
                   <TableRow>
-                    <TableRowColumn style={columnStyle1.col1}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col1}>
                       
                       <i className="material-icons"
 												style={{ color: state.results.duplicates.length === 0 ? '#4CAF50' : '#F44336' }}>
 												{state.results.duplicates.length === 0 ? 'done' : 'close'}
 											</i>
                     </TableRowColumn>
-                    <TableRowColumn style={columnStyle1.col2}>Check for duplicate ID values</TableRowColumn>
-										<TableRowColumn style={columnStyle1.col3}>
+                    <TableRowColumn style={props.globalText.testing.colStyle.col2}>Check for duplicate ID values</TableRowColumn>
+										<TableRowColumn style={props.globalText.testing.colStyle.col3}>
 											{state.results.duplicates.length === 0 ? (
 												<p>No Duplicates Found</p>
 											) : (

@@ -109,6 +109,14 @@ const globalText = {
     }
   },
 	
+	testing: {
+		colStyle: {
+			col1: { width: '12%', padding: '10px' },
+			col2: { width: '33%', padding: '10px' },
+			col3: { width: '55%', padding: '10px' }
+		}
+	}
+	
 }
 
 export default globalText

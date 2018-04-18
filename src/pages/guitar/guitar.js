@@ -99,7 +99,8 @@ const Guitar = props => (
 					)} />
 				
 					<Route path={`${props.match.path}/scales`} exact render={ ({ match }) => (
-						<GuitarScales
+						<GuitarScales appState={props.appState}
+							globalText={props.globalText}
 							theoryData={props.theoryData}
 							scalesData={props.scalesData} />
 					)} />

@@ -12,7 +12,7 @@ class ScaleChooser extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			key: 6,
+			key: 0,
 			type: 0,
 			index: 0
 		}
