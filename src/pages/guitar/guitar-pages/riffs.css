@@ -1,12 +1,47 @@
 .riffs {
-	display: flex;
-	flex-direction: column;
-	border-bottom: 1px solid #E0E0E0;
-}
-.riff {
-	border-top: 1px solid;
-	border-left: 1px solid;
-	border-right: 1px solid;
-	border-color: #E0E0E0;
-	padding: 10px;
-}
+	border-bottom: 1px solid #E0E0E0; }
+	.riff {}
+		.riff .riff-info {
+			padding: 10px;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row; }
+			.riff .riff-info img {
+				border-radius: 100%;
+				width: 39px;
+				height: 39px;
+				box-shadow:
+					0 0 4px rgba(0,0,0,.14),
+					0 4px 8px rgba(0,0,0,.28);
+				margin-right: 10px; }
+			.riff .riff-info .riff-text {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column; }
+				.riff .riff-info .riff-text .riff-title {
+					line-height: 1;
+					text-align: left;
+					padding-bottom: 5px;
+					font-size: 20px;
+					font-weight: 700; }
+				.riff .riff-info .riff-text .riff-artist {
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start; }
+					.riff .riff-info .riff-text .riff-artist section,
+					.riff .riff-info .riff-text .riff-artist b {
+						line-height: 1;
+						text-align: left;
+						font-weight: 400;
+						font-size: 14px; }
+						.riff .riff-info .riff-text .riff-artist b {
+							margin: 0 3px; }
+						.riff .riff-info .riff-text .riff-artist section:hover {
+							text-decoration: underline; }
+
+	.riffs .riff .riff-more {
+		padding: 10px; }
+		.riffs .riff .riff-more p {
+			line-height: 1;
+			margin: 0;
+			font-size: 16px; }
