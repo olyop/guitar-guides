@@ -1,0 +1,12 @@
+.riffs {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #E0E0E0;
+}
+.riff {
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-color: #E0E0E0;
+	padding: 10px;
+}

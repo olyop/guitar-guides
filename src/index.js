@@ -15,8 +15,8 @@ import createAdminAccount from './functions/create-admin-account'
 
 // Import Data
 import IMPORT_globalText from './database/global-text'
-import IMPORT_scalesDatabase from './database/scales-database'
 import IMPORT_theoryDatabase from './database/theory-database'
+import IMPORT_riffsDatabase from './database/riffs-database'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -212,8 +212,8 @@ class Index extends React.Component {
                   <Guitar match={match}
 										appState={appState}
 										globalText={globalText}
-										scalesData={this.props.scalesData}
                     theoryData={this.props.theoryData}
+										riffsData={this.props.riffsData}
                     updateProgressChords={this.updateProgressChords}
 										updateProgressChordsLoading={this.state.updateProgressChordsLoading}  />		
                 )} />
@@ -246,8 +246,8 @@ class Index extends React.Component {
 
 ReactDOM.render(
 	<Index globalText={IMPORT_globalText}
-		scalesData={IMPORT_scalesDatabase}
-    theoryData={IMPORT_theoryDatabase} />,
+    theoryData={IMPORT_theoryDatabase}
+		riffsData={IMPORT_riffsDatabase} />,
 	document.getElementById('root')
 )
 
