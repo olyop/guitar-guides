@@ -7,22 +7,18 @@
 			justify-content: flex-start;
 			flex-direction: row; }
 			.riff .riff-info img {
-				border-radius: 100%;
-				width: 39px;
-				height: 39px;
+        transition: .3s all;
 				box-shadow:
 					0 0 4px rgba(0,0,0,.14),
-					0 4px 8px rgba(0,0,0,.28);
-				margin-right: 10px; }
+					0 4px 8px rgba(0,0,0,.28); }
 			.riff .riff-info .riff-text {
 				display: flex;
-				justify-content: flex-start;
 				flex-direction: column; }
 				.riff .riff-info .riff-text .riff-title {
+          transition: .3s all;
 					line-height: 1;
 					text-align: left;
 					padding-bottom: 5px;
-					font-size: 20px;
 					font-weight: 700; }
 				.riff .riff-info .riff-text .riff-artist {
 					display: flex;
@@ -30,10 +26,10 @@
 					justify-content: flex-start; }
 					.riff .riff-info .riff-text .riff-artist section,
 					.riff .riff-info .riff-text .riff-artist b {
+            transition: .3s all;
 						line-height: 1;
 						text-align: left;
-						font-weight: 400;
-						font-size: 14px; }
+						font-weight: 400; }
 						.riff .riff-info .riff-text .riff-artist b {
 							margin: 0 3px; }
 						.riff .riff-info .riff-text .riff-artist section:hover {
@@ -45,3 +41,8 @@
 			line-height: 1;
 			margin: 0;
 			font-size: 16px; }
+
+@media (min-width: 768px) {
+  .riff .riff-info {
+    padding: 15px; }
+}

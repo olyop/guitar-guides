@@ -2,8 +2,6 @@ import React from 'react'
 
 import axios from 'axios'
 
-import testAlbumCover from '../../../media/album-covers-temp/test.jpg'
-
 import FlatButton from 'material-ui/FlatButton'
 import Heading from '../../../common/heading'
 import Loading from '../../../common/loading'
@@ -34,7 +32,15 @@ class Riff extends React.Component {
 			button: {
 				padding: '0',
 				height: 'auto'
-			}
+			},
+      imgStyle: {
+        width: this.state.more ? '150px' : '42px',
+        height: this.state.more ? '150px' : '42px',
+        borderRadius: this.state.more ? '3px' : '100%',
+        marginRight: this.state.more ? '15px' : '10px'
+      },
+      title: { fontSize: this.state.more ? '27px' : '21px' },
+      artist: { fontSize: this.state.more ? '18px' : '15px' }
 		}
 		return (
 			<div key={riff.id}
@@ -45,15 +51,16 @@ class Riff extends React.Component {
 				<FlatButton fullWidth
 					style={styles.button}
 					className="riff">
-					<div className="riff-info"
-						style={{ borderBottom: `1px solid ${this.state.more ? '#e0e0e0' : 'transparent'}` }}>
-						<img src={testAlbumCover} alt="album" />
+					<div className="riff-info">
+						<img src={`${this.props.globalText.api.aws}/riffs-album-covers/${riff.id}.jpg`} alt="album"
+              style={styles.imgStyle} />
 						<div className="riff-text">
-							<div className="riff-title">{riff.title}</div>
+							<div className="riff-title"
+                style={styles.title}>{riff.title}</div>
 							<div className="riff-artist">
-								<section>{riff.album}</section>
-								<b>&#8211;</b>
-								<section>{riff.artist}</section>
+								<section style={styles.artist}>{riff.album} ({riff.year})</section>
+								<b style={styles.artist}> &#8211; </b>
+								<section style={styles.artist}>{riff.artist}</section>
 							</div>
 						</div>
 					</div>
@@ -101,10 +108,10 @@ class GuitarRiffs extends React.Component {
 
 					<Heading onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle={`${this.props.riffsData.length} riffs`}>Famous Rock Riffs</Heading>
+						subtitle={`${this.props.riffsData.length + 1} riffs`}>Famous Rock Riffs</Heading>
 					{this.state.content1 ? (
 						<div className="riffs">
-							{this.props.riffsData.map((riff, index) => <Riff riff={riff} />)}
+							{this.props.riffsData.map((riff, index) => <Riff globalText={this.props.globalText} riff={riff} />)}
 						</div>
 					) : null}
 

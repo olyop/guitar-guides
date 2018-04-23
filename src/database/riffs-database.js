@@ -1,8 +1,6 @@
-import madeId from '../functions/make-id'
-
 const riffs = [
 	{
-		id: madeId(),
+		id: 'noKMyWGljk',
 		title: 'Seven Nation Army',
 		album: 'Elephant',
 		artist: 'The White Stripes',
@@ -11,7 +9,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'ZrrHfxiTVD',
 		title: 'Sunshine Of Your Love',
 		album: 'Disraeli Gears',
 		artist: 'Cream',
@@ -20,7 +18,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'qucnDySiqf',
 		title: 'Day Tripper',
 		album: 'We Can Work It Out',
 		artist: 'The Beatles',
@@ -29,7 +27,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'xOImUWKzcg',
 		title: 'Enter Sandman',
 		album: 'Metallica',
 		artist: 'Metallica',
@@ -38,7 +36,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'JmaomoZWaS',
 		title: 'Californication',
 		album: 'Californication',
 		artist: 'Red Hot Chili Peppers',
@@ -47,7 +45,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'hsmfoBoVDw',
 		title: 'Smoke on the Water',
 		album: 'Machine Head',
 		artist: 'Deep Purple',
@@ -56,7 +54,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'LbRfBHSEPO',
 		title: 'Lose Yourself',
 		album: '8 Mile',
 		artist: 'Eminem',
@@ -65,7 +63,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'DFUzdxFOjM',
 		title: 'Beat It',
 		album: 'Thriller',
 		artist: 'Michael Jackson',
@@ -74,16 +72,16 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'oqyKrnCUyz',
 		title: 'Eye of the Tiger',
-		album: 'Eye of the Toger',
+		album: 'Eye of the Tiger',
 		artist: 'Survivor',
 		year: '1982',
 		difficulty: 0,
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'mGYLQmaWwZ',
 		title: 'In Bloom',
 		album: 'Nevermind',
 		artist: 'Nirvana',
@@ -92,16 +90,16 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'lTCSOVibWC',
 		title: 'American Idiot',
-		album: 'American idiot',
+		album: 'American Idiot',
 		artist: 'Green Day',
 		year: '2004',
 		difficulty: 1,
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'XUOumOywgB',
 		title: 'Black or White',
 		album: 'Dangerous',
 		artist: 'Michael Jackson',
@@ -110,7 +108,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'eceNICvIeh',
 		title: 'Crazy Train',
 		album: 'Blizzard of Ozz',
 		artist: 'Ozzy Osbourne',
@@ -119,7 +117,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'lSqNXtplxM',
 		title: 'Every Breath You Take',
 		album: 'Synchronicity',
 		artist: 'The Police',
@@ -128,7 +126,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'vQclDLFsnk',
 		title: 'Money',
 		album: 'The Dark Side of the Moon',
 		artist: 'Pink Floyd',
@@ -137,7 +135,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'cAWhpqFLeH',
 		title: 'Thunderstruck',
 		album: 'The Razors Edge',
 		artist: 'AC/DC',
@@ -146,7 +144,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'byLUYgYxEH',
 		title: 'Back In Black',
 		album: 'Back In Black',
 		artist: 'AC/DC',
@@ -155,16 +153,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
-		title: 'Paralyzer',
-		album: 'Them vs. You vs. Me',
-		artist: 'Finger Eleven',
-		year: '2007',
-		difficulty: 1,
-		tab: []
-	},
-	{
-		id: madeId(),
+		id: 'LFoKeLCIht',
 		title: 'Sweet Child O\' Mine',
 		album: 'Appetite for Destruction',
 		artist: 'Guns N\' Roses',
@@ -173,7 +162,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'UBtypVXxVi',
 		title: 'Another Brick in the Wall Pt. 2',
 		album: 'The Wall',
 		artist: 'Pink Floyd',
@@ -182,7 +171,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'aiECfsCqPw',
 		title: 'Someday',
 		album: 'Is This It',
 		artist: 'The Strokes',
@@ -191,7 +180,7 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'MLncIOMObI',
 		title: 'Juicebox',
 		album: 'First Impressions Of Earth',
 		artist: 'The Strokes',
@@ -200,11 +189,38 @@ const riffs = [
 		tab: []
 	},
 	{
-		id: madeId(),
+		id: 'aiHqcBmOnu',
 		title: 'Can\'t Stop',
 		album: 'By The Way',
 		artist: 'Red Hot Chili Peppers',
 		year: '2003',
+		difficulty: 1,
+		tab: []
+	},
+	{
+		id: 'vHjkeJJZtB',
+		title: 'Always With Me, Alays With You',
+		album: 'Surfing With The Alien',
+		artist: 'Joe Satriani',
+		year: '1987',
+		difficulty: 0,
+		tab: []
+	},
+	{
+		id: 'JfThyVxcDY',
+		title: 'Take Me Out',
+		album: 'Franz Ferdinand',
+		artist: 'Franz Ferdinand',
+		year: '2004',
+		difficulty: 1,
+		tab: []
+	},
+	{
+		id: 'YVvgLHfHqx',
+		title: 'Forever Now',
+		album: 'Circus Animals',
+		artist: 'Cold Chisel',
+		year: '1982',
 		difficulty: 1,
 		tab: []
 	}
