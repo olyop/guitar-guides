@@ -16,7 +16,6 @@ import createAdminAccount from './functions/create-admin-account'
 // Import Data
 import IMPORT_globalText from './database/global-text'
 import IMPORT_theoryDatabase from './database/theory-database'
-import IMPORT_riffsDatabase from './database/riffs-database'
 
 // Import CSS
 import 'normalize.css/normalize.css'
@@ -213,7 +212,6 @@ class Index extends React.Component {
 										appState={appState}
 										globalText={globalText}
                     theoryData={this.props.theoryData}
-										riffsData={this.props.riffsData}
                     updateProgressChords={this.updateProgressChords}
 										updateProgressChordsLoading={this.state.updateProgressChordsLoading}  />		
                 )} />
@@ -246,8 +244,7 @@ class Index extends React.Component {
 
 ReactDOM.render(
 	<Index globalText={IMPORT_globalText}
-    theoryData={IMPORT_theoryDatabase}
-		riffsData={IMPORT_riffsDatabase} />,
+    theoryData={IMPORT_theoryDatabase} />,
 	document.getElementById('root')
 )
 

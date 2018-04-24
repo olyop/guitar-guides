@@ -1,48 +1,79 @@
 .riffs {
 	border-bottom: 1px solid #E0E0E0; }
-	.riff {}
-		.riff .riff-info {
+	.riffs .riff {}
+		.riffs .riff .riff-inner {
+       transition: .3s all;
+			display: flex;
+			justify-content: space-between; }
+		.riffs .riff .riff-right {
+			display: flex;
+			height: 100%;
+			justify-content: flex-start; }
+			.riffs .riff .riff-right i {
+				cursor: pointer;
+				padding: 3px;
+				font-size: 30px; }
+		.riffs .riff .riff-info {
 			padding: 10px;
 			display: flex;
 			justify-content: flex-start;
 			flex-direction: row; }
-			.riff .riff-info img {
+			.riffs .riff .riff-info img {
         transition: .3s all;
+				border-radius: 3px;
 				box-shadow:
 					0 0 4px rgba(0,0,0,.14),
 					0 4px 8px rgba(0,0,0,.28); }
-			.riff .riff-info .riff-text {
+			.riffs .riff .riff-info .riff-text {
 				display: flex;
 				flex-direction: column; }
-				.riff .riff-info .riff-text .riff-title {
+				.riffs .riff .riff-info .riff-text .riff-title {
           transition: .3s all;
 					line-height: 1;
 					text-align: left;
 					padding-bottom: 5px;
 					font-weight: 700; }
-				.riff .riff-info .riff-text .riff-artist {
+				.riffs .riff .riff-info .riff-text .riff-artist {
 					display: flex;
-					flex-direction: row;
 					justify-content: flex-start; }
-					.riff .riff-info .riff-text .riff-artist section,
-					.riff .riff-info .riff-text .riff-artist b {
+					.riffs .riff .riff-info .riff-text .riff-artist section,
+					.riffs .riff .riff-info .riff-text .riff-artist b {
             transition: .3s all;
 						line-height: 1;
+						font-size: 18px;
 						text-align: left;
 						font-weight: 400; }
-						.riff .riff-info .riff-text .riff-artist b {
+						.riffs .riff .riff-info .riff-text .riff-artist b {
 							margin: 0 3px; }
-						.riff .riff-info .riff-text .riff-artist section:hover {
+						.riffs .riff .riff-info .riff-text .riff-artist section:hover {
 							text-decoration: underline; }
 
+				.riffs .riff .riff-info .riff-text .riff-artist-more {
+					flex-direction: column;
+					align-items: flex-start;
+					display: flex; }
+					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-album {
+						font-weight: 400;
+						padding-bottom: 5px;
+						line-height: 1;
+						font-size: 19px; }
+					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-artist {
+						font-weight: 600;
+						color: #F44336;
+						line-height: 1;
+						font-size: 23px; }
+
 	.riffs .riff .riff-more {
-		padding: 10px; }
+		padding: 0 10px 10px 10px; }
 		.riffs .riff .riff-more p {
 			line-height: 1;
 			margin: 0;
 			font-size: 16px; }
 
 @media (min-width: 768px) {
-  .riff .riff-info {
+  .riffs .riff .riff-info,
+	.riffs .riff .riff-right {
     padding: 15px; }
+	.riffs .riff .riff-more {
+		padding: 0 15px 15px 15px; }
 }

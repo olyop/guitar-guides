@@ -1,6 +1,7 @@
 import React from 'react'
 
 import axios from 'axios'
+import orderBy from 'lodash/orderBy'
 
 import FlatButton from 'material-ui/FlatButton'
 import Heading from '../../../common/heading'
@@ -36,11 +37,21 @@ class Riff extends React.Component {
       imgStyle: {
         width: this.state.more ? '150px' : '42px',
         height: this.state.more ? '150px' : '42px',
-        borderRadius: this.state.more ? '3px' : '100%',
-        marginRight: this.state.more ? '15px' : '10px'
+        marginRight: '15px'
       },
-      title: { fontSize: this.state.more ? '27px' : '21px' },
-      artist: { fontSize: this.state.more ? '18px' : '15px' }
+      title: {
+				fontSize: this.state.more ? '27px' : '21px',
+				paddingBottom: this.state.more ? '5px' : '0',
+				borderBottom: this.state.more ? '1px solid #BDBDBD' : 'none',
+				marginBottom: this.state.more ? '5px' : '0'
+			},
+			right: { alignItems: this.state.more ? 'flex-start' : 'center' },
+			icon: {
+				borderRadius: '100%',
+				margin: '0 5px 0 0',
+				minWidth: 'auto',
+				padding: '0'
+			}
 		}
 		return (
 			<div key={riff.id}
@@ -51,17 +62,35 @@ class Riff extends React.Component {
 				<FlatButton fullWidth
 					style={styles.button}
 					className="riff">
-					<div className="riff-info">
-						<img src={`${this.props.globalText.api.aws}/riffs-album-covers/${riff.id}.jpg`} alt="album"
-              style={styles.imgStyle} />
-						<div className="riff-text">
-							<div className="riff-title"
-                style={styles.title}>{riff.title}</div>
-							<div className="riff-artist">
-								<section style={styles.artist}>{riff.album} ({riff.year})</section>
-								<b style={styles.artist}> &#8211; </b>
-								<section style={styles.artist}>{riff.artist}</section>
+					<div className="riff-inner"
+						style={styles.right}>
+						<div className="riff-info">
+							<img src={`${this.props.globalText.api.aws}/riffs-album-covers/${riff.id}.jpg`} alt="album"
+								style={styles.imgStyle} />
+							<div className="riff-text">
+								<div className="riff-title"
+									style={styles.title}>{riff.title}</div>
+								{this.state.more ? (
+									<div className="riff-artist-more">
+										<div className="riff-artist-more-album">{`${riff.album} (${riff.year})`}</div>
+										<div className="riff-artist-more-artist">{riff.artist}</div>
+									</div>
+								) : (
+									<div className="riff-artist">
+										<section style={styles.artist}>{riff.album} ({riff.year})</section>
+										<b style={styles.artist}> &#8211; </b>
+										<section style={styles.artist}>{riff.artist}</section>
+									</div>
+								)}
 							</div>
+						</div>
+						<div className="riff-right">
+							<FlatButton style={styles.icon}>
+								<i className="material-icons">done</i>
+							</FlatButton>
+							<FlatButton style={styles.icon}>
+								<i className="material-icons">expand_more</i>
+							</FlatButton>
 						</div>
 					</div>
 				</FlatButton>
@@ -89,8 +118,8 @@ class GuitarRiffs extends React.Component {
 	}
 	
 	componentDidMount() {
-    axios.get(`${this.props.globalText.api.url}/scales`)
-      .then(response => this.setState({ riffs: response.data }))
+    axios.get(`${this.props.globalText.api.url}/riffs`)
+      .then(response => this.setState({ riffs: orderBy(response.data, ['title'],['asc']) }))
       .catch(error => this.setState({ riffs: 'error' }))
 	}
 	
@@ -108,10 +137,10 @@ class GuitarRiffs extends React.Component {
 
 					<Heading onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle={`${this.props.riffsData.length + 1} riffs`}>Famous Rock Riffs</Heading>
+						subtitle={`${this.state.riffs.length + 1} riffs`}>Famous Rock Riffs</Heading>
 					{this.state.content1 ? (
 						<div className="riffs">
-							{this.props.riffsData.map((riff, index) => <Riff globalText={this.props.globalText} riff={riff} />)}
+							{this.state.riffs.map((riff, index) => <Riff globalText={this.props.globalText} riff={riff} />)}
 						</div>
 					) : null}
 
