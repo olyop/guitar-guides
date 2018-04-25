@@ -53,11 +53,13 @@
 					align-items: flex-start;
 					display: flex; }
 					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-album {
+            transition: .3s all;
 						font-weight: 400;
 						padding-bottom: 5px;
 						line-height: 1;
 						font-size: 19px; }
 					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-artist {
+            transition: .3s all;
 						font-weight: 600;
 						color: #F44336;
 						line-height: 1;

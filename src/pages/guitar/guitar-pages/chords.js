@@ -14,7 +14,7 @@ class StandardChords extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			content1: true,
+			content1: false,
 			standardChords: null
 		}
     this.toggleContent1 = this.toggleContent1.bind(this)
@@ -37,12 +37,9 @@ class StandardChords extends React.Component {
 		} else if (this.state.standardChords.constructor === Array) {
 			return (
 				<div>
-					
 					<Heading onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle="15 chords">
-						Common Chords
-					</Heading>
+						subtitle="15 chords">Common Chords</Heading>
 					{this.state.content1 ? (
 						<div>
 							<p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
@@ -54,8 +51,6 @@ class StandardChords extends React.Component {
 							</div>
 						</div>
 					) : null}
-					
-					
 				</div>
 			)
 		}
@@ -67,10 +62,7 @@ class GuitarChords extends React.Component {
   
   constructor(props) {
     super(props)
-    this.state = {
-      content1: false,
-      content2: true
-    }
+    this.state = { content1: true }
     this.toggleContent1 = this.toggleContent1.bind(this)
   }
   
@@ -81,7 +73,7 @@ class GuitarChords extends React.Component {
     return (
       <div id="guitar-chords">
         
-        <StandardChords  appState={this.props.appState}
+        <StandardChords appState={this.props.appState}
 					globalText={this.props.globalText}
 					theoryData={this.props.theoryData} />
 				

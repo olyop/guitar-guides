@@ -85,7 +85,8 @@ const ChordChart = props => {
 		)
 	})
 	
-	let iconText, iconStyle = {
+	let iconText,
+      iconStyle = {
 		color: props.completed ? '#fff' : '#333',
 		backgroundColor: props.completed && props.progressLoading !== 'error' ? '#4CAF50' : null
 	}
