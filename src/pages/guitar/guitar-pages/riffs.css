@@ -1,69 +1,5 @@
 .riffs {
 	border-bottom: 1px solid #E0E0E0; }
-	.riffs .riff {}
-		.riffs .riff .riff-inner {
-       transition: .3s all;
-			display: flex;
-			justify-content: space-between; }
-		.riffs .riff .riff-right {
-			display: flex;
-			height: 100%;
-			justify-content: flex-start; }
-			.riffs .riff .riff-right i {
-				cursor: pointer;
-				padding: 3px;
-				font-size: 30px; }
-		.riffs .riff .riff-info {
-			padding: 10px;
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: row; }
-			.riffs .riff .riff-info img {
-        transition: .3s all;
-				border-radius: 3px;
-				box-shadow:
-					0 0 4px rgba(0,0,0,.14),
-					0 4px 8px rgba(0,0,0,.28); }
-			.riffs .riff .riff-info .riff-text {
-				display: flex;
-				flex-direction: column; }
-				.riffs .riff .riff-info .riff-text .riff-title {
-          transition: .3s all;
-					line-height: 1;
-					text-align: left;
-					padding-bottom: 5px;
-					font-weight: 700; }
-				.riffs .riff .riff-info .riff-text .riff-artist {
-					display: flex;
-					justify-content: flex-start; }
-					.riffs .riff .riff-info .riff-text .riff-artist section,
-					.riffs .riff .riff-info .riff-text .riff-artist b {
-            transition: .3s all;
-						line-height: 1;
-						font-size: 18px;
-						text-align: left;
-						font-weight: 400; }
-						.riffs .riff .riff-info .riff-text .riff-artist b {
-							margin: 0 3px; }
-						.riffs .riff .riff-info .riff-text .riff-artist section:hover {
-							text-decoration: underline; }
-
-				.riffs .riff .riff-info .riff-text .riff-artist-more {
-					flex-direction: column;
-					align-items: flex-start;
-					display: flex; }
-					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-album {
-            transition: .3s all;
-						font-weight: 400;
-						padding-bottom: 5px;
-						line-height: 1;
-						font-size: 19px; }
-					.riffs .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-artist {
-            transition: .3s all;
-						font-weight: 600;
-						color: #F44336;
-						line-height: 1;
-						font-size: 23px; }
 
 	.riffs .riff .riff-more {
 		padding: 0 10px 10px 10px; }
@@ -71,11 +7,3 @@
 			line-height: 1;
 			margin: 0;
 			font-size: 16px; }
-
-@media (min-width: 768px) {
-  .riffs .riff .riff-info,
-	.riffs .riff .riff-right {
-    padding: 15px; }
-	.riffs .riff .riff-more {
-		padding: 0 15px 15px 15px; }
-}

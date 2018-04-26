@@ -1,0 +1,83 @@
+.riff {}
+  .riff .riff-inner {
+    transition: .3s all;
+    display: flex;
+    justify-content: space-between; }
+  .riff .riff-right {
+    display: flex;
+    height: 100%;
+    padding: 12px;
+    justify-content: flex-start; }
+    .riff .riff-right i {
+      border-radius: 100%;
+      cursor: pointer;
+      font-size: 30px; }
+  .riff .riff-info {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row; }
+    .riff .riff-info img {
+      transition: .3s all;
+      border-radius: 3px;
+      margin-right: 10px;
+      box-shadow:
+        0 0 4px rgba(0,0,0,.14),
+        0 4px 8px rgba(0,0,0,.28); }
+    .riff .riff-info .riff-text {
+      display: flex;
+      flex-direction: column; }
+      .riff .riff-info .riff-text .riff-title {
+        font-size: 18px;
+        transition: .3s all;
+        line-height: 1;
+        text-align: left;
+        padding-bottom: 5px;
+        font-weight: 700; }
+      .riff .riff-info .riff-text .riff-artist {
+        display: flex;
+        justify-content: flex-start; }
+        .riff .riff-info .riff-text .riff-artist section,
+        .riff .riff-info .riff-text .riff-artist b {
+          transition: .3s all;
+          line-height: 1;
+          font-size: 16px;
+          text-align: left;
+          font-weight: 400; }
+          .riff .riff-info .riff-text .riff-artist b {
+            margin: 0 3px; }
+          .riff .riff-info .riff-text .riff-artist section:hover {
+            text-decoration: underline; }
+
+      .riff .riff-info .riff-text .riff-artist-more {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex; }
+        .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-album {
+          transition: .3s all;
+          font-weight: 400;
+          padding-bottom: 5px;
+          line-height: 1;
+          font-size: 19px; }
+        .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-artist {
+          transition: .3s all;
+          font-weight: 600;
+          color: #F44336;
+          line-height: 1;
+          font-size: 23px; }
+
+@media (min-width: 768px) {
+  .riff .riff-info {
+    padding: 15px; }
+    .riff .riff-info img {
+      margin-right: 15px; }
+    .riff .riff-info .riff-text .riff-title {
+      font-size: 21px; }
+    .riff .riff-info .riff-text .riff-artist section,
+    .riff .riff-info .riff-text .riff-artist b {
+      font-size: 17px; }
+  .riff .riff-right {
+    padding: 20px; }
+	.riff .riff-more {
+		padding: 0 15px 15px 15px; }
+}

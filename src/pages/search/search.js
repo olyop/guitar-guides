@@ -31,13 +31,15 @@ class Search extends React.Component {
     Promise.all([
       axios.get(`${this.props.globalText.api.url}/standardChords`),
       axios.get(`${this.props.globalText.api.url}/chordChooser`),
-			axios.get(`${this.props.globalText.api.url}/scales`)
+			axios.get(`${this.props.globalText.api.url}/scales`),
+      axios.get(`${this.props.globalText.api.url}/riffs`)
     ])
-    .then(([response1, response2, response3]) => {
+    .then(([response1, response2, response3, response4]) => {
 			const database = {
 				standardChords: response1.data,
 				chordChooser: transfer3dimensional(response2.data),
-				scales: transfer3dimensional(response3.data)
+				scales: transfer3dimensional(response3.data),
+        riffs: response4.data
 			}
       this.setState(
 				{ database },
@@ -60,7 +62,7 @@ class Search extends React.Component {
 			if (includes(input, maliciousSubStrings[i])) { flag = true }
 		}
     this.setState({
-      input: input,
+      input: input.toLowerCase(),
       isInputMalicious: flag
     })
 	}

@@ -2,22 +2,22 @@ import React from 'react'
 
 import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
-import { findChordMatches, findPageMatches } from './find-matches'
+import { findChordMatches, findPageMatches, findRiffMatches } from './find-matches'
 
 import { Link } from 'react-router-dom'
 import Ad from '../../common/ad'
+import Riff from '../../common/riff'
 import Heading from '../../common/heading'
 import SadFace from '../../common/sad-face'
 import ChordChart from '../../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
 
+const adStyle = { marginTop: '10px' }
+
 class PageSearchResults extends React.Component {
-	
 	constructor(props) {
 		super(props)
-		this.state = {
-			content: true
-		}
+		this.state = { content: true }
 		this.handleContent = this.handleContent.bind(this)
 	}
 	
@@ -28,7 +28,6 @@ class PageSearchResults extends React.Component {
 		const matches = this.props.matches
 		return (
 			<div className="search-results-content">
-        
 				<Heading onClick={this.handleContent}
 					active={this.state.content}
 					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading>
@@ -44,16 +43,13 @@ class PageSearchResults extends React.Component {
             ))}
           </div>
 				) : null}
-        
-        <Ad style={{ margin: '0' }} />
-				
+        <Ad style={adStyle} />
 			</div>
 		)
 	}
 }
 
 class ChordSearchResults extends React.Component {
-	
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -73,7 +69,6 @@ class ChordSearchResults extends React.Component {
 		const matches = this.props.matches 
 		return (
 			<div className="search-results-content">
-        
 				<Heading onClick={this.handleContent}
 					active={this.state.content}
 					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Chords</Heading>
@@ -102,18 +97,70 @@ class ChordSearchResults extends React.Component {
             
 						{matches.length > 5 ? (
               <FlatButton onClick={this.handleMore}
-                label={this.state.more ? 'Less...' : 'Show all'}
-								style={{ marginBottom: '10px' }} />
+                label={this.state.more ? 'Less...' : 'Show all'} />
             ) : null}
             
 					</div>
 				) : null}
-            
-        <Ad style={{ margin: '0' }} />
-        
+        <Ad style={adStyle} />
 			</div>
 		)
 	}
+}
+
+class RiffSearchResults extends React.Component {
+ constructor(props) {
+		super(props)
+		this.state = {
+			content: true,
+			more: false
+		}
+		this.handleMore = this.handleMore.bind(this)
+		this.handleContent = this.handleContent.bind(this)
+	}
+	
+	handleMore() {
+		this.setState({ more: !this.state.more }) }
+	handleContent() {
+		this.setState({ content: !this.state.content }) }
+  
+  render() {
+		const matches = this.props.matches
+    return (
+      <div className="search-results-content">
+        <Heading onClick={this.handleContent}
+					active={this.state.content}
+					subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Riffs</Heading>
+				{this.state.content ? (
+					<div>
+          
+            {this.state.more ? (
+              <div className="search-results-riffs">
+                {matches.map(riff => (
+                  <Riff key={riff.id}
+                    globalText={this.props.globalText} riff={riff} />
+                ))}
+              </div>
+            ) : (
+              <div className="search-results-riffs">
+                {matches.slice(0,5).map(riff => (
+                  <Riff key={riff.id}
+                    globalText={this.props.globalText} riff={riff} />
+                ))}
+              </div>
+            )}
+            
+            {matches.length > 5 ? (
+              <FlatButton onClick={this.handleMore}
+                label={this.state.more ? 'Less...' : 'Show all'} />
+            ) : null}
+          
+          </div>
+				) : null}
+        <Ad style={adStyle} />
+      </div>
+    )
+  }
 }
 
 const SearchResults = props => {
@@ -124,7 +171,8 @@ const SearchResults = props => {
   } else {
 		const pageMatches = orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc'])
     const chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc'])
-    if (chordMatches.length === 0 && pageMatches.length === 0) {
+    const riffmatches = orderBy(findRiffMatches(props.database.riffs, props.input), ['title'], ['asc'])
+    if (chordMatches.length === 0 && pageMatches.length === 0 && riffmatches.length === 0) {
       return <SadFace>No Search Results.</SadFace>
     } else {
       return (
@@ -140,6 +188,12 @@ const SearchResults = props => {
               updateProgressChords={props.updateProgressChords}
 							updateProgressChordsLoading={props.updateProgressChordsLoading}
 							matches={chordMatches} />
+          )}
+          
+          {riffmatches.length === 0 ? null : (
+            <RiffSearchResults appState={props.appState}
+              globalText={props.globalText}
+              matches={riffmatches} />
           )}
           
         </div>
