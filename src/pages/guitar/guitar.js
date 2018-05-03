@@ -9,7 +9,6 @@ import { NavLink, Route } from 'react-router-dom'
 import GuitarHome from './guitar-pages/home'
 import GuitarScales from './guitar-pages/scales'
 import GuitarChords from './guitar-pages/chords'
-import GuitarExercises from './guitar-pages/exercises'
 import GuitarRiffs from './guitar-pages/riffs'
 import GuitarAbout from './guitar-pages/about'
 import GuitarSettings from './guitar-pages/settings'
@@ -62,12 +61,6 @@ const Guitar = props => (
 							<p>Scales</p>
 						</NavLink>
 						
-						<NavLink to="/guitar/exercises"
-							activeClassName="guitar-nav-item-active">
-							<div className="guitar-nav-strip"></div>
-							<p>Exercises</p>
-						</NavLink>
-						
 						<NavLink to="/guitar/riffs"
 							activeClassName="guitar-nav-item-active">
 							<div className="guitar-nav-strip"></div>
@@ -87,38 +80,35 @@ const Guitar = props => (
 			<div id="guitar-content">
 				<div className="container">
 					
-					<Route path={`${props.match.path}`} exact render={ ({ match }) => (
+					<Route path={`${props.match.path}`} exact render={ () => (
 						<GuitarHome />
 					)} />
 					
-					<Route path={`${props.match.path}/chords`} exact render={ ({ match }) => (
+					<Route path={`${props.match.path}/chords`} exact render={ () => (
 						<GuitarChords appState={props.appState}
 							globalText={props.globalText}
               theoryData={props.theoryData}
               updateProgressChords={props.updateProgressChords} />
 					)} />
 				
-					<Route path={`${props.match.path}/scales`} exact render={ ({ match }) => (
+					<Route path={`${props.match.path}/scales`} exact render={ () => (
 						<GuitarScales appState={props.appState}
 							globalText={props.globalText}
 							theoryData={props.theoryData} />
 					)} />
 					
-					<Route path={`${props.match.path}/exercises`} exact render={ ({ match }) => (
-						<GuitarExercises />
-					)} />
-					
-					<Route path={`${props.match.path}/riffs`} exact render={ ({ match }) => (
+					<Route path={`${props.match.path}/riffs`} exact render={ () => (
 						<GuitarRiffs appState={props.appState}
 							globalText={props.globalText}
 							theoryData={props.theoryData} />
 					)} />
 					
-					<Route path={`${props.match.path}/about`} exact render={ ({ match }) => (
-						<GuitarAbout />
+					<Route path={`${props.match.path}/about`} exact render={ () => (
+						<GuitarAbout appState={props.appState}
+							globalText={props.globalText} />
 					)} />
 					
-					<Route path={`${props.match.path}/settings`} exact render={ ({ match }) => (
+					<Route path={`${props.match.path}/settings`} exact render={ () => (
 						<GuitarSettings />
 					)} />
 				

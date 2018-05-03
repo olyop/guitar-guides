@@ -40,7 +40,7 @@ class GuitarRiffs extends React.Component {
 
 					<Heading onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle={`${this.state.riffs.length + 1} riffs`}>Famous Rock Riffs</Heading>
+						subtitle={`${this.state.riffs.length + 1} famous rock riffs`}>Riffs</Heading>
 					{this.state.content1 ? (
 						<div className="riffs">
 							{this.state.riffs.map((riff, index) => <Riff key={riff.id} globalText={this.props.globalText} riff={riff} />)}

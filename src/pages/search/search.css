@@ -78,7 +78,7 @@
 
       #search .search-results .search-results-riffs {
         border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 15px; }
+        margin-bottom: 10px; }
 
 @media (min-width: 500px) {
   #search .search-top .search-top-icon {

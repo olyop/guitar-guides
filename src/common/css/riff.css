@@ -26,9 +26,10 @@
         0 4px 8px rgba(0,0,0,.28); }
     .riff .riff-info .riff-text {
       display: flex;
+			justify-content: center;
       flex-direction: column; }
       .riff .riff-info .riff-text .riff-title {
-        font-size: 18px;
+        font-size: 20px;
         transition: .3s all;
         line-height: 1;
         text-align: left;
@@ -66,6 +67,9 @@
           line-height: 1;
           font-size: 23px; }
 
+	.riff .riff-more {
+		padding: 0 15px 15px 15px; }
+
 @media (min-width: 768px) {
   .riff .riff-info {
     padding: 15px; }
@@ -78,6 +82,4 @@
       font-size: 17px; }
   .riff .riff-right {
     padding: 20px; }
-	.riff .riff-more {
-		padding: 0 15px 15px 15px; }
 }

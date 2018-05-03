@@ -34,7 +34,7 @@ class Search extends React.Component {
 			axios.get(`${this.props.globalText.api.url}/scales`),
       axios.get(`${this.props.globalText.api.url}/riffs`)
     ])
-    .then(([response1, response2, response3, response4]) => {
+    .then(([response1, response2, response3, response4, response5]) => {
 			const database = {
 				standardChords: response1.data,
 				chordChooser: transfer3dimensional(response2.data),

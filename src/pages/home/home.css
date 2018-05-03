@@ -9,7 +9,7 @@
 		height: 92vh; }
 		#home .home-cards .home-section {
 			margin: 0px;
-			width: calc(100% / 3); }
+			width: calc(100% / 2); }
 			#home .home-cards .home-section .home-section-inner {
 				cursor: pointer;
 				padding: 0px;

@@ -25,13 +25,14 @@ class Riff extends React.Component {
 				borderColor: '#e0e0e0',
 				padding: '0'
 			},
+			riffText: { justifyContent: this.state.more ? 'flex-start' : 'center' },
 			button: {
 				padding: '0',
 				height: 'auto'
 			},
       imgStyle: {
-        width: this.state.more ? '150px' : '42px',
-        height: this.state.more ? '150px' : '42px'
+        width: this.state.more ? '150px' : '41px',
+        height: this.state.more ? '150px' : '41px'
       },
       title: {
 				paddingBottom: this.state.more ? '5px' : '0',
@@ -52,7 +53,8 @@ class Riff extends React.Component {
 						<div className="riff-info">
 							<img src={`${this.props.globalText.api.aws}/riffs-album-covers/${riff.id}.jpg`} alt="album"
 								style={styles.imgStyle} />
-							<div className="riff-text">
+							<div className="riff-text"
+								style={styles.riffText}>
 								<div className="riff-title"
 									style={styles.title}>{riff.title}</div>
 								{this.state.more ? (
