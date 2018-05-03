@@ -30,6 +30,12 @@
 	height: auto;
 }
 
+#guitar-content #guitar-about p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
 @media (min-width: 500px) {
 	#guitar-content #guitar-chords .guitar-chords-track {
 		justify-content: space-between; }
