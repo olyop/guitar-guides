@@ -7,10 +7,12 @@
 		flex-direction: column;
 		justify-content: flex-start; }
 
-		.guitar-tab h1 {
-			width: 330px;
-			margin: 0 0 10px 0;
-			font-size: 16px; }
+		.guitar-tab .guitar-tab-header {
+			display: flex;
+			justify-content: space-between; }
+			.guitar-tab .guitar-tab-header h1 {
+				margin: 0 0 10px 0;
+				font-size: 16px; }
 
 		.guitar-tab .guitar-tab-section {
 			width: 330px;
@@ -31,7 +33,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center; }
-				.guitar-tab .guitar-tab-section .guitar-tab-note p {
+				.guitar-tab .guitar-tab-section .guitar-tab-note .guitar-tab-note-fret,
+				.guitar-tab .guitar-tab-section .guitar-tab-note .guitar-tab-note-note {
 					transition: .2s all;
 					width: 17px;
 					height: 17px;
@@ -39,6 +42,7 @@
 					text-align: center;
 					background-color: #fff;
 					font-size: 13px; }
+
 
 @media (min-width: 768px) {
 	.guitar-tab .guitar-tabs {

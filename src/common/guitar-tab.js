@@ -1,13 +1,14 @@
 import React from 'react'
 
+import Toggle from 'material-ui/Toggle'
+
 import './css/guitar-tab.css'
+
+const leftSpacing = [5,30,55,80,105,130,155,180,205,230,255,280,305]
+const stringSpacing = [0,20,40,60,80,100]
 
 class GuitarTabSection extends React.Component {	
 	render() {
-		
-		const stringSpacing = [0,20,40,60,80,100]
-		const leftSpacing = [5,30,55,80,105,130,155,180,205,230,255,280,305]
-		
 		return (
 			<div className="guitar-tab-section">
 				
@@ -29,7 +30,10 @@ class GuitarTabSection extends React.Component {
 							<div key={index}
 								className="guitar-tab-note"
 								style={noteStyle}>
-								<p>{section.fret}</p>
+								<div className="guitar-tab-note-fret"
+									style={{ display: this.props.hover ? 'none' : 'block' }}>{section.fret}</div>
+								<div className="guitar-tab-note-note"
+									style={{ display: this.props.hover ? 'block' : 'none' }}>{section.note}</div>
 							</div>
 						)
 					}
@@ -41,6 +45,19 @@ class GuitarTabSection extends React.Component {
 }
 
 class GuitarTab extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		this.state = { hover: false }
+		this.handleHover = this.handleHover.bind(this)
+	}
+	
+	handleHover() {
+		this.setState({ hover: !this.state.hover })	}
+	
+	componentWillReceiveProps() {
+		this.setState({ hover: false })	}
+	
 	render() {
 		
 		// Calcuate number of tab sections needed
@@ -49,15 +66,34 @@ class GuitarTab extends React.Component {
 		for (let i = 0; i < numOfTabSection; i++) {
 			tabSections[i] = i + 1 
 		}
+		
+		const styles = {
+			thumbOff: { backgroundColor: '#ffcccc' },
+			trackOff: { backgroundColor: '#ff9d9d' },
+			thumbSwitched: { backgroundColor: 'red' },
+			trackSwitched: { backgroundColor: '#ff9d9d' }
+		}
 
 		return (
 			<div className="guitar-tab">
 				
-				<h1>{this.props.scale.name}</h1>
+				<div className="guitar-tab-header"
+					style={{ width: `${330 * numOfTabSection}px` }}>
+					<h1>{this.props.scale.name}</h1>
+					<Toggle toggled={this.state.hover}
+						onToggle={this.handleHover}
+						thumbStyle={styles.thumbOff}
+						trackStyle={styles.trackOff}
+						thumbSwitchedStyle={styles.thumbSwitched}
+						trackSwitchedStyle={styles.trackSwitched}
+						style={{ width: 'auto' }}
+						label="Notes" />
+				</div>
 				
 				<div className="guitar-tabs">
 					{tabSections.map((section, index) => (
 						<GuitarTabSection key={index}
+							hover={this.state.hover}
 							tab={this.props.scale.tab.slice(0 + (index * 13), 13 + (index * 13))} />
 					))}
 				</div>
