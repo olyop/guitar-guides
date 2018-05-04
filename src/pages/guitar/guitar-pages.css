@@ -27,8 +27,8 @@
 
 #guitar-content #guitar-about img {
 	width: 100%;
-	height: auto;
-}
+	margin: 0;
+	height: auto; }
 
 #guitar-content #guitar-about p {
   line-height: 1.6;
@@ -54,4 +54,7 @@
 			font-size: 16px; 	}
 		#guitar-content #guitar-home .col-md-6 {
 			padding-bottom: 0; }
+		#guitar-content #guitar-about img {
+			width: calc(100% - 80px);
+			margin: 0 40px; }
 }

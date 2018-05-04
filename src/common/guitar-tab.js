@@ -18,22 +18,58 @@ class GuitarTabSection extends React.Component {
 						style={{ top: `${line}px` }} />
 				))}
 
-				{this.props.tab.map((section, index) => {
-					if (section === null) {
+				{this.props.tab.tab.slice(0 + (this.props.index * 13), 13 + (this.props.index * 13)).map((note, index) => {
+					if (note === null) {
 						return null
+					} else if (note.same) {
+						let style = { left: `${leftSpacing[index]}px` }
+						return (
+							note.cluster.map((note, i) => {
+								let style = {
+									container: {
+										left: `${leftSpacing[index]}px`,
+										top: `${stringSpacing[note.string - 1]}px`
+									},
+									fret: { display: this.props.hover ? 'none' : 'block' },
+									note: { display: this.props.hover ? 'block' : 'none' }
+								}
+								return (
+									<div key={i}
+										className="guitar-tab-note"
+										style={style.container}>
+										<div className="guitar-tab-note-fret"
+											style={style.fret}>{note.fret}</div>
+										<div className="guitar-tab-note-note"
+											style={style.note}>{note.note}</div>
+									</div>
+								)
+							})
+						)
 					} else {
-						let noteStyle = {
-							left: `${leftSpacing[index]}px`,
-							top: `${stringSpacing[section.string - 1]}px`
+						let style = {
+							container: {
+								left: `${leftSpacing[index]}px`,
+								top: `${stringSpacing[note.string - 1]}px`
+							},
+							fret: {
+								display: this.props.hover ? 'none' : 'block',
+								fontWeight: note.root ? '800' : null,
+								color: note.root ? '#F44336' : null
+							},
+							note: {
+								display: this.props.hover ? 'block' : 'none',
+								fontWeight: note.root ? '800' : null,
+								color: note.root ? '#F44336' : null
+							}
 						}
 						return (
 							<div key={index}
 								className="guitar-tab-note"
-								style={noteStyle}>
+								style={style.container}>
 								<div className="guitar-tab-note-fret"
-									style={{ display: this.props.hover ? 'none' : 'block' }}>{section.fret}</div>
+									style={style.fret}>{note.fret}</div>
 								<div className="guitar-tab-note-note"
-									style={{ display: this.props.hover ? 'block' : 'none' }}>{section.note}</div>
+									style={style.note}>{note.note}</div>
 							</div>
 						)
 					}
@@ -61,15 +97,15 @@ class GuitarTab extends React.Component {
 	render() {
 		
 		// Calcuate number of tab sections needed
-		let numOfTabSection = Math.ceil(this.props.scale.tab.length / 12)
+		let numOfTabSection = Math.ceil(this.props.tab.tab.length / 12)
 		let tabSections = new Array(numOfTabSection)
 		for (let i = 0; i < numOfTabSection; i++) {
 			tabSections[i] = i + 1 
 		}
 		
-		const styles = {
-			thumbOff: { backgroundColor: '#ffcccc' },
-			trackOff: { backgroundColor: '#ff9d9d' },
+		let styles = {
+			thumbOff: { backgroundColor: '#BDBDBD' },
+			trackOff: { backgroundColor: '#EEEEEE' },
 			thumbSwitched: { backgroundColor: 'red' },
 			trackSwitched: { backgroundColor: '#ff9d9d' }
 		}
@@ -79,11 +115,9 @@ class GuitarTab extends React.Component {
 				
 				<div className="guitar-tab-header"
 					style={{ width: `${330 * numOfTabSection}px` }}>
-					<h1>{this.props.scale.name}</h1>
+					<h1>{this.props.tab.name}</h1>
 					<Toggle toggled={this.state.hover}
 						onToggle={this.handleHover}
-						thumbStyle={styles.thumbOff}
-						trackStyle={styles.trackOff}
 						thumbSwitchedStyle={styles.thumbSwitched}
 						trackSwitchedStyle={styles.trackSwitched}
 						style={{ width: 'auto' }}
@@ -93,8 +127,9 @@ class GuitarTab extends React.Component {
 				<div className="guitar-tabs">
 					{tabSections.map((section, index) => (
 						<GuitarTabSection key={index}
+							index={index}
 							hover={this.state.hover}
-							tab={this.props.scale.tab.slice(0 + (index * 13), 13 + (index * 13))} />
+							tab={this.props.tab} />
 					))}
 				</div>
 				

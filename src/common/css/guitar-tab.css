@@ -35,7 +35,6 @@
 				justify-content: center; }
 				.guitar-tab .guitar-tab-section .guitar-tab-note .guitar-tab-note-fret,
 				.guitar-tab .guitar-tab-section .guitar-tab-note .guitar-tab-note-note {
-					transition: .2s all;
 					width: 17px;
 					height: 17px;
 					margin: 0;
@@ -52,4 +51,9 @@
 		width: 660px;	}
 	.guitar-tab .guitar-tab-section {
 		margin-bottom: 0; }
+}
+
+@media (min-width: 1200px) {
+	.guitar-tab .guitar-tabs {
+		width: 990px;	}
 }

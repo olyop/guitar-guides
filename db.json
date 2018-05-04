@@ -1,5 +1,29 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "OuFVs4MG7e",
+      "name": "Oliver",
+      "surname": "Plummer",
+      "experience": 2,
+      "dateJoined": "04/05/2018",
+      "progress": {
+        "guitar": {
+          "chords": [
+            "HzYummygsF",
+            "NoXgQFIHXw",
+            "LfeGibuDhj",
+            "DVBuUnMTJv"
+          ],
+          "scales": {}
+        },
+        "bass": {
+          "major": false,
+          "minor": false
+        },
+        "theory": {}
+      }
+    }
+  ],
   "standardChords": [
     {
       "id": "voiTzokFTl",
@@ -4416,7 +4440,8 @@
             {
               "note": "A",
               "fret": 0,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "B",
@@ -4451,7 +4476,8 @@
             {
               "note": "A",
               "fret": 2,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "B",
@@ -4493,7 +4519,8 @@
             {
               "note": "A",
               "fret": 5,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "B",
@@ -4528,7 +4555,8 @@
             {
               "note": "A",
               "fret": 7,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "B",
@@ -4563,7 +4591,8 @@
             {
               "note": "A",
               "fret": 5,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "B",
@@ -4600,7 +4629,8 @@
             {
               "note": "A",
               "fret": 12,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "B",
@@ -4635,7 +4665,8 @@
             {
               "note": "A",
               "fret": 14,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "B",
@@ -4677,7 +4708,8 @@
             {
               "note": "A",
               "fret": 17,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "B",
@@ -4712,7 +4744,8 @@
             {
               "note": "A",
               "fret": 19,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "B",
@@ -4747,7 +4780,8 @@
             {
               "note": "A",
               "fret": 17,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "B",
@@ -4781,7 +4815,8 @@
             {
               "note": "A",
               "fret": 0,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C",
@@ -4806,7 +4841,8 @@
             {
               "note": "A",
               "fret": 2,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C",
@@ -4838,7 +4874,8 @@
             {
               "note": "A",
               "fret": 5,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "C",
@@ -4863,7 +4900,8 @@
             {
               "note": "A",
               "fret": 7,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "C",
@@ -4888,7 +4926,8 @@
             {
               "note": "A",
               "fret": 5,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "C",
@@ -4915,7 +4954,8 @@
             {
               "note": "A",
               "fret": 12,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C",
@@ -4940,7 +4980,8 @@
             {
               "note": "A",
               "fret": 14,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C",
@@ -4972,7 +5013,8 @@
             {
               "note": "A",
               "fret": 17,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "C",
@@ -4997,7 +5039,8 @@
             {
               "note": "A",
               "fret": 19,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "C",
@@ -5022,7 +5065,8 @@
             {
               "note": "A",
               "fret": 17,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "C",
@@ -5058,7 +5102,8 @@
             {
               "note": "A#",
               "fret": 1,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C",
@@ -5093,7 +5138,8 @@
             {
               "note": "A#",
               "fret": 3,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C",
@@ -5135,7 +5181,8 @@
             {
               "note": "A#",
               "fret": 6,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "C",
@@ -5170,7 +5217,8 @@
             {
               "note": "A#",
               "fret": 8,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "C",
@@ -5205,7 +5253,8 @@
             {
               "note": "A#",
               "fret": 6,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "C",
@@ -5242,7 +5291,8 @@
             {
               "note": "A#",
               "fret": 13,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C",
@@ -5277,7 +5327,8 @@
             {
               "note": "A#",
               "fret": 15,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C",
@@ -5331,7 +5382,8 @@
             {
               "note": "A#",
               "fret": 1,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C#",
@@ -5356,7 +5408,8 @@
             {
               "note": "A#",
               "fret": 3,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C#",
@@ -5388,7 +5441,8 @@
             {
               "note": "A#",
               "fret": 6,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "C#",
@@ -5413,7 +5467,8 @@
             {
               "note": "A#",
               "fret": 8,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "C#",
@@ -5438,7 +5493,8 @@
             {
               "note": "A#",
               "fret": 6,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "C#",
@@ -5465,7 +5521,8 @@
             {
               "note": "A#",
               "fret": 13,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C#",
@@ -5490,7 +5547,8 @@
             {
               "note": "A#",
               "fret": 15,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C#",
@@ -5541,7 +5599,8 @@
             {
               "note": "B",
               "fret": 2,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C#",
@@ -5576,7 +5635,8 @@
             {
               "note": "B",
               "fret": 4,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C#",
@@ -5618,7 +5678,8 @@
             {
               "note": "B",
               "fret": 7,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "C#",
@@ -5653,7 +5714,8 @@
             {
               "note": "B",
               "fret": 9,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "C#",
@@ -5688,7 +5750,8 @@
             {
               "note": "B",
               "fret": 7,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "C#",
@@ -5725,7 +5788,8 @@
             {
               "note": "B",
               "fret": 14,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "C#",
@@ -5760,7 +5824,8 @@
             {
               "note": "B",
               "fret": 16,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "C#",
@@ -5814,7 +5879,8 @@
             {
               "note": "B",
               "fret": 2,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D",
@@ -5839,7 +5905,8 @@
             {
               "note": "B",
               "fret": 4,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D",
@@ -5871,7 +5938,8 @@
             {
               "note": "B",
               "fret": 7,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "D",
@@ -5896,7 +5964,8 @@
             {
               "note": "B",
               "fret": 9,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "D",
@@ -5948,7 +6017,8 @@
             {
               "note": "B",
               "fret": 14,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D",
@@ -5973,7 +6043,8 @@
             {
               "note": "B",
               "fret": 16,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D",
@@ -6024,7 +6095,8 @@
             {
               "note": "C",
               "fret": 3,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D",
@@ -6059,7 +6131,8 @@
             {
               "note": "C",
               "fret": 5,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D",
@@ -6101,7 +6174,8 @@
             {
               "note": "C",
               "fret": 8,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "D",
@@ -6136,7 +6210,8 @@
             {
               "note": "C",
               "fret": 10,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "D",
@@ -6208,7 +6283,8 @@
             {
               "note": "C",
               "fret": 15,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D",
@@ -6243,7 +6319,8 @@
             {
               "note": "C",
               "fret": 17,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D",
@@ -6297,7 +6374,8 @@
             {
               "note": "C",
               "fret": 3,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D#",
@@ -6322,7 +6400,8 @@
             {
               "note": "C",
               "fret": 5,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D#",
@@ -6354,7 +6433,8 @@
             {
               "note": "C",
               "fret": 8,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "D#",
@@ -6379,7 +6459,8 @@
             {
               "note": "C",
               "fret": 10,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "D#",
@@ -6404,7 +6485,8 @@
             {
               "note": "C",
               "fret": 8,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "D#",
@@ -6431,7 +6513,8 @@
             {
               "note": "C",
               "fret": 15,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D#",
@@ -6456,7 +6539,8 @@
             {
               "note": "C",
               "fret": 17,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D#",
@@ -6507,7 +6591,8 @@
             {
               "note": "C#",
               "fret": 4,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D#",
@@ -6542,7 +6627,8 @@
             {
               "note": "C#",
               "fret": 6,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D#",
@@ -6584,7 +6670,8 @@
             {
               "note": "C#",
               "fret": 9,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "D#",
@@ -6619,7 +6706,8 @@
             {
               "note": "C#",
               "fret": 11,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "D#",
@@ -6654,7 +6742,8 @@
             {
               "note": "C#",
               "fret": 9,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "D#",
@@ -6691,7 +6780,8 @@
             {
               "note": "C#",
               "fret": 16,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "D#",
@@ -6726,7 +6816,8 @@
             {
               "note": "C#",
               "fret": 18,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "D#",
@@ -6780,7 +6871,8 @@
             {
               "note": "C#",
               "fret": 4,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "E",
@@ -6805,7 +6897,8 @@
             {
               "note": "C#",
               "fret": 6,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "E",
@@ -6837,7 +6930,8 @@
             {
               "note": "C#",
               "fret": 9,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "E",
@@ -6862,7 +6956,8 @@
             {
               "note": "C#",
               "fret": 11,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "E",
@@ -6887,7 +6982,8 @@
             {
               "note": "C#",
               "fret": 9,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "E",
@@ -6914,7 +7010,8 @@
             {
               "note": "C#",
               "fret": 16,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "E",
@@ -6939,7 +7036,8 @@
             {
               "note": "C#",
               "fret": 18,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "E",
@@ -6990,7 +7088,8 @@
             {
               "note": "D",
               "fret": 5,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "E",
@@ -7025,7 +7124,8 @@
             {
               "note": "D",
               "fret": 7,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "E",
@@ -7067,7 +7167,8 @@
             {
               "note": "D",
               "fret": 10,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "E",
@@ -7102,7 +7203,8 @@
             {
               "note": "D",
               "fret": 12,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "E",
@@ -7137,7 +7239,8 @@
             {
               "note": "D",
               "fret": 10,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "E",
@@ -7174,7 +7277,8 @@
             {
               "note": "D",
               "fret": 17,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "E",
@@ -7209,7 +7313,8 @@
             {
               "note": "D",
               "fret": 19,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "E",
@@ -7263,7 +7368,8 @@
             {
               "note": "D",
               "fret": 5,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F",
@@ -7288,7 +7394,8 @@
             {
               "note": "D",
               "fret": 7,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F",
@@ -7320,7 +7427,8 @@
             {
               "note": "D",
               "fret": 10,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "F",
@@ -7345,7 +7453,8 @@
             {
               "note": "D",
               "fret": 12,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "F",
@@ -7370,7 +7479,8 @@
             {
               "note": "D",
               "fret": 10,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "F",
@@ -7397,7 +7507,8 @@
             {
               "note": "D",
               "fret": 17,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F",
@@ -7422,7 +7533,8 @@
             {
               "note": "D",
               "fret": 19,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F",
@@ -7473,7 +7585,8 @@
             {
               "note": "D#",
               "fret": 6,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F",
@@ -7508,7 +7621,8 @@
             {
               "note": "D#",
               "fret": 8,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F",
@@ -7550,7 +7664,8 @@
             {
               "note": "D#",
               "fret": 11,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "F",
@@ -7585,7 +7700,8 @@
             {
               "note": "D#",
               "fret": 13,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "F",
@@ -7620,7 +7736,8 @@
             {
               "note": "D#",
               "fret": 11,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "F",
@@ -7657,7 +7774,8 @@
             {
               "note": "D#",
               "fret": 18,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F",
@@ -7692,7 +7810,8 @@
             {
               "note": "D#",
               "fret": 20,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F",
@@ -7746,7 +7865,8 @@
             {
               "note": "D#",
               "fret": 6,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F#",
@@ -7771,7 +7891,8 @@
             {
               "note": "D#",
               "fret": 8,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F#",
@@ -7803,7 +7924,8 @@
             {
               "note": "D#",
               "fret": 11,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "F#",
@@ -7828,7 +7950,8 @@
             {
               "note": "D#",
               "fret": 13,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "F#",
@@ -7853,7 +7976,8 @@
             {
               "note": "D#",
               "fret": 11,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "F#",
@@ -7880,7 +8004,8 @@
             {
               "note": "D#",
               "fret": 18,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F#",
@@ -7905,7 +8030,8 @@
             {
               "note": "D#",
               "fret": 20,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F#",
@@ -7941,7 +8067,8 @@
             {
               "note": "E",
               "fret": 0,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "F#",
@@ -7976,7 +8103,8 @@
             {
               "note": "E",
               "fret": 2,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "F#",
@@ -8011,7 +8139,8 @@
             {
               "note": "E",
               "fret": 0,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "F#",
@@ -8048,7 +8177,8 @@
             {
               "note": "E",
               "fret": 7,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "F#",
@@ -8083,7 +8213,8 @@
             {
               "note": "E",
               "fret": 9,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "F#",
@@ -8125,7 +8256,8 @@
             {
               "note": "E",
               "fret": 12,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "F#",
@@ -8160,7 +8292,8 @@
             {
               "note": "E",
               "fret": 14,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "F#",
@@ -8195,7 +8328,8 @@
             {
               "note": "E",
               "fret": 12,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "F#",
@@ -8219,7 +8353,8 @@
             {
               "note": "E",
               "fret": 0,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G",
@@ -8244,7 +8379,8 @@
             {
               "note": "E",
               "fret": 2,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G",
@@ -8269,7 +8405,8 @@
             {
               "note": "E",
               "fret": 0,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G",
@@ -8296,7 +8433,8 @@
             {
               "note": "E",
               "fret": 7,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "G",
@@ -8321,7 +8459,8 @@
             {
               "note": "E",
               "fret": 9,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "G",
@@ -8353,7 +8492,8 @@
             {
               "note": "E",
               "fret": 12,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G",
@@ -8378,7 +8518,8 @@
             {
               "note": "E",
               "fret": 14,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G",
@@ -8403,7 +8544,8 @@
             {
               "note": "E",
               "fret": 12,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G",
@@ -8424,7 +8566,8 @@
             {
               "note": "F",
               "fret": 1,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G",
@@ -8459,7 +8602,8 @@
             {
               "note": "F",
               "fret": 3,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G",
@@ -8494,7 +8638,8 @@
             {
               "note": "F",
               "fret": 1,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G",
@@ -8531,7 +8676,8 @@
             {
               "note": "F",
               "fret": 8,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "G",
@@ -8566,7 +8712,8 @@
             {
               "note": "F",
               "fret": 10,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "G",
@@ -8608,7 +8755,8 @@
             {
               "note": "F",
               "fret": 13,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G",
@@ -8643,7 +8791,8 @@
             {
               "note": "F",
               "fret": 15,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G",
@@ -8678,7 +8827,8 @@
             {
               "note": "F",
               "fret": 13,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G",
@@ -8702,7 +8852,8 @@
             {
               "note": "F",
               "fret": 1,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G#",
@@ -8727,7 +8878,8 @@
             {
               "note": "F",
               "fret": 3,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G#",
@@ -8752,7 +8904,8 @@
             {
               "note": "F",
               "fret": 1,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G#",
@@ -8779,7 +8932,8 @@
             {
               "note": "F",
               "fret": 8,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "G#",
@@ -8804,7 +8958,8 @@
             {
               "note": "F",
               "fret": 10,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "G#",
@@ -8836,7 +8991,8 @@
             {
               "note": "F",
               "fret": 13,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G#",
@@ -8861,7 +9017,8 @@
             {
               "note": "F",
               "fret": 15,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G#",
@@ -8886,7 +9043,8 @@
             {
               "note": "F",
               "fret": 13,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G#",
@@ -8907,7 +9065,8 @@
             {
               "note": "F#",
               "fret": 2,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G#",
@@ -8942,7 +9101,8 @@
             {
               "note": "F#",
               "fret": 4,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G#",
@@ -8977,7 +9137,8 @@
             {
               "note": "F#",
               "fret": 2,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G#",
@@ -9014,7 +9175,8 @@
             {
               "note": "F#",
               "fret": 9,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "G#",
@@ -9049,7 +9211,8 @@
             {
               "note": "F#",
               "fret": 11,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "G#",
@@ -9091,7 +9254,8 @@
             {
               "note": "F#",
               "fret": 14,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "G#",
@@ -9126,7 +9290,8 @@
             {
               "note": "F#",
               "fret": 16,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "G#",
@@ -9161,7 +9326,8 @@
             {
               "note": "F#",
               "fret": 14,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "G#",
@@ -9185,7 +9351,8 @@
             {
               "note": "F#",
               "fret": 2,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A",
@@ -9210,7 +9377,8 @@
             {
               "note": "F#",
               "fret": 4,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A",
@@ -9235,7 +9403,8 @@
             {
               "note": "F#",
               "fret": 2,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A",
@@ -9262,7 +9431,8 @@
             {
               "note": "F#",
               "fret": 9,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "A",
@@ -9287,7 +9457,8 @@
             {
               "note": "F#",
               "fret": 11,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "A",
@@ -9319,7 +9490,8 @@
             {
               "note": "F#",
               "fret": 14,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A",
@@ -9344,7 +9516,8 @@
             {
               "note": "F#",
               "fret": 16,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A",
@@ -9369,7 +9542,8 @@
             {
               "note": "F#",
               "fret": 14,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A",
@@ -9390,7 +9564,8 @@
             {
               "note": "G",
               "fret": 3,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A",
@@ -9425,7 +9600,8 @@
             {
               "note": "G",
               "fret": 5,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A",
@@ -9460,7 +9636,8 @@
             {
               "note": "G",
               "fret": 3,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A",
@@ -9497,7 +9674,8 @@
             {
               "note": "G",
               "fret": 10,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "A",
@@ -9532,7 +9710,8 @@
             {
               "note": "G",
               "fret": 12,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "A",
@@ -9574,7 +9753,8 @@
             {
               "note": "G",
               "fret": 15,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A",
@@ -9609,7 +9789,8 @@
             {
               "note": "G",
               "fret": 17,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A",
@@ -9644,7 +9825,8 @@
             {
               "note": "G",
               "fret": 15,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A",
@@ -9668,7 +9850,8 @@
             {
               "note": "G",
               "fret": 3,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A#",
@@ -9693,7 +9876,8 @@
             {
               "note": "G",
               "fret": 5,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A#",
@@ -9718,7 +9902,8 @@
             {
               "note": "G",
               "fret": 3,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A#",
@@ -9745,7 +9930,8 @@
             {
               "note": "G",
               "fret": 10,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "A#",
@@ -9770,7 +9956,8 @@
             {
               "note": "G",
               "fret": 12,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "A#",
@@ -9802,7 +9989,8 @@
             {
               "note": "G",
               "fret": 15,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A#",
@@ -9827,7 +10015,8 @@
             {
               "note": "G",
               "fret": 17,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A#",
@@ -9873,7 +10062,8 @@
             {
               "note": "G#",
               "fret": 4,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A#",
@@ -9908,7 +10098,8 @@
             {
               "note": "G#",
               "fret": 6,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A#",
@@ -9943,7 +10134,8 @@
             {
               "note": "G#",
               "fret": 4,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A#",
@@ -9980,7 +10172,8 @@
             {
               "note": "G#",
               "fret": 11,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "A#",
@@ -10015,7 +10208,8 @@
             {
               "note": "G#",
               "fret": 13,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "A#",
@@ -10057,7 +10251,8 @@
             {
               "note": "G#",
               "fret": 16,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "A#",
@@ -10092,7 +10287,8 @@
             {
               "note": "G#",
               "fret": 18,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "A#",
@@ -10127,7 +10323,8 @@
             {
               "note": "G#",
               "fret": 16,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "A#",
@@ -10151,7 +10348,8 @@
             {
               "note": "G#",
               "fret": 4,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "B",
@@ -10176,7 +10374,8 @@
             {
               "note": "G#",
               "fret": 6,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "B",
@@ -10201,7 +10400,8 @@
             {
               "note": "G#",
               "fret": 4,
-              "string": 1
+              "string": 1,
+							"root": true
             },
             {
               "note": "B",
@@ -10228,7 +10428,8 @@
             {
               "note": "G#",
               "fret": 11,
-              "string": 5
+              "string": 5,
+							"root": true
             },
             {
               "note": "B",
@@ -10253,7 +10454,8 @@
             {
               "note": "G#",
               "fret": 13,
-              "string": 3
+              "string": 3,
+							"root": true
             },
             {
               "note": "B",
@@ -10285,7 +10487,8 @@
             {
               "note": "G#",
               "fret": 16,
-              "string": 6
+              "string": 6,
+							"root": true
             },
             {
               "note": "B",
@@ -10310,7 +10513,8 @@
             {
               "note": "G#",
               "fret": 18,
-              "string": 4
+              "string": 4,
+							"root": true
             },
             {
               "note": "B",
@@ -10355,7 +10559,173 @@
       "artist": "The White Stripes",
       "year": "2003",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": [
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "G",
+						"fret": 10,
+						"string": 5
+					},
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "D",
+						"fret": 5,
+						"string": 5
+					},
+					{
+						"note": "C",
+						"fret": 3,
+						"string": 5
+					},
+					{
+						"note": "B",
+						"fret": 2,
+						"string": 5
+					},
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "G",
+						"fret": 10,
+						"string": 5
+					},
+					{
+						"note": "E",
+						"fret": 7,
+						"string": 5
+					},
+					{
+						"note": "D",
+						"fret": 5,
+						"string": 5
+					},
+					{
+						"note": "C",
+						"fret": 3,
+						"string": 5
+					},
+					{
+						"note": "D",
+						"fret": 5,
+						"string": 5
+					},
+					{
+						"note": "C",
+						"fret": 3,
+						"string": 5
+					},
+					{
+						"note": "B",
+						"fret": 2,
+						"string": 5
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "G",
+						"fret": 3,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					},
+					{
+						"note": "A",
+						"fret": 5,
+						"string": 6
+					}
+				]
+			}
     },
     {
       "id": "ZrrHfxiTVD",
@@ -10364,7 +10734,48 @@
       "artist": "Cream",
       "year": "1967",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": [
+					{
+						"same": true,
+						"cluster": [
+							{
+								"note": "E",
+								"fret": 0,
+								"string": 6
+							},
+							{
+								"note": "A",
+								"fret": 0,
+								"string": 5
+							},
+							{
+								"note": "D",
+								"fret": 0,
+								"string": 4
+							},
+							{
+								"note": "G",
+								"fret": 0,
+								"string": 3
+							},
+							{
+								"note": "B",
+								"fret": 0,
+								"string": 2
+							},
+							{
+								"note": "E",
+								"fret": 0,
+								"string": 1
+							}
+						]
+					}
+				]
+			}
     },
     {
       "id": "qucnDySiqf",
@@ -10373,7 +10784,12 @@
       "artist": "The Beatles",
       "year": "1965",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "xOImUWKzcg",
@@ -10382,7 +10798,12 @@
       "artist": "Metallica",
       "year": "1991",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "JmaomoZWaS",
@@ -10391,7 +10812,12 @@
       "artist": "Red Hot Chili Peppers",
       "year": "2000",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "hsmfoBoVDw",
@@ -10400,7 +10826,12 @@
       "artist": "Deep Purple",
       "year": "1973",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "LbRfBHSEPO",
@@ -10409,7 +10840,12 @@
       "artist": "Eminem",
       "year": "2002",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "DFUzdxFOjM",
@@ -10418,7 +10854,12 @@
       "artist": "Michael Jackson",
       "year": "1983",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "oqyKrnCUyz",
@@ -10427,7 +10868,12 @@
       "artist": "Survivor",
       "year": "1982",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "mGYLQmaWwZ",
@@ -10436,7 +10882,12 @@
       "artist": "Nirvana",
       "year": "1992",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "lTCSOVibWC",
@@ -10445,7 +10896,12 @@
       "artist": "Green Day",
       "year": "2004",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "XUOumOywgB",
@@ -10454,7 +10910,12 @@
       "artist": "Michael Jackson",
       "year": "1991",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "eceNICvIeh",
@@ -10463,7 +10924,12 @@
       "artist": "Ozzy Osbourne",
       "year": "1980",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "lSqNXtplxM",
@@ -10472,7 +10938,12 @@
       "artist": "The Police",
       "year": "1990",
       "difficulty": 2,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "vQclDLFsnk",
@@ -10481,7 +10952,12 @@
       "artist": "Pink Floyd",
       "year": "1973",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "cAWhpqFLeH",
@@ -10490,7 +10966,12 @@
       "artist": "AC/DC",
       "year": "1990",
       "difficulty": 2,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "byLUYgYxEH",
@@ -10499,7 +10980,12 @@
       "artist": "AC/DC",
       "year": "1980",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "LFoKeLCIht",
@@ -10508,7 +10994,12 @@
       "artist": "Guns N\" Roses",
       "year": "1988",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "UBtypVXxVi",
@@ -10517,7 +11008,12 @@
       "artist": "Pink Floyd",
       "year": "1979",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "aiECfsCqPw",
@@ -10526,7 +11022,12 @@
       "artist": "The Strokes",
       "year": "2001",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "MLncIOMObI",
@@ -10535,7 +11036,12 @@
       "artist": "The Strokes",
       "year": "2006",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "aiHqcBmOnu",
@@ -10544,7 +11050,12 @@
       "artist": "Red Hot Chili Peppers",
       "year": "2003",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "vHjkeJJZtB",
@@ -10553,7 +11064,12 @@
       "artist": "Joe Satriani",
       "year": "1987",
       "difficulty": 0,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "JfThyVxcDY",
@@ -10562,7 +11078,12 @@
       "artist": "Franz Ferdinand",
       "year": "2004",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     },
     {
       "id": "YVvgLHfHqx",
@@ -10571,7 +11092,12 @@
       "artist": "Cold Chisel",
       "year": "1982",
       "difficulty": 1,
-      "tab": []
+      "tab": {
+				"id": "GwKVWWZqcr",
+				"name": "Intro",
+				"fret": 0,
+				"tab": []
+			}
     }
   ]
 }

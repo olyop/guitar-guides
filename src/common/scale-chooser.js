@@ -72,7 +72,7 @@ class ScaleChooser extends React.Component {
 				
 				<div className="scale-chooser-tab"> 
 					
-					<GuitarTab scale={this.props.scalesData[this.state.key][this.state.type][this.state.index]} />
+					<GuitarTab tab={this.props.scalesData[this.state.key][this.state.type][this.state.index]} />
 				
 					<div className="scale-variations">
 						<FlatButton onClick={this.left}

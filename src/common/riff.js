@@ -1,6 +1,7 @@
 import React from 'react'
 
 import FlatButton from 'material-ui/FlatButton'
+import GuitarTab from './guitar-tab'
 
 import  './css/riff.css'
 
@@ -42,12 +43,12 @@ class Riff extends React.Component {
 		}
 		return (
 			<div key={riff.id}
-				onClick={this.toggleMore}
 				style={styles.riff}
 				className="riff">
 				
 				<FlatButton fullWidth
 					style={styles.button}
+					onClick={this.toggleMore}
 					className="riff">
 					<div className="riff-inner">
 						<div className="riff-info">
@@ -79,7 +80,7 @@ class Riff extends React.Component {
 				
 				{this.state.more ? (
 					<div className="riff-more">
-						<p style={{ margin: 0 }}>Tab</p>
+						<GuitarTab tab={riff.tab} />
 					</div>
 				) : null}
 				

@@ -12,7 +12,7 @@ import SadFace from '../../common/sad-face'
 import ChordChart from '../../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
 
-const adStyle = { marginTop: '10px' }
+const adStyle = { marginTop: '10px', marginBottom: '10px'  }
 
 class PageSearchResults extends React.Component {
 	constructor(props) {
