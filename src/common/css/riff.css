@@ -1,6 +1,5 @@
 .riff {}
   .riff .riff-inner {
-    transition: .3s all;
     display: flex;
     justify-content: space-between; }
   .riff .riff-right {
@@ -18,7 +17,6 @@
     justify-content: flex-start;
     flex-direction: row; }
     .riff .riff-info img {
-      transition: .3s all;
       border-radius: 3px;
       margin-right: 10px;
       box-shadow:
@@ -30,7 +28,6 @@
       flex-direction: column; }
       .riff .riff-info .riff-text .riff-title {
         font-size: 20px;
-        transition: .3s all;
         line-height: 1;
         text-align: left;
         padding-bottom: 5px;
@@ -40,7 +37,6 @@
         justify-content: flex-start; }
         .riff .riff-info .riff-text .riff-artist section,
         .riff .riff-info .riff-text .riff-artist b {
-          transition: .3s all;
           line-height: 1;
           font-size: 16px;
           text-align: left;
@@ -55,13 +51,11 @@
         align-items: flex-start;
         display: flex; }
         .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-album {
-          transition: .3s all;
           font-weight: 400;
           padding-bottom: 5px;
           line-height: 1;
           font-size: 19px; }
         .riff .riff-info .riff-text .riff-artist-more .riff-artist-more-artist {
-          transition: .3s all;
           font-weight: 600;
           color: #F44336;
           line-height: 1;

@@ -27,7 +27,7 @@ const GuitarHome = props => (
 		
 		<div className="row">
 			<div className="col-md-12">
-				<Ad />
+				<Ad style={{ margin: '15px 0' }} />
 			</div>
 		</div>
 		
