@@ -38,7 +38,8 @@ class GuitarTabSection extends React.Component {
 				{[10,30,50,70,90,110].map((line, index) => (
 					<div key={index}
 						className="guitar-tab-horz"
-						style={{ top: `${line}px` }} />
+						style={{ top: `${line}px` }}
+					/>
 				))}
 
 				{this.props.tab.tab.slice(0 + (this.props.index * 13), 13 + (this.props.index * 13)).map((note, index) => {
@@ -109,7 +110,6 @@ class GuitarTab extends React.Component {
 		for (let i = 0; i < numOfTabSection; i++) {
 			tabSections[i] = i + 1 
 		}
-		
 		let styles = {
 			thumbOff: { backgroundColor: '#BDBDBD' },
 			trackOff: { backgroundColor: '#EEEEEE' },
@@ -117,7 +117,6 @@ class GuitarTab extends React.Component {
 			trackSwitched: { backgroundColor: '#ff9d9d' },
 			style: { width: 'auto' }
 		}
-
 		return (
 			<div className="guitar-tab">
 				
@@ -129,7 +128,8 @@ class GuitarTab extends React.Component {
 						thumbSwitchedStyle={styles.thumbSwitched}
 						trackSwitchedStyle={styles.trackSwitched}
 						style={styles.style}
-						label="Notes" />
+						label="Notes"
+					/>
 				</div>
 				
 				<div className="guitar-tabs">
@@ -137,7 +137,8 @@ class GuitarTab extends React.Component {
 						<GuitarTabSection key={index}
 							index={index}
 							noteToggle={this.state.noteToggle}
-							tab={this.props.tab} />
+							tab={this.props.tab}
+						/>
 					))}
 				</div>
 				

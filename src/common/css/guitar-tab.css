@@ -1,6 +1,6 @@
 .guitar-tab {
 	transition: .2s all;
-	padding: 20px 20px 0 20px; }
+	padding: 10px 15px 0 15px; }
 	.guitar-tab .guitar-tabs {
 		display: flex;
 		width: 100%;
@@ -12,9 +12,8 @@
 			.guitar-tab .guitar-tab-header h1 {
 				margin: 0;
 				font-size: 18px; }
-.guitar-tab .guitar-tab-header .guitar-tab-header-toggle {
-	margin-top: 10px;
-}
+			.guitar-tab .guitar-tab-header .guitar-tab-header-toggle {
+				margin-top: 10px; }
 
 		.guitar-tab .guitar-tab-section {
 			height: 120px;

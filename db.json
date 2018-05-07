@@ -11020,64 +11020,64 @@
 						"string": 2
 					},
 					{
+						"note": "F#",
+						"fret": 7,
+						"string": 2
+					},
+					{
+						"note": "E",
+						"fret": 5,
+						"string": 2
+					},
+					{
+						"note": "D#",
+						"fret": 4,
+						"string": 2
+					},
+					{
+						"note": "E",
+						"fret": 5,
+						"string": 2
+					},
+					{
+						"note": "E",
+						"fret": 6,
+						"string": 3
+					},
+					{
+						"note": "B",
+						"fret": 4,
+						"string": 3
+					},
+					{
+						"note": "C#",
+						"fret": 6,
+						"string": 3
+					},
+					{
+						"note": "D#",
+						"fret": 8,
+						"string": 3
+					},
+					{
+						"note": "C",
+						"fret": 9,
+						"string": 3
+					},
+					{
 						"note": "D",
 						"fret": 5,
-						"string": 5
+						"string": 3
 					},
 					{
 						"note": "C",
 						"fret": 3,
-						"string": 5
+						"string": 3
 					},
 					{
 						"note": "B",
 						"fret": 2,
-						"string": 5
-					},
-					{
-						"note": "E",
-						"fret": 7,
-						"string": 5
-					},
-					{
-						"note": "E",
-						"fret": 7,
-						"string": 5
-					},
-					{
-						"note": "G",
-						"fret": 10,
-						"string": 5
-					},
-					{
-						"note": "E",
-						"fret": 7,
-						"string": 5
-					},
-					{
-						"note": "D",
-						"fret": 5,
-						"string": 5
-					},
-					{
-						"note": "C",
-						"fret": 3,
-						"string": 5
-					},
-					{
-						"note": "D",
-						"fret": 5,
-						"string": 5
-					},
-					{
-						"note": "C",
-						"fret": 3,
-						"string": 5
-					},
-					{
-						"note": "B",
-						"fret": 2,
-						"string": 5
+						"string": 3
 					}
 				]
 			}
