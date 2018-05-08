@@ -39,6 +39,14 @@ class GuitarAbout extends React.Component {
 						<img src={this.props.globalText.api.aws + '/images/guitar-anatomy.png'} alt="Guitar Anatomy" />
 					</div>
 				) : null}
+        
+        <Heading>Types of Guitars</Heading>
+        
+        <Heading>Accessories</Heading>
+        
+        <Heading>History</Heading>
+        
+        
 
 			</div>
 		)

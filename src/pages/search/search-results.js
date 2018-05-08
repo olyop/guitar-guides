@@ -1,6 +1,7 @@
 import React from 'react'
 
 import orderBy from 'lodash/orderBy'
+import sort_by from '../../functions/sort_by'
 import includes from 'lodash/includes'
 import { findChordMatches, findPageMatches, findRiffMatches } from './find-matches'
 
@@ -175,19 +176,23 @@ const SearchResults = props => {
   } else if (props.input === '') {
     return null
   } else {
-		let unsortedMatches = [
-			{ type: 'pages', matches: orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc']) },
-			{ type: 'chords', matches: orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc']) },
-			{ type: 'riffs', matches: orderBy(findRiffMatches(props.database.riffs, props.input), ['title'], ['asc']) }
+    
+    const pageMatches = orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc']),
+          chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc']),
+          riffMatches = orderBy(findRiffMatches(props.database.riffs, props.input), ['title'], ['asc'])
+    
+		let matches = [
+			{ type: 'pages', matches: pageMatches, arrayLength: pageMatches.length },
+			{ type: 'chords', matches: chordMatches, arrayLength: chordMatches.length },
+			{ type: 'riffs', matches: riffMatches, arrayLength: riffMatches.length }
 		]
-		let matches = orderBy(unsortedMatches, ['matches'], ['asc'])
-		console.log()
-    if (matches[0].matches.length === 0 && matches[1].matches.length === 0 && matches[2].matches.length === 0) {
+    
+    if (matches[0].arrayLength === 0 && matches[1].arrayLength === 0 && matches[2].arrayLength === 0) {
 			return <SadFace>No Search Results.</SadFace>
 		} else {
       return (
         <div className="search-results">
-					{matches.map((match, index) => {
+					{matches.sort(sort_by('arrayLength', true, parseInt)).map((match, index) => {
 						if (match.type === 'pages') { return <PageSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
 						else if (match.type === 'chords') { return <ChordSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
 						else if (match.type === 'riffs') { return <RiffSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
