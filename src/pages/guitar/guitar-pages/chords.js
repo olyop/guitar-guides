@@ -77,7 +77,7 @@ class GuitarChords extends React.Component {
 					globalText={this.props.globalText}
 					theoryData={this.props.theoryData} />
 				
-				<Ad />
+				<Ad style={{ margin: '15px 0' }} />
         
         <Heading onClick={this.toggleContent1}
           active={this.state.content1}

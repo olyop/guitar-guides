@@ -10,8 +10,8 @@
 
 		.guitar-tab .guitar-tab-header {}
 			.guitar-tab .guitar-tab-header h1 {
-				margin: 0;
-				font-size: 18px; }
+				margin: 0 0 10px 0;
+				font-size: 20px; }
 			.guitar-tab .guitar-tab-header .guitar-tab-header-toggle {
 				margin-top: 10px; }
 

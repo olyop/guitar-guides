@@ -1,8 +1,9 @@
 .scale-chooser {
+	margin-bottom: 20px;
 	padding: 0; }
 
 	.scale-chooser .scale-chooser-menus {
-		padding: 0 20px 0 20px;
+		padding: 0 15px 0 15px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start; }
@@ -10,9 +11,10 @@
 		margin-right: 20px; }
 
 	.scale-chooser .scale-variations {
+		margin-top: -10px;
 		display: flex;
 		align-items: center; 
-		padding: 0 10px 10px 10px; }
+		padding: 0 0 10px 0; }
 		.scale-chooser .scale-variations i {
 			font-size: 28px; }
 
