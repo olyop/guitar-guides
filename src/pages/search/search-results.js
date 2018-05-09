@@ -194,7 +194,17 @@ const SearchResults = props => {
         <div className="search-results">
 					{matches.sort(sort_by('arrayLength', true, parseInt)).map((match, index) => {
 						if (match.type === 'pages') { return <PageSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
-						else if (match.type === 'chords') { return <ChordSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
+						else if (match.type === 'chords') {
+							return (
+								<ChordSearchResults key={index}
+									appState={props.appState}
+									globalText={props.globalText}
+									matches={match.matches} 
+									updateProgressChords={props.updateProgressChords}
+									updateProgressChordsLoading={props.updateProgressChordsLoading}
+								/>
+							)
+						}
 						else if (match.type === 'riffs') { return <RiffSearchResults key={index} appState={props.appState} globalText={props.globalText} matches={match.matches} /> }
 						else { return null }
 					})}
