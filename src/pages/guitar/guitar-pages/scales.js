@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import Loading from '../../../common/loading'
 import ScaleChooser from '../../../common/scale-chooser'
-import Heading from '../../../common/heading'
+import { Heading1 } from '../../../common/heading'
 import {
   Table,
   TableBody,
@@ -114,8 +114,8 @@ class GuitarScales extends React.Component {
 			return (
 				<div id="guitar-scales">
 
-					<Heading onClick={this.toggleContent1}
-						active={this.state.content1}>Scale Chooser</Heading>
+					<Heading1 onClick={this.toggleContent1}
+						active={this.state.content1}>Scale Chooser</Heading1>
 					{this.state.content1 ? (
 						<div>
 							<p>Choose what scale you want to learn.</p>
@@ -124,11 +124,9 @@ class GuitarScales extends React.Component {
 						</div>
 					) : null}
 					
-					<Heading onClick={this.toggleContent2}
-						active={this.state.content2}>Scale Key</Heading>
-					{this.state.content2 ? (
-						<GuitarScalesKey />
-					) : null}
+					<Heading1 onClick={this.toggleContent2}
+						active={this.state.content2}>Scale Key</Heading1>
+					{this.state.content2 ? <GuitarScalesKey /> : null}
 
 				</div>
 			)

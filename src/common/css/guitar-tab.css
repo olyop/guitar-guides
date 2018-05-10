@@ -1,6 +1,6 @@
 .guitar-tab {
 	transition: .2s all;
-	padding: 10px 15px 0 15px; }
+	padding: 0 15px 0 15px; }
 	.guitar-tab .guitar-tabs {
 		display: flex;
 		width: 100%;

@@ -10672,39 +10672,107 @@
         "fret": 0,
         "tab": [
           {
-            "same": true,
-            "cluster": [
-              {
-                "note": "E",
-                "fret": 0,
-                "string": 6
-              },
-              {
-                "note": "A",
-                "fret": 0,
-                "string": 5
-              },
-              {
-                "note": "D",
-                "fret": 0,
-                "string": 4
-              },
-              {
-                "note": "G",
-                "fret": 0,
-                "string": 3
-              },
-              {
-                "note": "B",
-                "fret": 0,
-                "string": 2
-              },
-              {
-                "note": "E",
-                "fret": 0,
-                "string": 1
-              }
-            ]
+            "note": "D",
+            "fret": 12,
+            "string": 4
+          },
+          {
+            "note": "D",
+            "fret": 12,
+            "string": 4
+          },
+          {
+            "note": "C",
+            "fret": 10,
+            "string": 4
+          },
+          {
+            "note": "D",
+            "fret": 12,
+            "string": 4
+          },
+          {
+            "note": "A",
+            "fret": 12,
+            "string": 5
+          },
+          {
+            "note": "G#",
+            "fret": 11,
+            "string": 5
+          },
+          {
+            "note": "G",
+            "fret": 10,
+            "string": 5
+          },
+          {
+            "note": "D",
+            "fret": 10,
+            "string": 6
+          },
+          {
+            "note": "F",
+            "fret": 8,
+            "string": 5
+          },
+          {
+            "note": "D",
+            "fret": 10,
+            "string": 6
+          },
+					null,
+					null,
+					null,
+					{
+            "note": "G",
+            "fret": 12,
+            "string": 3
+          },
+          {
+            "note": "G",
+            "fret": 12,
+            "string": 3
+          },
+          {
+            "note": "F",
+            "fret": 10,
+            "string": 3
+          },
+          {
+            "note": "G",
+            "fret": 12,
+            "string": 3
+          },
+          {
+            "note": "D",
+            "fret": 12,
+            "string": 4
+          },
+          {
+            "note": "C#",
+            "fret": 11,
+            "string": 4
+          },
+          {
+            "note": "C",
+            "fret": 10,
+            "string": 4
+          },
+          {
+            "note": "G",
+            "fret": 10,
+            "string": 5
+          },
+          {
+            "note": "A#",
+            "fret": 8,
+            "string": 4
+          },
+          {
+            "note": "G",
+            "fret": 10,
+            "string": 5
           }
         ]
       }
@@ -10748,7 +10816,43 @@
         "id": "GwKVWWZqcr",
         "name": "Intro",
         "fret": 0,
-        "tab": []
+        "tab": [
+					 {
+            "cluster": true,
+            "tab": [
+              {
+                "note": "E",
+                "fret": 0,
+                "string": 6
+              },
+              {
+                "note": "A",
+                "fret": 0,
+                "string": 5
+              },
+              {
+                "note": "D",
+                "fret": 0,
+                "string": 4
+              },
+              {
+                "note": "G",
+                "fret": 0,
+                "string": 3
+              },
+              {
+                "note": "B",
+                "fret": 0,
+                "string": 2
+              },
+              {
+                "note": "E",
+                "fret": 0,
+                "string": 1
+              }
+            ]
+          }
+				]
       }
     },
     {

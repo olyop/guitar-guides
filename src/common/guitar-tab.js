@@ -4,8 +4,9 @@ import Toggle from 'material-ui/Toggle'
 
 import './css/guitar-tab.css'
 
-const leftSpacing = [5,30,55,80,105,130,155,180,205,230,255,280,305]
-const stringSpacing = [0,20,40,60,80,100]
+const leftSpacing = [5,30,55,80,105,130,155,180,205,230,255,280,305],
+			stringSpacing = [0,20,40,60,80,100],
+			horzLineSpacing = [10,30,50,70,90,110]
 
 const TabNote = props => {
 	if (props.note.slide) {
@@ -32,22 +33,23 @@ const TabNote = props => {
 
 class GuitarTabSection extends React.Component {	
 	render() {
+		const section = this.props.tab.tab.slice(this.props.index * 13, 13 + (this.props.index * 13))
 		return (
 			<div className="guitar-tab-section">
 				
-				{[10,30,50,70,90,110].map((line, index) => (
+				{horzLineSpacing.map((line, index) => (
 					<div key={index}
 						className="guitar-tab-horz"
 						style={{ top: `${line}px` }}
 					/>
 				))}
 
-				{this.props.tab.tab.slice(0 + (this.props.index * 13), 13 + (this.props.index * 13)).map((note, index) => {
+				{section.map((note, index) => {
 					if (note === null) {
 						return null
-					} else if (note.same) {
+					} else if (note.cluster) {
 						return (
-							note.cluster.map((note, i) => {
+							note.tab.map((note, i) => {
 								let containerStyle = {
 									left: `${leftSpacing[index]}px`,
 									top: `${stringSpacing[note.string - 1]}px`

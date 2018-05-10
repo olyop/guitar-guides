@@ -8,7 +8,7 @@ import { findChordMatches, findPageMatches, findRiffMatches } from './find-match
 import { Link } from 'react-router-dom'
 import Ad from '../../common/ad'
 import Riff from '../../common/riff'
-import Heading from '../../common/heading'
+import { Heading1 } from '../../common/heading'
 import SadFace from '../../common/sad-face'
 import ChordChart from '../../common/chord-chart'
 import FlatButton from 'material-ui/FlatButton'
@@ -31,9 +31,9 @@ class PageSearchResults extends React.Component {
 		else {
 			return (
 				<div className="search-results-content">
-					<Heading onClick={this.handleContent}
+					<Heading1 onClick={this.handleContent}
 						active={this.state.content}
-						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading>
+						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Pages</Heading1>
 					{this.state.content ? (
 						<div className="search-results-pages">
 							{matches.map(page => (
@@ -75,9 +75,9 @@ class ChordSearchResults extends React.Component {
 		else {
 			return (
 				<div className="search-results-content">
-					<Heading onClick={this.handleContent}
+					<Heading1 onClick={this.handleContent}
 						active={this.state.content}
-						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Chords</Heading>
+						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Chords</Heading1>
 					{this.state.content ? (
 						<div>
 
@@ -137,9 +137,9 @@ class RiffSearchResults extends React.Component {
 		else {
 			return (
 				<div className="search-results-content">
-					<Heading onClick={this.handleContent}
+					<Heading1 onClick={this.handleContent}
 						active={this.state.content}
-						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Riffs</Heading>
+						subtitle={`${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`}>Riffs</Heading1>
 					{this.state.content ? (
 						<div>
 							{this.state.more ? (

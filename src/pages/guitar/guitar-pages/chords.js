@@ -5,7 +5,7 @@ import orderBy from 'lodash/orderBy'
 
 import ChordChooser from '../../../common/chord-chooser'
 import ChordChart from '../../../common/chord-chart'
-import Heading from '../../../common/heading'
+import { Heading1 } from '../../../common/heading'
 import Loading from '../../../common/loading'
 import Ad from '../../../common/ad'
 
@@ -37,9 +37,9 @@ class StandardChords extends React.Component {
 		} else if (this.state.standardChords.constructor === Array) {
 			return (
 				<div>
-					<Heading onClick={this.toggleContent1}
+					<Heading1 onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle="15 chords">Common Chords</Heading>
+						subtitle="15 chords">Common Chords</Heading1>
 					{this.state.content1 ? (
 						<div>
 							<p>Here is a list the standard (non-bar) chords that every guitarist should know.</p>
@@ -79,9 +79,9 @@ class GuitarChords extends React.Component {
 				
 				<Ad style={{ margin: '15px 0' }} />
         
-        <Heading onClick={this.toggleContent1}
+        <Heading1 onClick={this.toggleContent1}
           active={this.state.content1}
-					subtitle="187 chords">Chord Finder</Heading>
+					subtitle="187 chords">Chord Finder</Heading1>
         {this.state.content1 ? (
           <ChordChooser appState={this.props.appState}
 						globalText={this.props.globalText}

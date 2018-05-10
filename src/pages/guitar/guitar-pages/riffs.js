@@ -4,7 +4,7 @@ import axios from 'axios'
 import orderBy from 'lodash/orderBy'
 
 import Riff from '../../../common/riff'
-import Heading from '../../../common/heading'
+import { Heading1 } from '../../../common/heading'
 import Loading from '../../../common/loading'
 
 import './riffs.css'
@@ -38,9 +38,9 @@ class GuitarRiffs extends React.Component {
 			return (
 				<div id="guitar-riffs">
 
-					<Heading onClick={this.toggleContent1}
+					<Heading1 onClick={this.toggleContent1}
 						active={this.state.content1}
-						subtitle={`${this.state.riffs.length + 1} famous rock riffs`}>Riffs</Heading>
+						subtitle={`${this.state.riffs.length + 1} famous rock riffs`}>Riffs</Heading1>
 					{this.state.content1 ? (
 						<div className="riffs">
 							{this.state.riffs.map((riff, index) => <Riff key={riff.id} globalText={this.props.globalText} riff={riff} />)}

@@ -10,7 +10,7 @@ import './testing.css'
 
 import Title from '../../common/title'
 import Container from '../../common/container'
-import Heading from '../../common/heading'
+import { Heading1 } from '../../common/heading'
 import Loading from '../../common/loading'
 import RaisedButton from 'material-ui/RaisedButton'
 import {
@@ -305,9 +305,9 @@ class Testing extends React.Component {
 				
 				<Title>Testing</Title>
 				
-				<Heading onClick={this.toggleContent1}
+				<Heading1 onClick={this.toggleContent1}
 					active={this.state.content1}
-					>Database Testing</Heading>
+					>Database Testing</Heading1>
 				{this.state.content1 ? (
           <DatabaseTesting appState={this.props.appState}
             globalText={this.props.globalText} />

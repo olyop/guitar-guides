@@ -7,7 +7,7 @@ import Dialog from 'material-ui/Dialog'
 import TextField from 'material-ui/TextField'
 import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
-import Heading from '../../common/heading'
+import { Heading1 } from '../../common/heading'
 
 import './account-page.css'
 
@@ -133,8 +133,8 @@ class AccountPage extends React.Component {
 					
 					<div className="account-page-content">
             
-						<Heading onClick={this.toggleContent1}
-							active={this.state.content1}>Overview</Heading>
+						<Heading1 onClick={this.toggleContent1}
+							active={this.state.content1}>Overview</Heading1>
             
 						{this.state.content1 ? (
 							<div className="account-page-content account-page-overview">
@@ -165,9 +165,9 @@ class AccountPage extends React.Component {
 					</div>
 					
 					<div className="account-page-content">
-						<Heading onClick={this.toggleContent2}
+						<Heading1 onClick={this.toggleContent2}
 							active={this.state.content2}
-							subtitle="View your progress in the app.">Progress</Heading>
+							subtitle="View your progress in the app.">Progress</Heading1>
 						{this.state.content2 ? (
 							<div className="account-page-content account-page-progress">
 								Progress
@@ -176,8 +176,8 @@ class AccountPage extends React.Component {
 					</div>
 					
 					<div className="account-page-content">
-						<Heading onClick={this.toggleContent3}
-							active={this.state.content3}>Settings</Heading>
+						<Heading1 onClick={this.toggleContent3}
+							active={this.state.content3}>Settings</Heading1>
 						{this.state.content3 ? (
 							<div className="account-page-content account-page-settings">
 								

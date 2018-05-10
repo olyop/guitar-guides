@@ -4,8 +4,8 @@ import FlatButton from 'material-ui/FlatButton'
 
 import './css/heading.css'
 
-const Heading = props => (
-  <div className="heading"
+const Heading1 = props => (
+  <div className="heading1"
 		style={props.style}>
 		
 		<FlatButton onClick={props.onClick}
@@ -27,4 +27,11 @@ const Heading = props => (
   </div>
 )
 
-export default Heading
+const Heading2 = props => (
+	<div className="heading2"
+		style={props.style}>
+		{props.children}
+	</div>
+)
+
+export { Heading1, Heading2 }

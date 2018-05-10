@@ -2,7 +2,7 @@ import React from 'react'
 
 import Title from '../../common/title'
 import Container from '../../common/container'
-import Heading from '../../common/heading'
+import { Heading1 } from '../../common/heading'
 import RaisedButton from 'material-ui/RaisedButton'
 import {
   Table,
@@ -48,8 +48,8 @@ class Help extends React.Component {
 				
 				<Title>Help</Title>
 				
-				<Heading onClick={this.toggleContent2}
-					active={this.state.content2}>Feedback</Heading>
+				<Heading1 onClick={this.toggleContent2}
+					active={this.state.content2}>Feedback</Heading1>
 				{this.state.content2 ? (
 					<div className="help-content">
 						<a href="https://github.com/olyop/guitar-guides"
@@ -71,8 +71,8 @@ class Help extends React.Component {
 					</div>
 				) : null}
 
-				<Heading onClick={this.toggleContent1}
-					active={this.state.content1}>Chord Chart Key</Heading>
+				<Heading1 onClick={this.toggleContent1}
+					active={this.state.content1}>Chord Chart Key</Heading1>
 				{this.state.content1 ? (
 					<div>
 
