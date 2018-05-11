@@ -16,7 +16,9 @@ const Heading1 = props => (
 				padding: '0'
 			}}>
 			<i onClick={props.onClick}
-				className="material-icons">{props.active ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}</i>
+				className="material-icons">
+				{props.active ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}
+			</i>
 		</FlatButton>
 		
 		<div className="heading-content">

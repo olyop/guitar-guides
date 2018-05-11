@@ -176,17 +176,14 @@ const SearchResults = props => {
   } else if (props.input === '') {
     return null
   } else {
-    
-    const pageMatches = orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc']),
-          chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc']),
-          riffMatches = orderBy(findRiffMatches(props.database.riffs, props.input), ['title'], ['asc'])
-    
-		let matches = [
+    let pageMatches = orderBy(findPageMatches(props.globalText.pageStructure, props.input), ['name'], ['asc']),
+				chordMatches = orderBy(findChordMatches(props.database.chordChooser, props.input), ['fret'], ['asc']),
+				riffMatches = orderBy(findRiffMatches(props.database.riffs, props.input), ['title'], ['asc'])
+		const	matches = [
 			{ type: 'pages', matches: pageMatches, arrayLength: pageMatches.length },
 			{ type: 'chords', matches: chordMatches, arrayLength: chordMatches.length },
 			{ type: 'riffs', matches: riffMatches, arrayLength: riffMatches.length }
 		]
-    
     if (matches[0].arrayLength === 0 && matches[1].arrayLength === 0 && matches[2].arrayLength === 0) {
 			return <SadFace>No Search Results.</SadFace>
 		} else {

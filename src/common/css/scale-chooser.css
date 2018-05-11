@@ -4,6 +4,7 @@
 
 	.scale-chooser .scale-chooser-menus {
 		padding: 0 15px 0 15px;
+		margin-bottom: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start; }
