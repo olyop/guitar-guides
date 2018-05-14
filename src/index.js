@@ -213,7 +213,8 @@ class Index extends React.Component {
 										globalText={globalText}
                     theoryData={this.props.theoryData}
                     updateProgressChords={this.updateProgressChords}
-										updateProgressChordsLoading={this.state.updateProgressChordsLoading}  />		
+										updateProgressChordsLoading={this.state.updateProgressChordsLoading}
+                  />		
                 )} />
 								
 								<Route path="/bass" exact render={ () => (
@@ -226,7 +227,7 @@ class Index extends React.Component {
 										globalText={globalText} />		
                 )} />
 								
-								<Footer />
+                <Footer />
 							
 							</div>
             ) : (

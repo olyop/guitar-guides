@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
@@ -33,6 +33,6 @@ i {
 @media (min-height: 1080px) {
   #content, #account {
     height: 94vh; }
-	#page {
+	.page {
 		min-height: 94vh; }
 }
