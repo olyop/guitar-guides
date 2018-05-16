@@ -119,7 +119,8 @@ class GuitarScales extends React.Component {
 					{this.state.content1 ? (
 						<div>
 							<p>Choose what scale you want to learn.</p>
-							<ScaleChooser scalesData={this.state.scales}
+							<ScaleChooser globalText={this.props.globalText}
+								scalesData={this.state.scales}
 								theoryData={this.props.theoryData} />
 						</div>
 					) : null}

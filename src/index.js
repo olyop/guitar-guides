@@ -53,13 +53,15 @@ class Index extends React.Component {
 			accountEditLoading: false,
 			accountDeleteLoading: false,
 			updateProgressChordsLoading: false,
-			menu: false
+			menu: false,
+			night: false
 		}
 		this.handleHamburger = this.handleHamburger.bind(this)
 		this.logIn = this.logIn.bind(this)
     this.logOut = this.logOut.bind(this)
     this.editAccount = this.editAccount.bind(this)
     this.deleteAccount = this.deleteAccount.bind(this)
+		this.toggleNightMode = this.toggleNightMode.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
 	
@@ -78,10 +80,9 @@ class Index extends React.Component {
 					headers: { 'Content-Type': 'application/json' },
           data: this.state.account
 				}
-        
         axiosConfig.data.name = name
         axiosConfig.data.surname = surname
-        
+				
         axios(axiosConfig)
 					.then(response => {
 						this.setState({
@@ -111,6 +112,9 @@ class Index extends React.Component {
 			}
 		)
   }
+	
+	toggleNightMode() {
+		this.setState({ night: !this.state.night })	}
   
 	// Handle Navigation Menu
 	handleHamburger() {
@@ -233,7 +237,8 @@ class Index extends React.Component {
             ) : (
 							<Accounts appState={appState}
 								globalText={globalText}
-								logIn={this.logIn} />
+								logIn={this.logIn}
+								toggleNightMode={this.toggleNightMode} />
 						)}
 
           </div>

@@ -70,10 +70,19 @@ class AccountPage extends React.Component {
 		if (flag) { return }
 		
     // Validate form data
-    let isNameEmpty = this.state.editAccountName.trim() === ''
-    let isNameTooLong = this.state.editAccountName.length > 10
-		let isSurnameEmpty = this.state.editAccountSurname.trim() === ''
-    let isSurnameTooLong = this.state.editAccountSurname.length > 10
+    let isNameEmpty = this.state.editAccountName.trim() === '',
+				isNameTooLong = this.state.editAccountName.length > 10,
+				isSurnameEmpty = this.state.editAccountSurname.trim() === '',
+				isSurnameTooLong = this.state.editAccountSurname.length > 10
+		
+		// Send data
+    if (isNameEmpty === false &&
+			isNameTooLong === false &&
+			isSurnameEmpty === false &&
+			isSurnameTooLong === false) {
+      this.props.editAccount(this.state.editAccountName.trim(), this.state.editAccountSurname.trim())
+      this.closeEditAccountDialog()
+    }
     
 		// Check first name input
     if (isNameEmpty) {
@@ -87,15 +96,6 @@ class AccountPage extends React.Component {
       this.setState({ editAccountSurnameError: 'Please enter your surname.' })
     } else if (isSurnameTooLong) {
       this.setState({ editAccountSurnameError: 'Your surname is to long.' })
-    }
-    
-    // Send data
-    if (isNameEmpty === false &&
-			isNameTooLong === false &&
-			isSurnameEmpty === false &&
-			isSurnameTooLong === false) {
-      this.props.editAccount(this.state.editAccountName.trim(), this.state.editAccountSurname.trim())
-      this.closeEditAccountDialog()
     }
   }
 	
@@ -210,23 +210,15 @@ class AccountPage extends React.Component {
 						          errorText={this.state.editAccountNameError}
                       disabled={this.props.accountEditLoading}
 						          floatingLabelText="Name"
-											floatingLabelFixed
 											tabIndex={1}
-											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
-											floatingLabelFocusStyle={{ fontWeight: '700' }}
-											errorStyle={{ color: '#F44336' }} />
+											{...this.props.globalText.styles.textField} />
 										<TextField value={this.state.editAccountSurname}
 											onChange={this.handleEditAccountSurname}
 						          errorText={this.state.editAccountSurnameError}
                       disabled={this.props.accountEditLoading}
 						          floatingLabelText="Surname"
-											floatingLabelFixed
 											tabIndex={2}
-											underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-											floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
-											floatingLabelFocusStyle={{ fontWeight: '700' }}
-											errorStyle={{ color: '#F44336' }} />
+											{...this.props.globalText.styles.textField} />
 									</div>
 								</Dialog>
 								

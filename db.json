@@ -2,8 +2,8 @@
   "users": [
     {
       "id": "BJi8clLuXY",
-      "name": "Oliver",
-      "surname": "Plummer",
+      "name": "Jimi",
+      "surname": "Hendrix",
       "experience": 2,
       "dateJoined": "08/05/2018",
       "progress": {
@@ -10721,10 +10721,10 @@
             "fret": 10,
             "string": 6
           },
-					null,
-					null,
-					null,
-					{
+          null,
+          null,
+          null,
+          {
             "note": "G",
             "fret": 12,
             "string": 3
@@ -10817,7 +10817,7 @@
         "name": "Intro",
         "fret": 0,
         "tab": [
-					 {
+          {
             "cluster": true,
             "tab": [
               {
@@ -10852,7 +10852,7 @@
               }
             ]
           }
-				]
+        ]
       }
     },
     {
