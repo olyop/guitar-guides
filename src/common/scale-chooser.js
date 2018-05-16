@@ -53,7 +53,8 @@ class ScaleChooser extends React.Component {
 					<SelectField floatingLabelText="Key"
 						value={this.state.key}
           	onChange={this.handleKeyChange}
-						className="scale-chooser-menu">
+						className="scale-chooser-menu"
+						{...this.props.globalText.styles.selectField}>
 						{this.props.theoryData.notes.map((note, index) => (
 							<MenuItem key={index} value={index} primaryText={note} /> 
 						))}
@@ -61,8 +62,8 @@ class ScaleChooser extends React.Component {
 					
 					<SelectField floatingLabelText="Type"
 						value={this.state.type}
-          	onChange={this.handleTypeChange}
-						className="scale-chooser-menu">
+						className="scale-chooser-menu"
+						{...this.props.globalText.styles.selectField}>
 						{this.props.theoryData.scaleTypes.map((type, index) => (
 							<MenuItem key={index} value={index} primaryText={type} />
 						))}

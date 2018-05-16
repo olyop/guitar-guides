@@ -116,6 +116,21 @@ const globalText = {
 			col2: { width: '33%', padding: '10px' },
 			col3: { width: '55%', padding: '10px' }
 		}
+	},
+	
+	styles: {
+		selectField: {
+			underlineFocusStyle: { borderColor: '#F44336' },
+			floatingLabelFocusStyle: { color: '#F44336' }
+		},
+		textField: {
+			floatingLabelFixed: true,
+			style: { width: '48%' },
+			underlineFocusStyle: { borderColor: '#BDBDBD' },
+			floatingLabelStyle: { fontWeight: '400', color: '#333', fontSize: '20px' },
+			floatingLabelFocusStyle: { fontWeight: '700' },
+			errorStyle: { color: '#F44336' }
+		}
 	}
 	
 }

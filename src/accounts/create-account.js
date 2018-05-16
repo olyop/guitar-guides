@@ -103,26 +103,14 @@ class CreateAccount extends React.Component {
 					<TextField value={this.state.name}
 						onChange={this.handleName}
 						errorText={this.state.nameErrorText}
-						floatingLabelFixed
 						floatingLabelText={this.props.globalText.accounts.createAccountPage.nameLabelText}
-						tabIndex={1}
-						style={{ width: '48%' }}
-						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
-						floatingLabelFocusStyle={{ fontWeight: '700' }}
-						errorStyle={{ color: '#F44336' }} />
+						{...this.props.globalText.styles.textField} />
 
 					<TextField value={this.state.surname}
 						onChange={this.handleSurname}
 						errorText={this.state.surnameErrorText}
-						floatingLabelFixed
 						floatingLabelText={this.props.globalText.accounts.createAccountPage.surnameLabelText}
-						tabIndex={2}
-						style={{ width: '48%' }}
-						underlineFocusStyle={{ borderColor: '#BDBDBD' }}
-						floatingLabelStyle={{ fontWeight: '400', color: '#333', fontSize: '20px' }}
-						floatingLabelFocusStyle={{ fontWeight: '700' }}
-						errorStyle={{ color: '#F44336' }} />
+						{...this.props.globalText.styles.textField} />
 					
 				</div>
 				
