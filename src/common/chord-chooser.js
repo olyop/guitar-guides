@@ -21,10 +21,14 @@ class ChordChartVariations extends React.Component {
   
   left() {
     if (this.state.index !== 0) {
-      this.setState({ index: this.state.index - 1 }) } }
+      this.setState({ index: this.state.index - 1 })
+		}
+	}
   right() {
     if (this.state.index !== this.props.variations.length - 1) {
-      this.setState({ index: this.state.index + 1 }) } }
+      this.setState({ index: this.state.index + 1 })
+		}
+	}
   
   componentWillReceiveProps() {
     this.setState({ index: 0 }) }
@@ -37,14 +41,18 @@ class ChordChartVariations extends React.Component {
         <div className="chord-chooser-chart">
           
           <i onClick={this.left}
-            className={this.state.index === 0 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>keyboard_arrow_left</i>
+            className={this.state.index === 0 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>
+						keyboard_arrow_left
+					</i>
 
           <ChordChart chord={chord}
 						checkFunction={this.props.updateProgressChords}
 						completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)}  />
 
           <i onClick={this.right}
-            className={this.state.index === variations.length - 1 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>keyboard_arrow_right</i>
+            className={'material-icons chord-chooser-variation' + (this.state.index === variations.length - 1 ? 'chord-chooser-variation-max' : '')}>
+						keyboard_arrow_right
+					</i>
           
         </div>
         <h5>{variations.length === 1 ? '1/1' : `${this.state.index + 1}/${variations.length}`}</h5>
@@ -94,7 +102,8 @@ class ChordChooser extends React.Component {
 								className="chord-chooser-button"
 								backgroundColor={this.state.note === index ? '#F44336' : '#fff'}
 								labelColor={this.state.note === index ? '#fff' : '#333'}
-								onClick={ () => this.setState({ note: index }) } />
+								onClick={ () => this.setState({ note: index }) }
+							/>
 						))}
 					</div>
 
@@ -105,7 +114,8 @@ class ChordChooser extends React.Component {
 								className="chord-chooser-button"
 								backgroundColor={this.state.type === index ? '#F44336' : '#fff'}
 								labelColor={this.state.type === index ? '#fff' : '#333'}
-								onClick={ () => this.setState({ type: index }) } />
+								onClick={ () => this.setState({ type: index }) }
+							/>
 						))}
 					</div>
 

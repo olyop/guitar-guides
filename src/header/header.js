@@ -29,6 +29,7 @@ const Header = props => (
 
 			<div className="header-section header-middle">
 				<Link to="/">
+					<img alt="Guitar" src={`${props.globalText.api.aws}/guitar-icon.png`} />
           <h1><b>G</b>uitar <b>G</b>uides</h1>
         </Link>
 			</div>

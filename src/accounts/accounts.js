@@ -84,7 +84,8 @@ class Accounts extends React.Component {
 					{this.state.newAccountScreen ? (
 						<CreateAccount globalText={this.props.globalText}
 							toggleCreateAccountScreen={this.toggleCreateAccountScreen}
-              addAccount={this.addAccount} />
+              addAccount={this.addAccount}
+						/>
 					) : (
 						<div className="account-list">
               
