@@ -126,7 +126,6 @@ class Test1 extends React.Component {
 		)
 	}
 }
-
 class Test2 extends React.Component {
   
 	constructor(props) {
@@ -255,7 +254,7 @@ class DatabaseTesting extends React.Component {
 				
 				<div className="testing-test">
 					<div>
-						<h1>Test and Validate Chords Database</h1>
+						<h1>Validate Chords Database</h1>
 					</div>
 					<RaisedButton label={this.state.test1 ? 'Hide Test Results' : 'Run Tests'}
 						onClick={this.toggleTest1} />
@@ -267,7 +266,7 @@ class DatabaseTesting extends React.Component {
 				
 				<div className="testing-test">
 					<div>
-						<h1>Test and Validate Scales Database</h1>
+						<h1>Validate Scales Database</h1>
 					</div>
 					<RaisedButton label={this.state.test2 ? 'Hide Test Results' : 'Run Tests'}
 						onClick={this.toggleTest2} />
