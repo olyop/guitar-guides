@@ -32,6 +32,26 @@
         },
         "theory": {}
       }
+    },
+    {
+      "id": "vn6dQOZrrN",
+      "name": "Oliver",
+      "surname": "Plummer",
+      "experience": 2,
+      "dateJoined": "27/05/2018",
+      "progress": {
+        "guitar": {
+          "chords": [
+            "HzYummygsF"
+          ],
+          "scales": {}
+        },
+        "bass": {
+          "major": false,
+          "minor": false
+        },
+        "theory": {}
+      }
     }
   ],
   "standardChords": [

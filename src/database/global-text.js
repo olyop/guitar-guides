@@ -1,7 +1,7 @@
 const globalText = {
 	
 	api: {
-		url: 'http://192.168.1.11:3001',
+		url: 'http://192.168.1.4:3001',
     aws: 'https://s3-ap-southeast-2.amazonaws.com/guitar-guides'
 	},
 	
