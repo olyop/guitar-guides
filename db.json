@@ -52,6 +52,24 @@
         },
         "theory": {}
       }
+    },
+    {
+      "id": "xQ9XzvR86Q",
+      "name": "Jay",
+      "surname": "Chur",
+      "experience": 0,
+      "dateJoined": "04/07/2018",
+      "progress": {
+        "guitar": {
+          "chords": [],
+          "scales": {}
+        },
+        "bass": {
+          "major": false,
+          "minor": false
+        },
+        "theory": {}
+      }
     }
   ],
   "standardChords": [

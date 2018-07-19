@@ -23,6 +23,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import './header/hamburger/hamburgers.min.css'
 import './index.css'
+import './pages/pages.css'
 
 // Import Pages
 import Header from './header/header'
@@ -221,9 +222,11 @@ class Index extends React.Component {
                   />		
                 )} />
 								
-								<Route path="/bass" exact render={ () => (
-                  <Bass appState={appState}
-										globalText={globalText} />		
+								<Route path="/bass" exact render={ ({ match }) => (
+                  <Bass match={match}
+										appState={appState}
+										globalText={globalText}
+                    theoryData={this.props.theoryData} />		
                 )} />
 								
 								<Route path="/theory" exact render={ () => (
