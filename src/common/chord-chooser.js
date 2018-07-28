@@ -30,7 +30,7 @@ class ChordChartVariations extends React.Component {
 		}
 	}
   
-  componentWillReceiveProps() {
+  UNSAFE_componentWillReceiveProps() {
     this.setState({ index: 0 }) }
   
   render() {

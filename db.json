@@ -1,39 +1,6 @@
 {
   "users": [
     {
-      "id": "BJi8clLuXY",
-      "name": "Jimi",
-      "surname": "Hendrix",
-      "experience": 2,
-      "dateJoined": "08/05/2018",
-      "progress": {
-        "guitar": {
-          "chords": [
-            "HzYummygsF",
-            "OIYSEdFXIC",
-            "DVBuUnMTJv",
-            "aTZsNGBwTW",
-            "dnCohQbsQo",
-            "LmCVZpAqMx",
-            "WTycZMdDZl",
-            "VQasrXzuPi",
-            "wkkvrPFZur",
-            "MBKFoHMxej",
-            "sEjAGHsnUv",
-            "cUOvLXZXsd",
-            "yGfCIEihIc",
-            "DjWTUJPYwh"
-          ],
-          "scales": {}
-        },
-        "bass": {
-          "major": false,
-          "minor": false
-        },
-        "theory": {}
-      }
-    },
-    {
       "id": "vn6dQOZrrN",
       "name": "Oliver",
       "surname": "Plummer",
@@ -44,24 +11,6 @@
           "chords": [
             "HzYummygsF"
           ],
-          "scales": {}
-        },
-        "bass": {
-          "major": false,
-          "minor": false
-        },
-        "theory": {}
-      }
-    },
-    {
-      "id": "xQ9XzvR86Q",
-      "name": "Jay",
-      "surname": "Chur",
-      "experience": 0,
-      "dateJoined": "04/07/2018",
-      "progress": {
-        "guitar": {
-          "chords": [],
           "scales": {}
         },
         "bass": {
