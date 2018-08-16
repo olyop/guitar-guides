@@ -68,9 +68,11 @@ class Index extends React.Component {
 	
 	// Account Functions
 	logIn(account) {
-    this.setState({ account }) } 
+    this.setState({ account })
+	} 
   logOut() {
-    this.setState({ account: null }) }
+    this.setState({ account: null })
+	}
   editAccount(name, surname) {
     this.setState(
       { accountEditLoading: true },
@@ -115,11 +117,13 @@ class Index extends React.Component {
   }
 	
 	toggleNightMode() {
-		this.setState({ night: !this.state.night })	}
+		this.setState({ night: !this.state.night })
+	}
   
 	// Handle Navigation Menu
 	handleHamburger() {
-    this.setState({ menu: !this.state.menu }) }
+    this.setState({ menu: !this.state.menu })
+	}
   
   // Progress Functions
   updateProgressChords(chordId) {
