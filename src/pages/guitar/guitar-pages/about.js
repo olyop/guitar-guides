@@ -3,21 +3,21 @@ import React from 'react'
 import { Heading1, Heading2 } from '../../../common/heading'
 
 class GuitarAbout extends React.Component {
-	
+
 	constructor(props) {
 		super(props)
 		this.state = {
-			content1: true,
-			content2: true,
+			content1: false,
+			content2: false,
 			content3: true,
-			content4: true
+			content4: false
 		}
 		this.toggleContent1 = this.toggleContent1.bind(this)
 		this.toggleContent2 = this.toggleContent2.bind(this)
 		this.toggleContent3 = this.toggleContent3.bind(this)
 		this.toggleContent4 = this.toggleContent4.bind(this)
 	}
-	
+
 	toggleContent1() {
 		this.setState({ content1: !this.state.content1 })	}
 	toggleContent2() {
@@ -26,12 +26,12 @@ class GuitarAbout extends React.Component {
 		this.setState({ content3: !this.state.content3 })	}
 	toggleContent4() {
 		this.setState({ content4: !this.state.content4 })	}
-	
+
 	render() {
 		let contentStyle = { marginBottom: '20px' }
 		return (
 			<div id="guitar-about">
-        
+
         <Heading1 onClick={this.toggleContent1}
 					active={this.state.content1}>Description</Heading1>
 				{this.state.content1 ? (
@@ -48,22 +48,27 @@ class GuitarAbout extends React.Component {
 						<img src={this.props.globalText.api.aws + '/images/guitar-anatomy.png'} alt="Guitar Anatomy" />
 					</div>
 				) : null}
-        
+
         <Heading1 onClick={this.toggleContent3}
-					active={this.state.content3}>Types of Guitars</Heading1>
+					active={this.state.content3}>Famous Guitar Brands</Heading1>
 				{this.state.content3 ? (
 					<div style={contentStyle}>
-						<Heading2>Fender Strat</Heading2>
+						<Heading2>Fender</Heading2>
+						<p>Fender, is an American manufacturer of stringed instruments and amplifiers. Fender Guitars are among the most recognized in the world. Fender is famous for its solid-body electric guitars and bass guitars, such as the Stratocaster, Telecaster, Precision Bass, and the Jazz Bass. Its headquarters are in Scottsdale, Arizona. The company also manufactures acoustic guitars, electric basses, mandolins, banjos, and electric violins, as well as guitar amplifiers, bass amplifiers, and PA (public address) equipment. Other Fender brands include Squier (entry level/budget), Jackson, Charvel, EVH guitars and amplifiers in collaboration with Eddie Van Halen, and the manufacture and distribution of Gretsch guitars under license.</p>
+						<Heading2>Gibson</Heading2>
+						<p>Gibson is an American manufacturer of guitars, other musical instruments, and consumer and professional electronics from Kalamazoo, Michigan and now based in Nashville, Tennessee. Orville Gibson founded the company in 1902 as the &#34;Gibson Mandolin-Guitar Mfg. Co. Ltd.&#34; in Kalamazoo, Michigan, to make mandolin&#45;family instruments. By the 1930s, the company was also making flattop acoustic guitars, as well as one of the first commercially available hollow&#45;body electric guitars, used and popularized by Charlie Christian. Gibson sells guitars under a variety of brand names and builds one of the world's most iconic guitars, the Gibson Les Paul. Many Gibson instruments are highly collectible. Gibson was at the forefront of innovation in acoustic guitars, especially in the big band era of the 1930s&#59; the Gibson Super 400 was widely imitated. In 1952, Gibson introduced its first solid&#45;body electric guitar, the Les Paul, which became its most popular guitar to date &#45; designed by Ted McCarty and Les Paul.</p>
+						<Heading2>Ibanez</Heading2>
+						<p>Ibaenez is a Japanese guitar brand owned by Hoshino Gakki. Based in Nagoya, Aichi, Japan, Hoshino Gakki were one of the first Japanese musical instrument companies to gain a significant foothold in import guitar sales in the United States and Europe, as well as the first brand of guitars to mass-produce the seven-string guitar and eight-string guitar. Ibanez manufactures effects, accessories, amps, and instruments in Japan, China, Indonesia and in the United States (at a Los Angeles-based custom shop). Currently, there are nearly 165 models of bass guitar, 130 acoustic guitars, and more than 300 electric guitars.</p>
 					</div>
 				) : null}
-        
+
         <Heading1 onClick={this.toggleContent4}
 					active={this.state.content4}>Accessories</Heading1>
-        
+
 			</div>
 		)
 	}
-	
+
 }
 
 export default GuitarAbout

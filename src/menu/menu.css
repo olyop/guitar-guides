@@ -22,13 +22,47 @@
     position: fixed;
     height: 92vh;
     width: 350px;
-		padding: 20px 20px 20px 0;
+		padding: 0;
     top: 8vh;
 	  z-index: 5;
-    background-color: #F5F5F5;
-    box-shadow:
-      0 0 4px rgba(0,0,0,.14),
-      0 4px 8px rgba(0,0,0,.28); }
+    background-color: #FAFAFA;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28); }
+      #menu .menu-slider .menu-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+        #menu .menu-slider .menu-buttons a {
+          width: 100%;
+          background-color: #FAFAFA;
+          padding: 15px 20px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start; }
+          #menu .menu-slider .menu-buttons a:hover {
+            background-color: #EEEEEE;
+            text-decoration: none; }
+            #menu .menu-slider .menu-buttons a:hover p {
+              font-weight: 600; }
+            #menu .menu-slider .menu-buttons a:hover i {
+              color: #F44336; }
+          #menu .menu-slider .menu-buttons a p {
+            margin: 0;
+            font-weight: 600;
+            font-size: 20px; }
+          #menu .menu-slider .menu-buttons a i {
+            padding-right: 10px;
+            font-size: 23px; }
+        #menu .menu-slider .menu-sub {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start; }
+          #menu .menu-slider .menu-sub a {
+            padding: 5px 50px; }
+            #menu .menu-slider .menu-sub a p {
+              font-weight: 400;
+              font-size: 17px;  }
 
 @media (min-height: 1080px) {
   #menu {

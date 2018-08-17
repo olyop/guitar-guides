@@ -27,7 +27,9 @@
 
 #guitar-content #guitar-about img {
 	width: 100%;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	margin: 0;
+	padding: 10px;
 	height: auto; }
 
 #guitar-content #guitar-about p {
@@ -54,7 +56,4 @@
 			font-size: 16px; 	}
 		#guitar-content #guitar-home .col-md-6 {
 			padding-bottom: 0; }
-		#guitar-content #guitar-about img {
-			width: calc(100% - 80px);
-			margin: 0 40px; }
 }

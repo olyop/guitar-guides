@@ -45,7 +45,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 // Root Index Component
 class Index extends React.Component {
-	
+
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -65,11 +65,11 @@ class Index extends React.Component {
 		this.toggleNightMode = this.toggleNightMode.bind(this)
     this.updateProgressChords = this.updateProgressChords.bind(this)
 	}
-	
+
 	// Account Functions
 	logIn(account) {
     this.setState({ account })
-	} 
+	}
   logOut() {
     this.setState({ account: null })
 	}
@@ -83,9 +83,10 @@ class Index extends React.Component {
 					headers: { 'Content-Type': 'application/json' },
           data: this.state.account
 				}
+
         axiosConfig.data.name = name
         axiosConfig.data.surname = surname
-				
+
         axios(axiosConfig)
 					.then(response => {
 						this.setState({
@@ -115,16 +116,16 @@ class Index extends React.Component {
 			}
 		)
   }
-	
+
 	toggleNightMode() {
 		this.setState({ night: !this.state.night })
 	}
-  
+
 	// Handle Navigation Menu
 	handleHamburger() {
     this.setState({ menu: !this.state.menu })
 	}
-  
+
   // Progress Functions
   updateProgressChords(chordId) {
 		this.setState(
@@ -154,18 +155,18 @@ class Index extends React.Component {
 			}
 		)
   }
-	
+
 	render() {
 		const appState = this.state
 		const globalText = this.props.globalText
-		
+
 		// Check if account is logged in
 		let isAccountLoggedIn
 		if (appState.account === null) {
 			isAccountLoggedIn = false }
 		else if (typeof appState.account === 'object') {
 			isAccountLoggedIn = true }
-		
+
 		return (
 			<BrowserRouter>
         <MuiThemeProvider>
@@ -184,11 +185,11 @@ class Index extends React.Component {
 
             {isAccountLoggedIn ? (
               <div id="content">
-							
+
 								<Route path="/" exact render={ ({ match, location }) => (
 									<Home location={location} />
 								)} />
-								
+
 								<Route path="/account" exact render={ () => (
 									<AccountPage appState={appState}
 										globalText={globalText}
@@ -198,24 +199,24 @@ class Index extends React.Component {
 										deleteAccount={this.deleteAccount}
 										accountDeleteLoading={this.state.accountDeleteLoading} />
 								)} />
-								
+
 								<Route path="/testing" exact render={ () => (
 									<Testing appState={appState}
 										globalText={globalText} />
 								)} />
-                
+
                 <Route path="/help" exact render={ () => (
                   <Help appState={appState}
                     globalText={globalText} />
                 )} />
-                
+
                 <Route path="/search" exact render={ () => (
                   <Search appState={appState}
                     globalText={globalText}
 									  updateProgressChords={this.updateProgressChords}
 										updateProgressChordsLoading={this.state.updateProgressChordsLoading} />
                 )} />
-								
+
 								<Route path="/guitar" render={ ({ match }) => (
                   <Guitar match={match}
 										appState={appState}
@@ -223,23 +224,23 @@ class Index extends React.Component {
                     theoryData={this.props.theoryData}
                     updateProgressChords={this.updateProgressChords}
 										updateProgressChordsLoading={this.state.updateProgressChordsLoading}
-                  />		
+                  />
                 )} />
-								
+
 								<Route path="/bass" exact render={ ({ match }) => (
                   <Bass match={match}
 										appState={appState}
 										globalText={globalText}
-                    theoryData={this.props.theoryData} />		
+                    theoryData={this.props.theoryData} />
                 )} />
-								
+
 								<Route path="/theory" exact render={ () => (
                   <Theory appState={appState}
-										globalText={globalText} />		
+										globalText={globalText} />
                 )} />
-								
+
                 <Footer />
-							
+
 							</div>
             ) : (
 							<Accounts appState={appState}

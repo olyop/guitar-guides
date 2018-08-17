@@ -5,64 +5,81 @@ import './menu.css'
 
 const Menu = props => (
 	<div id="menu">
-    
+
     <div onClick={props.handleHamburger}
       className="menu-background"></div>
-		
+
     <div className="menu-slider">
-			
-			<ul>
-				<li><NavLink to="/" onClick={props.handleHamburger}>Home</NavLink></li>
-			</ul>
-			
-			<ul>
-				<li>
-					<NavLink to="/guitar">Guitar</NavLink>
-					<ul>
-						<li><NavLink to="/guitar/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
-						<li><NavLink to="/guitar/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
-						<li><NavLink to="/guitar/exercises" onClick={props.handleHamburger}>Exercises</NavLink></li>
-						<li><NavLink to="/guitar/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
-						<li><NavLink to="/guitar/about" onClick={props.handleHamburger}>About</NavLink></li>
-					</ul>
-				</li>
-			</ul>
-			
-			<ul>
-				<li>
-					<NavLink to="/bass" onClick={props.handleHamburger}>Bass</NavLink>
-					<ul>
-						<li><NavLink to="/bass/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
-						<li><NavLink to="/bass/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
-						<li><NavLink to="/bass/exercies" onClick={props.handleHamburger}>Exercies</NavLink></li>
-						<li><NavLink to="/bass/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
-						<li><NavLink to="/bass/about" onClick={props.handleHamburger}>About</NavLink></li>
-					</ul>
-				</li>
-			</ul>
-			
-			<ul>
-				<li>
-					<NavLink to="/theory" onClick={props.handleHamburger}>Theory</NavLink>
-					<ul>
-						<li><NavLink to="/theory/chords" onClick={props.handleHamburger}>Chords</NavLink></li>
-						<li><NavLink to="/theory/scales" onClick={props.handleHamburger}>Scales</NavLink></li>
-						<li><NavLink to="/theory/exercies" onClick={props.handleHamburger}>Exercies</NavLink></li>
-						<li><NavLink to="/theory/riffs" onClick={props.handleHamburger}>Riffs</NavLink></li>
-						<li><NavLink to="/theory/about" onClick={props.handleHamburger}>About</NavLink></li>
-					</ul>
-				</li>
-			</ul>
-			
-			<ul>
-				<li><NavLink to="/search" onClick={props.handleHamburger}>Search</NavLink></li>
-				<li><NavLink to="/help" onClick={props.handleHamburger}>Help</NavLink></li>
-				<li><NavLink to="/account" onClick={props.handleHamburger}>Account</NavLink></li>
-				<li><NavLink to="/testing" onClick={props.handleHamburger}>Testing</NavLink></li>
-			</ul>
-			
+
+			<div className="menu-buttons">
+				<NavLink to="/guitar" onClick={props.handleHamburger} title="Guitar">
+					<i className="material-icons">expand_more</i>
+					<p>Guitar</p>
+				</NavLink>
+				<div className="menu-sub">
+					<NavLink to="/guitar/chords" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Guitar Chords">
+						<i className="material-icons">remove</i>
+						<p>Chords</p>
+					</NavLink>
+					<NavLink to="/guitar/scales" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Guitar Scales">
+						<i className="material-icons">remove</i>
+						<p>Scales</p>
+					</NavLink>
+					<NavLink to="/guitar/exercises" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Guitar Exercises">
+						<i className="material-icons">remove</i>
+						<p>Exercies</p>
+					</NavLink>
+					<NavLink to="/guitar/riffs" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Guitar Riffs">
+						<i className="material-icons">remove</i>
+						<p>Riffs</p>
+					</NavLink>
+					<NavLink to="/guitar/about" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Guitar About">
+						<i className="material-icons">remove</i>
+						<p>About</p>
+					</NavLink>
+				</div>
+				<NavLink to="/bass" onClick={props.handleHamburger} title="Bass">
+					<i className="material-icons">expand_more</i>
+					<p>Bass</p>
+				</NavLink>
+				<div className="menu-sub">
+					<NavLink to="/bass/scales" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Scales">
+						<i className="material-icons">remove</i>
+						<p>Scales</p>
+					</NavLink>
+					<NavLink to="/bass/exercises" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Exercies">
+						<i className="material-icons">remove</i>
+						<p>Exercies</p>
+					</NavLink>
+					<NavLink to="/bass/riffs" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Riffs">
+						<i className="material-icons">remove</i>
+						<p>Riffs</p>
+					</NavLink>
+					<NavLink to="/bass/about" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass About">
+						<i className="material-icons">remove</i>
+						<p>About</p>
+					</NavLink>
+				</div>
+				<NavLink to="/search" onClick={props.handleHamburger} title="Search">
+					<i className="material-icons">search</i>
+					<p>Search</p>
+				</NavLink>
+				<NavLink to="/help" onClick={props.handleHamburger} title="Help">
+					<i className="material-icons">help</i>
+					<p>Help</p>
+				</NavLink>
+				<NavLink to="/account" onClick={props.handleHamburger} title="Account">
+					<i className="material-icons">account_circle</i>
+					<p>Account</p>
+				</NavLink>
+				<NavLink to="/testing" onClick={props.handleHamburger} title="Testing">
+					<i className="material-icons">trending_up</i>
+					<p>Testing</p>
+				</NavLink>
+			</div>
+
     </div>
-    
+
 	</div>
 )
 

@@ -11,14 +11,14 @@ import Loading from '../common/loading'
 import './css/chord-chooser.css'
 
 class ChordChartVariations extends React.Component {
-  
+
   constructor(props) {
     super(props)
     this.state = { index: 0 }
     this.left = this.left.bind(this)
     this.right = this.right.bind(this)
   }
-  
+
   left() {
     if (this.state.index !== 0) {
       this.setState({ index: this.state.index - 1 })
@@ -29,17 +29,17 @@ class ChordChartVariations extends React.Component {
       this.setState({ index: this.state.index + 1 })
 		}
 	}
-  
+
   UNSAFE_componentWillReceiveProps() {
     this.setState({ index: 0 }) }
-  
+
   render() {
 		const variations = this.props.variations
 		const chord = variations[this.state.index]
     return (
       <div>
         <div className="chord-chooser-chart">
-          
+
           <i onClick={this.left}
             className={this.state.index === 0 ? 'material-icons chord-chooser-variation chord-chooser-variation-max' : 'material-icons chord-chooser-variation'}>
 						keyboard_arrow_left
@@ -50,10 +50,10 @@ class ChordChartVariations extends React.Component {
 						completed={includes(this.props.appState.account.progress.guitar.chords, chord.id)}  />
 
           <i onClick={this.right}
-            className={'material-icons chord-chooser-variation' + (this.state.index === variations.length - 1 ? 'chord-chooser-variation-max' : '')}>
+            className={'material-icons chord-chooser-variation' + (this.state.index === variations.length - 1 ? ' chord-chooser-variation-max' : '')}>
 						keyboard_arrow_right
 					</i>
-          
+
         </div>
         <h5>{variations.length === 1 ? '1/1' : `${this.state.index + 1}/${variations.length}`}</h5>
       </div>
@@ -62,17 +62,17 @@ class ChordChartVariations extends React.Component {
 }
 
 class ChordChooser extends React.Component {
-  
+
   constructor(props) {
     super(props)
-    
+
     this.state = {
 			chordChooser: null,
       note: 0,
       type: 0
     }
   }
-	
+
 	// Get Chord Database
 	componentDidMount() {
     axios.get(`${this.props.globalText.api.url}/chordChooser`)
@@ -83,7 +83,7 @@ class ChordChooser extends React.Component {
         console.log(error)
       })
 	}
-  
+
   render() {
     if (this.state.chordChooser === null) {
 			return (
