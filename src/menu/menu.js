@@ -13,7 +13,7 @@ const Menu = props => (
 
 			<div className="menu-buttons">
 				<NavLink to="/guitar" onClick={props.handleHamburger} title="Guitar">
-					<i className="material-icons">expand_more</i>
+					<i className="material-icons">bookmark</i>
 					<p>Guitar</p>
 				</NavLink>
 				<div className="menu-sub">
@@ -39,7 +39,7 @@ const Menu = props => (
 					</NavLink>
 				</div>
 				<NavLink to="/bass" onClick={props.handleHamburger} title="Bass">
-					<i className="material-icons">expand_more</i>
+					<i className="material-icons">bookmark</i>
 					<p>Bass</p>
 				</NavLink>
 				<div className="menu-sub">

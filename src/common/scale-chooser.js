@@ -8,7 +8,7 @@ import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 
 class ScaleChooser extends React.Component {
-	
+
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -21,12 +21,12 @@ class ScaleChooser extends React.Component {
     this.left = this.left.bind(this)
     this.right = this.right.bind(this)
 	}
-	
+
 	handleKeyChange(event, index, value) {
     this.setState({ key: value, index: 0 }) }
 	handleTypeChange(event, index, value) {
     this.setState({ type: value, index: 0 }) }
-	
+
 	left() {
     if (this.state.index !== 0) {
       this.setState({ index: this.state.index - 1 })
@@ -37,7 +37,7 @@ class ScaleChooser extends React.Component {
       this.setState({ index: this.state.index + 1 })
 		}
 	}
-	
+
 	render() {
 		let buttonStyle = {
 			margin: '0',
@@ -47,34 +47,35 @@ class ScaleChooser extends React.Component {
 		}
 		return (
 			<div className="scale-chooser">
-				
+
 				<div className="scale-chooser-menus">
-					
+
 					<SelectField floatingLabelText="Key"
 						value={this.state.key}
           	onChange={this.handleKeyChange}
 						className="scale-chooser-menu"
 						{...this.props.globalText.styles.selectField}>
 						{this.props.theoryData.notes.map((note, index) => (
-							<MenuItem key={index} value={index} primaryText={note} /> 
+							<MenuItem key={index} value={index} primaryText={note} />
 						))}
 					</SelectField>
-					
+
 					<SelectField floatingLabelText="Type"
 						value={this.state.type}
+          	onChange={this.handleTypeChange}
 						className="scale-chooser-menu"
 						{...this.props.globalText.styles.selectField}>
 						{this.props.theoryData.scaleTypes.map((type, index) => (
 							<MenuItem key={index} value={index} primaryText={type} />
 						))}
 					</SelectField>
-					
+
 				</div>
-				
-				<div className="scale-chooser-tab"> 
-					
+
+				<div className="scale-chooser-tab">
+
 					<GuitarTab tab={this.props.scalesData[this.state.key][this.state.type][this.state.index]} />
-				
+
 					<div className="scale-variations">
 						<FlatButton onClick={this.left}
 							style={buttonStyle}>
@@ -85,9 +86,9 @@ class ScaleChooser extends React.Component {
 							<i className="material-icons">keyboard_arrow_right</i>
 						</FlatButton>
 					</div>
-					
+
 				</div>
-				
+
 			</div>
 		)
 	}
