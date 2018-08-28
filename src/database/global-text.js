@@ -1,10 +1,10 @@
 const globalText = {
-	
+
 	api: {
-		url: 'http://localhost:3001',
+		url: 'http://192.168.1.4:3001',
     aws: 'https://s3-ap-southeast-2.amazonaws.com/guitar-guides'
 	},
-	
+
 	pageStructure: [
 		{
 			id: '5BbBWQDyT0',
@@ -77,7 +77,7 @@ const globalText = {
 			path: '/help'
 		}
 	],
-	
+
 	accounts: {
 		heading: 'Accounts',
 		subtitle: 'Please login or create an account to continue in the app.',
@@ -95,11 +95,11 @@ const globalText = {
 			cancelNewAccountButtonText: 'Cancel'
 		}
 	},
-	
+
 	header: {
 		searchInputText: 'Search'
 	},
-  
+
   help: {
     chordChartKey: {
       tableHeader: [
@@ -109,7 +109,7 @@ const globalText = {
       ]
     }
   },
-	
+
 	testing: {
 		colStyle: {
 			col1: { width: '12%', padding: '10px' },
@@ -117,7 +117,7 @@ const globalText = {
 			col3: { width: '55%', padding: '10px' }
 		}
 	},
-	
+
 	styles: {
 		selectField: {
 			underlineFocusStyle: { borderColor: '#F44336' },
@@ -132,7 +132,7 @@ const globalText = {
 			errorStyle: { color: '#F44336' }
 		}
 	}
-	
+
 }
 
 export default globalText
