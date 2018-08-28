@@ -40,24 +40,24 @@ const Menu = props => (
 				</div>
 				<NavLink to="/bass" onClick={props.handleHamburger} title="Bass">
 					<i className="material-icons">bookmark</i>
-					<p>Bass</p>
+					<p>Bass (W.I.P.)</p>
 				</NavLink>
 				<div className="menu-sub">
 					<NavLink to="/bass/scales" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Scales">
 						<i className="material-icons">remove</i>
-						<p>Scales</p>
+						<p>Scales (W.I.P.)</p>
 					</NavLink>
 					<NavLink to="/bass/exercises" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Exercies">
 						<i className="material-icons">remove</i>
-						<p>Exercies</p>
+						<p>Exercies (W.I.P.)</p>
 					</NavLink>
 					<NavLink to="/bass/riffs" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass Riffs">
 						<i className="material-icons">remove</i>
-						<p>Riffs</p>
+						<p>Riffs (W.I.P.)</p>
 					</NavLink>
 					<NavLink to="/bass/about" onClick={props.handleHamburger} className="menu-slider-sub-button" title="Bass About">
 						<i className="material-icons">remove</i>
-						<p>About</p>
+						<p>About (W.I.P.)</p>
 					</NavLink>
 				</div>
 				<NavLink to="/search" onClick={props.handleHamburger} title="Search">

@@ -10,25 +10,25 @@ import Loading from '../../../common/loading'
 import Ad from '../../../common/ad'
 
 class StandardChords extends React.Component {
-	
+
 	constructor(props) {
 		super(props)
 		this.state = {
-			content1: false,
+			content1: true,
 			standardChords: null
 		}
     this.toggleContent1 = this.toggleContent1.bind(this)
   }
-  
+
   toggleContent1() {
     this.setState({ content1: !this.state.content1 }) }
-	
+
 	componentDidMount() {
     axios.get(`${this.props.globalText.api.url}/standardChords`)
       .then(response => this.setState({ standardChords: response.data }))
       .catch(error => this.setState({ standardChords: 'error' }))
 	}
-	
+
 	render() {
 		if (this.state.standardChords === null) {
 			return <Loading />
@@ -54,31 +54,31 @@ class StandardChords extends React.Component {
 				</div>
 			)
 		}
-		
+
 	}
 }
 
 class GuitarChords extends React.Component {
-  
+
   constructor(props) {
     super(props)
     this.state = { content1: true }
     this.toggleContent1 = this.toggleContent1.bind(this)
   }
-  
+
   toggleContent1() {
     this.setState({ content1: !this.state.content1 }) }
-  
+
   render() {
     return (
       <div id="guitar-chords">
-        
+
         <StandardChords appState={this.props.appState}
 					globalText={this.props.globalText}
 					theoryData={this.props.theoryData} />
-				
+
 				<Ad style={{ margin: '15px 0' }} />
-        
+
         <Heading1 onClick={this.toggleContent1}
           active={this.state.content1}
 					subtitle="187 chords">Chord Finder</Heading1>
@@ -92,6 +92,6 @@ class GuitarChords extends React.Component {
       </div>
     )
   }
-} 
+}
 
 export default GuitarChords

@@ -7,14 +7,14 @@ const accountTemplate = {
 	progress: {
 		guitar: {
 			chords: [],
-			scales: {}
+			scales: []
 		},
 		bass: {
 			major: false,
 			minor: false
 		},
 		theory: {
-			
+
 		}
 	}
 }
